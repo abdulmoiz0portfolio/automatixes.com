@@ -257,14 +257,16 @@ function initMatterJsPhysics() {
         el.style.position = "absolute";
         el.style.padding = isMobile ? "8px 16px" : "18px 45px";
         el.style.borderRadius = "100px";
-        el.style.color = pillTint ? "#a8541a" : "#333333";
-        el.style.fontSize = isMobile ? "11px" : "20px";
-        el.style.fontWeight = "500";
+        el.style.color = "#ffffff";
+        el.style.fontSize = isMobile ? "12px" : "18px";
+        el.style.fontWeight = "600";
         el.style.whiteSpace = "nowrap";
         el.style.userSelect = "none";
         el.style.pointerEvents = "none";
-        el.style.background = pillTint ? "rgba(59, 130, 246, 0.08)" : "rgba(0, 0, 0, 0.05)";
-        el.style.border = pillTint ? "1px solid rgba(59, 130, 246, 0.3)" : "1px solid rgba(0, 0, 0, 0.1)";
+        el.style.background = "rgba(255, 255, 255, 0.05)";
+        el.style.border = "1px solid rgba(200, 224, 25, 0.25)";
+        el.style.backdropFilter = "blur(8px)";
+        el.style.boxShadow = "0 10px 25px rgba(0, 0, 0, 0.5)";
         el.style.zIndex = "5";
         el.style.willChange = "transform";
 
@@ -339,14 +341,22 @@ function initNewsletterPopup() {
     const closeBtn = document.getElementById("closeModal");
     const newsletterSeen = localStorage.getItem("newsletterSeen_baig");
     
+    // Non-intrusive: only show after user has actively scrolled down 50% of the page
     if (!newsletterSeen) {
-        setTimeout(() => {
-            modal.style.display = "flex";
-            if (window.lenis) window.lenis.stop();
-            setTimeout(() => {
-                modal.classList.add("active");
-            }, 10);
-        }, 1500); // 1.5s delay to fit standard user experience
+        let shown = false;
+        const handleScroll = () => {
+            if (shown) return;
+            const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+            if (scrollPercent > 0.5) {
+                shown = true;
+                window.removeEventListener("scroll", handleScroll);
+                modal.style.display = "flex";
+                setTimeout(() => {
+                    modal.classList.add("active");
+                }, 10);
+            }
+        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
     }
 
     function closePopup() {
@@ -358,12 +368,14 @@ function initNewsletterPopup() {
         localStorage.setItem("newsletterSeen_baig", "true");
     }
 
-    closeBtn.onclick = closePopup;
-    window.onclick = (event) => {
+    if (closeBtn) {
+        closeBtn.addEventListener("click", closePopup);
+    }
+    window.addEventListener("click", (event) => {
         if (event.target === modal) {
             closePopup();
         }
-    };
+    });
 
     const form = document.getElementById("popup-newsletter-form");
     const emailInput = document.getElementById("popup-email-input");
