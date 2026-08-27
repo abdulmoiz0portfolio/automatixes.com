@@ -670,12 +670,8 @@
 
 
 
-    <!-- Custom Main JS -->
-    <script src="assets/js/main.js?v=1.0.2"></script>
+    <!-- Main Custom JS -->
+    <script src="assets/js/main.js?v=2.1.0"></script>
 </body>
 </html>
-
-
-
-
 
