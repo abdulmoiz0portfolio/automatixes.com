@@ -686,7 +686,7 @@ function initCustomCursor() {
     
     // Check if touch device / coarse pointer
     const isTouch = window.matchMedia && window.matchMedia("(pointer: coarse), (hover: none)").matches;
-    if (isTouch) {
+    if (isTouch || window.innerWidth < 992) {
         cursorOuter.style.display = "none";
         cursorInner.style.display = "none";
         return;
@@ -697,7 +697,11 @@ function initCustomCursor() {
         return;
     }
 
-    // Set initial off-screen coordinates and ensure pointer-events: none
+    // Ensure pointer-events are disabled completely
+    cursorOuter.style.pointerEvents = "none";
+    cursorInner.style.pointerEvents = "none";
+
+    // Set initial off-screen coordinates centered exactly at origin
     gsap.set([cursorOuter, cursorInner], {
         xPercent: -50,
         yPercent: -50,
@@ -707,11 +711,10 @@ function initCustomCursor() {
     });
 
     // 120fps hardware-accelerated quickTo setters
-    // Inner cursor restored to 0.05 sweet spot for snappy but smooth tracking
-    const xInner = gsap.quickTo(cursorInner, "x", { duration: 0.05, ease: "power2.out" });
-    const yInner = gsap.quickTo(cursorInner, "y", { duration: 0.05, ease: "power2.out" });
-    const xOuter = gsap.quickTo(cursorOuter, "x", { duration: 0.2, ease: "power2.out" });
-    const yOuter = gsap.quickTo(cursorOuter, "y", { duration: 0.2, ease: "power2.out" });
+    const xInner = gsap.quickTo(cursorInner, "x", { duration: 0.02, ease: "none" });
+    const yInner = gsap.quickTo(cursorInner, "y", { duration: 0.02, ease: "none" });
+    const xOuter = gsap.quickTo(cursorOuter, "x", { duration: 0.16, ease: "power2.out" });
+    const yOuter = gsap.quickTo(cursorOuter, "y", { duration: 0.16, ease: "power2.out" });
 
     let isVisible = false;
 
@@ -721,41 +724,43 @@ function initCustomCursor() {
             isVisible = true;
             cursorOuter.classList.remove("cursor-hidden");
             cursorInner.classList.remove("cursor-hidden");
-            gsap.to([cursorOuter, cursorInner], { opacity: 1, duration: 0.25, overwrite: "auto" });
+            gsap.to([cursorOuter, cursorInner], { opacity: 1, duration: 0.2, overwrite: "auto" });
         }
 
-        // Inner cursor: fast snappy tracking
         xInner(e.clientX);
         yInner(e.clientY);
-
-        // Outer cursor: smooth lagging trail
         xOuter(e.clientX);
         yOuter(e.clientY);
     });
 
-    // Window mouseleave / mouseenter opacity transitions (document boundary guard)
+    // Click / Active tactile states
+    window.addEventListener("mousedown", () => {
+        cursorOuter.classList.add("cursor-active");
+        cursorInner.classList.add("cursor-active");
+    });
+
+    window.addEventListener("mouseup", () => {
+        cursorOuter.classList.remove("cursor-active");
+        cursorInner.classList.remove("cursor-active");
+    });
+
+    // Window mouseleave / mouseenter opacity transitions
     document.addEventListener("mouseleave", () => {
         isVisible = false;
         cursorOuter.classList.add("cursor-hidden");
         cursorInner.classList.add("cursor-hidden");
-        gsap.to([cursorOuter, cursorInner], { opacity: 0, duration: 0.25, overwrite: "auto" });
+        gsap.to([cursorOuter, cursorInner], { opacity: 0, duration: 0.2, overwrite: "auto" });
     });
 
     document.addEventListener("mouseenter", () => {
         isVisible = true;
         cursorOuter.classList.remove("cursor-hidden");
         cursorInner.classList.remove("cursor-hidden");
-        gsap.to([cursorOuter, cursorInner], { opacity: 1, duration: 0.25, overwrite: "auto" });
+        gsap.to([cursorOuter, cursorInner], { opacity: 1, duration: 0.2, overwrite: "auto" });
     });
 
     // Delegated Hover Handling on interactive elements
     document.body.addEventListener("mouseover", (e) => {
-        if (e.target.closest(".icon-arrow, .card-service-item") && !e.target.closest(".btn, a, button, [data-cursor]")) {
-            cursorOuter.classList.remove("cursor-hover", "cursor-view", "cursor-drag", "cursor-magnetic");
-            cursorInner.classList.remove("cursor-hover", "cursor-view", "cursor-drag", "cursor-magnetic");
-            return;
-        }
-
         const customCursorTarget = e.target.closest("[data-cursor]");
         if (customCursorTarget) {
             const cursorType = customCursorTarget.getAttribute("data-cursor");
@@ -774,6 +779,13 @@ function initCustomCursor() {
             }
         }
 
+        const physicsTarget = e.target.closest("#physics-container, .toss-away");
+        if (physicsTarget) {
+            cursorOuter.classList.add("cursor-drag");
+            cursorInner.classList.add("cursor-drag");
+            return;
+        }
+
         const magneticTarget = e.target.closest(".btn-magnetic");
         if (magneticTarget) {
             cursorOuter.classList.add("cursor-magnetic", "cursor-hover");
@@ -781,7 +793,7 @@ function initCustomCursor() {
             return;
         }
 
-        const interactiveTarget = e.target.closest("a, button, .btn, .nav-link, .physics-pill, .close-modal, .tech-item, .accordion-button, input, textarea, select");
+        const interactiveTarget = e.target.closest("a, button, .btn, .btn-brand, .nav-link, .dropdown-item, .physics-pill, .close-modal, .tech-item, .accordion-button, input, textarea, select, [role='button'], .portfolio-card, .card-service-item");
         if (interactiveTarget) {
             cursorOuter.classList.add("cursor-hover");
             cursorInner.classList.add("cursor-hover");
@@ -789,7 +801,7 @@ function initCustomCursor() {
     });
 
     document.body.addEventListener("mouseout", (e) => {
-        const interactiveTarget = e.target.closest("a, button, .btn, .nav-link, .physics-pill, .close-modal, .tech-item, .accordion-button, input, textarea, select, [data-cursor], .btn-magnetic");
+        const interactiveTarget = e.target.closest("a, button, .btn, .btn-brand, .nav-link, .dropdown-item, .physics-pill, .close-modal, .tech-item, .accordion-button, input, textarea, select, [role='button'], .portfolio-card, .card-service-item, [data-cursor], .btn-magnetic, #physics-container, .toss-away");
         if (interactiveTarget) {
             cursorOuter.classList.remove("cursor-hover", "cursor-view", "cursor-drag", "cursor-magnetic");
             cursorInner.classList.remove("cursor-hover", "cursor-view", "cursor-drag", "cursor-magnetic");
