@@ -4,9 +4,16 @@
     <?php if ($page_key === 'index' || $page_key === 'voice-agent'): ?>
     
     <style>
-        /* Protect ElevenLabs widget z-index without breaking its internal layout */
+        /* Restrict ElevenLabs widget container strictly to bottom-right corner */
         elevenlabs-convai {
-            z-index: 2147483646 !important; 
+            position: fixed !important;
+            bottom: 20px !important;
+            right: 20px !important;
+            width: auto !important;
+            height: auto !important;
+            max-width: 400px !important;
+            max-height: 600px !important;
+            z-index: 99999 !important;
             pointer-events: auto !important;
         }
     </style>
@@ -671,7 +678,7 @@
 
 
     <!-- Main Custom JS -->
-    <script src="assets/js/main.js?v=3.1.0"></script>
+    <script src="assets/js/main.js?v=3.2.0"></script>
 </body>
 </html>
 

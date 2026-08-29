@@ -568,14 +568,21 @@ html, body {
     cursor: default;
 }
 
-/* Standard pointer cursor on all clickable elements */
+/* Preloader must never block interactions */
+#preloader {
+    pointer-events: none !important;
+}
+
+/* Standard pointer cursor and guaranteed clickability on all elements */
 a, button, input[type="button"], input[type="submit"], input[type="reset"], select, label, summary, .btn, .btn-brand, .btn-magnetic, .nav-link, .dropdown-item, .accordion-button, [role="button"], .portfolio-card, .card-service-item, #sticky-expert-btn, .social-icon, .icon-arrow, .physics-pill, .tech-item, .close-modal {
     cursor: pointer !important;
+    pointer-events: auto !important;
 }
 
 /* Text cursor on input fields */
 input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="number"], textarea {
     cursor: text !important;
+    pointer-events: auto !important;
 }
 
 /* --- 6.2 Tactile 3D Magnetic Buttons --- */

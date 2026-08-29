@@ -41,18 +41,32 @@ document.addEventListener("DOMContentLoaded", () => {
     initMarqueeVelocity();
 });
 
-// Window Load Handler for Preloader
-window.addEventListener("load", () => {
+// Preloader Fast Safe Dismissal
+function dismissPreloader() {
     const preloader = document.getElementById("preloader");
-    if (preloader) {
-        gsap.to(preloader, {
-            opacity: 0,
-            duration: 0.6,
-            onComplete: () => {
+    if (preloader && preloader.style.display !== "none") {
+        preloader.style.pointerEvents = "none";
+        if (typeof gsap !== "undefined") {
+            gsap.to(preloader, {
+                opacity: 0,
+                duration: 0.4,
+                onComplete: () => {
+                    preloader.style.display = "none";
+                    preloader.remove();
+                }
+            });
+        } else {
+            preloader.style.opacity = "0";
+            setTimeout(() => {
                 preloader.style.display = "none";
-            }
-        });
+                preloader.remove();
+            }, 300);
+        }
     }
+}
+window.addEventListener("load", dismissPreloader);
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(dismissPreloader, 600); // Guarantees page is interactive in 0.6s
 });
 
 /**
