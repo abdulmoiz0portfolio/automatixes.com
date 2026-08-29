@@ -127,7 +127,7 @@
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     
     <!-- Custom Main CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=3.3.0">
+    <link rel="stylesheet" href="assets/css/main.css?v=3.4.0">
 </head>
 <body>
 
@@ -1923,36 +1923,54 @@
         });
         observer.observe(document.body, { childList: true, subtree: true });
 
-        // Sticky button function to open chat and send lead capture message
-        window.connectWithExpert = function() {
-            // Hide the sticky button when chat opens so it never overlaps!
-            const stickyBtn = document.getElementById('sticky-expert-btn');
-            if (stickyBtn) stickyBtn.style.display = 'none';
+        // Sticky button function to open chat or scroll to contact section
+        window.connectWithExpert = function(e) {
+            if (e && e.preventDefault) e.preventDefault();
 
-            // Open chat by clicking hidden toggle
-            toggleChatState();
+            // 1. Try n8n Chat Widget if available
+            const toggleContainer = document.querySelector('.chat-window-toggle') || document.querySelector('.n8n-chat button') || document.querySelector('.chat-toggle');
+            if (toggleContainer) {
+                const stickyBtn = document.getElementById('sticky-expert-btn');
+                if (stickyBtn) stickyBtn.style.display = 'none';
+                if (typeof toggleChatState === 'function') toggleChatState();
+                setTimeout(() => {
+                    const textarea = document.querySelector('.chat-layout textarea') || document.querySelector('textarea');
+                    if (textarea) {
+                        const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, "value").set;
+                        if (nativeInputValueSetter) nativeInputValueSetter.call(textarea, "I need to connect with an expert right now.");
+                        textarea.dispatchEvent(new Event('input', { bubbles: true }));
+                        textarea.dispatchEvent(new KeyboardEvent('keydown', { bubbles: true, cancelable: true, keyCode: 13, key: 'Enter' }));
+                    }
+                }, 600);
+                return;
+            }
 
-            // Send message automatically
-            setTimeout(() => {
-                const textarea = document.querySelector('.chat-layout textarea') || document.querySelector('textarea');
-                if (textarea) {
-                    const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, "value").set;
-                    nativeInputValueSetter.call(textarea, "I need to connect with an expert right now.");
-                    textarea.dispatchEvent(new Event('input', { bubbles: true }));
-                    
-                    const enterEvent = new KeyboardEvent('keydown', {
-                        bubbles: true, cancelable: true, keyCode: 13, key: 'Enter'
-                    });
-                    textarea.dispatchEvent(enterEvent);
+            // 2. Smooth Scroll to Contact Consultation Form
+            const contactSec = document.getElementById('contact-section');
+            if (contactSec) {
+                if (window.lenis) {
+                    window.lenis.scrollTo(contactSec, { offset: -60, duration: 1.2 });
+                } else {
+                    contactSec.scrollIntoView({ behavior: 'smooth' });
                 }
-            }, 600);
-        }
+                const nameInp = document.getElementById('contact-name') || document.querySelector('#contact-section input');
+                if (nameInp) setTimeout(() => nameInp.focus(), 700);
+                return;
+            }
+
+            // 3. Fallback to Contact Page
+            window.location.href = 'contact';
+        };
+
+        // Attach direct listener to sticky button
+        const sBtn = document.getElementById('sticky-expert-btn');
+        if (sBtn) sBtn.addEventListener('click', window.connectWithExpert);
     </script>
 
 
 
     <!-- Custom Main JS -->
-    <script src="assets/js/main.js?v=3.3.0"></script>
+    <script src="assets/js/main.js?v=3.4.0"></script>
 </body>
 </html>
 
