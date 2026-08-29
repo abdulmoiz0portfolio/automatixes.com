@@ -4,7 +4,10 @@ include 'header.php';
 ?>
 
 <!-- Voice Agent Hero Section -->
-<section class="voice-agent-section position-relative py-5 overflow-hidden" style="background: var(--bg-void, #050505); min-height: 90vh;">
+<section class="voice-agent-section position-relative py-5 overflow-hidden" style="background: var(--bg-void, #050505); min-height: 90vh; padding-top: 150px !important;">
+    <style>
+        #sticky-expert-btn { display: none !important; }
+    </style>
     <!-- Ambient Radial Glows -->
     <div class="position-absolute top-0 start-50 translate-middle-x pointer-events-none" style="width: 600px; height: 600px; background: radial-gradient(circle, rgba(200, 224, 25, 0.12) 0%, transparent 70%); filter: blur(60px); z-index: 0;"></div>
     <div class="position-absolute bottom-0 start-0 pointer-events-none" style="width: 400px; height: 400px; background: radial-gradient(circle, rgba(0, 255, 136, 0.08) 0%, transparent 70%); filter: blur(50px); z-index: 0;"></div>
