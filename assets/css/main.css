@@ -573,6 +573,19 @@ html, body {
     pointer-events: none !important;
 }
 
+/* Prevent Third-Party Voice Widgets from blocking page clicks */
+elevenlabs-convai {
+    position: fixed !important;
+    bottom: 25px !important;
+    right: 25px !important;
+    left: auto !important;
+    top: auto !important;
+    width: 70px !important;
+    height: 70px !important;
+    z-index: 99999 !important;
+    pointer-events: auto !important;
+}
+
 /* Standard pointer cursor and guaranteed clickability on all elements */
 a, button, input[type="button"], input[type="submit"], input[type="reset"], select, label, summary, .btn, .btn-brand, .btn-magnetic, .nav-link, .dropdown-item, .accordion-button, [role="button"], .portfolio-card, .card-service-item, #sticky-expert-btn, .social-icon, .icon-arrow, .physics-pill, .tech-item, .close-modal {
     cursor: pointer !important;

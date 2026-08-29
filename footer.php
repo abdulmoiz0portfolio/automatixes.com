@@ -7,12 +7,12 @@
         /* Restrict ElevenLabs widget container strictly to bottom-right corner */
         elevenlabs-convai {
             position: fixed !important;
-            bottom: 20px !important;
-            right: 20px !important;
-            width: auto !important;
-            height: auto !important;
-            max-width: 400px !important;
-            max-height: 600px !important;
+            bottom: 25px !important;
+            right: 25px !important;
+            left: auto !important;
+            top: auto !important;
+            width: 70px !important;
+            height: 70px !important;
             z-index: 99999 !important;
             pointer-events: auto !important;
         }
@@ -678,7 +678,7 @@
 
 
     <!-- Main Custom JS -->
-    <script src="assets/js/main.js?v=3.2.0"></script>
+    <script src="assets/js/main.js?v=3.3.0"></script>
 </body>
 </html>
 
