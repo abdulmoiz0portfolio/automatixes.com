@@ -61,14 +61,13 @@
                     <div class="footer-widget">
                         <h5 class="widget-title">Contact Info</h5>
                         <ul class="list-unstyled contact-info text-muted">
-
-                            <li class="d-flex mb-2">
-                                <i class="fa-solid fa-envelope text-accent-brand me-2 mt-1"></i>
-                                <a href="mailto:contact@automatixes.com">contact@automatixes.com</a>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fa-solid fa-envelope text-accent-brand me-2 fs-6"></i>
+                                <a href="mailto:contact@automatixes.com" class="text-decoration-none">contact@automatixes.com</a>
                             </li>
-                            <li class="d-flex mb-2">
-                                <i class="fa-solid fa-phone text-accent-brand me-2 mt-1"></i>
-                                <a href="tel:+923366920141">+92 336 6920141</a>
+                            <li class="d-flex align-items-center mb-2">
+                                <i class="fa-solid fa-phone text-accent-brand me-2 fs-6"></i>
+                                <a href="tel:+923366920141" class="text-decoration-none">+92 336 6920141</a>
                             </li>
                         </ul>
                     </div>
@@ -674,7 +673,7 @@
 
 
     <!-- Main Custom JS -->
-    <script src="assets/js/main.js?v=3.7.0"></script>
+    <script src="assets/js/main.js?v=3.8.0"></script>
 </body>
 </html>
 
