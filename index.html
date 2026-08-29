@@ -1893,13 +1893,15 @@
             function openModal(e) {
                 if (e && e.preventDefault) e.preventDefault();
                 modal.style.display = 'flex';
-                requestAnimationFrame(() => {
-                    modal.classList.add('active');
-                });
+                modal.style.opacity = '1';
+                modal.style.pointerEvents = 'auto';
+                modal.classList.add('active');
             }
 
             function closeModal() {
                 modal.classList.remove('active');
+                modal.style.opacity = '0';
+                modal.style.pointerEvents = 'none';
                 setTimeout(() => {
                     modal.style.display = 'none';
                 }, 300);
