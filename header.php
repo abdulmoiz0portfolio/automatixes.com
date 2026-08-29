@@ -210,7 +210,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     
     <!-- Custom Main CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=3.6.0">
+    <link rel="stylesheet" href="assets/css/main.css?v=3.7.0">
 </head>
 <body>
 
@@ -241,7 +241,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
         <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-0">
                 <a class="navbar-brand d-flex align-items-center" href="index">
-                    <img src="assets/img/logo/automatixes-logo-new.png" alt="Automatixes Logo" style="height: 65px; width: auto; object-fit: contain; margin-top: -5px; margin-bottom: -5px;">
+                    <img src="assets/img/logo/automatixes-logo-new.png" alt="Automatixes Logo" style="height: 45px; width: auto; object-fit: contain;">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
