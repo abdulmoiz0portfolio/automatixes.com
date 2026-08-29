@@ -1,28 +1,6 @@
     </div> <!-- End smooth-content -->
     </div> <!-- End smooth-wrapper -->
 
-    <?php if ($page_key === 'index' || $page_key === 'voice-agent'): ?>
-    
-    <style>
-        /* Restrict ElevenLabs widget container strictly to bottom-right corner */
-        elevenlabs-convai {
-            position: fixed !important;
-            bottom: 25px !important;
-            right: 25px !important;
-            left: auto !important;
-            top: auto !important;
-            width: 70px !important;
-            height: 70px !important;
-            z-index: 99999 !important;
-            pointer-events: auto !important;
-        }
-    </style>
-
-      <!-- ElevenLabs Voice Widget -->
-    <elevenlabs-convai agent-id="agent_1601m004ny6efkns714nfr8vjvqm"></elevenlabs-convai>
-    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
-    <?php endif; ?>
-
     <!-- Footer Section Start -->
     <footer class="footer-area bg-dark text-white pt-5 pb-3">
         <div class="container">
@@ -696,7 +674,7 @@
 
 
     <!-- Main Custom JS -->
-    <script src="assets/js/main.js?v=3.5.0"></script>
+    <script src="assets/js/main.js?v=3.6.0"></script>
 </body>
 </html>
 
