@@ -696,7 +696,7 @@
 
 
     <!-- Main Custom JS -->
-    <script src="assets/js/main.js?v=3.4.0"></script>
+    <script src="assets/js/main.js?v=3.5.0"></script>
 </body>
 </html>
 
