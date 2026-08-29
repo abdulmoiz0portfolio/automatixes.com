@@ -554,143 +554,28 @@ small,
    06. INTERFACE CONTRACTS (Downstream Milestones M2, M3, M4)
    ========================================================================== */
 
-/* --- 6.1 Custom High-Performance Neon Cursor (120fps Hardware-Accelerated) --- */
-.mouse-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    pointer-events: none !important;
-    z-index: 9999999;
-    will-change: transform, width, height, background-color, border-color, opacity;
-    opacity: 0;
-    transition: opacity 0.25s ease, width 0.25s cubic-bezier(0.16, 1, 0.3, 1), height 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, border-color 0.25s ease;
-}
-
-/* Inner Dot: Centered, snappy, neon glow */
+/* --- 6.1 Default Native Browser Cursor Precision --- */
+.mouse-cursor,
+.cursor-outer,
 .cursor-inner {
-    width: 8px;
-    height: 8px;
-    background-color: var(--accent-neon, #C8E019);
-    border-radius: 50%;
-    box-shadow: 0 0 12px rgba(200, 224, 25, 0.9), 0 0 4px rgba(255, 255, 255, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
 }
 
-/* Outer Ring: Smooth trailing aura */
-.cursor-outer {
-    width: 36px;
-    height: 36px;
-    border: 1.5px solid rgba(200, 224, 25, 0.5);
-    background-color: rgba(200, 224, 25, 0.03);
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Default cursor on document */
+html, body {
+    cursor: default;
 }
 
-/* Hover State: Expanding interactive ring */
-.cursor-outer.cursor-hover {
-    width: 52px;
-    height: 52px;
-    border-color: var(--accent-neon, #C8E019);
-    background-color: rgba(200, 224, 25, 0.12);
-    box-shadow: 0 0 20px rgba(200, 224, 25, 0.3);
-    backdrop-filter: blur(1px);
+/* Standard pointer cursor on all clickable elements */
+a, button, input[type="button"], input[type="submit"], input[type="reset"], select, label, summary, .btn, .btn-brand, .btn-magnetic, .nav-link, .dropdown-item, .accordion-button, [role="button"], .portfolio-card, .card-service-item, #sticky-expert-btn, .social-icon, .icon-arrow, .physics-pill, .tech-item, .close-modal {
+    cursor: pointer !important;
 }
 
-.cursor-inner.cursor-hover {
-    transform: scale(0.6);
-    background-color: #ffffff;
-}
-
-/* Click / Active State */
-.cursor-outer.cursor-active {
-    width: 28px;
-    height: 28px;
-    border-color: var(--accent-neon, #C8E019);
-    background-color: rgba(200, 224, 25, 0.3);
-}
-
-.cursor-inner.cursor-active {
-    transform: scale(1.4);
-}
-
-/* Magnetic State */
-.cursor-outer.cursor-magnetic {
-    width: 60px;
-    height: 60px;
-    border-color: var(--accent-neon, #C8E019);
-    background-color: rgba(200, 224, 25, 0.18);
-    box-shadow: 0 0 25px rgba(200, 224, 25, 0.4);
-}
-
-/* View / Drag Modes */
-.cursor-outer.cursor-view,
-.cursor-outer.cursor-drag {
-    width: 74px;
-    height: 74px;
-    background-color: var(--accent-neon, #C8E019) !important;
-    border-color: var(--accent-neon, #C8E019) !important;
-    border-radius: 50% !important;
-    box-shadow: 0 0 25px rgba(200, 224, 25, 0.6);
-}
-
-.cursor-outer.cursor-view::after {
-    content: 'VIEW';
-    font-family: var(--font-heading);
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    color: #050505;
-    text-transform: uppercase;
-}
-
-.cursor-outer.cursor-drag::after {
-    content: 'DRAG';
-    font-family: var(--font-heading);
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    color: #050505;
-    text-transform: uppercase;
-}
-
-.cursor-inner.cursor-view,
-.cursor-inner.cursor-drag {
-    opacity: 0 !important;
-}
-
-/* Hidden state */
-.cursor-hidden,
-.mouse-cursor.cursor-hidden {
-    opacity: 0 !important;
-    visibility: hidden;
-}
-
-/* Hide Default System Cursor on Fine Pointer Desktops */
-@media (hover: hover) and (pointer: fine) {
-    *, *::before, *::after {
-        cursor: none !important;
-    }
-}
-
-/* Disable Custom Cursor on Touch & Mobile Devices */
-@media (hover: none), (pointer: coarse), (max-width: 991.98px) {
-    .mouse-cursor,
-    .cursor-outer,
-    .cursor-inner {
-        display: none !important;
-        pointer-events: none !important;
-    }
-    html, body, a, button, input, textarea, select, [role="button"], .btn, .btn-brand {
-        cursor: auto !important;
-    }
-    a, button, input[type="button"], input[type="submit"], select, .btn, .btn-brand, .nav-link, .dropdown-item, .accordion-button, [role="button"] {
-        cursor: pointer !important;
-    }
+/* Text cursor on input fields */
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="number"], textarea {
+    cursor: text !important;
 }
 
 /* --- 6.2 Tactile 3D Magnetic Buttons --- */
