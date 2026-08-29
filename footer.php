@@ -671,7 +671,7 @@
 
 
     <!-- Main Custom JS -->
-    <script src="assets/js/main.js?v=2.2.0"></script>
+    <script src="assets/js/main.js?v=3.0.0"></script>
 </body>
 </html>
 

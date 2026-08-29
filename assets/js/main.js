@@ -676,7 +676,7 @@ function logSimulatedWebhook(logText) {
     }
 
 /**
- * Custom Mouse Cursor Follower setup with GSAP quickTo trailing animations (F8)
+ * Ultra-Smooth High-Performance Custom Cursor (Lerp + rAF + Immediate Point Sync)
  */
 function initCustomCursor() {
     const cursorOuter = document.querySelector(".cursor-outer");
@@ -684,56 +684,55 @@ function initCustomCursor() {
     
     if (!cursorOuter || !cursorInner) return;
     
-    // Check if touch device / coarse pointer
-    const isTouch = window.matchMedia && window.matchMedia("(pointer: coarse), (hover: none)").matches;
+    // Check if touch device / coarse pointer / mobile screen
+    const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (window.matchMedia && window.matchMedia("(pointer: coarse), (hover: none)").matches);
     if (isTouch || window.innerWidth < 992) {
         cursorOuter.style.display = "none";
         cursorInner.style.display = "none";
         return;
     }
 
-    if (typeof gsap === "undefined") {
-        console.warn("GSAP is not defined for custom cursor.");
-        return;
-    }
-
     // Ensure pointer-events are disabled completely
     cursorOuter.style.pointerEvents = "none";
     cursorInner.style.pointerEvents = "none";
+    cursorOuter.style.opacity = "0";
+    cursorInner.style.opacity = "0";
 
-    // Set initial off-screen coordinates centered exactly at origin
-    gsap.set([cursorOuter, cursorInner], {
-        xPercent: -50,
-        yPercent: -50,
-        x: -100,
-        y: -100,
-        opacity: 0
-    });
-
-    // 120fps hardware-accelerated quickTo setters
-    const xInner = gsap.quickTo(cursorInner, "x", { duration: 0.02, ease: "none" });
-    const yInner = gsap.quickTo(cursorInner, "y", { duration: 0.02, ease: "none" });
-    const xOuter = gsap.quickTo(cursorOuter, "x", { duration: 0.16, ease: "power2.out" });
-    const yOuter = gsap.quickTo(cursorOuter, "y", { duration: 0.16, ease: "power2.out" });
-
+    let mouseX = -100;
+    let mouseY = -100;
+    let ringX = -100;
+    let ringY = -100;
     let isVisible = false;
 
-    // Window Mousemove tracking
+    // Smooth Lerp loop for Outer Ring
+    function loop() {
+        if (isVisible) {
+            ringX += (mouseX - ringX) * 0.22;
+            ringY += (mouseY - ringY) * 0.22;
+            cursorOuter.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) translate(-50%, -50%)`;
+        }
+        requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
+
+    // Mouse Movement Tracking (Zero-lag immediate sync for inner dot)
     window.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
         if (!isVisible) {
             isVisible = true;
-            cursorOuter.classList.remove("cursor-hidden");
-            cursorInner.classList.remove("cursor-hidden");
-            gsap.to([cursorOuter, cursorInner], { opacity: 1, duration: 0.2, overwrite: "auto" });
+            cursorOuter.style.opacity = "1";
+            cursorInner.style.opacity = "1";
+            ringX = mouseX;
+            ringY = mouseY;
         }
 
-        xInner(e.clientX);
-        yInner(e.clientY);
-        xOuter(e.clientX);
-        yOuter(e.clientY);
-    });
+        // Direct hardware-accelerated translation for inner dot
+        cursorInner.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+    }, { passive: true });
 
-    // Click / Active tactile states
+    // Tactile Click Feedback
     window.addEventListener("mousedown", () => {
         cursorOuter.classList.add("cursor-active");
         cursorInner.classList.add("cursor-active");
@@ -744,19 +743,23 @@ function initCustomCursor() {
         cursorInner.classList.remove("cursor-active");
     });
 
-    // Window mouseleave / mouseenter opacity transitions
+    // Window boundary guard (Instantly hide when mouse exits window/browser)
     document.addEventListener("mouseleave", () => {
         isVisible = false;
-        cursorOuter.classList.add("cursor-hidden");
-        cursorInner.classList.add("cursor-hidden");
-        gsap.to([cursorOuter, cursorInner], { opacity: 0, duration: 0.2, overwrite: "auto" });
+        cursorOuter.style.opacity = "0";
+        cursorInner.style.opacity = "0";
+    });
+
+    window.addEventListener("blur", () => {
+        isVisible = false;
+        cursorOuter.style.opacity = "0";
+        cursorInner.style.opacity = "0";
     });
 
     document.addEventListener("mouseenter", () => {
         isVisible = true;
-        cursorOuter.classList.remove("cursor-hidden");
-        cursorInner.classList.remove("cursor-hidden");
-        gsap.to([cursorOuter, cursorInner], { opacity: 1, duration: 0.2, overwrite: "auto" });
+        cursorOuter.style.opacity = "1";
+        cursorInner.style.opacity = "1";
     });
 
     // Delegated Hover Handling on interactive elements
@@ -793,7 +796,7 @@ function initCustomCursor() {
             return;
         }
 
-        const interactiveTarget = e.target.closest("a, button, .btn, .btn-brand, .nav-link, .dropdown-item, .physics-pill, .close-modal, .tech-item, .accordion-button, input, textarea, select, [role='button'], .portfolio-card, .card-service-item");
+        const interactiveTarget = e.target.closest("a, button, .btn, .btn-brand, .nav-link, .dropdown-item, .physics-pill, .close-modal, .tech-item, .accordion-button, input, textarea, select, [role='button'], .portfolio-card, .card-service-item, #sticky-expert-btn, .social-icon, .icon-arrow");
         if (interactiveTarget) {
             cursorOuter.classList.add("cursor-hover");
             cursorInner.classList.add("cursor-hover");
@@ -801,51 +804,26 @@ function initCustomCursor() {
     });
 
     document.body.addEventListener("mouseout", (e) => {
-        const interactiveTarget = e.target.closest("a, button, .btn, .btn-brand, .nav-link, .dropdown-item, .physics-pill, .close-modal, .tech-item, .accordion-button, input, textarea, select, [role='button'], .portfolio-card, .card-service-item, [data-cursor], .btn-magnetic, #physics-container, .toss-away");
+        const interactiveTarget = e.target.closest("a, button, .btn, .btn-brand, .nav-link, .dropdown-item, .physics-pill, .close-modal, .tech-item, .accordion-button, input, textarea, select, [role='button'], .portfolio-card, .card-service-item, [data-cursor], .btn-magnetic, #physics-container, .toss-away, #sticky-expert-btn, .social-icon, .icon-arrow");
         if (interactiveTarget) {
             cursorOuter.classList.remove("cursor-hover", "cursor-view", "cursor-drag", "cursor-magnetic");
             cursorInner.classList.remove("cursor-hover", "cursor-view", "cursor-drag", "cursor-magnetic");
         }
     });
 
-    // Export Global Controller API
+    // Global Controller API for backward compatibility
     window.cursorFollower = {
         outer: cursorOuter,
         inner: cursorInner,
-        xOuter: xOuter,
-        yOuter: yOuter,
-        xInner: xInner,
-        yInner: yInner,
-        setHover: function(className = "cursor-hover") {
-            cursorOuter.classList.add(className);
-            cursorInner.classList.add(className);
-        },
-        resetHover: function(className) {
-            if (className) {
-                cursorOuter.classList.remove(className);
-                cursorInner.classList.remove(className);
-            } else {
-                cursorOuter.classList.remove("cursor-hover", "cursor-magnetic", "cursor-view", "cursor-drag");
-                cursorInner.classList.remove("cursor-hover", "cursor-magnetic", "cursor-view", "cursor-drag");
-            }
-        },
         show: function() {
             isVisible = true;
-            cursorOuter.classList.remove("cursor-hidden");
-            cursorInner.classList.remove("cursor-hidden");
-            gsap.to([cursorOuter, cursorInner], { opacity: 1, duration: 0.2, overwrite: "auto" });
+            cursorOuter.style.opacity = "1";
+            cursorInner.style.opacity = "1";
         },
         hide: function() {
             isVisible = false;
-            cursorOuter.classList.add("cursor-hidden");
-            cursorInner.classList.add("cursor-hidden");
-            gsap.to([cursorOuter, cursorInner], { opacity: 0, duration: 0.2, overwrite: "auto" });
-        },
-        moveTo: function(x, y) {
-            xInner(x);
-            yInner(y);
-            xOuter(x);
-            yOuter(y);
+            cursorOuter.style.opacity = "0";
+            cursorInner.style.opacity = "0";
         }
     };
 }
