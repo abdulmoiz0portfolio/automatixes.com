@@ -786,7 +786,7 @@
                         <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Dedicated Pipeline Monitoring & Support</span></li>
                     </ul>
                     <div class="mt-auto pt-4">
-                        <a href="ai-automated-solutions" class="btn btn-accent-brand w-100 rounded-pill py-3 text-dark fw-extrabold shadow-sm hover-lift">Explore Solutions</a>
+                        <a href="ai-automated-solutions" class="btn btn-outline-brand w-100 rounded-pill py-3 fw-extrabold shadow-sm hover-lift">Explore Solutions</a>
                     </div>
                 </div>
             </div>
