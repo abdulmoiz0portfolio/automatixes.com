@@ -73,13 +73,13 @@
                     <div class="footer-widget">
                         <h5 class="widget-title">Contact Info</h5>
                         <ul class="list-unstyled footer-menu">
-                            <li class="d-flex align-items-center mb-2">
-                                <i class="fa-solid fa-envelope text-accent-brand me-2" style="font-size: 15px;"></i>
+                            <li class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-envelope text-accent-brand me-2.5" style="width: 18px; text-align: center; font-size: 14px;"></i>
                                 <a href="mailto:contact@automatixes.com" class="text-decoration-none">contact@automatixes.com</a>
                             </li>
                             <li class="d-flex align-items-center mb-2">
-                                <i class="fa-solid fa-phone text-accent-brand me-2" style="font-size: 16px;"></i>
-                                <a href="tel:+923366920141" class="text-decoration-none fw-bold" style="font-size: 16px; color: #ffffff !important;">+92 336 6920141</a>
+                                <i class="fa-solid fa-phone text-accent-brand me-2.5" style="width: 18px; text-align: center; font-size: 14px;"></i>
+                                <a href="tel:+923366920141" class="text-decoration-none">+92 336 6920141</a>
                             </li>
                         </ul>
                     </div>
