@@ -1507,17 +1507,18 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 15px 0;
-    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    padding: 20px 0;
+    mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
 }
 
 .tech-marquee-track {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
     width: max-content;
-    animation: techMarqueeScroll 35s linear infinite;
+    will-change: transform;
+    animation: techMarqueeScroll 40s linear infinite;
 }
 
 .tech-marquee-wrapper:hover .tech-marquee-track {
@@ -1529,19 +1530,21 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 130px;
-    padding: 18px 20px;
+    min-width: 140px;
+    flex-shrink: 0;
+    padding: 16px 22px;
     background: var(--bg-surface-1);
     border: 1px solid var(--border-subtle);
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    user-select: none;
 }
 
 .tech-item:hover {
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 10px 30px rgba(204, 255, 0, 0.15);
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 10px 30px rgba(200, 224, 25, 0.15);
     border-color: var(--accent-neon);
     z-index: 10;
 }
@@ -1550,7 +1553,8 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 42px;
+    height: 44px;
+    width: 44px;
     margin-bottom: 8px;
 }
 
@@ -1563,12 +1567,13 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
 }
 
 @keyframes techMarqueeScroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
 }
 
 @media (max-width: 768px) {
-    .tech-marquee-track { gap: 22px; }
+    .tech-marquee-track { gap: 18px; }
+    .tech-item { min-width: 120px; padding: 14px 18px; }
 }
 
 /* --- Reviews & Ratings --- */

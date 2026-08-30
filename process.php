@@ -183,7 +183,7 @@ include 'header.php';
                 <div class="n8n-icon"><i class="fa-solid fa-phone"></i></div>
                 <div class="n8n-content">
                     <h4>Discovery Call</h4>
-                    <p>Understand your goals, current bottlenecks, and automation potential.</p>
+                    <p>Understand your operational bottlenecks, voice calling requirements, and automation potential.</p>
                 </div>
                 <div class="n8n-handle bottom"></div>
             </div>
@@ -193,8 +193,8 @@ include 'header.php';
                 <div class="n8n-handle top"></div>
                 <div class="n8n-icon"><i class="fa-solid fa-lightbulb"></i></div>
                 <div class="n8n-content">
-                    <h4>Strategy & Proposal</h4>
-                    <p>We design a custom architecture and outline clear ROI for the project.</p>
+                    <h4>Strategy & Architecture</h4>
+                    <p>We design a custom AI agent blueprint and outline clear time and cost savings for your business.</p>
                 </div>
                 <div class="n8n-handle bottom"></div>
             </div>
@@ -202,10 +202,10 @@ include 'header.php';
             <!-- Step 3 -->
             <div class="n8n-node">
                 <div class="n8n-handle top"></div>
-                <div class="n8n-icon"><i class="fa-solid fa-code"></i></div>
+                <div class="n8n-icon"><i class="fa-solid fa-robot"></i></div>
                 <div class="n8n-content">
-                    <h4>Design & Development</h4>
-                    <p>Building your custom AI agents and n8n workflows from the ground up.</p>
+                    <h4>AI Agent & Pipeline Build</h4>
+                    <p>Building your autonomous AI voice agents, LLM prompts, and n8n workflows from the ground up.</p>
                 </div>
                 <div class="n8n-handle bottom"></div>
             </div>
@@ -213,10 +213,10 @@ include 'header.php';
             <!-- Step 4 -->
             <div class="n8n-node">
                 <div class="n8n-handle top"></div>
-                <div class="n8n-icon"><i class="fa-solid fa-bug"></i></div>
+                <div class="n8n-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
                 <div class="n8n-content">
-                    <h4>Testing & Refinement</h4>
-                    <p>Rigorous testing to ensure all integrations are robust and error-free.</p>
+                    <h4>Latency & Integration Testing</h4>
+                    <p>Rigorous testing of voice latency, CRM sync triggers, and webhook error handling.</p>
                 </div>
                 <div class="n8n-handle bottom"></div>
             </div>
@@ -227,7 +227,7 @@ include 'header.php';
                 <div class="n8n-icon"><i class="fa-solid fa-rocket"></i></div>
                 <div class="n8n-content">
                     <h4>Deployment & Handover</h4>
-                    <p>Going live. We hand over the keys and train your team to manage it.</p>
+                    <p>Going live. We connect production numbers, activate live bots, and train your team.</p>
                 </div>
                 <div class="n8n-handle bottom"></div>
             </div>
@@ -235,10 +235,10 @@ include 'header.php';
             <!-- Step 6 -->
             <div class="n8n-node">
                 <div class="n8n-handle top"></div>
-                <div class="n8n-icon"><i class="fa-solid fa-tools"></i></div>
+                <div class="n8n-icon"><i class="fa-solid fa-chart-line"></i></div>
                 <div class="n8n-content">
-                    <h4>Ongoing Support</h4>
-                    <p>Continuous monitoring, scaling capabilities, and technical support.</p>
+                    <h4>Continuous Monitoring & Scaling</h4>
+                    <p>24/7 uptime monitoring, prompt tuning, and ongoing scaling support as you grow.</p>
                 </div>
                 <div class="n8n-handle bottom"></div>
             </div>
