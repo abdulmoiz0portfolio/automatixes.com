@@ -357,6 +357,12 @@
     </script>
 
     
+    <!-- Floating WhatsApp Button (Bottom-Left) -->
+    <a href="https://wa.me/923366920141?text=Hi%20Automatixes%20team%2C%20I%20want%20to%20know%20more%20about%20your%20AI%20automation%20services." target="_blank" id="sticky-whatsapp-btn" class="floating-whatsapp-btn" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-ping"></span>
+    </a>
+
     <!-- =========================================================================
          CONNECT WITH AN EXPERT (FAST-CONNECT HUB & MODAL)
          ========================================================================= -->
@@ -453,8 +459,51 @@
         </div>
     </div>
 
-    <!-- Styles & Logic for Connect with an Expert Hub -->
+    <!-- Styles & Logic for Connect with an Expert Hub & WhatsApp Button -->
     <style>
+        .floating-whatsapp-btn {
+            position: fixed !important;
+            bottom: 25px !important;
+            left: 25px !important;
+            width: 58px !important;
+            height: 58px !important;
+            background: #25D366 !important;
+            color: #ffffff !important;
+            border-radius: 50% !important;
+            font-size: 32px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5), 0 0 15px rgba(37, 211, 102, 0.3) !important;
+            z-index: 999999 !important;
+            text-decoration: none !important;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
+        }
+
+        .floating-whatsapp-btn:hover {
+            transform: scale(1.12) !important;
+            background: #20ba59 !important;
+            color: #ffffff !important;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.7) !important;
+        }
+
+        .whatsapp-ping {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid #25D366;
+            animation: waPing 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+            pointer-events: none;
+        }
+
+        @keyframes waPing {
+            75%, 100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
         .sticky-expert-btn {
             position: fixed !important;
             top: 50% !important;
