@@ -92,6 +92,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <link rel="canonical" href="<?php echo $canonical_url; ?>">
     
     <!-- Meta SEO Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="description" content="<?php echo $active_meta['desc']; ?>">
     <meta name="keywords" content="<?php echo $active_meta['keywords']; ?>">
     <meta name="author" content="Automatixes">
