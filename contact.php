@@ -17,8 +17,8 @@
     <div class="container">
         <div class="row g-5 justify-content-center">
             <div class="col-lg-8">
-                <div class="contact-form-wrapper p-4 p-md-5 rounded-4 shadow-sm bg-light">
-                    <h3 class="mb-4 fw-extrabold text-dark text-center">Project Proposal Form</h3>
+                <div class="contact-form-wrapper p-4 p-md-5 rounded-4 shadow-sm bg-surface-1 border border-secondary border-opacity-25">
+                    <h3 class="mb-4 fw-extrabold text-white text-center">Project Proposal Form</h3>
 
                     <form id="contact-firebase-form-page" novalidate>
                         <div class="row g-4">
