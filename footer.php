@@ -463,28 +463,31 @@
     <style>
         .floating-whatsapp-btn {
             position: fixed !important;
-            bottom: 25px !important;
-            left: 25px !important;
-            width: 58px !important;
-            height: 58px !important;
+            bottom: 28px !important;
+            left: 28px !important;
+            width: 60px !important;
+            height: 60px !important;
             background: #25D366 !important;
             color: #ffffff !important;
             border-radius: 50% !important;
-            font-size: 32px !important;
+            font-size: 34px !important;
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
-            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5), 0 0 15px rgba(37, 211, 102, 0.3) !important;
-            z-index: 999999 !important;
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6), 0 0 20px rgba(37, 211, 102, 0.4) !important;
+            z-index: 2147483640 !important;
             text-decoration: none !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            pointer-events: auto !important;
             transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease !important;
         }
 
         .floating-whatsapp-btn:hover {
-            transform: scale(1.12) !important;
+            transform: scale(1.15) !important;
             background: #20ba59 !important;
             color: #ffffff !important;
-            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.7) !important;
+            box-shadow: 0 8px 35px rgba(37, 211, 102, 0.8) !important;
         }
 
         .whatsapp-ping {
