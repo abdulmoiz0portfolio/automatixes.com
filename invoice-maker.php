@@ -214,12 +214,58 @@ include 'header.php';
 
             <!-- Invoice Summary & Totals -->
             <div class="row align-items-start mb-3 totals-section">
-                <!-- Payment Notes / Terms (Left) -->
-                <div class="col-md-6 mb-3 mb-md-0">
-                    <div class="p-3 bg-light rounded-3 border h-100">
-                        <h6 class="fw-bold text-dark mb-2 text-uppercase tracking-wider small">Notes & Payment Terms</h6>
-                        <textarea v-model="notes" id="notes-input" class="form-control form-control-sm border-0 bg-transparent text-secondary" rows="3" placeholder="Enter payment instructions, bank details, or terms..."></textarea>
+                <!-- Left: Payment Notes & Bank Details -->
+                <div class="col-md-6 mb-3 mb-md-0 space-y-3">
+                    
+                    <!-- Notes & Payment Terms (Editable Title & Removable) -->
+                    <div v-if="options.showNotes" class="p-3 bg-light rounded-3 border mb-3">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <input type="text" v-model="sections.notesTitle" class="form-control form-control-sm border-0 p-0 fw-bold text-dark text-uppercase tracking-wider small" style="width: 80%; background: transparent;" placeholder="NOTES & PAYMENT TERMS">
+                            <button type="button" @click="options.showNotes = false" class="btn btn-outline-danger btn-xs py-0 px-1.5 no-print" style="font-size: 11px;">
+                                <i class="fa-solid fa-xmark"></i> Hide
+                            </button>
+                        </div>
+                        <textarea v-model="notes" id="notes-input" class="form-control form-control-sm border-0 bg-transparent text-secondary p-0" rows="3" placeholder="Enter payment instructions, terms, or greetings..."></textarea>
                     </div>
+                    <div v-else class="no-print mb-2">
+                        <button type="button" @click="options.showNotes = true" class="btn btn-outline-primary btn-xs rounded-pill px-2.5 py-1 fw-semibold">
+                            <i class="fa-solid fa-plus"></i> Add Notes & Terms Section
+                        </button>
+                    </div>
+
+                    <!-- Bank & Wire Transfer (Editable Title & Removable) -->
+                    <div v-if="options.showBank" class="p-3 bg-light rounded-3 border">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <input type="text" v-model="sections.bankTitle" class="form-control form-control-sm border-0 p-0 fw-bold text-dark text-uppercase tracking-wider small" style="width: 80%; background: transparent;" placeholder="BANK & WIRE TRANSFER:">
+                            <button type="button" @click="options.showBank = false" class="btn btn-outline-danger btn-xs py-0 px-1.5 no-print" style="font-size: 11px;">
+                                <i class="fa-solid fa-xmark"></i> Hide
+                            </button>
+                        </div>
+                        <div class="row g-2 small">
+                            <div class="col-6">
+                                <label class="text-muted d-block" style="font-size: 10px;">Bank Name:</label>
+                                <input type="text" v-model="bank.name" class="form-control form-control-sm" placeholder="JPMorgan Chase">
+                            </div>
+                            <div class="col-6">
+                                <label class="text-muted d-block" style="font-size: 10px;">Account / IBAN:</label>
+                                <input type="text" v-model="bank.iban" class="form-control form-control-sm" placeholder="GB29 CHAS XXX">
+                            </div>
+                            <div class="col-6">
+                                <label class="text-muted d-block" style="font-size: 10px;">Swift / BIC:</label>
+                                <input type="text" v-model="bank.swift" class="form-control form-control-sm" placeholder="CHASUS33">
+                            </div>
+                            <div class="col-6">
+                                <label class="text-muted d-block" style="font-size: 10px;">Account Title:</label>
+                                <input type="text" v-model="bank.holder" class="form-control form-control-sm" placeholder="Automatixes LLC">
+                            </div>
+                        </div>
+                    </div>
+                    <div v-else class="no-print mb-2">
+                        <button type="button" @click="options.showBank = true" class="btn btn-outline-primary btn-xs rounded-pill px-2.5 py-1 fw-semibold">
+                            <i class="fa-solid fa-plus"></i> Add Bank & Wire Transfer Section
+                        </button>
+                    </div>
+
                 </div>
 
                 <!-- Totals Calculation Card (Right) -->
@@ -234,7 +280,7 @@ include 'header.php';
                         <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom">
                             <div class="d-flex align-items-center gap-1">
                                 <span class="fw-semibold text-secondary">Tax Rate (%):</span>
-                                <input type="number" min="0" max="100" step="0.1" v-model.number="taxRate" id="tax-rate-input" class="form-control form-control-sm text-end" style="width: 65px;">
+                                <input type="number" min="0" step="any" v-model.number="taxRate" id="tax-rate-input" class="form-control form-control-sm text-end" style="width: 70px;">
                             </div>
                             <span class="fw-bold text-dark tax-amount-display" id="tax-amount-val">+ {{ invoiceMeta.currency }} {{ formatMoney(taxAmount) }}</span>
                         </div>
@@ -243,7 +289,7 @@ include 'header.php';
                         <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom">
                             <div class="d-flex align-items-center gap-1">
                                 <span class="fw-semibold text-secondary">Discount (%):</span>
-                                <input type="number" min="0" max="100" step="0.1" v-model.number="discountRate" id="discount-rate-input" class="form-control form-control-sm text-end" style="width: 65px;">
+                                <input type="number" min="0" step="any" v-model.number="discountRate" id="discount-rate-input" class="form-control form-control-sm text-end" style="width: 70px;">
                             </div>
                             <span class="fw-bold text-success discount-amount-display" id="discount-amount-val">- {{ invoiceMeta.currency }} {{ formatMoney(discountAmount) }}</span>
                         </div>
@@ -471,7 +517,26 @@ include 'header.php';
                 company.value.showLogo = true;
             };
 
-            // 2. Client Details (Editable)
+            // 2. Sections & Options
+            const sections = ref({
+                clientTitle: 'BILLED TO:',
+                notesTitle: 'NOTES & PAYMENT TERMS',
+                bankTitle: 'BANK & WIRE TRANSFER:'
+            });
+
+            const options = ref({
+                showNotes: true,
+                showBank: true
+            });
+
+            const bank = ref({
+                name: 'JPMorgan Chase Bank',
+                iban: 'GB29 CHAS 0928 3829 1029 48',
+                swift: 'CHASUS33XXX',
+                holder: 'Automatixes LLC'
+            });
+
+            // 3. Client Details (Editable)
             const client = ref({
                 name: 'Acme Corporation',
                 company: 'Acme Corp Inc.',
@@ -480,7 +545,7 @@ include 'header.php';
                 phone: '+1 (555) 019-2834'
             });
 
-            // 3. Invoice Meta
+            // 4. Invoice Meta
             const todayStr = new Date().toISOString().split('T')[0];
             const defaultDue = new Date();
             defaultDue.setDate(defaultDue.getDate() + 14);
@@ -493,7 +558,7 @@ include 'header.php';
                 currency: '$'
             });
 
-            // 4. Default Core Services
+            // 5. Default Core Services
             const defaultServices = [
                 'Autonomous AI Agents',
                 'AI Automations (n8n/Make)',
@@ -503,7 +568,7 @@ include 'header.php';
                 'Support & Maintenance'
             ];
 
-            // 5. Reactive Line Items Table Data
+            // 6. Reactive Line Items Table Data
             const lineItems = ref([
                 {
                     serviceSelect: 'Autonomous AI Agents',
@@ -521,11 +586,11 @@ include 'header.php';
                 }
             ]);
 
-            // 6. Tax and Discount Rates (%)
+            // 7. Tax and Discount Rates (%)
             const taxRate = ref(5);
             const discountRate = ref(0);
 
-            // 7. Payment Notes / Terms
+            // 8. Payment Notes / Terms
             const notes = ref('Thank you for working with Automatixes! Payment is due within 14 days.');
 
             // Helper to update service description
@@ -558,29 +623,30 @@ include 'header.php';
             // Computed Properties for Live Math Calculations
             const subtotal = computed(() => {
                 return lineItems.value.reduce((sum, item) => {
-                    const qty = Number(item.quantity) || 0;
-                    const prc = Number(item.price) || 0;
+                    const qty = parseFloat(item.quantity) || 0;
+                    const prc = parseFloat(item.price) || 0;
                     return sum + (qty * prc);
                 }, 0);
             });
 
             const taxAmount = computed(() => {
-                const rate = Number(taxRate.value) || 0;
-                return subtotal.value * (rate / 100);
+                const rate = parseFloat(taxRate.value) || 0;
+                return (subtotal.value * rate) / 100;
             });
 
             const discountAmount = computed(() => {
-                const rate = Number(discountRate.value) || 0;
-                return subtotal.value * (rate / 100);
+                const rate = parseFloat(discountRate.value) || 0;
+                return (subtotal.value * rate) / 100;
             });
 
             const grandTotal = computed(() => {
-                return subtotal.value + taxAmount.value - discountAmount.value;
+                const total = subtotal.value + taxAmount.value - discountAmount.value;
+                return Math.max(0, total);
             });
 
             // Currency formatting helper
             const formatMoney = (val) => {
-                const num = Number(val) || 0;
+                const num = parseFloat(val) || 0;
                 return num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
             };
 
@@ -607,7 +673,7 @@ include 'header.php';
                         price: 1000.00
                     }
                 ];
-                taxRate.value = 0;
+                taxRate.value = 5;
                 discountRate.value = 0;
             };
 
@@ -616,6 +682,9 @@ include 'header.php';
                 onLogoUpload,
                 removeLogo,
                 resetLogo,
+                sections,
+                options,
+                bank,
                 client,
                 invoiceMeta,
                 defaultServices,
