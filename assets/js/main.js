@@ -244,9 +244,21 @@ function initMatterJsPhysics() {
     Composite.add(world, [ground, leftWall, rightWall, topWall]);
 
     const defaultPillTexts = [
-        "Slow Websites", "High Bounce Rates", "Manual Workflows",
-        "Lead Leakage", "Poor Conversion Rates", "Inconsistent Branding",
-        "Scaling Difficulties", "Outdated Technology", "Hidden Operational Costs", "Technical Debt"
+        "⚡ AI Automations",
+        "🔌 MCP Servers & Tools",
+        "🔄 Webhook Triggers",
+        "🤖 Autonomous AI Agents",
+        "⚙️ Complex Workflows",
+        "🎙️ AI Voice Agents",
+        "📊 CRM & Database Sync",
+        "🧠 LLM Orchestration",
+        "💼 n8n & Make Pipelines",
+        "🚀 Real-Time API Integrations",
+        "🚫 Manual Busywork",
+        "📉 Lead Leakage",
+        "⏳ Wasted Admin Hours",
+        "❌ Disconnected Apps",
+        "🔒 24/7 Smart Pipelines"
     ];
 
     let pillTexts = defaultPillTexts;
@@ -260,7 +272,7 @@ function initMatterJsPhysics() {
     }
 
     const isMobile = window.innerWidth < 768;
-    const displayPills = isMobile ? pillTexts.slice(0, 6) : pillTexts;
+    const displayPills = isMobile ? pillTexts.slice(0, 8) : pillTexts;
     const pills = [];
 
     displayPills.forEach((text, i) => {
