@@ -42,7 +42,7 @@
                         <h5 class="widget-title">Our Services</h5>
                         <ul class="list-unstyled footer-menu">
                             <li><a href="ai-automated-solutions">AI Automations</a></li>
-                            <li><a href="website-development">Web & App Dev</a></li>
+                            <li><a href="voice-agent" class="d-inline-flex align-items-center gap-1.5"><span>AI Voice Agents</span> <span class="badge bg-danger" style="font-size: 9px; font-weight: 700; border-radius: 4px; background: #FF3B30 !important;">HOT</span></a></li>
                             <li><a href="product-shoot">Product Shoot</a></li>
                         </ul>
                     </div>

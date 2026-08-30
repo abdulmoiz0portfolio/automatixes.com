@@ -392,14 +392,24 @@
         <div class="row g-4 justify-content-center">
             <!-- Row 2: Secondary Services -->
             <div class="col-lg-5 col-md-6">
-                <div class="card-service-item wow fadeInUp" data-wow-delay=".6s">
-                    <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm">
-                        <img src="assets/img/services/web_development.jpg" alt="Web & App Development" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
+                <div class="card-service-item wow fadeInUp" data-wow-delay=".6s" style="border: 1px solid rgba(255, 59, 48, 0.3); background: rgba(18, 24, 38, 0.7); position: relative; overflow: hidden;">
+                    <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm position-relative">
+                        <img src="assets/img/services/ai_agents.jpg" alt="Autonomous AI Voice Agents" class="img-fluid w-100" style="aspect-ratio: 4/3; object-fit: cover;">
+                        <span class="badge position-absolute top-0 end-0 m-3 text-white rounded-pill px-3 py-1.5 shadow" style="font-size: 11px; font-weight: 800; background: linear-gradient(135deg, #FF3B30, #FF9500) !important; letter-spacing: 0.5px;">
+                            <i class="fa-solid fa-fire me-1"></i> HIGH DEMAND
+                        </span>
                     </div>
                     <div class="content">
-                        <h3><a href="website-development" class="text-white text-decoration-none">Web & App Development</a></h3>
-                        <p class="text-white-50">High performance, responsive, secure web platforms and fluid mobile apps built using modern technologies.</p>
-                        <a href="website-development" class="icon-arrow mt-3 d-inline-flex align-items-center justify-content-center" aria-label="Web & App Development"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></a>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <i class="fa-solid fa-microphone-lines" style="font-size: 1.3rem; color: #FF3B30;"></i>
+                            <span class="text-white-50 font-monospace small">Conversational Voice Engine</span>
+                        </div>
+                        <h3><a href="voice-agent" class="text-white text-decoration-none">Autonomous AI Voice Agents</a></h3>
+                        <p class="text-white-50">Human-like conversational voice bots that handle customer inquiries, inbound call routing, qualify leads, and book appointments 24/7 with zero human lag.</p>
+                        <a href="voice-agent" class="btn btn-sm btn-outline-danger rounded-pill px-3 py-2 fw-bold text-nowrap mt-3 d-inline-flex align-items-center gap-2" style="border-color: rgba(255, 59, 48, 0.5); color: #FF6B6B;">
+                            <span>Try Live Voice Demo</span>
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                        </a>
                     </div>
                 </div>
             </div>
