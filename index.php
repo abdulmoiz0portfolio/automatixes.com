@@ -687,84 +687,86 @@
             <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">PACKAGES</span>
             <h2 class="display-5 fw-bold text-white mb-3">Our Core Packages</h2>
             <div class="title-underline mx-auto mb-4"></div>
-            <p class="text-white-50 mx-auto max-w-700">Choose the right automation or development package tailored to scale your business and eliminate bottlenecks.</p>
+            <p class="text-white-50 mx-auto max-w-700">Choose the right AI voice agent, autonomous workflow pipeline, or commercial photography package tailored to scale your business.</p>
         </div>
 
         <div class="row g-4 justify-content-center align-items-stretch">
             
-            
-            <!-- Package 1: Website -->
+            <!-- Package 1: AI Voice Agent Deployment -->
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                <div class="card pricing-card h-100 bg-surface border-0 rounded-4 p-4 p-lg-5 position-relative text-center hover-lift d-flex flex-column" style="box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05) !important;">
+                <div class="card pricing-card h-100 bg-surface border-0 rounded-4 p-4 p-lg-5 position-relative text-center hover-lift d-flex flex-column" style="box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 1px solid rgba(255,59,48,0.3) !important;">
                     <div class="mb-4">
-                        <div class="bg-brand-translucent text-accent-brand rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 60px; height: 60px; font-size: 24px;">
-                            <i class="fa-solid fa-laptop-code"></i>
+                        <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 60px; height: 60px; font-size: 24px; background: rgba(255,59,48,0.15); color: #FF3B30;">
+                            <i class="fa-solid fa-microphone-lines"></i>
                         </div>
-                        <h3 class="h4 fw-bold text-white mb-2">Website Build</h3>
-                        <p class="text-muted small">High-converting digital presence</p>
+                        <span class="badge bg-danger rounded-pill px-2.5 py-1 mb-2" style="font-size: 10px; font-weight: 800; background: linear-gradient(135deg, #FF3B30, #FF9500) !important;">HIGH DEMAND</span>
+                        <h3 class="h4 fw-bold text-white mb-2">AI Voice Agent</h3>
+                        <p class="text-muted small">Autonomous conversational calling</p>
                     </div>
                     <hr class="border-secondary opacity-25 mb-4">
                     <ul class="list-unstyled text-white-50 mb-5 text-start" style="font-size: 0.95rem;">
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Custom UI/UX Design</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Responsive & Mobile Ready</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>SEO Optimized Structure</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>High Speed & Performance</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Content Management (CMS)</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-danger mt-1 me-3 flex-shrink-0"></i> <span>Inbound & Outbound Voice Calling</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-danger mt-1 me-3 flex-shrink-0"></i> <span>Sub-500ms Human Cadence & Latency</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-danger mt-1 me-3 flex-shrink-0"></i> <span>Automated Appointment Booking & Calendar</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-danger mt-1 me-3 flex-shrink-0"></i> <span>CRM Data Sync & Live Call Transcripts</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-danger mt-1 me-3 flex-shrink-0"></i> <span>24/7 Autonomous Inbound Lead Triage</span></li>
                     </ul>
                     <div class="mt-auto pt-4">
-                        <a href="contact" class="btn btn-outline-light w-100 rounded-pill py-3 fw-bold">Build Your Site</a>
+                        <a href="voice-agent" class="btn btn-outline-danger w-100 rounded-pill py-3 fw-bold" style="border-color: rgba(255,59,48,0.5); color: #FF6B6B;">Try Voice Demo</a>
                     </div>
                 </div>
             </div>
 
             <!-- Package 2: AI Automation (POPULAR) -->
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                <div class="card pricing-card scale-lg-up h-100 bg-surface rounded-4 p-4 p-lg-5 position-relative text-center d-flex flex-column" style="box-shadow: 0 15px 40px rgba(200, 224, 25, 0.1); border: 2px solid var(--accent-neon) !important;">
+                <div class="card pricing-card scale-lg-up h-100 bg-surface rounded-4 p-4 p-lg-5 position-relative text-center d-flex flex-column" style="box-shadow: 0 15px 40px rgba(200, 224, 25, 0.15); border: 2px solid var(--accent-neon) !important;">
                     
                     <div class="mb-4 mt-2">
-                        <div class="badge bg-accent-brand text-dark rounded-pill py-1 px-3 fw-bold mb-4 shadow-sm" style="font-size: 0.75rem; letter-spacing: 1px;">POPULAR</div>
+                        <div class="badge bg-accent-brand text-dark rounded-pill py-1 px-3 fw-bold mb-4 shadow-sm" style="font-size: 0.75rem; letter-spacing: 1px;">MOST POPULAR</div>
                         <div class="bg-brand-translucent text-accent-brand rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 60px; height: 60px; font-size: 24px;">
                             <i class="fa-solid fa-robot"></i>
                         </div>
-                        <h3 class="h4 fw-bold text-white mb-2">AI Automation</h3>
-                        <p class="text-muted small">Intelligent agents & workflows</p>
+                        <h3 class="h4 fw-bold text-white mb-2">AI Automations</h3>
+                        <p class="text-muted small">Intelligent agents & custom pipelines</p>
                     </div>
                     <hr class="border-secondary opacity-25 mb-4">
                     <ul class="list-unstyled text-white-50 mb-5 text-start" style="font-size: 0.95rem;">
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Custom AI Voice & Chat Agents</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Chatbots (WhatsApp, Instagram, Telegram)</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>N8N & Make.com Workflows</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>CRM Data Sync & Triggers</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Ongoing Strategy & Support</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Smart Chatbots (WhatsApp, Web, Instagram)</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>End-to-End n8n & Make.com Workflows</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Multi-Tool CRM, Email & API Sync</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Dynamic Lead Scoring & Data Extraction</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Dedicated Pipeline Monitoring & Support</span></li>
                     </ul>
                     <div class="mt-auto pt-4">
-                        <a href="contact" class="btn btn-accent-brand w-100 rounded-pill py-3 text-dark fw-extrabold shadow-sm hover-lift">Get Started</a>
+                        <a href="ai-automated-solutions" class="btn btn-accent-brand w-100 rounded-pill py-3 text-dark fw-extrabold shadow-sm hover-lift">Explore Solutions</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Package 3: Commercial Products -->
+            <!-- Package 3: Commercial Products Shoot -->
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
                 <div class="card pricing-card h-100 bg-surface border-0 rounded-4 p-4 p-lg-5 position-relative text-center hover-lift d-flex flex-column" style="box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05) !important;">
                     <div class="mb-4">
                         <div class="bg-brand-translucent text-accent-brand rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 60px; height: 60px; font-size: 24px;">
-                            <i class="fa-solid fa-video"></i>
+                            <i class="fa-solid fa-camera-retro"></i>
                         </div>
-                        <h3 class="h4 fw-bold text-white mb-2">Digitized Commercial Products</h3>
-                        <p class="text-muted small">Digital enhancement & cinematic edits</p>
+                        <h3 class="h4 fw-bold text-white mb-2">Product Shoot</h3>
+                        <p class="text-muted small">Studio commercial photography</p>
                     </div>
                     <hr class="border-secondary opacity-25 mb-4">
                     <ul class="list-unstyled text-white-50 mb-5 text-start" style="font-size: 0.95rem;">
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>AI Product Photo Enhancement</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Background Removal & Replacement</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Custom Studio Lighting & Staging</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>High-Resolution Commercial Photography</span></li>
                         <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Professional Color Grading & Retouching</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Social Media Ready Formats</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Background Optimization & Enhancement</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Social Media & E-Commerce Formats</span></li>
                     </ul>
                     <div class="mt-auto pt-4">
-                        <a href="contact" class="btn btn-outline-light w-100 rounded-pill py-3 fw-bold">Get Started</a>
+                        <a href="product-shoot" class="btn btn-outline-light w-100 rounded-pill py-3 fw-bold">View Product Shoot</a>
                     </div>
                 </div>
-            </div></div>
+            </div>
+        </div>
     </div>
 </section>
 <!-- Packages Section End -->
