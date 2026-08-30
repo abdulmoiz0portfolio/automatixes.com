@@ -269,8 +269,8 @@
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-5">
-                <div class="about-image-wrapper wow fadeInLeft" data-wow-delay=".3s">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Team planning at Automatixes" loading="lazy" class="img-fluid rounded-4 shadow-sm border border-white border-4">
+                <div class="about-image-wrapper wow fadeInLeft position-relative" data-wow-delay=".3s">
+                    <img src="assets/img/about-team.jpg" alt="AI Automation Team at Automatixes" loading="lazy" class="img-fluid rounded-4 shadow-lg border border-secondary" style="object-fit: cover; width: 100%; aspect-ratio: 4/3; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
                 </div>
             </div>
             <div class="col-lg-7">
