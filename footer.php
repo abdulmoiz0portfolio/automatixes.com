@@ -391,7 +391,24 @@
 
                 <!-- Fast Contact Options Grid -->
                 <div class="expert-channels-grid mb-3">
-                    <!-- Option 1: WhatsApp -->
+                    <!-- Option 1: AI Voice Agent (Featured / High Demand) -->
+                    <a href="voice-agent" class="expert-channel-card voice-channel" style="border: 1px solid rgba(255, 59, 48, 0.4); background: rgba(255, 59, 48, 0.08);">
+                        <div class="channel-icon-box" style="background: rgba(255, 59, 48, 0.2); color: #FF3B30;">
+                            <i class="fa-solid fa-microphone-lines fs-5"></i>
+                        </div>
+                        <div class="channel-info">
+                            <div class="d-flex align-items-center gap-2">
+                                <h6 class="fw-bold text-white mb-0" style="font-size: 13.5px;">Live AI Voice Agent Call</h6>
+                                <span class="badge bg-danger rounded-pill px-2 py-0.5" style="font-size: 9px; font-weight: 800; background: linear-gradient(135deg, #FF3B30, #FF9500) !important;">HOT</span>
+                            </div>
+                            <p class="text-white-50 mb-0" style="font-size: 11px;">Instant real-time browser voice call (&lt;500ms)</p>
+                        </div>
+                        <div class="channel-action">
+                            <span class="action-btn" style="background: #FF3B30; color: #fff;">Talk Now <i class="fa-solid fa-phone ms-1"></i></span>
+                        </div>
+                    </a>
+
+                    <!-- Option 2: WhatsApp -->
                     <a href="https://wa.me/923366920141?text=Hi%20Automatixes%20team%2C%20I%20want%20to%20connect%20with%20an%20automation%20expert%20for%20my%20business." target="_blank" class="expert-channel-card whatsapp-channel">
                         <div class="channel-icon-box">
                             <i class="fa-brands fa-whatsapp"></i>
@@ -402,20 +419,6 @@
                         </div>
                         <div class="channel-action">
                             <span class="action-btn">Chat <i class="fa-solid fa-arrow-right ms-1"></i></span>
-                        </div>
-                    </a>
-
-                    <!-- Option 2: AI Voice Agent -->
-                    <a href="voice-agent" class="expert-channel-card voice-channel">
-                        <div class="channel-icon-box">
-                            <i class="fa-solid fa-microphone-lines"></i>
-                        </div>
-                        <div class="channel-info">
-                            <h6 class="fw-bold text-white mb-0" style="font-size: 13.5px;">Talk to AI Voice Agent</h6>
-                            <p class="text-white-50 mb-0" style="font-size: 11px;">Live voice call directly in browser</p>
-                        </div>
-                        <div class="channel-action">
-                            <span class="action-btn">Call <i class="fa-solid fa-arrow-right ms-1"></i></span>
                         </div>
                     </a>
 
