@@ -138,7 +138,7 @@ include 'header.php';
                 <div class="col-md-6">
                     <div class="p-3 bg-light rounded-3 border h-100">
                         <h6 class="fw-bold text-dark mb-2 text-uppercase tracking-wider small">
-                            <i class="fa-solid fa-user-tag text-accent-brand me-1 no-print"></i> Billed To (Client):
+                            <i class="fa-solid fa-user-tag text-accent-brand me-1 no-print"></i> Billed To:
                         </h6>
                         <div class="mb-2">
                             <input type="text" v-model="client.name" id="client-name-input" class="form-control form-control-sm fw-bold text-dark" placeholder="Client Contact Name">
