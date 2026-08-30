@@ -207,7 +207,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Custom Main CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=4.1.0">
+    <link rel="stylesheet" href="assets/css/main.css?v=4.2.0">
 </head>
 <body>
 

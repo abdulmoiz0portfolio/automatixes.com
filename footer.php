@@ -687,7 +687,7 @@
 
 
     <!-- Main Custom JS -->
-    <script src="assets/js/main.js?v=4.1.0"></script>
+    <script src="assets/js/main.js?v=4.2.0"></script>
 </body>
 </html>
 

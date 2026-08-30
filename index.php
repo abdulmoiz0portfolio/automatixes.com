@@ -702,7 +702,7 @@
 
 
 <!-- Packages Section Start -->
-<section class="packages-area bg-dark pt-5 pb-5 position-relative overflow-hidden">
+<section id="packages-section" class="packages-area section-padding bg-dark position-relative overflow-hidden">
     <div class="container position-relative z-1">
         <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".1s">
             <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">PACKAGES</span>
