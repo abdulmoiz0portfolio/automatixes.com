@@ -58,7 +58,10 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="invoice-maker">Free Invoice Maker</a>
+                                <a href="https://invoicemaker.automatixes.com" target="_blank" class="d-inline-flex align-items-center gap-1.5">
+                                    <span>Free Invoice Maker</span>
+                                    <span class="badge bg-primary" style="font-size: 10px; font-weight: 700; border-radius: 6px;">Free</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
