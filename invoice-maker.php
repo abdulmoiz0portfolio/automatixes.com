@@ -114,19 +114,87 @@ include 'header.php';
                             </div>
                         </div>
                         <div class="row g-2 align-items-center">
-                            <label class="col-5 col-form-label col-form-label-sm fw-semibold text-muted">Currency:</label>
-                            <div class="col-7">
-                                <select v-model="invoiceMeta.currency" id="currency-select" class="form-select form-select-sm fw-bold text-end">
-                                    <option value="$">USD ($)</option>
-                                    <option value="€">EUR (€)</option>
-                                    <option value="£">GBP (£)</option>
-                                    <option value="C$">CAD (C$)</option>
-                                    <option value="A$">AUD (A$)</option>
-                                    <option value="Rs">PKR (Rs)</option>
-                                    <option value="AED">AED (AED)</option>
-                                    <option value="SAR">SAR (SAR)</option>
-                                    <option value="₹">INR (₹)</option>
+                            <label class="col-4 col-form-label col-form-label-sm fw-semibold text-muted">Currency:</label>
+                            <div class="col-8">
+                                <select v-model="invoiceMeta.currency" id="currency-select" class="form-select form-select-sm fw-bold mb-1">
+                                    <optgroup label="⭐ Major Global">
+                                        <option value="$">USD ($) - US Dollar</option>
+                                        <option value="€">EUR (€) - Euro</option>
+                                        <option value="£">GBP (£) - British Pound</option>
+                                        <option value="¥">JPY (¥) - Japanese Yen</option>
+                                        <option value="CHF">CHF - Swiss Franc</option>
+                                        <option value="C$">CAD (C$) - Canadian Dollar</option>
+                                        <option value="A$">AUD (A$) - Australian Dollar</option>
+                                        <option value="NZ$">NZD (NZ$) - New Zealand Dollar</option>
+                                        <option value="S$">SGD (S$) - Singapore Dollar</option>
+                                        <option value="HK$">HKD (HK$) - Hong Kong Dollar</option>
+                                        <option value="¥">CNY (¥) - Chinese Yuan</option>
+                                    </optgroup>
+                                    <optgroup label="🕌 Middle East & Gulf (GCC)">
+                                        <option value="AED">AED (د.إ) - UAE Dirham</option>
+                                        <option value="SAR">SAR (﷼) - Saudi Riyal</option>
+                                        <option value="QAR">QAR (﷼) - Qatari Riyal</option>
+                                        <option value="KWD">KWD (د.ك) - Kuwaiti Dinar</option>
+                                        <option value="BHD">BHD (ب.د) - Bahraini Dinar</option>
+                                        <option value="OMR">OMR (ر.ع) - Omani Rial</option>
+                                        <option value="JOD">JOD (د.ا) - Jordanian Dinar</option>
+                                        <option value="EGP">EGP (ج.م) - Egyptian Pound</option>
+                                        <option value="₺">TRY (₺) - Turkish Lira</option>
+                                        <option value="₪">ILS (₪) - Israeli Shekel</option>
+                                    </optgroup>
+                                    <optgroup label="🌏 South Asia">
+                                        <option value="Rs">PKR (Rs) - Pakistani Rupee</option>
+                                        <option value="₹">INR (₹) - Indian Rupee</option>
+                                        <option value="৳">BDT (৳) - Bangladeshi Taka</option>
+                                        <option value="Rs">LKR (Rs) - Sri Lankan Rupee</option>
+                                        <option value="₨">NPR (₨) - Nepalese Rupee</option>
+                                    </optgroup>
+                                    <optgroup label="🌴 Southeast & East Asia">
+                                        <option value="RM">MYR (RM) - Malaysian Ringgit</option>
+                                        <option value="Rp">IDR (Rp) - Indonesian Rupiah</option>
+                                        <option value="₱">PHP (₱) - Philippine Peso</option>
+                                        <option value="฿">THB (฿) - Thai Baht</option>
+                                        <option value="₫">VND (₫) - Vietnamese Dong</option>
+                                        <option value="₩">KRW (₩) - South Korean Won</option>
+                                    </optgroup>
+                                    <optgroup label="🏰 Europe & Nordic">
+                                        <option value="kr">SEK (kr) - Swedish Krona</option>
+                                        <option value="kr">NOK (kr) - Norwegian Krone</option>
+                                        <option value="kr">DKK (kr) - Danish Krone</option>
+                                        <option value="zł">PLN (zł) - Polish Zloty</option>
+                                        <option value="Kč">CZK (Kč) - Czech Koruna</option>
+                                        <option value="Ft">HUF (Ft) - Hungarian Forint</option>
+                                        <option value="lei">RON (lei) - Romanian Leu</option>
+                                        <option value="₴">UAH (₴) - Ukrainian Hryvnia</option>
+                                        <option value="₽">RUB (₽) - Russian Ruble</option>
+                                    </optgroup>
+                                    <optgroup label="🌎 Americas">
+                                        <option value="Mex$">MXN (Mex$) - Mexican Peso</option>
+                                        <option value="R$">BRL (R$) - Brazilian Real</option>
+                                        <option value="CLP$">CLP (CLP$) - Chilean Peso</option>
+                                        <option value="COP$">COP (COP$) - Colombian Peso</option>
+                                        <option value="PEN">PEN (S/.) - Peruvian Sol</option>
+                                        <option value="ARS$">ARS (ARS$) - Argentine Peso</option>
+                                    </optgroup>
+                                    <optgroup label="🌍 Africa">
+                                        <option value="R">ZAR (R) - South African Rand</option>
+                                        <option value="₦">NGN (₦) - Nigerian Naira</option>
+                                        <option value="KSh">KES (KSh) - Kenyan Shilling</option>
+                                        <option value="GH₵">GHS (GH₵) - Ghanaian Cedi</option>
+                                        <option value="MAD">MAD (د.م.) - Moroccan Dirham</option>
+                                    </optgroup>
+                                    <optgroup label="⚡ Crypto / Web3">
+                                        <option value="₿">BTC (₿) - Bitcoin</option>
+                                        <option value="Ξ">ETH (Ξ) - Ethereum</option>
+                                        <option value="₮">USDT (₮) - Tether USD</option>
+                                        <option value="USDC">USDC - USD Coin</option>
+                                        <option value="SOL">SOL - Solana</option>
+                                    </optgroup>
                                 </select>
+                                <div class="d-flex align-items-center gap-1">
+                                    <span class="text-muted" style="font-size: 10px;">Custom:</span>
+                                    <input type="text" v-model="invoiceMeta.currency" class="form-control form-control-sm py-0 px-1 font-monospace" placeholder="e.g. CAD, Rs, $" style="font-size: 11px;">
+                                </div>
                             </div>
                         </div>
                     </div>
