@@ -1214,24 +1214,68 @@ function prevMedia() {
             background: #C8E019 !important;
             color: #050505 !important;
             border: none !important;
-            padding: 12px 24px 12px 20px !important;
+            height: 52px !important;
+            padding: 0 16px 0 18px !important;
             border-radius: 30px 0 0 30px !important;
             font-size: 14px !important;
             font-weight: 700 !important;
             cursor: pointer !important;
             z-index: 999999 !important;
             box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(200, 224, 25, 0.3) !important;
-            display: flex !important;
+            display: inline-flex !important;
             align-items: center !important;
-            gap: 10px !important;
+            justify-content: center !important;
             text-decoration: none !important;
-            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease, box-shadow 0.3s ease !important;
+            overflow: hidden !important;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
         }
 
-        .sticky-expert-btn:hover {
-            transform: translateY(-50%) translateX(-4px) !important;
+        .sticky-expert-btn i {
+            font-size: 1.25rem !important;
+            flex-shrink: 0 !important;
+            transition: transform 0.3s ease !important;
+            animation: pulseHeadphone 2.5s infinite ease-in-out !important;
+        }
+
+        .sticky-expert-btn .btn-text {
+            max-width: 0 !important;
+            opacity: 0 !important;
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            display: inline-block !important;
+            transition: max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, margin 0.3s ease !important;
+            margin-left: 0 !important;
+        }
+
+        .sticky-expert-btn:hover,
+        .sticky-expert-btn:focus-visible {
+            padding: 0 22px 0 18px !important;
             background: #d4ec1f !important;
-            box-shadow: -6px 6px 25px rgba(200, 224, 25, 0.5) !important;
+            transform: translateY(-50%) translateX(-4px) !important;
+            box-shadow: -6px 6px 28px rgba(200, 224, 25, 0.6) !important;
+        }
+
+        .sticky-expert-btn:hover i,
+        .sticky-expert-btn:focus-visible i {
+            transform: scale(1.15) rotate(-8deg) !important;
+            animation: none !important;
+        }
+
+        .sticky-expert-btn:hover .btn-text,
+        .sticky-expert-btn:focus-visible .btn-text {
+            max-width: 200px !important;
+            opacity: 1 !important;
+            margin-left: 10px !important;
+        }
+
+        @keyframes pulseHeadphone {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.18);
+                filter: drop-shadow(0 0 4px rgba(5, 5, 5, 0.4));
+            }
         }
 
         .expert-modal-overlay {
