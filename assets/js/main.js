@@ -194,11 +194,11 @@ function initThreeJsParticles() {
 }
 
 /**
- * 3. Matter.js Pill Tossing (Matching SoftNest Layout)
+ * 3. Matter.js Pill Tossing (SAY GOODBYE TO THESE BUSINESS HEADACHES)
  */
 function initMatterJsPhysics() {
     const container = document.getElementById("physics-container");
-    if (!container) return;
+    if (!container || typeof Matter === 'undefined') return;
 
     const Engine = Matter.Engine,
           Render = Matter.Render,
@@ -211,9 +211,10 @@ function initMatterJsPhysics() {
 
     const engine = Engine.create();
     const world = engine.world;
+    engine.gravity.y = 1.0;
 
-    let width = container.clientWidth;
-    let height = container.clientHeight;
+    let width = container.clientWidth || window.innerWidth;
+    let height = container.clientHeight || 600;
 
     const render = Render.create({
         element: container,
@@ -230,94 +231,114 @@ function initMatterJsPhysics() {
     render.canvas.style.position = 'absolute';
     render.canvas.style.top = '0';
     render.canvas.style.left = '0';
-    render.canvas.style.zIndex = '1';
+    render.canvas.style.width = '100%';
+    render.canvas.style.height = '100%';
+    render.canvas.style.zIndex = '2';
 
-    // Boundary walls
-    const ground = Bodies.rectangle(width / 2, height + 50, width * 2, 100, { isStatic: true });
-    const leftWall = Bodies.rectangle(-50, height / 2, 100, height * 2, { isStatic: true });
-    const rightWall = Bodies.rectangle(width + 50, height / 2, 100, height * 2, { isStatic: true });
-    const topWall = Bodies.rectangle(width / 2, -400, width * 2, 800, { isStatic: true });
+    // Boundary walls (with safety margins)
+    let ground = Bodies.rectangle(width / 2, height + 40, width * 2, 80, { isStatic: true });
+    let leftWall = Bodies.rectangle(-40, height / 2, 80, height * 2, { isStatic: true });
+    let rightWall = Bodies.rectangle(width + 40, height / 2, 80, height * 2, { isStatic: true });
+    let topWall = Bodies.rectangle(width / 2, -300, width * 2, 600, { isStatic: true });
     
     Composite.add(world, [ground, leftWall, rightWall, topWall]);
 
-    // Pill texts â€” falls back to default pain-point set, or reads a custom
-    // JSON list from data-pills on the container (e.g. for benefit-themed sections)
     const defaultPillTexts = [
         "Slow Websites", "High Bounce Rates", "Manual Workflows",
-        "Lack of Brand Differentiation", "Lead Leakage", "Poor Conversion Rates",
-        "Inconsistent Branding", "Scaling Difficulties", "Outdated Technology",
-        "Hidden Operational Costs", "Technical Debt"
+        "Lead Leakage", "Poor Conversion Rates", "Inconsistent Branding",
+        "Scaling Difficulties", "Outdated Technology", "Hidden Operational Costs", "Technical Debt"
     ];
+
     let pillTexts = defaultPillTexts;
     if (container.dataset.pills) {
         try {
             const parsed = JSON.parse(container.dataset.pills);
             if (Array.isArray(parsed) && parsed.length) pillTexts = parsed;
         } catch (e) {
-            console.warn("Invalid data-pills JSON, using defaults.", e);
+            console.warn("Invalid data-pills JSON", e);
         }
     }
 
-    const pills = [];
     const isMobile = window.innerWidth < 768;
     const displayPills = isMobile ? pillTexts.slice(0, 6) : pillTexts;
-
-    const pillTint = container.dataset.pillTint === "brand";
+    const pills = [];
 
     displayPills.forEach((text, i) => {
         const el = document.createElement("div");
         el.innerText = text;
         el.className = "physics-pill";
         el.style.position = "absolute";
-        el.style.padding = isMobile ? "8px 16px" : "18px 45px";
+        el.style.padding = isMobile ? "10px 20px" : "16px 40px";
         el.style.borderRadius = "100px";
         el.style.color = "#ffffff";
-        el.style.fontSize = isMobile ? "12px" : "18px";
-        el.style.fontWeight = "600";
+        el.style.fontSize = isMobile ? "13px" : "17px";
+        el.style.fontWeight = "700";
         el.style.whiteSpace = "nowrap";
         el.style.userSelect = "none";
         el.style.pointerEvents = "none";
-        el.style.background = "rgba(255, 255, 255, 0.05)";
-        el.style.border = "1px solid rgba(200, 224, 25, 0.25)";
-        el.style.backdropFilter = "blur(8px)";
-        el.style.boxShadow = "0 10px 25px rgba(0, 0, 0, 0.5)";
+        el.style.background = "rgba(18, 24, 38, 0.85)";
+        el.style.border = "1px solid rgba(200, 224, 25, 0.4)";
+        el.style.backdropFilter = "blur(12px)";
+        el.style.boxShadow = "0 8px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(200, 224, 25, 0.15)";
         el.style.zIndex = "5";
         el.style.willChange = "transform";
+        el.style.cursor = "grab";
+        el.style.transition = "border-color 0.2s ease, box-shadow 0.2s ease";
 
         container.appendChild(el);
 
         const rect = el.getBoundingClientRect();
-        const w = rect.width;
-        const h = rect.height;
+        const w = rect.width || 180;
+        const h = rect.height || 50;
 
-        const x = Math.random() * (width / 2) + width / 4;
-        const y = Math.random() * height - height;
+        // Position above viewport initially for staggering drop
+        const startX = (width * 0.15) + (Math.random() * (width * 0.7));
+        const startY = -(i * 60) - 50;
 
-        const body = Bodies.rectangle(x, y, w, h, {
+        const body = Bodies.rectangle(startX, startY, w, h, {
             chamfer: { radius: h / 2 },
-            restitution: 0.6,
-            density: 0.04,
-            friction: 0.1,
-            frictionAir: 0.02,
+            restitution: 0.7,
+            density: 0.05,
+            friction: 0.15,
+            frictionAir: 0.015,
             render: { fillStyle: 'transparent' }
         });
 
-        Matter.Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.1);
+        Matter.Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.08);
         Composite.add(world, body);
-        pills.push({ body, el, w, h });
+        pills.push({ body, el, w, h, active: false });
     });
 
-    const mouse = Mouse.create(render.canvas);
+    // Custom Mouse synchronization with page scroll & Lenis
+    const mouse = Mouse.create(container);
     const mouseConstraint = MouseConstraint.create(engine, {
         mouse: mouse,
         constraint: {
-            stiffness: 0.2,
+            stiffness: 0.3,
             render: { visible: false }
         }
     });
 
-    mouse.element.removeEventListener("mousewheel", mouse.mousewheel);
-    mouse.element.removeEventListener("DOMMouseScroll", mouse.mousewheel);
+    // Accurate coordinate recalculation on scroll/cursor move
+    function syncMouse(e) {
+        const rect = container.getBoundingClientRect();
+        const clientX = e.touches && e.touches.length ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches && e.touches.length ? e.touches[0].clientY : e.clientY;
+        mouse.position.x = clientX - rect.left;
+        mouse.position.y = clientY - rect.top;
+    }
+
+    container.addEventListener('mousemove', syncMouse, { passive: true });
+    container.addEventListener('mousedown', (e) => {
+        syncMouse(e);
+        container.style.cursor = 'grabbing';
+    });
+    window.addEventListener('mouseup', () => {
+        container.style.cursor = 'grab';
+    });
+
+    container.addEventListener('touchmove', syncMouse, { passive: true });
+    container.addEventListener('touchstart', syncMouse, { passive: true });
 
     Composite.add(world, mouseConstraint);
     render.mouse = mouse;
@@ -326,22 +347,45 @@ function initMatterJsPhysics() {
         pills.forEach(p => {
             const pos = p.body.position;
             const angle = p.body.angle;
-            p.el.style.transform = `translate(${pos.x - p.w / 2}px, ${pos.y - p.h / 2}px) rotate(${angle}rad)`;
+            p.el.style.transform = `translate3d(${pos.x - p.w / 2}px, ${pos.y - p.h / 2}px, 0) rotate(${angle}rad)`;
+            
+            // Visual drag highlight
+            if (mouseConstraint.body === p.body) {
+                p.el.style.borderColor = "#C8E019";
+                p.el.style.boxShadow = "0 0 25px rgba(200, 224, 25, 0.7)";
+            } else {
+                p.el.style.borderColor = "rgba(200, 224, 25, 0.35)";
+                p.el.style.boxShadow = "0 8px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(200, 224, 25, 0.15)";
+            }
         });
     });
 
     Render.run(render);
     const runner = Runner.create();
-    Runner.run(runner, engine);
 
+    // Trigger Runner when section is visible in viewport
+    let started = false;
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !started) {
+                started = true;
+                Runner.run(runner, engine);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    observer.observe(container);
+
+    // Responsive resize handler
     window.addEventListener('resize', () => {
-        width = container.clientWidth;
-        height = container.clientHeight;
+        width = container.clientWidth || window.innerWidth;
+        height = container.clientHeight || 600;
         render.canvas.width = width;
         render.canvas.height = height;
-        Matter.Body.setPosition(ground, { x: width / 2, y: height + 50 });
-        Matter.Body.setPosition(rightWall, { x: width + 50, y: height / 2 });
-        Matter.Body.setPosition(topWall, { x: width / 2, y: -400 });
+        Matter.Body.setPosition(ground, { x: width / 2, y: height + 40 });
+        Matter.Body.setPosition(leftWall, { x: -40, y: height / 2 });
+        Matter.Body.setPosition(rightWall, { x: width + 40, y: height / 2 });
+        Matter.Body.setPosition(topWall, { x: width / 2, y: -300 });
     });
 }
 

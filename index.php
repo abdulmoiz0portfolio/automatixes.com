@@ -324,18 +324,18 @@
 
 <!-- Toss Away Physics Section Start -->
 <section class="section toss-away" style="position: relative; overflow: hidden; padding: 0; background: var(--bg-surface-1, #0a0a0a); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
-    <div class="container toss-away-container" style="position: absolute; top: 80px; left: 50%; transform: translateX(-50%); z-index: 99; pointer-events: none; width: 100%;">
+    <div class="container toss-away-container" style="position: absolute; top: 60px; left: 50%; transform: translateX(-50%); z-index: 10; pointer-events: none; width: 100%;">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
                 <div class="section__header text-center" style="margin-bottom: 0;">
-                    <h2 class="title title-anim toss-away-title" style="color: #ffffff; font-size: 55px; font-weight: 800; line-height: 1.1; letter-spacing: -1px;">
+                    <h2 class="title title-anim toss-away-title" style="color: #ffffff; font-size: clamp(1.8rem, 4.5vw, 3.4rem); font-weight: 800; line-height: 1.15; letter-spacing: -1px;">
                         SAY GOODBYE TO THESE<br><span style="color: var(--accent-neon, #C8E019);">BUSINESS HEADACHES</span>
                     </h2>
                 </div>
             </div>
         </div>
     </div>
-    <div id="physics-container" style="width: 100%; height: 600px; position: relative; cursor: grab; z-index: 1; overflow: hidden;">
+    <div id="physics-container" style="width: 100%; height: 580px; position: relative; cursor: grab; z-index: 1; overflow: hidden;">
         <!-- Matter.js Canvas Injected Here -->
     </div>
 </section>

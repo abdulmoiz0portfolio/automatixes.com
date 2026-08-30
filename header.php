@@ -257,7 +257,6 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
                                 <li><a class="dropdown-item py-2 fw-semibold" href="voice-agent">Voice Agent Demo <span class="badge bg-danger rounded-pill ms-2" style="font-size: 0.65rem;">NEW</span></a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold" href="website-development">Web & App Development</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold" href="product-shoot">Product Shoot</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold" href="invoice-maker">Free Invoice Maker</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="reviews">Customer Ratings</a></li>
