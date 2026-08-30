@@ -426,22 +426,22 @@
             <div class="mx-auto bg-secondary bg-opacity-25 mt-2" style="width: 60px; height: 2px;"></div>
         </div>
 
-        <!-- Row 2: Additional Services (Product Shoot) -->
+        <!-- Row 2: Additional Services (AI Product Staging) -->
         <div class="row g-4 justify-content-center">
             <div class="col-lg-6 col-md-8">
                 <div class="card-service-item wow fadeInUp" data-wow-delay=".6s" style="border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(18, 24, 38, 0.7); border-radius: 20px;">
                     <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm">
-                        <img src="assets/img/services/product_shoot.jpg" alt="Product Shoot Photography" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                        <img src="assets/img/services/product_shoot.jpg" alt="AI Product Staging and Visuals" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;">
                     </div>
                     <div class="content p-2">
                         <div class="d-flex align-items-center gap-2 mb-2">
-                            <i class="fa-solid fa-camera-retro" style="font-size: 1.3rem; color: #60A5FA;"></i>
-                            <span class="text-white-50 font-monospace small">Studio Commercial Photography</span>
+                            <i class="fa-solid fa-wand-magic-sparkles" style="font-size: 1.3rem; color: #60A5FA;"></i>
+                            <span class="text-white-50 font-monospace small">AI Visuals & Background Staging</span>
                         </div>
-                        <h3 class="mb-2"><a href="product-shoot" class="text-white text-decoration-none">Product Shoot</a></h3>
-                        <p class="text-white-50 mb-3">High-end commercial product photography featuring studio lighting, customized staging, and creative direction to elevate your brand presence.</p>
+                        <h3 class="mb-2"><a href="product-shoot" class="text-white text-decoration-none">AI Product Staging & Visuals</a></h3>
+                        <p class="text-white-50 mb-3">Transform basic raw product shots into stunning, high-converting commercial assets with hyper-realistic AI background replacement, 3D lighting, and cinematic manipulation.</p>
                         <a href="product-shoot" class="btn btn-sm btn-outline-light rounded-pill px-4 py-2 fw-bold text-nowrap d-inline-flex align-items-center gap-2" style="border-color: rgba(255, 255, 255, 0.3);">
-                            <span>View Product Shoot Details</span>
+                            <span>View AI Product Staging Details</span>
                             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                         </a>
                     </div>
@@ -791,26 +791,26 @@
                 </div>
             </div>
 
-            <!-- Package 3: Commercial Products Shoot -->
+            <!-- Package 3: AI Product Staging & Visuals -->
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
                 <div class="card pricing-card h-100 bg-surface border-0 rounded-4 p-4 p-lg-5 position-relative text-center hover-lift d-flex flex-column" style="box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05) !important;">
                     <div class="mb-4">
                         <div class="bg-brand-translucent text-accent-brand rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 60px; height: 60px; font-size: 24px;">
-                            <i class="fa-solid fa-camera-retro"></i>
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
                         </div>
-                        <h3 class="h4 fw-bold text-white mb-2">Product Shoot</h3>
-                        <p class="text-muted small">Studio commercial photography</p>
+                        <h3 class="h4 fw-bold text-white mb-2">AI Product Staging</h3>
+                        <p class="text-muted small">Photorealistic AI backgrounds & edits</p>
                     </div>
                     <hr class="border-secondary opacity-25 mb-4">
                     <ul class="list-unstyled text-white-50 mb-5 text-start" style="font-size: 0.95rem;">
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Custom Studio Lighting & Staging</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>High-Resolution Commercial Photography</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Professional Color Grading & Retouching</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Background Optimization & Enhancement</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Social Media & E-Commerce Formats</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>AI Background Replacement & 3D Staging</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Dynamic Cinematic Lighting & Shadows</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>High-End Retouching & Color Correction</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Studio-Quality Visuals from Raw Photos</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>E-Commerce & Social Media Ready Assets</span></li>
                     </ul>
                     <div class="mt-auto pt-4">
-                        <a href="product-shoot" class="btn btn-outline-light w-100 rounded-pill py-3 fw-bold">View Product Shoot</a>
+                        <a href="product-shoot" class="btn btn-outline-light w-100 rounded-pill py-3 fw-bold">Explore AI Visuals</a>
                     </div>
                 </div>
             </div>
@@ -860,7 +860,7 @@
                 <div class="carousel-item text-center py-4">
                     <div class="fs-2 text-accent-brand mb-3"><i class="fa-solid fa-quote-left"></i></div>
                     <p class="fs-5 text-white-50 px-md-5 italic">
-                        "The AI Voice Agent they deployed handles our customer queries and call bookings around the clock without latency. Coupled with their high-end product shoot photography, our brand conversion rate skyrocketed!"
+                        "The AI Voice Agent they deployed handles our customer queries and call bookings around the clock without latency. Coupled with their mind-blowing AI product staging and background edits, our brand conversion rate skyrocketed!"
                     </p>
                     <h5 class="fw-bold text-white mt-4 mb-1">Sarah K.</h5>
                     <p class="text-white-50 small">Brand Manager, Luxe Aesthetics</p>

@@ -31,9 +31,9 @@ $meta_config = [
         'url' => 'ai-automated-solutions'
     ],
     'product-shoot' => [
-        'title' => 'Commercial Product Photography & Studio Shoots | Automatixes',
-        'desc' => 'High-end e-commerce product shoots featuring studio lighting and expert prop styling that increases brand conversion rates. Browse our portfolio.',
-        'keywords' => 'Product Shoot Photography, e-commerce photography, luxury product studio, backlighting styling',
+        'title' => 'AI Product Staging, 3D Backgrounds & Commercial Edits | Automatixes',
+        'desc' => 'Transform simple raw product photos into eye-catching commercial masterpieces with photorealistic AI backgrounds, 3D staging, and cinematic lighting.',
+        'keywords' => 'AI Product Staging, AI Background Replacement, Commercial Product Editing, E-commerce Mockup Staging, Automatixes',
         'url' => 'product-shoot'
     ],
     'contact' => [
@@ -255,7 +255,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
                             <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
                                 <li><a class="dropdown-item py-2 fw-semibold" href="ai-automated-solutions">AI Automated Solutions</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold d-flex align-items-center justify-content-between" href="voice-agent"><span>AI Voice Agents</span> <span class="badge bg-danger rounded-pill ms-2" style="font-size: 0.65rem; background: linear-gradient(135deg, #FF3B30, #FF9500) !important;">🔥 HIGH DEMAND</span></a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold" href="product-shoot">Product Shoot</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold" href="product-shoot">AI Product Staging & Visuals</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="reviews">Customer Ratings</a></li>
