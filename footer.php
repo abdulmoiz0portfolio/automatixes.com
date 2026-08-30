@@ -27,11 +27,16 @@
                 <div class="col-lg-2 col-md-4 col-6">
                     <div class="footer-widget">
                         <h5 class="widget-title">Quick Links</h5>
-                        <ul class="list-unstyled footer-menu">
+                        <ul class="list-unstyled footer-menu mb-4">
                             <li><a href="index">Home</a></li>
                             <li><a href="about">About Us</a></li>
                             <li><a href="blogs">Blogs</a></li>
                             <li><a href="contact">Contact Us</a></li>
+                        </ul>
+                        <h5 class="widget-title">Legal</h5>
+                        <ul class="list-unstyled footer-menu">
+                            <li><a href="privacy">Privacy Policy</a></li>
+                            <li><a href="terms">Terms of Service</a></li>
                         </ul>
                     </div>
                 </div>
@@ -64,16 +69,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-1 col-md-4 col-6">
-                    <div class="footer-widget">
-                        <h5 class="widget-title">Legal</h5>
-                        <ul class="list-unstyled footer-menu">
-                            <li><a href="privacy">Privacy Policy</a></li>
-                            <li><a href="terms">Terms of Service</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <h5 class="widget-title">Contact Info</h5>
                         <ul class="list-unstyled footer-menu">
