@@ -157,6 +157,38 @@ html {
     scroll-behavior: auto; /* MUST remain auto to prevent conflict with Lenis smooth-scroll RAF in M2 */
 }
 
+/* Accessible Anchor Target Offset */
+[id] {
+    scroll-margin-top: 100px;
+}
+
+/* Typographic Precision - Prevent Heading Widows */
+h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6, .section-title {
+    text-wrap: balance;
+    text-wrap: pretty;
+}
+
+/* High-Contrast Accessible Focus States */
+:focus-visible {
+    outline: 2px solid var(--accent-neon, #C8E019) !important;
+    outline-offset: 3px !important;
+}
+
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline: 2px solid var(--accent-neon, #C8E019) !important;
+    outline-offset: 2px !important;
+}
+
+/* WCAG Reduced Motion Accommodation */
+@media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 body {
     background-color: var(--bg-void) !important;
     color: var(--text-primary) !important;

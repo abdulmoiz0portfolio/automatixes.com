@@ -426,13 +426,13 @@
                     </h6>
                     <form id="expertQuickForm" class="row g-2">
                         <div class="col-5">
-                            <input type="text" id="expertName" class="form-control form-control-sm bg-dark border-secondary text-white" placeholder="Your Name" style="font-size: 12px; height: 32px;" required>
+                            <input type="text" id="expertName" name="expert_name" autocomplete="name" aria-label="Your Name" class="form-control form-control-sm bg-dark border-secondary text-white" placeholder="Your Name" style="font-size: 12px; height: 32px;" required>
                         </div>
                         <div class="col-5">
-                            <input type="text" id="expertContact" class="form-control form-control-sm bg-dark border-secondary text-white" placeholder="Phone or WhatsApp" style="font-size: 12px; height: 32px;" required>
+                            <input type="text" id="expertContact" name="expert_contact" autocomplete="tel" aria-label="Phone or WhatsApp" class="form-control form-control-sm bg-dark border-secondary text-white" placeholder="Phone or WhatsApp" style="font-size: 12px; height: 32px;" required>
                         </div>
                         <div class="col-2">
-                            <button type="submit" class="btn btn-sm btn-brand w-100 fw-bold d-flex align-items-center justify-content-center" style="font-size: 12px; height: 32px; padding: 0;">Send</button>
+                            <button type="submit" class="btn btn-sm btn-brand w-100 fw-bold d-flex align-items-center justify-content-center" style="font-size: 12px; height: 32px; padding: 0;" aria-label="Submit callback request">Send</button>
                         </div>
                     </form>
                     <div id="expertFormSuccess" class="text-success small fw-semibold mt-1" style="display: none; font-size: 11px;">
@@ -687,7 +687,7 @@
 
 
     <!-- Main Custom JS -->
-    <script src="assets/js/main.js?v=4.0.0"></script>
+    <script src="assets/js/main.js?v=4.1.0"></script>
 </body>
 </html>
 
