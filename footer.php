@@ -548,18 +548,21 @@
             backdrop-filter: blur(10px) !important;
             -webkit-backdrop-filter: blur(10px) !important;
             z-index: 2147483647 !important;
-            display: flex !important;
+            display: none !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
             align-items: center !important;
             justify-content: center !important;
             padding: 20px !important;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease !important;
+            opacity: 0 !important;
+            transition: opacity 0.3s ease, visibility 0.3s ease !important;
         }
 
         .expert-modal-overlay.active {
-            opacity: 1 !important;
+            display: flex !important;
+            visibility: visible !important;
             pointer-events: auto !important;
+            opacity: 1 !important;
         }
 
         .expert-modal-dialog {
@@ -672,19 +675,11 @@
 
             function openModal(e) {
                 if (e && e.preventDefault) e.preventDefault();
-                modal.style.display = 'flex';
-                modal.style.opacity = '1';
-                modal.style.pointerEvents = 'auto';
                 modal.classList.add('active');
             }
 
             function closeModal() {
                 modal.classList.remove('active');
-                modal.style.opacity = '0';
-                modal.style.pointerEvents = 'none';
-                setTimeout(() => {
-                    modal.style.display = 'none';
-                }, 300);
             }
 
             stickyBtn.addEventListener('click', openModal);

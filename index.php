@@ -678,58 +678,6 @@
 </section>
 <!-- Our Process Section End -->
 
-<!-- Portfolio Section Start -->
-<section id="portfolio-section" class="section-padding bg-surface text-white">
-    <div class="container max-w-1000">
-        <div class="text-center mb-5 max-w-700 mx-auto">
-            <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">SERVICES & CASE STUDIES</span>
-            <h2 class="display-5 fw-extrabold mb-3 text-white typewriter-anim">Our Work in Action</h2>
-            <p class="text-white-50 fs-5">Take a look at how we deploy custom code and AI agents to transform businesses.</p>
-        </div>
-        
-        <div class="row g-4 mt-2">
-            <!-- Project 1: Web Development -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                <div class="portfolio-card bg-surface-1 rounded-4 border border-secondary border-opacity-25 p-3 h-100 position-relative shadow-sm text-start" style="transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;">
-                    <div class="portfolio-preview rounded-3 overflow-hidden position-relative bg-dark mb-4 border border-secondary border-opacity-25 shadow-sm" style="height: 250px;">
-                        <img src="assets/img/services/web_dev_light.jpg" alt="Web Development" class="w-100 h-100 object-fit-cover">
-                    </div>
-                    <div class="portfolio-info px-2">
-                        <h3 class="h5 fw-bold mb-2 text-white">Web Development</h3>
-                        <p class="text-white-50 mb-0 fs-6">High-performance custom web apps and bespoke E-commerce storefronts engineered for speed and conversion.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2: AI Agents -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                <div class="portfolio-card bg-surface-1 rounded-4 border border-secondary border-opacity-25 p-3 h-100 position-relative shadow-sm text-start" style="transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;">
-                    <div class="portfolio-preview rounded-3 overflow-hidden position-relative bg-dark mb-4 border border-secondary border-opacity-25 shadow-sm" style="height: 250px;">
-                        <img src="assets/img/services/ai_agents_light.jpg" alt="AI Agents" class="w-100 h-100 object-fit-cover">
-                    </div>
-                    <div class="portfolio-info px-2">
-                        <h3 class="h5 fw-bold mb-2 text-white">AI Agents & Chatbots</h3>
-                        <p class="text-white-50 mb-0 fs-6">Autonomous agents that handle customer support, lead qualification, and dynamic reasoning 24/7.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 3: AI Automations -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
-                <div class="portfolio-card bg-surface-1 rounded-4 border border-secondary border-opacity-25 p-3 h-100 position-relative shadow-sm text-start" style="transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;">
-                    <div class="portfolio-preview rounded-3 overflow-hidden position-relative bg-dark mb-4 border border-secondary border-opacity-25 shadow-sm" style="height: 250px;">
-                        <img src="assets/img/services/automations_light.jpg" alt="AI Automations" class="w-100 h-100 object-fit-cover">
-                    </div>
-                    <div class="portfolio-info px-2">
-                        <h3 class="h5 fw-bold mb-2 text-white">AI Automations</h3>
-                        <p class="text-white-50 mb-0 fs-6">Data pipelines and automated workflows across n8n, Make, and GoHighLevel to sync your operations flawlessly.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Portfolio Section End -->
 
 
 <!-- Packages Section Start -->
