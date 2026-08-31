@@ -41,18 +41,32 @@ document.addEventListener("DOMContentLoaded", () => {
     initMarqueeVelocity();
 });
 
-// Window Load Handler for Preloader
-window.addEventListener("load", () => {
+// Preloader Fast Safe Dismissal
+function dismissPreloader() {
     const preloader = document.getElementById("preloader");
-    if (preloader) {
-        gsap.to(preloader, {
-            opacity: 0,
-            duration: 0.6,
-            onComplete: () => {
+    if (preloader && preloader.style.display !== "none") {
+        preloader.style.pointerEvents = "none";
+        if (typeof gsap !== "undefined") {
+            gsap.to(preloader, {
+                opacity: 0,
+                duration: 0.4,
+                onComplete: () => {
+                    preloader.style.display = "none";
+                    preloader.remove();
+                }
+            });
+        } else {
+            preloader.style.opacity = "0";
+            setTimeout(() => {
                 preloader.style.display = "none";
-            }
-        });
+                preloader.remove();
+            }, 300);
+        }
     }
+}
+window.addEventListener("load", dismissPreloader);
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(dismissPreloader, 600); // Guarantees page is interactive in 0.6s
 });
 
 /**
@@ -180,11 +194,11 @@ function initThreeJsParticles() {
 }
 
 /**
- * 3. Matter.js Pill Tossing (Matching SoftNest Layout)
+ * 3. Matter.js Pill Tossing (SAY GOODBYE TO THESE BUSINESS HEADACHES)
  */
 function initMatterJsPhysics() {
     const container = document.getElementById("physics-container");
-    if (!container) return;
+    if (!container || typeof Matter === 'undefined') return;
 
     const Engine = Matter.Engine,
           Render = Matter.Render,
@@ -197,9 +211,10 @@ function initMatterJsPhysics() {
 
     const engine = Engine.create();
     const world = engine.world;
+    engine.gravity.y = 1.0;
 
-    let width = container.clientWidth;
-    let height = container.clientHeight;
+    let width = container.clientWidth || window.innerWidth;
+    let height = container.clientHeight || 600;
 
     const render = Render.create({
         element: container,
@@ -216,96 +231,126 @@ function initMatterJsPhysics() {
     render.canvas.style.position = 'absolute';
     render.canvas.style.top = '0';
     render.canvas.style.left = '0';
-    render.canvas.style.zIndex = '1';
+    render.canvas.style.width = '100%';
+    render.canvas.style.height = '100%';
+    render.canvas.style.zIndex = '2';
 
-    // Boundary walls
-    const ground = Bodies.rectangle(width / 2, height + 50, width * 2, 100, { isStatic: true });
-    const leftWall = Bodies.rectangle(-50, height / 2, 100, height * 2, { isStatic: true });
-    const rightWall = Bodies.rectangle(width + 50, height / 2, 100, height * 2, { isStatic: true });
-    const topWall = Bodies.rectangle(width / 2, -400, width * 2, 800, { isStatic: true });
+    // Boundary walls (with safety margins)
+    let ground = Bodies.rectangle(width / 2, height + 40, width * 2, 80, { isStatic: true });
+    let leftWall = Bodies.rectangle(-40, height / 2, 80, height * 2, { isStatic: true });
+    let rightWall = Bodies.rectangle(width + 40, height / 2, 80, height * 2, { isStatic: true });
+    let topWall = Bodies.rectangle(width / 2, -300, width * 2, 600, { isStatic: true });
     
     Composite.add(world, [ground, leftWall, rightWall, topWall]);
 
-    // Pill texts â€” falls back to default pain-point set, or reads a custom
-    // JSON list from data-pills on the container (e.g. for benefit-themed sections)
     const defaultPillTexts = [
-        "Missed Leads",
-        "Slow Follow-Ups",
-        "Manual Data Entry",
-        "Scattered Tools",
-        "Repetitive Reporting",
-        "Delayed Support",
-        "Human Errors",
-        "Scaling Bottlenecks"
+        "⚡ AI Automations",
+        "🔌 MCP Servers & Tools",
+        "🔄 Webhook Triggers",
+        "🤖 Autonomous AI Agents",
+        "⚙️ Complex Workflows",
+        "🎙️ AI Voice Agents",
+        "📊 CRM & Database Sync",
+        "🧠 LLM Orchestration",
+        "💼 n8n & Make Pipelines",
+        "🚀 Real-Time API Integrations",
+        "🚫 Manual Busywork",
+        "📉 Lead Leakage",
+        "⏳ Wasted Admin Hours",
+        "❌ Disconnected Apps",
+        "🔒 24/7 Smart Pipelines"
     ];
+
     let pillTexts = defaultPillTexts;
     if (container.dataset.pills) {
         try {
             const parsed = JSON.parse(container.dataset.pills);
             if (Array.isArray(parsed) && parsed.length) pillTexts = parsed;
         } catch (e) {
-            console.warn("Invalid data-pills JSON, using defaults.", e);
+            console.warn("Invalid data-pills JSON", e);
         }
     }
 
-    const pills = [];
     const isMobile = window.innerWidth < 768;
-    const displayPills = pillTexts;
-
-    const pillTint = container.dataset.pillTint === "brand";
+    const displayPills = isMobile ? pillTexts.slice(0, 8) : pillTexts;
+    const pills = [];
 
     displayPills.forEach((text, i) => {
         const el = document.createElement("div");
         el.innerText = text;
         el.className = "physics-pill";
         el.style.position = "absolute";
-        el.style.padding = isMobile ? "8px 16px" : "18px 45px";
+        el.style.padding = isMobile ? "10px 20px" : "16px 40px";
         el.style.borderRadius = "100px";
-        el.style.color = pillTint ? "#a8541a" : "#333333";
-        el.style.fontSize = isMobile ? "11px" : "20px";
-        el.style.fontWeight = "500";
+        el.style.color = "#ffffff";
+        el.style.fontSize = isMobile ? "13px" : "17px";
+        el.style.fontWeight = "700";
         el.style.whiteSpace = "nowrap";
         el.style.userSelect = "none";
         el.style.pointerEvents = "none";
-        el.style.background = pillTint ? "rgba(59, 130, 246, 0.08)" : "rgba(0, 0, 0, 0.05)";
-        el.style.border = pillTint ? "1px solid rgba(59, 130, 246, 0.3)" : "1px solid rgba(0, 0, 0, 0.1)";
+        el.style.background = "rgba(18, 24, 38, 0.85)";
+        el.style.border = "1px solid rgba(200, 224, 25, 0.4)";
+        el.style.backdropFilter = "blur(12px)";
+        el.style.boxShadow = "0 8px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(200, 224, 25, 0.15)";
         el.style.zIndex = "5";
         el.style.willChange = "transform";
+        el.style.cursor = "grab";
+        el.style.transition = "border-color 0.2s ease, box-shadow 0.2s ease";
 
         container.appendChild(el);
 
         const rect = el.getBoundingClientRect();
-        const w = rect.width;
-        const h = rect.height;
+        const w = rect.width || 180;
+        const h = rect.height || 50;
 
-        const x = Math.random() * (width / 2) + width / 4;
-        const y = Math.random() * height - height;
+        // Position above viewport initially for staggering drop
+        const startX = (width * 0.15) + (Math.random() * (width * 0.7));
+        const startY = -(i * 60) - 50;
 
-        const body = Bodies.rectangle(x, y, w, h, {
+        const body = Bodies.rectangle(startX, startY, w, h, {
             chamfer: { radius: h / 2 },
-            restitution: 0.6,
-            density: 0.04,
-            friction: 0.1,
-            frictionAir: 0.02,
+            restitution: 0.7,
+            density: 0.05,
+            friction: 0.15,
+            frictionAir: 0.015,
             render: { fillStyle: 'transparent' }
         });
 
-        Matter.Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.1);
+        Matter.Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.08);
         Composite.add(world, body);
-        pills.push({ body, el, w, h });
+        pills.push({ body, el, w, h, active: false });
     });
 
-    const mouse = Mouse.create(render.canvas);
+    // Custom Mouse synchronization with page scroll & Lenis
+    const mouse = Mouse.create(container);
     const mouseConstraint = MouseConstraint.create(engine, {
         mouse: mouse,
         constraint: {
-            stiffness: 0.2,
+            stiffness: 0.3,
             render: { visible: false }
         }
     });
 
-    mouse.element.removeEventListener("mousewheel", mouse.mousewheel);
-    mouse.element.removeEventListener("DOMMouseScroll", mouse.mousewheel);
+    // Accurate coordinate recalculation on scroll/cursor move
+    function syncMouse(e) {
+        const rect = container.getBoundingClientRect();
+        const clientX = e.touches && e.touches.length ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches && e.touches.length ? e.touches[0].clientY : e.clientY;
+        mouse.position.x = clientX - rect.left;
+        mouse.position.y = clientY - rect.top;
+    }
+
+    container.addEventListener('mousemove', syncMouse, { passive: true });
+    container.addEventListener('mousedown', (e) => {
+        syncMouse(e);
+        container.style.cursor = 'grabbing';
+    });
+    window.addEventListener('mouseup', () => {
+        container.style.cursor = 'grab';
+    });
+
+    container.addEventListener('touchmove', syncMouse, { passive: true });
+    container.addEventListener('touchstart', syncMouse, { passive: true });
 
     Composite.add(world, mouseConstraint);
     render.mouse = mouse;
@@ -314,22 +359,45 @@ function initMatterJsPhysics() {
         pills.forEach(p => {
             const pos = p.body.position;
             const angle = p.body.angle;
-            p.el.style.transform = `translate(${pos.x - p.w / 2}px, ${pos.y - p.h / 2}px) rotate(${angle}rad)`;
+            p.el.style.transform = `translate3d(${pos.x - p.w / 2}px, ${pos.y - p.h / 2}px, 0) rotate(${angle}rad)`;
+            
+            // Visual drag highlight
+            if (mouseConstraint.body === p.body) {
+                p.el.style.borderColor = "#C8E019";
+                p.el.style.boxShadow = "0 0 25px rgba(200, 224, 25, 0.7)";
+            } else {
+                p.el.style.borderColor = "rgba(200, 224, 25, 0.35)";
+                p.el.style.boxShadow = "0 8px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(200, 224, 25, 0.15)";
+            }
         });
     });
 
     Render.run(render);
     const runner = Runner.create();
-    Runner.run(runner, engine);
 
+    // Trigger Runner when section is visible in viewport
+    let started = false;
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !started) {
+                started = true;
+                Runner.run(runner, engine);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    observer.observe(container);
+
+    // Responsive resize handler
     window.addEventListener('resize', () => {
-        width = container.clientWidth;
-        height = container.clientHeight;
+        width = container.clientWidth || window.innerWidth;
+        height = container.clientHeight || 600;
         render.canvas.width = width;
         render.canvas.height = height;
-        Matter.Body.setPosition(ground, { x: width / 2, y: height + 50 });
-        Matter.Body.setPosition(rightWall, { x: width + 50, y: height / 2 });
-        Matter.Body.setPosition(topWall, { x: width / 2, y: -400 });
+        Matter.Body.setPosition(ground, { x: width / 2, y: height + 40 });
+        Matter.Body.setPosition(leftWall, { x: -40, y: height / 2 });
+        Matter.Body.setPosition(rightWall, { x: width + 40, y: height / 2 });
+        Matter.Body.setPosition(topWall, { x: width / 2, y: -300 });
     });
 }
 
@@ -343,14 +411,22 @@ function initNewsletterPopup() {
     const closeBtn = document.getElementById("closeModal");
     const newsletterSeen = localStorage.getItem("newsletterSeen_baig");
     
+    // Non-intrusive: only show after user has actively scrolled down 50% of the page
     if (!newsletterSeen) {
-        setTimeout(() => {
-            modal.style.display = "flex";
-            if (window.lenis) window.lenis.stop();
-            setTimeout(() => {
-                modal.classList.add("active");
-            }, 10);
-        }, 1500); // 1.5s delay to fit standard user experience
+        let shown = false;
+        const handleScroll = () => {
+            if (shown) return;
+            const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+            if (scrollPercent > 0.5) {
+                shown = true;
+                window.removeEventListener("scroll", handleScroll);
+                modal.style.display = "flex";
+                setTimeout(() => {
+                    modal.classList.add("active");
+                }, 10);
+            }
+        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
     }
 
     function closePopup() {
@@ -362,12 +438,14 @@ function initNewsletterPopup() {
         localStorage.setItem("newsletterSeen_baig", "true");
     }
 
-    closeBtn.onclick = closePopup;
-    window.onclick = (event) => {
+    if (closeBtn) {
+        closeBtn.addEventListener("click", closePopup);
+    }
+    window.addEventListener("click", (event) => {
         if (event.target === modal) {
             closePopup();
         }
-    };
+    });
 
     const form = document.getElementById("popup-newsletter-form");
     const emailInput = document.getElementById("popup-email-input");
@@ -668,166 +746,13 @@ function logSimulatedWebhook(logText) {
     }
 
 /**
- * Custom Mouse Cursor Follower setup with GSAP quickTo trailing animations (F8)
+ * Custom Cursor disabled - Native Default Browser Cursor Active
  */
 function initCustomCursor() {
     const cursorOuter = document.querySelector(".cursor-outer");
     const cursorInner = document.querySelector(".cursor-inner");
-    
-    if (!cursorOuter || !cursorInner) return;
-    
-    // Check if touch device / coarse pointer
-    const isTouch = window.matchMedia && window.matchMedia("(pointer: coarse), (hover: none)").matches;
-    if (isTouch) {
-        cursorOuter.style.display = "none";
-        cursorInner.style.display = "none";
-        return;
-    }
-
-    if (typeof gsap === "undefined") {
-        console.warn("GSAP is not defined for custom cursor.");
-        return;
-    }
-
-    // Set initial off-screen coordinates and ensure pointer-events: none
-    gsap.set([cursorOuter, cursorInner], {
-        xPercent: -50,
-        yPercent: -50,
-        x: -100,
-        y: -100,
-        opacity: 0
-    });
-
-    // 120fps hardware-accelerated quickTo setters
-    // Inner cursor restored to 0.05 sweet spot for snappy but smooth tracking
-    const xInner = gsap.quickTo(cursorInner, "x", { duration: 0.05, ease: "power2.out" });
-    const yInner = gsap.quickTo(cursorInner, "y", { duration: 0.05, ease: "power2.out" });
-    const xOuter = gsap.quickTo(cursorOuter, "x", { duration: 0.2, ease: "power2.out" });
-    const yOuter = gsap.quickTo(cursorOuter, "y", { duration: 0.2, ease: "power2.out" });
-
-    let isVisible = false;
-
-    // Window Mousemove tracking
-    window.addEventListener("mousemove", (e) => {
-        if (!isVisible) {
-            isVisible = true;
-            cursorOuter.classList.remove("cursor-hidden");
-            cursorInner.classList.remove("cursor-hidden");
-            gsap.to([cursorOuter, cursorInner], { opacity: 1, duration: 0.25, overwrite: "auto" });
-        }
-
-        // Inner cursor: fast snappy tracking
-        xInner(e.clientX);
-        yInner(e.clientY);
-
-        // Outer cursor: smooth lagging trail
-        xOuter(e.clientX);
-        yOuter(e.clientY);
-    });
-
-    // Window mouseleave / mouseenter opacity transitions (document boundary guard)
-    document.addEventListener("mouseleave", () => {
-        isVisible = false;
-        cursorOuter.classList.add("cursor-hidden");
-        cursorInner.classList.add("cursor-hidden");
-        gsap.to([cursorOuter, cursorInner], { opacity: 0, duration: 0.25, overwrite: "auto" });
-    });
-
-    document.addEventListener("mouseenter", () => {
-        isVisible = true;
-        cursorOuter.classList.remove("cursor-hidden");
-        cursorInner.classList.remove("cursor-hidden");
-        gsap.to([cursorOuter, cursorInner], { opacity: 1, duration: 0.25, overwrite: "auto" });
-    });
-
-    // Delegated Hover Handling on interactive elements
-    document.body.addEventListener("mouseover", (e) => {
-        if (e.target.closest(".icon-arrow, .card-service-item") && !e.target.closest(".btn, a, button, [data-cursor]")) {
-            cursorOuter.classList.remove("cursor-hover", "cursor-view", "cursor-drag", "cursor-magnetic");
-            cursorInner.classList.remove("cursor-hover", "cursor-view", "cursor-drag", "cursor-magnetic");
-            return;
-        }
-
-        const customCursorTarget = e.target.closest("[data-cursor]");
-        if (customCursorTarget) {
-            const cursorType = customCursorTarget.getAttribute("data-cursor");
-            if (cursorType === "view") {
-                cursorOuter.classList.add("cursor-view");
-                cursorInner.classList.add("cursor-view");
-                return;
-            } else if (cursorType === "drag") {
-                cursorOuter.classList.add("cursor-drag");
-                cursorInner.classList.add("cursor-drag");
-                return;
-            } else if (cursorType === "magnetic") {
-                cursorOuter.classList.add("cursor-magnetic", "cursor-hover");
-                cursorInner.classList.add("cursor-magnetic", "cursor-hover");
-                return;
-            }
-        }
-
-        const magneticTarget = e.target.closest(".btn-magnetic");
-        if (magneticTarget) {
-            cursorOuter.classList.add("cursor-magnetic", "cursor-hover");
-            cursorInner.classList.add("cursor-magnetic", "cursor-hover");
-            return;
-        }
-
-        const interactiveTarget = e.target.closest("a, button, .btn, .nav-link, .physics-pill, .close-modal, .tech-item, .accordion-button, input, textarea, select");
-        if (interactiveTarget) {
-            cursorOuter.classList.add("cursor-hover");
-            cursorInner.classList.add("cursor-hover");
-        }
-    });
-
-    document.body.addEventListener("mouseout", (e) => {
-        const interactiveTarget = e.target.closest("a, button, .btn, .nav-link, .physics-pill, .close-modal, .tech-item, .accordion-button, input, textarea, select, [data-cursor], .btn-magnetic");
-        if (interactiveTarget) {
-            cursorOuter.classList.remove("cursor-hover", "cursor-view", "cursor-drag", "cursor-magnetic");
-            cursorInner.classList.remove("cursor-hover", "cursor-view", "cursor-drag", "cursor-magnetic");
-        }
-    });
-
-    // Export Global Controller API
-    window.cursorFollower = {
-        outer: cursorOuter,
-        inner: cursorInner,
-        xOuter: xOuter,
-        yOuter: yOuter,
-        xInner: xInner,
-        yInner: yInner,
-        setHover: function(className = "cursor-hover") {
-            cursorOuter.classList.add(className);
-            cursorInner.classList.add(className);
-        },
-        resetHover: function(className) {
-            if (className) {
-                cursorOuter.classList.remove(className);
-                cursorInner.classList.remove(className);
-            } else {
-                cursorOuter.classList.remove("cursor-hover", "cursor-magnetic", "cursor-view", "cursor-drag");
-                cursorInner.classList.remove("cursor-hover", "cursor-magnetic", "cursor-view", "cursor-drag");
-            }
-        },
-        show: function() {
-            isVisible = true;
-            cursorOuter.classList.remove("cursor-hidden");
-            cursorInner.classList.remove("cursor-hidden");
-            gsap.to([cursorOuter, cursorInner], { opacity: 1, duration: 0.2, overwrite: "auto" });
-        },
-        hide: function() {
-            isVisible = false;
-            cursorOuter.classList.add("cursor-hidden");
-            cursorInner.classList.add("cursor-hidden");
-            gsap.to([cursorOuter, cursorInner], { opacity: 0, duration: 0.2, overwrite: "auto" });
-        },
-        moveTo: function(x, y) {
-            xInner(x);
-            yInner(y);
-            xOuter(x);
-            yOuter(y);
-        }
-    };
+    if (cursorOuter) cursorOuter.remove();
+    if (cursorInner) cursorInner.remove();
 }
 
 /**

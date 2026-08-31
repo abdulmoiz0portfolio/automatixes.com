@@ -43,52 +43,52 @@ $all_blogs = get_blogs();
 ?>
 
 <!-- Subpage Hero Section -->
-<section class="subpage-hero text-center position-relative">
-    <div class="container">
-        <span class="badge bg-warm-peach text-accent-brand rounded-pill px-3 py-2 fw-semibold mb-3">
+<section class="subpage-hero text-center position-relative py-5">
+    <div class="container pt-4">
+        <span class="badge bg-surface-1 border border-secondary text-accent-brand rounded-pill px-3 py-2 fw-semibold mb-3">
             <i class="fa-solid fa-book-open me-1"></i> Our Resources
         </span>
-        <h1 class="display-4 fw-extrabold text-dark mb-3">Insights & Updates</h1>
-        <p class="lead text-secondary max-width-600 mx-auto">
+        <h1 class="display-4 fw-extrabold text-white mb-3">Insights & Updates</h1>
+        <p class="lead text-white-50 max-width-600 mx-auto">
             Read our latest insights on AI automation, web development, and digital marketing strategies for growing your business.
         </p>
     </div>
 </section>
 
 <!-- Blog Listing Section -->
-<section class="py-5 bg-light-subtle">
+<section class="py-5 bg-surface">
     <div class="container py-4">
         
         <?php if (empty($all_blogs)): ?>
             <div class="text-center py-5 my-5">
                 <i class="fa-solid fa-folder-open text-muted fs-1 mb-3"></i>
-                <h3 class="fw-bold text-dark">No Articles Found</h3>
-                <p class="text-secondary">Articles published via n8n will appear here automatically.</p>
+                <h3 class="fw-bold text-white">No Articles Found</h3>
+                <p class="text-white-50">Articles published via n8n will appear here automatically.</p>
             </div>
         <?php else: ?>
             <div class="row g-4">
                 <?php foreach ($all_blogs as $blog): ?>
                 <!-- Blog Card -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden blog-card">
+                    <div class="card border border-secondary border-opacity-25 shadow-sm h-100 rounded-4 overflow-hidden blog-card bg-surface-1 text-white">
                         <div class="position-relative">
                             <img src="<?php echo htmlspecialchars($blog['image']); ?>" class="card-img-top object-fit-cover" alt="<?php echo htmlspecialchars($blog['title']); ?>" style="height: 220px;" onerror="this.src='assets/img/services/ai_automations.jpg'">
-                            <span class="badge bg-brand position-absolute top-0 end-0 m-3 rounded-pill px-3 py-2">
+                            <span class="badge bg-brand text-dark position-absolute top-0 end-0 m-3 rounded-pill px-3 py-2 fw-bold">
                                 <?php echo htmlspecialchars($blog['category']); ?>
                             </span>
                         </div>
                         <div class="card-body p-4 d-flex flex-column">
-                            <div class="text-muted small mb-2">
-                                <i class="fa-regular fa-calendar me-1"></i> 
+                            <div class="text-white-50 small mb-2">
+                                <i class="fa-regular fa-calendar me-1 text-accent-brand"></i> 
                                 <?php echo date('F j, Y', $blog['file_time']); ?>
                             </div>
-                            <h5 class="card-title fw-bold text-dark mb-3">
+                            <h5 class="card-title fw-bold text-white mb-3">
                                 <?php echo htmlspecialchars($blog['title']); ?>
                             </h5>
-                            <p class="card-text text-secondary mb-4 flex-grow-1" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                            <p class="card-text text-white-50 mb-4 flex-grow-1" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.6;">
                                 <?php echo htmlspecialchars($blog['description']); ?>
                             </p>
-                            <a href="blog-detail?id=<?php echo urlencode($blog['id']); ?>" class="btn btn-outline-brand rounded-pill align-self-start fw-semibold px-4">
+                            <a href="blog-detail?id=<?php echo urlencode($blog['id']); ?>" class="btn btn-outline-brand rounded-pill align-self-start fw-bold px-4 py-2">
                                 Read More <i class="fa-solid fa-arrow-right ms-2"></i>
                             </a>
                         </div>
@@ -104,11 +104,14 @@ $all_blogs = get_blogs();
 <!-- Custom Styles for Blog Cards -->
 <style>
     .blog-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background: var(--bg-surface-1, #141414) !important;
+        border: 1px solid rgba(255, 255, 255, 0.08) !important;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
     }
     .blog-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+        transform: translateY(-8px);
+        border-color: rgba(200, 224, 25, 0.4) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
     }
 </style>
 

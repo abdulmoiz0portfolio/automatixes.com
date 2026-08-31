@@ -31,9 +31,9 @@ $meta_config = [
         'url' => 'ai-automated-solutions'
     ],
     'product-shoot' => [
-        'title' => 'Commercial Product Photography & Studio Shoots | Automatixes',
-        'desc' => 'High-end e-commerce product shoots featuring studio lighting and expert prop styling that increases brand conversion rates. Browse our portfolio.',
-        'keywords' => 'Product Shoot Photography, e-commerce photography, luxury product studio, backlighting styling',
+        'title' => 'AI Product Staging, 3D Backgrounds & Commercial Edits | Automatixes',
+        'desc' => 'Transform simple raw product photos into eye-catching commercial masterpieces with photorealistic AI backgrounds, 3D staging, and cinematic lighting.',
+        'keywords' => 'AI Product Staging, AI Background Replacement, Commercial Product Editing, E-commerce Mockup Staging, Automatixes',
         'url' => 'product-shoot'
     ],
     'contact' => [
@@ -88,10 +88,11 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $active_meta['title']; ?></title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
     <link rel="canonical" href="<?php echo $canonical_url; ?>">
     
     <!-- Meta SEO Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="description" content="<?php echo $active_meta['desc']; ?>">
     <meta name="keywords" content="<?php echo $active_meta['keywords']; ?>">
     <meta name="author" content="Automatixes">
@@ -206,18 +207,11 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- n8n Chat Widget CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-    
     <!-- Custom Main CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=2.0.0">
+    <link rel="stylesheet" href="assets/css/main.css?v=6.0.0">
 </head>
 <body>
 
-    
-    <!-- Custom Mouse Cursor Follower -->
-    <div class="mouse-cursor cursor-outer" aria-hidden="true"></div>
-    <div class="mouse-cursor cursor-inner" aria-hidden="true"></div>
     <!-- Preloader Start -->
     <div id="preloader">
         <div class="animation-preloader">
@@ -243,9 +237,9 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <!-- Header Navigation Start -->
     <header id="header-sticky" class="header-nav">
         <div class="container">
-                <nav class="navbar navbar-expand-lg navbar-light bg-white py-0">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-0">
                 <a class="navbar-brand d-flex align-items-center" href="index">
-                    <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes Logo" style="width: 180px; height: auto; object-fit: contain; filter: brightness(0) invert(1);">
+                    <img src="assets/img/logo/automatixes-logo-new.png" alt="Automatixes Logo" style="height: 45px; width: auto; object-fit: contain;">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -260,11 +254,8 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
                             </a>
                             <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
                                 <li><a class="dropdown-item py-2 fw-semibold" href="ai-automated-solutions">AI Automated Solutions</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold" href="voice-agent">Voice Agent Demo <span class="badge bg-danger rounded-pill ms-2" style="font-size: 0.65rem;">NEW</span></a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold" href="ai-image-generator">AI Image Generator</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold" href="website-development">Web & App Development</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold" href="product-shoot">Product Shoot</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold" href="invoice-maker">Free Invoice Maker</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold d-flex align-items-center justify-content-between" href="voice-agent"><span>AI Voice Agents</span> <span class="badge bg-danger rounded-pill ms-2" style="font-size: 0.65rem; background: linear-gradient(135deg, #FF3B30, #FF9500) !important;">🔥 HIGH DEMAND</span></a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold" href="product-shoot">AI Product Staging & Visuals</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="reviews">Customer Ratings</a></li>

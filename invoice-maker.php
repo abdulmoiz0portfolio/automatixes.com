@@ -4,7 +4,7 @@ include 'header.php';
 ?>
 
 <!-- Subpage Hero Section -->
-<section class="subpage-hero text-center position-relative">
+<section class="subpage-hero text-center position-relative no-print">
     <div class="container">
         <span class="badge bg-warm-peach text-accent-brand rounded-pill px-3 py-2 fw-semibold mb-3">
             <i class="fa-solid fa-file-invoice me-1"></i> Free Online Invoice Generator
@@ -17,56 +17,76 @@ include 'header.php';
 </section>
 
 <!-- Main Invoice Maker App -->
-<div id="app" class="py-5 bg-light-subtle">
+<div id="app" class="py-4 py-md-5 bg-light-subtle">
     <div class="container">
         <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5 bg-white invoice-card">
             
             <!-- Top Control Bar (Screen Only) -->
             <div class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom no-print">
                 <div class="d-flex align-items-center gap-2">
-                    <span class="fw-bold text-dark fs-5"><i class="fa-solid fa-sliders text-accent-brand me-2"></i>Invoice Options</span>
+                    <span class="fw-bold text-dark fs-5"><i class="fa-solid fa-sliders text-accent-brand me-2"></i>Invoice Builder</span>
                 </div>
                 <div class="d-flex gap-2">
                     <button type="button" @click="resetForm" class="btn btn-outline-secondary rounded-pill px-3 py-2 btn-sm fw-semibold">
                         <i class="fa-solid fa-rotate-left me-1"></i> Reset
                     </button>
-                    <button type="button" id="print-invoice-btn" @click="triggerPrint" class="btn btn-brand rounded-pill px-4 py-2 btn-sm fw-bold">
+                    <button type="button" id="print-invoice-btn" @click="triggerPrint" class="btn btn-brand rounded-pill px-4 py-2 btn-sm fw-bold shadow-sm">
                         <i class="fa-solid fa-print me-1"></i> Print / Download PDF
                     </button>
                 </div>
             </div>
 
-            <!-- Printable Header Header Banner -->
+            <!-- Printable Header Banner -->
             <div class="row align-items-start mb-4 pb-3 border-bottom header-row">
                 <!-- Company Details (Left) -->
                 <div class="col-md-7 mb-3 mb-md-0 position-relative">
-                    <div class="d-flex align-items-center mb-3">
-                        <img :src="company.logo" alt="Company Logo" class="me-2 rounded-3" style="width: 50px; height: 50px; object-fit: contain; border: 1px solid rgba(0,0,0,0.1); background: #fff;">
-                        <div>
-                            <input type="text" v-model="company.name" class="form-control form-control-lg fw-bold border-0 p-0 text-dark fs-4 company-name-input" placeholder="Company Name">
-                            <input type="text" v-model="company.tagline" class="form-control border-0 p-0 text-muted small company-tagline-input" placeholder="Company Tagline">
+                    <div class="d-flex align-items-start gap-3 mb-3">
+                        
+                        <!-- Logo Container & Controls -->
+                        <div v-if="company.showLogo && company.logo" class="logo-box-container position-relative">
+                            <img :src="company.logo" alt="Company Logo" class="rounded-2" style="max-height: 54px; max-width: 150px; object-fit: contain; background: #fff;">
+                            <div class="no-print mt-1 d-flex gap-1">
+                                <label class="btn btn-outline-secondary btn-xs py-0 px-1.5 fw-semibold" style="font-size: 11px; cursor: pointer;" title="Change Logo">
+                                    <i class="fa-solid fa-camera"></i> Change
+                                    <input type="file" @change="onLogoUpload" accept="image/*" class="d-none">
+                                </label>
+                                <button type="button" @click="removeLogo" class="btn btn-outline-danger btn-xs py-0 px-1.5 fw-semibold" style="font-size: 11px;" title="Remove Logo">
+                                    <i class="fa-solid fa-trash"></i> Remove
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Add Logo Button if hidden/removed -->
+                        <div v-else class="no-print align-self-center">
+                            <label class="btn btn-outline-primary btn-sm rounded-pill px-3 py-1.5 fw-semibold d-inline-flex align-items-center gap-1.5" style="cursor: pointer;">
+                                <i class="fa-solid fa-cloud-arrow-up"></i> Upload Logo
+                                <input type="file" @change="onLogoUpload" accept="image/*" class="d-none">
+                            </label>
+                        </div>
+
+                        <div class="flex-grow-1">
+                            <input type="text" v-model="company.name" class="form-control form-control-lg fw-bold border-0 p-0 text-dark fs-4 company-name-input" placeholder="Your Company Name">
+                            <input type="text" v-model="company.tagline" class="form-control border-0 p-0 text-muted small company-tagline-input" placeholder="Company Tagline / Subtitle">
                         </div>
                     </div>
-                    <div class="ps-1 text-muted small">
-                        <div class="d-flex align-items-center mb-1 no-print">
-                            <i class="fa-solid fa-image text-accent-brand me-2" style="width: 14px;"></i>
-                            <input type="text" v-model="company.logo" class="form-control form-control-sm border-0 p-0 text-secondary" placeholder="Logo Image URL">
-                        </div>
+
+                    <!-- Company Info Fields -->
+                    <div class="ps-1 text-muted small space-y-1">
                         <div class="d-flex align-items-center mb-1">
                             <i class="fa-solid fa-location-dot text-accent-brand me-2 no-print" style="width: 14px;"></i>
-                            <input type="text" v-model="company.address" class="form-control form-control-sm border-0 p-0 text-secondary company-address-input" placeholder="Company Address">
+                            <input type="text" v-model="company.address" class="form-control form-control-sm border-0 p-0 text-secondary company-address-input" placeholder="Company Address (e.g. New York, NY)">
                         </div>
                         <div class="d-flex align-items-center mb-1">
                             <i class="fa-solid fa-phone text-accent-brand me-2 no-print" style="width: 14px;"></i>
-                            <input type="text" v-model="company.phone" class="form-control form-control-sm border-0 p-0 text-secondary company-phone-input" placeholder="Company Phone">
+                            <input type="text" v-model="company.phone" class="form-control form-control-sm border-0 p-0 text-secondary company-phone-input" placeholder="Company Phone (+1 234 567 890)">
                         </div>
                         <div class="d-flex align-items-center mb-1">
                             <i class="fa-solid fa-envelope text-accent-brand me-2 no-print" style="width: 14px;"></i>
-                            <input type="email" v-model="company.email" class="form-control form-control-sm border-0 p-0 text-secondary company-email-input" placeholder="Company Email">
+                            <input type="email" v-model="company.email" class="form-control form-control-sm border-0 p-0 text-secondary company-email-input" placeholder="Company Email (contact@company.com)">
                         </div>
                         <div class="d-flex align-items-center">
                             <i class="fa-solid fa-globe text-accent-brand me-2 no-print" style="width: 14px;"></i>
-                            <input type="text" v-model="company.website" class="form-control form-control-sm border-0 p-0 text-secondary company-website-input" placeholder="Company Website">
+                            <input type="text" v-model="company.website" class="form-control form-control-sm border-0 p-0 text-secondary company-website-input" placeholder="Company Website (https://company.com)">
                         </div>
                     </div>
                 </div>
@@ -94,15 +114,87 @@ include 'header.php';
                             </div>
                         </div>
                         <div class="row g-2 align-items-center">
-                            <label class="col-5 col-form-label col-form-label-sm fw-semibold text-muted">Currency:</label>
-                            <div class="col-7">
-                                <select v-model="invoiceMeta.currency" id="currency-select" class="form-select form-select-sm fw-bold text-end">
-                                    <option value="$">USD ($)</option>
-                                    <option value="ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã…Â¡Ãƒ"šÃ‚Â¬">EUR (ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢"šÂ¬Ã…Â¡Ãƒ"šÃ‚Â¬)</option>
-                                    <option value="ÃƒÆ’Ã¢â‚¬Å¡Ãƒ"šÃ‚Â£">GBP (ÃƒÆ’Ã¢â‚¬Å¡Ãƒ"šÃ‚Â£)</option>
-                                    <option value="C$">CAD (C$)</option>
-                                    <option value="Rs">PKR (Rs)</option>
+                            <label class="col-4 col-form-label col-form-label-sm fw-semibold text-muted">Currency:</label>
+                            <div class="col-8">
+                                <select v-model="invoiceMeta.currency" id="currency-select" class="form-select form-select-sm fw-bold mb-1">
+                                    <optgroup label="⭐ Major Global">
+                                        <option value="$">USD ($) - US Dollar</option>
+                                        <option value="€">EUR (€) - Euro</option>
+                                        <option value="£">GBP (£) - British Pound</option>
+                                        <option value="¥">JPY (¥) - Japanese Yen</option>
+                                        <option value="CHF">CHF - Swiss Franc</option>
+                                        <option value="C$">CAD (C$) - Canadian Dollar</option>
+                                        <option value="A$">AUD (A$) - Australian Dollar</option>
+                                        <option value="NZ$">NZD (NZ$) - New Zealand Dollar</option>
+                                        <option value="S$">SGD (S$) - Singapore Dollar</option>
+                                        <option value="HK$">HKD (HK$) - Hong Kong Dollar</option>
+                                        <option value="¥">CNY (¥) - Chinese Yuan</option>
+                                    </optgroup>
+                                    <optgroup label="🕌 Middle East & Gulf (GCC)">
+                                        <option value="AED">AED (د.إ) - UAE Dirham</option>
+                                        <option value="SAR">SAR (﷼) - Saudi Riyal</option>
+                                        <option value="QAR">QAR (﷼) - Qatari Riyal</option>
+                                        <option value="KWD">KWD (د.ك) - Kuwaiti Dinar</option>
+                                        <option value="BHD">BHD (ب.د) - Bahraini Dinar</option>
+                                        <option value="OMR">OMR (ر.ع) - Omani Rial</option>
+                                        <option value="JOD">JOD (د.ا) - Jordanian Dinar</option>
+                                        <option value="EGP">EGP (ج.م) - Egyptian Pound</option>
+                                        <option value="₺">TRY (₺) - Turkish Lira</option>
+                                        <option value="₪">ILS (₪) - Israeli Shekel</option>
+                                    </optgroup>
+                                    <optgroup label="🌏 South Asia">
+                                        <option value="Rs">PKR (Rs) - Pakistani Rupee</option>
+                                        <option value="₹">INR (₹) - Indian Rupee</option>
+                                        <option value="৳">BDT (৳) - Bangladeshi Taka</option>
+                                        <option value="Rs">LKR (Rs) - Sri Lankan Rupee</option>
+                                        <option value="₨">NPR (₨) - Nepalese Rupee</option>
+                                    </optgroup>
+                                    <optgroup label="🌴 Southeast & East Asia">
+                                        <option value="RM">MYR (RM) - Malaysian Ringgit</option>
+                                        <option value="Rp">IDR (Rp) - Indonesian Rupiah</option>
+                                        <option value="₱">PHP (₱) - Philippine Peso</option>
+                                        <option value="฿">THB (฿) - Thai Baht</option>
+                                        <option value="₫">VND (₫) - Vietnamese Dong</option>
+                                        <option value="₩">KRW (₩) - South Korean Won</option>
+                                    </optgroup>
+                                    <optgroup label="🏰 Europe & Nordic">
+                                        <option value="kr">SEK (kr) - Swedish Krona</option>
+                                        <option value="kr">NOK (kr) - Norwegian Krone</option>
+                                        <option value="kr">DKK (kr) - Danish Krone</option>
+                                        <option value="zł">PLN (zł) - Polish Zloty</option>
+                                        <option value="Kč">CZK (Kč) - Czech Koruna</option>
+                                        <option value="Ft">HUF (Ft) - Hungarian Forint</option>
+                                        <option value="lei">RON (lei) - Romanian Leu</option>
+                                        <option value="₴">UAH (₴) - Ukrainian Hryvnia</option>
+                                        <option value="₽">RUB (₽) - Russian Ruble</option>
+                                    </optgroup>
+                                    <optgroup label="🌎 Americas">
+                                        <option value="Mex$">MXN (Mex$) - Mexican Peso</option>
+                                        <option value="R$">BRL (R$) - Brazilian Real</option>
+                                        <option value="CLP$">CLP (CLP$) - Chilean Peso</option>
+                                        <option value="COP$">COP (COP$) - Colombian Peso</option>
+                                        <option value="PEN">PEN (S/.) - Peruvian Sol</option>
+                                        <option value="ARS$">ARS (ARS$) - Argentine Peso</option>
+                                    </optgroup>
+                                    <optgroup label="🌍 Africa">
+                                        <option value="R">ZAR (R) - South African Rand</option>
+                                        <option value="₦">NGN (₦) - Nigerian Naira</option>
+                                        <option value="KSh">KES (KSh) - Kenyan Shilling</option>
+                                        <option value="GH₵">GHS (GH₵) - Ghanaian Cedi</option>
+                                        <option value="MAD">MAD (د.م.) - Moroccan Dirham</option>
+                                    </optgroup>
+                                    <optgroup label="⚡ Crypto / Web3">
+                                        <option value="₿">BTC (₿) - Bitcoin</option>
+                                        <option value="Ξ">ETH (Ξ) - Ethereum</option>
+                                        <option value="₮">USDT (₮) - Tether USD</option>
+                                        <option value="USDC">USDC - USD Coin</option>
+                                        <option value="SOL">SOL - Solana</option>
+                                    </optgroup>
                                 </select>
+                                <div class="d-flex align-items-center gap-1">
+                                    <span class="text-muted" style="font-size: 10px;">Custom:</span>
+                                    <input type="text" v-model="invoiceMeta.currency" class="form-control form-control-sm py-0 px-1 font-monospace" placeholder="e.g. CAD, Rs, $" style="font-size: 11px;">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -110,11 +202,11 @@ include 'header.php';
             </div>
 
             <!-- Client Info Section -->
-            <div class="row mb-4">
+            <div class="row mb-4 client-section">
                 <div class="col-md-6">
                     <div class="p-3 bg-light rounded-3 border h-100">
                         <h6 class="fw-bold text-dark mb-2 text-uppercase tracking-wider small">
-                            <i class="fa-solid fa-user-tag text-accent-brand me-1 no-print"></i> Billed To (Client):
+                            <i class="fa-solid fa-user-tag text-accent-brand me-1 no-print"></i> Billed To:
                         </h6>
                         <div class="mb-2">
                             <input type="text" v-model="client.name" id="client-name-input" class="form-control form-control-sm fw-bold text-dark" placeholder="Client Contact Name">
@@ -138,7 +230,7 @@ include 'header.php';
             </div>
 
             <!-- Line Items Table -->
-            <div class="table-responsive mb-4">
+            <div class="table-responsive mb-3">
                 <table class="table table-bordered align-middle">
                     <thead class="table-dark text-uppercase small">
                         <tr>
@@ -189,13 +281,59 @@ include 'header.php';
             </div>
 
             <!-- Invoice Summary & Totals -->
-            <div class="row align-items-start mb-4">
-                <!-- Payment Notes / Terms (Left) -->
-                <div class="col-md-6 mb-3 mb-md-0">
-                    <div class="p-3 bg-light rounded-3 border h-100">
-                        <h6 class="fw-bold text-dark mb-2 text-uppercase tracking-wider small">Notes & Payment Terms</h6>
-                        <textarea v-model="notes" id="notes-input" class="form-control form-control-sm border-0 bg-transparent text-secondary" rows="4" placeholder="Enter payment instructions, bank details, or terms..."></textarea>
+            <div class="row align-items-start mb-3 totals-section">
+                <!-- Left: Payment Notes & Bank Details -->
+                <div class="col-md-6 mb-3 mb-md-0 space-y-3">
+                    
+                    <!-- Notes & Payment Terms (Editable Title & Removable) -->
+                    <div v-if="options.showNotes" class="p-3 bg-light rounded-3 border mb-3">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <input type="text" v-model="sections.notesTitle" class="form-control form-control-sm border-0 p-0 fw-bold text-dark text-uppercase tracking-wider small" style="width: 80%; background: transparent;" placeholder="NOTES & PAYMENT TERMS">
+                            <button type="button" @click="options.showNotes = false" class="btn btn-outline-danger btn-xs py-0 px-1.5 no-print" style="font-size: 11px;">
+                                <i class="fa-solid fa-xmark"></i> Hide
+                            </button>
+                        </div>
+                        <textarea v-model="notes" id="notes-input" class="form-control form-control-sm border-0 bg-transparent text-secondary p-0" rows="3" placeholder="Enter payment instructions, terms, or greetings..."></textarea>
                     </div>
+                    <div v-else class="no-print mb-2">
+                        <button type="button" @click="options.showNotes = true" class="btn btn-outline-primary btn-xs rounded-pill px-2.5 py-1 fw-semibold">
+                            <i class="fa-solid fa-plus"></i> Add Notes & Terms Section
+                        </button>
+                    </div>
+
+                    <!-- Bank & Wire Transfer (Editable Title & Removable) -->
+                    <div v-if="options.showBank" class="p-3 bg-light rounded-3 border">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <input type="text" v-model="sections.bankTitle" class="form-control form-control-sm border-0 p-0 fw-bold text-dark text-uppercase tracking-wider small" style="width: 80%; background: transparent;" placeholder="BANK & WIRE TRANSFER:">
+                            <button type="button" @click="options.showBank = false" class="btn btn-outline-danger btn-xs py-0 px-1.5 no-print" style="font-size: 11px;">
+                                <i class="fa-solid fa-xmark"></i> Hide
+                            </button>
+                        </div>
+                        <div class="row g-2 small">
+                            <div class="col-6">
+                                <label class="text-muted d-block" style="font-size: 10px;">Bank Name:</label>
+                                <input type="text" v-model="bank.name" class="form-control form-control-sm" placeholder="JPMorgan Chase">
+                            </div>
+                            <div class="col-6">
+                                <label class="text-muted d-block" style="font-size: 10px;">Account / IBAN:</label>
+                                <input type="text" v-model="bank.iban" class="form-control form-control-sm" placeholder="GB29 CHAS XXX">
+                            </div>
+                            <div class="col-6">
+                                <label class="text-muted d-block" style="font-size: 10px;">Swift / BIC:</label>
+                                <input type="text" v-model="bank.swift" class="form-control form-control-sm" placeholder="CHASUS33">
+                            </div>
+                            <div class="col-6">
+                                <label class="text-muted d-block" style="font-size: 10px;">Account Title:</label>
+                                <input type="text" v-model="bank.holder" class="form-control form-control-sm" placeholder="Automatixes LLC">
+                            </div>
+                        </div>
+                    </div>
+                    <div v-else class="no-print mb-2">
+                        <button type="button" @click="options.showBank = true" class="btn btn-outline-primary btn-xs rounded-pill px-2.5 py-1 fw-semibold">
+                            <i class="fa-solid fa-plus"></i> Add Bank & Wire Transfer Section
+                        </button>
+                    </div>
+
                 </div>
 
                 <!-- Totals Calculation Card (Right) -->
@@ -207,25 +345,25 @@ include 'header.php';
                         </div>
 
                         <!-- Tax Input & Calculated Amount -->
-                        <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom">
                             <div class="d-flex align-items-center gap-1">
                                 <span class="fw-semibold text-secondary">Tax Rate (%):</span>
-                                <input type="number" min="0" max="100" step="0.1" v-model.number="taxRate" id="tax-rate-input" class="form-control form-control-sm text-end" style="width: 70px;">
+                                <input type="number" min="0" step="any" v-model.number="taxRate" id="tax-rate-input" class="form-control form-control-sm text-end" style="width: 70px;">
                             </div>
                             <span class="fw-bold text-dark tax-amount-display" id="tax-amount-val">+ {{ invoiceMeta.currency }} {{ formatMoney(taxAmount) }}</span>
                         </div>
 
                         <!-- Discount Input & Calculated Amount -->
-                        <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <div class="d-flex justify-content-between align-items-center py-1.5 border-bottom">
                             <div class="d-flex align-items-center gap-1">
                                 <span class="fw-semibold text-secondary">Discount (%):</span>
-                                <input type="number" min="0" max="100" step="0.1" v-model.number="discountRate" id="discount-rate-input" class="form-control form-control-sm text-end" style="width: 70px;">
+                                <input type="number" min="0" step="any" v-model.number="discountRate" id="discount-rate-input" class="form-control form-control-sm text-end" style="width: 70px;">
                             </div>
                             <span class="fw-bold text-success discount-amount-display" id="discount-amount-val">- {{ invoiceMeta.currency }} {{ formatMoney(discountAmount) }}</span>
                         </div>
 
                         <!-- Grand Total -->
-                        <div class="d-flex justify-content-between align-items-center pt-3 mt-1">
+                        <div class="d-flex justify-content-between align-items-center pt-2.5 mt-1">
                             <span class="fw-extrabold text-dark fs-5">Grand Total:</span>
                             <span class="fw-extrabold text-accent-brand fs-4 grand-total-display" id="grand-total-val">{{ invoiceMeta.currency }} {{ formatMoney(grandTotal) }}</span>
                         </div>
@@ -234,16 +372,16 @@ include 'header.php';
             </div>
 
             <!-- Footer Sign-off / Thank you -->
-            <div class="text-center pt-4 border-top text-muted small mt-2">
-                <p class="mb-0 fw-semibold">Thank you for your business!</p>
-                <p class="mb-0 text-secondary">If you have any questions regarding this invoice, please contact <a href="mailto:contact@automatixes.com" class="text-accent-brand text-decoration-none">contact@automatixes.com</a></p>
+            <div class="invoice-footer-notes text-center pt-3 border-top text-muted small mt-2">
+                <p class="mb-0.5 fw-bold text-dark">Thank you for your business!</p>
+                <p class="mb-0 text-secondary">If you have any questions regarding this invoice, please contact <a :href="'mailto:' + (company.email || 'contact@automatixes.com')" class="text-accent-brand text-decoration-none fw-semibold">{{ company.email || 'contact@automatixes.com' }}</a></p>
             </div>
 
-            <!-- Watermark Footer (Print Only) -->
-            <div class="invoice-watermark mt-5 pt-3 border-top text-center" style="display: none;">
-                    Invoice Generated by <strong>Automatixes</strong> | <i class="fa-solid fa-globe me-1"></i> automatixes.com | <i class="fa-solid fa-phone me-1"></i> +92 336 6920141
-                </span>
+            <!-- Watermark Footer (In-Flow Clean Print) -->
+            <div class="invoice-watermark mt-3 pt-2 border-top text-center text-muted" style="display: none; font-size: 8.5pt;">
+                <span>Invoice Generated by <strong>{{ company.name || 'Automatixes' }}</strong> | {{ company.website || 'automatixes.com' }} | {{ company.phone || '+92 336 6920141' }}</span>
             </div>
+
         </div>
     </div>
 </div>
@@ -303,29 +441,22 @@ include 'header.php';
         display: none !important;
     }
 
-    .invoice-watermark {
-        display: block !important;
-        position: fixed;
-        bottom: 20px;
-        left: 0;
-        right: 0;
-        text-align: center;
-    }
-
     @page {
-        size: A4;
-        margin: 10mm 12mm;
+        size: A4 portrait;
+        margin: 8mm 12mm;
     }
 
     body {
         background: #ffffff !important;
-        color: #000000 !important;
-        font-size: 11pt;
+        color: #1e293b !important;
+        font-size: 10pt !important;
         padding: 0 !important;
         margin: 0 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
     }
 
-    #app, .py-5, .bg-light-subtle {
+    #app, .py-4, .py-md-5, .bg-light-subtle {
         padding: 0 !important;
         background: transparent !important;
     }
@@ -351,11 +482,11 @@ include 'header.php';
         background: transparent !important;
         box-shadow: none !important;
         padding: 0 !important;
-        color: #000000 !important;
+        color: #0f172a !important;
         font-weight: 500;
         appearance: none !important;
         -webkit-appearance: none !important;
-        font-size: 11pt !important;
+        font-size: 10pt !important;
     }
 
     .form-select {
@@ -363,24 +494,46 @@ include 'header.php';
     }
 
     .table {
-        border-color: #cccccc !important;
+        border-color: #cbd5e1 !important;
+        margin-bottom: 12px !important;
     }
 
     .table th, .table td {
         background: transparent !important;
-        border-color: #e0e0e0 !important;
-        padding: 6px 4px !important;
+        border-color: #e2e8f0 !important;
+        padding: 5px 6px !important;
     }
 
     .table-dark {
-        background-color: #f0f0f0 !important;
-        color: #000000 !important;
-        border-color: #cccccc !important;
+        background-color: #f1f5f9 !important;
+        color: #0f172a !important;
+        border-color: #cbd5e1 !important;
     }
 
     .bg-light, .bg-light-subtle {
-        background-color: #fcfcfc !important;
-        border-color: #e5e5e5 !important;
+        background-color: #f8fafc !important;
+        border-color: #e2e8f0 !important;
+    }
+
+    /* Avoid page-split collisions */
+    .header-row,
+    .client-section,
+    .table-responsive,
+    .line-item-row,
+    .totals-section,
+    .invoice-footer-notes,
+    .invoice-watermark {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    /* In-Flow Watermark (Prevents any fixed text collision) */
+    .invoice-watermark {
+        display: block !important;
+        position: static !important;
+        margin-top: 14px !important;
+        padding-top: 8px !important;
+        border-top: 1px solid #e2e8f0 !important;
     }
 }
 </style>
@@ -396,7 +549,8 @@ include 'header.php';
         setup() {
             // 1. Company Information (Pre-filled, Editable)
             const company = ref({
-                logo: 'assets/img/logo/icon_light.jpg',
+                showLogo: true,
+                logo: 'assets/img/logo/automatixes-logo-new.png',
                 name: 'Automatixes',
                 tagline: 'Empowering Businesses with AI & Automation',
                 address: 'Remote / Worldwide',
@@ -405,7 +559,52 @@ include 'header.php';
                 website: 'https://automatixes.com'
             });
 
-            // 2. Client Details (Editable)
+            // Logo Management Actions
+            const onLogoUpload = (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+                if (file.size > 3 * 1024 * 1024) {
+                    alert('Please select an image smaller than 3MB');
+                    return;
+                }
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    company.value.logo = event.target.result;
+                    company.value.showLogo = true;
+                };
+                reader.readAsDataURL(file);
+            };
+
+            const removeLogo = () => {
+                company.value.showLogo = false;
+                company.value.logo = '';
+            };
+
+            const resetLogo = () => {
+                company.value.logo = 'assets/img/logo/automatixes-logo-new.png';
+                company.value.showLogo = true;
+            };
+
+            // 2. Sections & Options
+            const sections = ref({
+                clientTitle: 'BILLED TO:',
+                notesTitle: 'NOTES & PAYMENT TERMS',
+                bankTitle: 'BANK & WIRE TRANSFER:'
+            });
+
+            const options = ref({
+                showNotes: true,
+                showBank: true
+            });
+
+            const bank = ref({
+                name: 'JPMorgan Chase Bank',
+                iban: 'GB29 CHAS 0928 3829 1029 48',
+                swift: 'CHASUS33XXX',
+                holder: 'Automatixes LLC'
+            });
+
+            // 3. Client Details (Editable)
             const client = ref({
                 name: 'Acme Corporation',
                 company: 'Acme Corp Inc.',
@@ -414,7 +613,7 @@ include 'header.php';
                 phone: '+1 (555) 019-2834'
             });
 
-            // 3. Invoice Meta
+            // 4. Invoice Meta
             const todayStr = new Date().toISOString().split('T')[0];
             const defaultDue = new Date();
             defaultDue.setDate(defaultDue.getDate() + 14);
@@ -427,7 +626,7 @@ include 'header.php';
                 currency: '$'
             });
 
-            // 4. Default Core Services
+            // 5. Default Core Services
             const defaultServices = [
                 'Autonomous AI Agents',
                 'AI Automations (n8n/Make)',
@@ -437,7 +636,7 @@ include 'header.php';
                 'Support & Maintenance'
             ];
 
-            // 5. Reactive Line Items Table Data
+            // 6. Reactive Line Items Table Data
             const lineItems = ref([
                 {
                     serviceSelect: 'Autonomous AI Agents',
@@ -455,11 +654,11 @@ include 'header.php';
                 }
             ]);
 
-            // 6. Tax and Discount Rates (%)
+            // 7. Tax and Discount Rates (%)
             const taxRate = ref(5);
             const discountRate = ref(0);
 
-            // 7. Payment Notes / Terms
+            // 8. Payment Notes / Terms
             const notes = ref('Thank you for working with Automatixes! Payment is due within 14 days.');
 
             // Helper to update service description
@@ -492,29 +691,30 @@ include 'header.php';
             // Computed Properties for Live Math Calculations
             const subtotal = computed(() => {
                 return lineItems.value.reduce((sum, item) => {
-                    const qty = Number(item.quantity) || 0;
-                    const prc = Number(item.price) || 0;
+                    const qty = parseFloat(item.quantity) || 0;
+                    const prc = parseFloat(item.price) || 0;
                     return sum + (qty * prc);
                 }, 0);
             });
 
             const taxAmount = computed(() => {
-                const rate = Number(taxRate.value) || 0;
-                return subtotal.value * (rate / 100);
+                const rate = parseFloat(taxRate.value) || 0;
+                return (subtotal.value * rate) / 100;
             });
 
             const discountAmount = computed(() => {
-                const rate = Number(discountRate.value) || 0;
-                return subtotal.value * (rate / 100);
+                const rate = parseFloat(discountRate.value) || 0;
+                return (subtotal.value * rate) / 100;
             });
 
             const grandTotal = computed(() => {
-                return subtotal.value + taxAmount.value - discountAmount.value;
+                const total = subtotal.value + taxAmount.value - discountAmount.value;
+                return Math.max(0, total);
             });
 
             // Currency formatting helper
             const formatMoney = (val) => {
-                const num = Number(val) || 0;
+                const num = parseFloat(val) || 0;
                 return num.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
             };
 
@@ -527,7 +727,7 @@ include 'header.php';
             const resetForm = () => {
                 client.value = { name: '', company: '', address: '', email: '', phone: '' };
                 invoiceMeta.value = {
-                    number: 'INV-1001',
+                    number: 'INV-' + Math.floor(1000 + Math.random() * 9000),
                     date: todayStr,
                     dueDate: dueStr,
                     currency: '$'
@@ -541,12 +741,18 @@ include 'header.php';
                         price: 1000.00
                     }
                 ];
-                taxRate.value = 0;
+                taxRate.value = 5;
                 discountRate.value = 0;
             };
 
             return {
                 company,
+                onLogoUpload,
+                removeLogo,
+                resetLogo,
+                sections,
+                options,
+                bank,
                 client,
                 invoiceMeta,
                 defaultServices,
@@ -570,6 +776,7 @@ include 'header.php';
 </script>
 
 <?php include 'footer.php'; ?>
+
 
 
 
