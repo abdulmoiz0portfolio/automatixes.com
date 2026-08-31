@@ -55,16 +55,10 @@
                         <h5 class="widget-title">SaaS Tools</h5>
                         <ul class="list-unstyled footer-menu">
                             <li>
-                                <a href="https://qrcode.automatixes.com" target="_blank" class="d-inline-flex align-items-center gap-1.5">
-                                    <span>QR Code Generator</span>
-                                    <span class="badge bg-primary" style="font-size: 10px; font-weight: 700; border-radius: 6px;">Free</span>
-                                </a>
+                                <a href="https://qrcode.automatixes.com" target="_blank">QR Code Generator</a>
                             </li>
                             <li>
-                                <a href="https://invoicemaker.automatixes.com" target="_blank" class="d-inline-flex align-items-center gap-1.5">
-                                    <span>Free Invoice Maker</span>
-                                    <span class="badge bg-primary" style="font-size: 10px; font-weight: 700; border-radius: 6px;">Free</span>
-                                </a>
+                                <a href="https://invoicemaker.automatixes.com" target="_blank">Free Invoice Maker</a>
                             </li>
                         </ul>
                     </div>
@@ -79,7 +73,7 @@
                             </li>
                             <li class="d-flex align-items-center mb-2">
                                 <i class="fa-solid fa-phone text-accent-brand me-2.5" style="width: 18px; text-align: center; font-size: 14px;"></i>
-                                <a href="tel:+923366920141" class="text-decoration-none">+92 336 6920141</a>
+                                <a href="tel:+923366920141" class="text-decoration-none" style="font-weight: 400 !important; color: var(--text-secondary);">+92 336 6920141</a>
                             </li>
                         </ul>
                     </div>
