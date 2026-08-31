@@ -244,21 +244,14 @@ function initMatterJsPhysics() {
     Composite.add(world, [ground, leftWall, rightWall, topWall]);
 
     const defaultPillTexts = [
-        "⚡ AI Automations",
-        "🔌 MCP Servers & Tools",
-        "🔄 Webhook Triggers",
-        "🤖 Autonomous AI Agents",
-        "⚙️ Complex Workflows",
-        "🎙️ AI Voice Agents",
-        "📊 CRM & Database Sync",
-        "🧠 LLM Orchestration",
-        "💼 n8n & Make Pipelines",
-        "🚀 Real-Time API Integrations",
-        "🚫 Manual Busywork",
-        "📉 Lead Leakage",
-        "⏳ Wasted Admin Hours",
-        "❌ Disconnected Apps",
-        "🔒 24/7 Smart Pipelines"
+        "Missed Leads",
+        "Slow Follow-Ups",
+        "Manual Data Entry",
+        "Scattered Tools",
+        "Repetitive Reporting",
+        "Delayed Support",
+        "Human Errors",
+        "Scaling Bottlenecks"
     ];
 
     let pillTexts = defaultPillTexts;
