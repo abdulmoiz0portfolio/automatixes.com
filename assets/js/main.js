@@ -229,10 +229,14 @@ function initMatterJsPhysics() {
     // Pill texts â€” falls back to default pain-point set, or reads a custom
     // JSON list from data-pills on the container (e.g. for benefit-themed sections)
     const defaultPillTexts = [
-        "Slow Websites", "High Bounce Rates", "Manual Workflows",
-        "Lack of Brand Differentiation", "Lead Leakage", "Poor Conversion Rates",
-        "Inconsistent Branding", "Scaling Difficulties", "Outdated Technology",
-        "Hidden Operational Costs", "Technical Debt"
+        "Missed Leads",
+        "Slow Follow-Ups",
+        "Manual Data Entry",
+        "Scattered Tools",
+        "Repetitive Reporting",
+        "Delayed Support",
+        "Human Errors",
+        "Scaling Bottlenecks"
     ];
     let pillTexts = defaultPillTexts;
     if (container.dataset.pills) {
@@ -246,7 +250,7 @@ function initMatterJsPhysics() {
 
     const pills = [];
     const isMobile = window.innerWidth < 768;
-    const displayPills = isMobile ? pillTexts.slice(0, 6) : pillTexts;
+    const displayPills = pillTexts;
 
     const pillTint = container.dataset.pillTint === "brand";
 
