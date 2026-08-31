@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Automation Agency (n8n, Make, GoHighLevel) | Automatixes</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
     <link rel="canonical" href="https://www.automatixes.com/">
     
     <!-- Meta SEO Tags -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="description" content="Automatixes is an AI-first agency building custom AI agents and workflow automations to connect your CRM, WhatsApp, and emails. Scale operations 24/7.">
     <meta name="keywords" content="AI Automation Agency, n8n, Make, GoHighLevel, Zapier, AI Agents, software development, CRM integration">
     <meta name="author" content="Automatixes">
@@ -42,7 +43,7 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Automatixes",
-      "url": "<?php echo $protocol; ?>://<?php echo $host; ?>",
+      "url": "https://www.automatixes.com",
       "description": "An AI-first automation agency that designs custom AI agents and workflow automations to run business operations 24/7."
     }
     </script>
@@ -53,9 +54,9 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Automatixes",
-      "url": "<?php echo $protocol; ?>://<?php echo $host; ?>",
-      "logo": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/services/ai_automations.jpg",
-      "image": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/services/ai_automations.jpg",
+      "url": "https://www.automatixes.com",
+      "logo": "https://www.automatixes.com/assets/img/services/ai_automations.jpg",
+      "image": "https://www.automatixes.com/assets/img/services/ai_automations.jpg",
       "description": "An AI-first automation agency that designs custom AI agents and workflow automations to run business operations 24/7.",
       "telephone": "+92-336-6920141",
       "email": "contact@automatixes.com",
@@ -70,48 +71,9 @@
     </script>
 
     <!-- Service Schema -->
-    <?php if (in_array($page_key, ['ai-automated-solutions', 'website-development', 'product-shoot'])): ?>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "<?php echo $active_meta['title']; ?>",
-      "serviceType": "<?php echo str_replace(' | Automatixes', '', $active_meta['title']); ?>",
-      "provider": {
-        "@type": "Organization",
-        "name": "Automatixes",
-        "url": "<?php echo $protocol; ?>://<?php echo $host; ?>"
-      },
-      "description": "<?php echo $active_meta['desc']; ?>",
-      "areaServed": {
-        "@type": "Place",
-        "name": "Worldwide"
-      }
-    }
-    </script>
-    <?php endif; ?>
-
+    
     <!-- BreadcrumbList Schema -->
-    <?php if ($page_key !== 'index'): ?>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "<?php echo $protocol; ?>://<?php echo $host; ?>"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "<?php echo str_replace(' | Automatixes', '', $active_meta['title']); ?>",
-        "item": "<?php echo $canonical_url; ?>"
-      }]
-    }
-    </script>
-    <?php endif; ?>
-
+    
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -124,7 +86,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Custom Main CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=6.0.0">
+    <link rel="stylesheet" href="assets/css/main.css?v=4.2.0">
 </head>
 <body>
 
@@ -170,7 +132,7 @@
                             </a>
                             <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
                                 <li><a class="dropdown-item py-2 fw-semibold" href="ai-automated-solutions">AI Automated Solutions</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold d-flex align-items-center justify-content-between" href="voice-agent"><span>AI Voice Agents</span> <span class="badge bg-danger rounded-pill ms-2" style="font-size: 0.65rem; background: linear-gradient(135deg, #FF3B30, #FF9500) !important;">🔥 HIGH DEMAND</span></a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold d-flex align-items-center justify-content-between" href="voice-agent"><span>AI Voice Agents</span> <span class="badge bg-danger rounded-pill ms-2" style="font-size: 0.65rem; background: linear-gradient(135deg, #FF3B30, #FF9500) !important;">ðŸ”¥ HIGH DEMAND</span></a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold" href="product-shoot">AI Product Staging & Visuals</a></li>
                             </ul>
                         </li>
@@ -191,6 +153,7 @@
 
     <div id="smooth-wrapper">
         <div id="smooth-content">
+
 
 
 
@@ -439,7 +402,7 @@
     
     <div class="container position-relative z-1 hero-content py-5" style="color: #ffffff;">
         <span class="badge rounded-pill border border-secondary text-light mb-4 px-4 py-2" style="background: rgba(255,255,255,0.03); letter-spacing: 2px; font-size: 0.75rem; text-transform: uppercase;">
-            <span style="color: #C8E019;" class="me-2">🚀</span> DIGITAL AGENCY FOR AMBITIOUS BRANDS
+            <span style="color: #C8E019;" class="me-2">ðŸš€</span> DIGITAL AGENCY FOR AMBITIOUS BRANDS
         </span>
         
         <h1 class="display-3 fw-bold mb-4" style="line-height: 1.15; letter-spacing: -1.5px; color: #ffffff;">
@@ -468,8 +431,8 @@
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-5">
-                <div class="about-image-wrapper wow fadeInLeft" data-wow-delay=".3s">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Team planning at Automatixes" loading="lazy" class="img-fluid rounded-4 shadow-sm border border-white border-4">
+                <div class="about-image-wrapper wow fadeInLeft position-relative" data-wow-delay=".3s">
+                    <img src="assets/img/about-team.jpg" alt="AI Automation Team at Automatixes" loading="lazy" class="img-fluid rounded-4 shadow-lg border border-secondary" style="object-fit: cover; width: 100%; aspect-ratio: 4/3; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -927,7 +890,6 @@
 
 
 
-
 <!-- Packages Section Start -->
 <section id="packages-section" class="packages-area section-padding bg-dark position-relative overflow-hidden">
     <div class="container position-relative z-1">
@@ -1311,12 +1273,6 @@
 }
 </script>
 
-
-
-
-
-
-
     </div> <!-- End smooth-content -->
     </div> <!-- End smooth-wrapper -->
 
@@ -1324,7 +1280,7 @@
     <footer class="footer-area bg-dark text-white pt-5 pb-3">
         <div class="container">
             <div class="row g-4 mb-5">
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <a href="index" class="footer-logo mb-3 d-inline-block text-decoration-none">
                             <img src="assets/img/logo/automatixes-logo-new.png" alt="Automatixes" style="height: 48px; width: auto; object-fit: contain;">
@@ -1343,20 +1299,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-2 col-md-4 col-6">
                     <div class="footer-widget">
                         <h5 class="widget-title">Quick Links</h5>
-                        <ul class="list-unstyled footer-menu">
+                        <ul class="list-unstyled footer-menu mb-4">
                             <li><a href="index">Home</a></li>
                             <li><a href="about">About Us</a></li>
                             <li><a href="blogs">Blogs</a></li>
                             <li><a href="contact">Contact Us</a></li>
+                        </ul>
+                        <h5 class="widget-title">Legal</h5>
+                        <ul class="list-unstyled footer-menu">
                             <li><a href="privacy">Privacy Policy</a></li>
                             <li><a href="terms">Terms of Service</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-2 col-md-4 col-6">
                     <div class="footer-widget">
                         <h5 class="widget-title">Our Services</h5>
                         <ul class="list-unstyled footer-menu">
@@ -1366,7 +1325,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-2 col-md-4 col-6">
                     <div class="footer-widget">
                         <h5 class="widget-title">SaaS Tools</h5>
                         <ul class="list-unstyled footer-menu">
@@ -1382,13 +1341,13 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <h5 class="widget-title">Contact Info</h5>
-                        <ul class="list-unstyled contact-info text-muted">
+                        <ul class="list-unstyled footer-menu">
                             <li class="d-flex align-items-center mb-2">
-                                <i class="fa-solid fa-envelope text-accent-brand me-2 fs-6"></i>
+                                <i class="fa-solid fa-envelope text-accent-brand me-2" style="font-size: 15px;"></i>
                                 <a href="mailto:contact@automatixes.com" class="text-decoration-none">contact@automatixes.com</a>
                             </li>
                             <li class="d-flex align-items-center mb-2">
-                                <i class="fa-solid fa-phone text-accent-brand me-2 fs-6"></i>
+                                <i class="fa-solid fa-phone text-accent-brand me-2" style="font-size: 16px;"></i>
                                 <a href="tel:+923366920141" class="text-decoration-none" style="font-weight: 400 !important; color: var(--text-secondary);">+92 336 6920141</a>
                             </li>
                         </ul>
@@ -1399,13 +1358,10 @@
             <hr class="border-secondary">
             
             <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
+                <div class="col-12 text-center">
                     <p class="mb-0 text-muted">&copy; 2026 Automatixes. All rights reserved.</p>
                 </div>
-                <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
-                    <a href="privacy" class="text-muted text-decoration-none me-3">Privacy Policy</a>
-                    <a href="terms" class="text-muted text-decoration-none">Terms of Service</a>
-                </div>
+                
             </div>
         </div>
     </footer>
@@ -1417,7 +1373,7 @@
             <button class="close-modal" id="closeModal">&times;</button>
             <div class="modal-content-side" style="padding: 40px 30px; text-align: center;">
                 <div class="modal-logo">
-                    <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes Logo" style="width: 48px; height: 48px; object-fit: cover; border-radius: 12px; mix-blend-mode: darken; border: 1px solid rgba(0,0,0,0.1); display: block; margin: 0 auto;">
+                    <img src="assets/img/logo/automatixes-icon.png" alt="Automatixes Logo" style="width: 64px; height: 64px; object-fit: contain; display: block; margin: 0 auto; margin-bottom: 10px;">
                 </div>
                 <h2 style="font-size: 28px; margin-bottom: 10px; ">Exclusive 10% Discount!</h2>
                 <p style="font-size: 15px; color: #666; margin-bottom: 25px;">Subscribe to our newsletter and save <b>10%</b> on your first project with us.</p>
@@ -1430,7 +1386,7 @@
                             <span id="popup-email-error" style="color: #ff3333; font-size: 13px; display: none;">Please enter a valid email address.</span>
                         </div>
 
-                        <button type="submit" class="btn btn-brand w-100 py-3"><span>Claim Now</span> <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span></button>
+                        <button type="submit" class="btn btn-brand w-100 py-3 d-flex align-items-center justify-content-center gap-2"><span>Claim Now</span> <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </form>
             </div>
@@ -1484,7 +1440,7 @@
         window.db = db;
         console.log("Firebase initialized successfully!");
 
-        // --- REAL-TIME TESTIMONIALS (rating >= 4) ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ auto-populate TESTIMONIALS section ---
+        // --- REAL-TIME TESTIMONIALS (rating >= 4) ÃƒÆ’Ã†â€™Ãƒâ€ 'ÃƒÆ’"Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’"Å¡Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢ auto-populate TESTIMONIALS section ---
         function escapeHTMLInner(str) {
             if (!str) return '';
             return String(str).replace(/[&<>'\"]/g, tag => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[tag] || tag));
@@ -1522,7 +1478,7 @@
                                     <div class="review-stars-display mt-1">${starsHtml}</div>
                                     ${profileLink}
                                 </div>
-                                <small class="text-muted">${d.rating} ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¹Ãƒ"¦Ã¢â‚¬Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"šÃ‚Â¦</small>
+                                <small class="text-muted">${d.rating} ÃƒÆ’Ã†â€™Ãƒâ€ 'ÃƒÆ’"Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¹ÃƒÆ’"Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’"Å¡Ãƒâ€šÃ‚Â¦</small>
                             </div>
                             <p class="text-secondary mb-0 mt-2" style="white-space:pre-line;">${escapeHTMLInner(d.comment)}</p>
                         </div>`;
@@ -1651,7 +1607,7 @@
                     if(averageRatingText) averageRatingText.innerHTML = `${avg} <i class="fa-solid fa-star text-accent-brand"></i>`;
                     if(reviewCountText) reviewCountText.textContent = `based on ${reviewCount} review${reviewCount > 1 ? 's' : ''}`;
                 } else {
-                    if(averageRatingText) averageRatingText.textContent = "0 ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¹Ãƒ"¦Ã¢â‚¬Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"šÃ‚Â¦";
+                    if(averageRatingText) averageRatingText.textContent = "0 ÃƒÆ’Ã†â€™Ãƒâ€ 'ÃƒÆ’"Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¹ÃƒÆ’"Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’"Å¡Ãƒâ€šÃ‚Â¦";
                     if(reviewCountText) reviewCountText.textContent = "(0 reviews)";
                     reviewsList.innerHTML = `<div class="col-12 text-center text-muted py-5 border rounded-4 bg-light">No reviews yet. Be the first to write a review!</div>`;
                 }
@@ -1672,6 +1628,7 @@
         }
     </script>
 
+    
     <!-- Floating WhatsApp Button (Bottom-Left) -->
     <a href="https://wa.me/923366920141?text=Hi%20Automatixes%20team%2C%20I%20want%20to%20know%20more%20about%20your%20AI%20automation%20services." target="_blank" id="sticky-whatsapp-btn" class="floating-whatsapp-btn" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
@@ -1769,7 +1726,7 @@
                         </div>
                     </form>
                     <div id="expertFormSuccess" class="text-success small fw-semibold mt-1" style="display: none; font-size: 11px;">
-                        ✓ Request sent! We will contact you within 15 minutes.
+                        âœ“ Request sent! We will contact you within 15 minutes.
                     </div>
                 </div>
 
@@ -2034,19 +1991,11 @@
 
             function openModal(e) {
                 if (e && e.preventDefault) e.preventDefault();
-                modal.style.display = 'flex';
-                modal.style.opacity = '1';
-                modal.style.pointerEvents = 'auto';
                 modal.classList.add('active');
             }
 
             function closeModal() {
                 modal.classList.remove('active');
-                modal.style.opacity = '0';
-                modal.style.pointerEvents = 'none';
-                setTimeout(() => {
-                    modal.style.display = 'none';
-                }, 300);
             }
 
             stickyBtn.addEventListener('click', openModal);
@@ -2112,8 +2061,21 @@
 
 
 
-    <!-- Custom Main JS -->
+    <!-- Main Custom JS -->
     <script src="assets/js/main.js?v=4.2.0"></script>
+    <!-- Agentation Visual Feedback Toolbar -->
+    <script src="assets/js/agentation-widget.js" defer></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
