@@ -22,14 +22,6 @@
       "dest": "/llms.txt"
     },
     {
-      "src": "/favicon.png",
-      "dest": "/favicon.png"
-    },
-    {
-      "src": "/favicon.ico",
-      "dest": "/favicon.ico"
-    },
-    {
       "src": "/(.*)",
       "dest": "/api/index.php"
     }

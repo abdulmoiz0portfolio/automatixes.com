@@ -1,5 +1,5 @@
 /* ==========================================================================
-   QCLAY REDESIGN SYSTEM â€” MAIN STYLESHEET
+   QCLAY REDESIGN SYSTEM — MAIN STYLESHEET
    Obsidian Abyss Foundation & Fluid Design System
    ========================================================================== */
 
@@ -29,15 +29,15 @@
     --accent-neon: #ccff00;           /* Signature QClay electric neon yellow-lime */
     --accent-neon-bright: #d4ff00;    /* High-voltage glow & active hover state */
     --accent-neon-hover: #b8e600;     /* Pressed button & deep interaction state */
-    --accent-brand: #C8E019;
-    --accent-brand-hover: #d4ec1f;
-    --accent-brand-glow: rgba(200, 224, 25, 0.25);
     --accent-emerald: #00ff88;        /* Secondary cyber emerald / live status indicator */
     --accent-cyan: #00e5ff;           /* Tertiary cyber cyan for dual gradient accents */
     --accent-neon-glow: rgba(204, 255, 0, 0.15); /* Soft neon ambient aura */
     --accent-neon-border: rgba(204, 255, 0, 0.35); /* Neon container stroke */
 
     /* Aliases for backward-compatibility */
+    --accent-brand: #ccff00;
+    --accent-brand-hover: #d4ff00;
+    --accent-brand-glow: rgba(204, 255, 0, 0.25);
     --bg-light: #0a0a0a;
     --bg-surface: #111113;
     --bg-warm-peach: #0a0a0a;
@@ -56,8 +56,6 @@
     --border-bright: rgba(204, 255, 0, 0.3);
     --border-neon: rgba(204, 255, 0, 0.45);
     --border-neon-bright: #ccff00;
-    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
 
     /* --- 6. Font Families & Typography Stack --- */
     --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -157,38 +155,6 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: auto; /* MUST remain auto to prevent conflict with Lenis smooth-scroll RAF in M2 */
-}
-
-/* Accessible Anchor Target Offset */
-[id] {
-    scroll-margin-top: 100px;
-}
-
-/* Typographic Precision - Prevent Heading Widows */
-h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6, .section-title {
-    text-wrap: balance;
-    text-wrap: pretty;
-}
-
-/* High-Contrast Accessible Focus States */
-:focus-visible {
-    outline: 2px solid var(--accent-neon, #C8E019) !important;
-    outline-offset: 3px !important;
-}
-
-button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
-    outline: 2px solid var(--accent-neon, #C8E019) !important;
-    outline-offset: 2px !important;
-}
-
-/* WCAG Reduced Motion Accommodation */
-@media (prefers-reduced-motion: reduce) {
-    *, ::before, ::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
 }
 
 body {
@@ -588,48 +554,113 @@ small,
    06. INTERFACE CONTRACTS (Downstream Milestones M2, M3, M4)
    ========================================================================== */
 
-/* --- 6.1 Default Native Browser Cursor Precision --- */
-.mouse-cursor,
-.cursor-outer,
+/* --- 6.1 Custom Follower Cursor (120fps Hardware-Accelerated) --- */
+.mouse-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999998;
+    transform: translate(-50%, -50%);
+    will-change: transform, width, height, background-color, border-color, opacity;
+    opacity: 0;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom Arrow Cursor (Based on uploaded image) */
 .cursor-inner {
+    width: 32px;
+    height: 32px;
+    margin-top: 13px;
+    margin-left: 9px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='%23000000' stroke='%23ffffff' stroke-width='2.5' stroke-linejoin='round' stroke-linecap='round'%3E%3Cpath d='M7 4 L7 26 C7 27.5 8.5 28.5 10 27 L15 19 L23 19 C25 19 26 17 24.5 15.5 L8 3 C6.5 2 5.5 3 7 4 Z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent !important;
+    border-radius: 0;
+    box-shadow: none !important;
+    z-index: 999999;
+    pointer-events: none;
+    transition: width 0.2s ease, height 0.2s ease, opacity 0.2s ease, background-image 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hide outer completely, as requested single custom shape */
+.cursor-outer {
     display: none !important;
-    pointer-events: none !important;
-    visibility: hidden !important;
 }
 
-/* Default cursor on document */
-html, body {
-    cursor: default;
+/* Cursor State 1: Interactive Hover */
+.cursor-hover-active .cursor-inner,
+.cursor-inner.cursor-hover {
+    /* Keep original cursor shape and color */
+    box-shadow: none !important;
 }
 
-/* Preloader must never block interactions */
-#preloader {
-    pointer-events: none !important;
+/* Cursor State 2: Magnetic */
+.cursor-inner.cursor-magnetic {
+    /* Keep original cursor shape and color */
+    box-shadow: none !important;
 }
 
-/* Prevent Third-Party Voice Widgets from blocking page clicks */
-elevenlabs-convai {
-    position: fixed !important;
-    bottom: 25px !important;
-    right: 25px !important;
-    left: auto !important;
-    top: auto !important;
-    width: 70px !important;
-    height: 70px !important;
-    z-index: 99999 !important;
-    pointer-events: auto !important;
+/* Cursor State 3 & 4: View / Drag */
+.cursor-inner.cursor-view,
+.cursor-inner.cursor-drag {
+    background-image: none !important;
+    background-color: #e77f23 !important;
+    border-radius: 50% !important;
+    width: 80px;
+    height: 80px;
+    margin-top: 0;
+    margin-left: 0;
+}
+.cursor-inner.cursor-view::after {
+    content: 'VIEW';
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #050505;
+    text-transform: uppercase;
+}
+.cursor-inner.cursor-drag::after {
+    content: 'DRAG';
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #050505;
+    text-transform: uppercase;
 }
 
-/* Standard pointer cursor and guaranteed clickability on all elements */
-a, button, input[type="button"], input[type="submit"], input[type="reset"], select, label, summary, .btn, .btn-brand, .btn-magnetic, .nav-link, .dropdown-item, .accordion-button, [role="button"], .portfolio-card, .card-service-item, #sticky-expert-btn, .social-icon, .icon-arrow, .physics-pill, .tech-item, .close-modal {
-    cursor: pointer !important;
-    pointer-events: auto !important;
+/* Cursor State 5: Hidden when leaving window */
+.cursor-hidden,
+.mouse-cursor.cursor-hidden {
+    opacity: 0 !important;
+    visibility: hidden;
 }
 
-/* Text cursor on input fields */
-input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="number"], textarea {
-    cursor: text !important;
-    pointer-events: auto !important;
+/* Hide Default System Cursor (Aggressive for Third-Party Widgets like n8n) */
+@media (hover: hover) and (pointer: fine) {
+    html, body, *, *::before, *::after,
+    a, button, input, textarea, select, iframe, label, summary, [role="button"],
+    .n8n-chat, .n8n-chat *, .chat-layout, .chat-layout * {
+        cursor: none !important;
+    }
+}
+
+/* Disable Custom Cursor on Touch & Coarse Pointer Devices */
+@media (hover: none) and (pointer: coarse), (hover: none), (pointer: coarse), (max-width: 991.98px) {
+    .mouse-cursor,
+    .cursor-outer,
+    .cursor-inner {
+        display: none !important;
+        pointer-events: none !important;
+    }
 }
 
 /* --- 6.2 Tactile 3D Magnetic Buttons --- */
@@ -700,22 +731,6 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     background: var(--accent-neon-bright);
     box-shadow: 0 15px 40px rgba(204, 255, 0, 0.5);
     transform: translateY(-2px);
-}
-
-.btn-outline-brand {
-    background: transparent !important;
-    color: var(--accent-neon, #C8E019) !important;
-    border: 1.5px solid var(--accent-neon, #C8E019) !important;
-    box-shadow: 0 4px 15px rgba(200, 224, 25, 0.12);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-}
-
-.btn-outline-brand:hover {
-    background: var(--accent-neon, #C8E019) !important;
-    color: #050505 !important;
-    border-color: var(--accent-neon, #C8E019) !important;
-    box-shadow: 0 0 25px rgba(200, 224, 25, 0.45), 0 10px 30px rgba(0, 0, 0, 0.5) !important;
-    transform: translateY(-3px);
 }
 
 .btn-magnetic .arrow-circle {
@@ -877,35 +892,6 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     z-index: 1;
 }
 
-/* Crisp Neon Outlined Brand Button (Used for Read More, secondary actions) */
-.btn-outline-brand {
-    color: var(--accent-neon, #C8E019) !important;
-    border: 1.5px solid var(--accent-neon, #C8E019) !important;
-    background: rgba(200, 224, 25, 0.08) !important;
-    font-family: var(--font-heading);
-    font-weight: 700 !important;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    border-radius: 50px !important;
-    padding: 10px 22px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    text-decoration: none !important;
-    transition: all 0.3s ease !important;
-    cursor: pointer;
-}
-
-.btn-outline-brand:hover,
-.btn-outline-brand:focus {
-    color: #050505 !important;
-    background-color: var(--accent-neon, #C8E019) !important;
-    border-color: var(--accent-neon, #C8E019) !important;
-    box-shadow: 0 6px 20px rgba(200, 224, 25, 0.45) !important;
-    transform: translateY(-2px);
-}
-
 .btn-brand.btn-lg,
 .btn-primary.btn-lg {
     padding: 15px 32px;
@@ -1003,21 +989,21 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(12px) saturate(180%);
-    -webkit-backdrop-filter: blur(12px) saturate(180%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(10, 10, 12, 0.55);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding: 14px 0;
     transition: var(--transition-smooth);
 }
 
 .header-nav.sticky {
-    background: rgba(0, 0, 0, 0.65) !important;
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(5, 5, 5, 0.78) !important;
+    backdrop-filter: blur(28px) saturate(200%);
+    -webkit-backdrop-filter: blur(28px) saturate(200%);
+    border-bottom: 1px solid rgba(204, 255, 0, 0.08);
     padding: 10px 0;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
 }
 
 .navbar-brand {
@@ -1209,18 +1195,18 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
 
 .letters-loading {
     font-weight: 800;
-    font-size: clamp(24px, 7vw, 55px);
+    font-size: 55px;
     color: rgba(255, 255, 255, 0.08);
     font-family: var(--font-heading);
     position: relative;
     display: inline-block;
-    letter-spacing: clamp(4px, 1.5vw, 12px);
+    letter-spacing: 12px;
     text-transform: uppercase;
-    -webkit-text-stroke: 1.5px rgba(255,255,255,0.2);
-    transform: translateZ(0);
 }
 
-
+.letters-loading:nth-child(4) {
+    margin-right: 25px;
+}
 
 .letters-loading::before {
     content: attr(data-text-preloader);
@@ -1230,7 +1216,6 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     color: var(--accent-neon);
     opacity: 0;
     animation: loadLetter 1.2s infinite;
-    -webkit-text-stroke: 1.5px var(--accent-neon);
 }
 
 .letters-loading:nth-child(2)::before { animation-delay: 0.1s; }
@@ -1294,7 +1279,6 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
 #physics-container {
     height: 600px;
     width: 100%;
-    overflow: hidden !important;
     cursor: grab;
     overflow: hidden;
     position: relative;
@@ -1525,18 +1509,17 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     position: relative;
     width: 100%;
     overflow: hidden;
-    padding: 20px 0;
-    mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+    padding: 15px 0;
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 
 .tech-marquee-track {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
     width: max-content;
-    will-change: transform;
-    animation: techMarqueeScroll 40s linear infinite;
+    animation: techMarqueeScroll 35s linear infinite;
 }
 
 .tech-marquee-wrapper:hover .tech-marquee-track {
@@ -1548,21 +1531,19 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-width: 140px;
-    flex-shrink: 0;
-    padding: 16px 22px;
+    min-width: 130px;
+    padding: 18px 20px;
     background: var(--bg-surface-1);
     border: 1px solid var(--border-subtle);
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
-    user-select: none;
 }
 
 .tech-item:hover {
-    transform: translateY(-6px) scale(1.04);
-    box-shadow: 0 10px 30px rgba(200, 224, 25, 0.15);
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 30px rgba(204, 255, 0, 0.15);
     border-color: var(--accent-neon);
     z-index: 10;
 }
@@ -1571,8 +1552,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 44px;
-    width: 44px;
+    height: 42px;
     margin-bottom: 8px;
 }
 
@@ -1585,13 +1565,12 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
 }
 
 @keyframes techMarqueeScroll {
-    0% { transform: translate3d(0, 0, 0); }
-    100% { transform: translate3d(-50%, 0, 0); }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 @media (max-width: 768px) {
-    .tech-marquee-track { gap: 18px; }
-    .tech-item { min-width: 120px; padding: 14px 18px; }
+    .tech-marquee-track { gap: 22px; }
 }
 
 /* --- Reviews & Ratings --- */
@@ -1847,7 +1826,7 @@ td, th {
 
 .shadow-sm,
 .shadow {
-    box-shadow: var(--card-shadow) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
 }
 
 .max-w-700 { max-width: 700px; }
@@ -2059,9 +2038,3 @@ html.lenis body {
     }
 }
 
-
-.hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.hover-lift:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.4) !important; }
-
-@media (min-width: 992px) { .scale-lg-up { transform: scale(1.05) !important; z-index: 2; position: relative; } }
-@media (max-width: 991px) { .pricing-card { margin-bottom: 2rem; } }
