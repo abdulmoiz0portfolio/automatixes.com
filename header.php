@@ -202,13 +202,13 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <!-- FontAwesome CDN for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
-    <!-- Google Fonts: Space Grotesk / Inter / Space Mono -->
+    <!-- Google Fonts: Outfit / Plus Jakarta Sans / Space Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Custom Main CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=9.0.0">
+    <link rel="stylesheet" href="assets/css/main.css?v=10.0.0">
 </head>
 <body>
 
