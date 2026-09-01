@@ -1,39 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Automation Agency (n8n, Make, GoHighLevel) | Automatixes</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="canonical" href="https://www.automatixes.com/">
+    <title>AI Automation Agency | Automatixes</title>
+    <link rel="icon" type="image/png" href="favicon.png?v=2">
+    <link rel="canonical" href="http://localhost:8000">
     
     <!-- Meta SEO Tags -->
-    <meta name="description" content="Automatixes is an AI-first agency building custom AI agents and workflow automations to connect your CRM, WhatsApp, and emails. Scale operations 24/7.">
-    <meta name="keywords" content="AI Automation Agency, n8n, Make, GoHighLevel, Zapier, AI Agents, software development, CRM integration">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="description" content="Automatixes is an AI-first agency building custom AI agents and workflow automations.">
+    <meta name="keywords" content="AI Automation Agency, n8n, Make, GoHighLevel, Zapier, AI Agents">
     <meta name="author" content="Automatixes">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.automatixes.com/">
-    <meta property="og:title" content="AI Automation Agency (n8n, Make, GoHighLevel) | Automatixes">
-    <meta property="og:description" content="Automatixes is an AI-first agency building custom AI agents and workflow automations to connect your CRM, WhatsApp, and emails. Scale operations 24/7.">
-    <meta property="og:image" content="https://www.automatixes.com/assets/img/services/ai_automations.jpg">
+    <meta property="og:url" content="http://localhost:8000">
+    <meta property="og:title" content="http://localhost:8000">
+    <meta property="og:description" content="http://localhost:8000">
+    <meta property="og:image" content="http://localhost:8000">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.automatixes.com/">
-    <meta name="twitter:title" content="AI Automation Agency (n8n, Make, GoHighLevel) | Automatixes">
-    <meta name="twitter:description" content="Automatixes is an AI-first agency building custom AI agents and workflow automations to connect your CRM, WhatsApp, and emails. Scale operations 24/7.">
-    <meta name="twitter:image" content="https://www.automatixes.com/assets/img/services/ai_automations.jpg">
+    <meta name="twitter:url" content="http://localhost:8000">
+    <meta name="twitter:title" content="http://localhost:8000">
+    <meta name="twitter:description" content="http://localhost:8000">
+    <meta name="twitter:image" content="http://localhost:8000">
 
     <!-- Hreflang Tags for SEO/GEO -->
-    <link rel="alternate" hreflang="x-default" href="https://www.automatixes.com/">
-    <link rel="alternate" hreflang="en" href="https://www.automatixes.com/">
-    <link rel="alternate" hreflang="en-us" href="https://www.automatixes.com/">
-    <link rel="alternate" hreflang="en-gb" href="https://www.automatixes.com/">
-    <link rel="alternate" hreflang="en-ca" href="https://www.automatixes.com/">
-    <link rel="alternate" hreflang="ar" href="https://www.automatixes.com/">
+    <link rel="alternate" hreflang="x-default" href="">
+    <link rel="alternate" hreflang="en" href="">
+    <link rel="alternate" hreflang="en-us" href="">
+    <link rel="alternate" hreflang="en-gb" href="">
+    <link rel="alternate" hreflang="en-ca" href="">
+    <link rel="alternate" hreflang="ar" href="">
 
     <!-- JSON-LD Structured Data Schema -->
     <!-- WebSite Schema -->
@@ -42,7 +37,7 @@
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Automatixes",
-      "url": "<?php echo $protocol; ?>://<?php echo $host; ?>",
+      "url": "http://localhost:8000",
       "description": "An AI-first automation agency that designs custom AI agents and workflow automations to run business operations 24/7."
     }
     </script>
@@ -53,9 +48,9 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Automatixes",
-      "url": "<?php echo $protocol; ?>://<?php echo $host; ?>",
-      "logo": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/services/ai_automations.jpg",
-      "image": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/services/ai_automations.jpg",
+      "url": "http://localhost:8000",
+      "logo": ":///assets/img/services/ai_automations.jpg",
+      "image": ":///assets/img/services/ai_automations.jpg",
       "description": "An AI-first automation agency that designs custom AI agents and workflow automations to run business operations 24/7.",
       "telephone": "+92-336-6920141",
       "email": "contact@automatixes.com",
@@ -70,47 +65,14 @@
     </script>
 
     <!-- Service Schema -->
-    <?php if (in_array($page_key, ['ai-automated-solutions', 'website-development', 'product-shoot'])): ?>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "<?php echo $active_meta['title']; ?>",
-      "serviceType": "<?php echo str_replace(' | Automatixes', '', $active_meta['title']); ?>",
-      "provider": {
-        "@type": "Organization",
-        "name": "Automatixes",
-        "url": "<?php echo $protocol; ?>://<?php echo $host; ?>"
-      },
-      "description": "<?php echo $active_meta['desc']; ?>",
-      "areaServed": {
-        "@type": "Place",
-        "name": "Worldwide"
-      }
-    }
-    </script>
-    <?php endif; ?>
+    
+    
+    
 
     <!-- BreadcrumbList Schema -->
-    <?php if ($page_key !== 'index'): ?>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "<?php echo $protocol; ?>://<?php echo $host; ?>"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "<?php echo str_replace(' | Automatixes', '', $active_meta['title']); ?>",
-        "item": "<?php echo $canonical_url; ?>"
-      }]
-    }
-    </script>
-    <?php endif; ?>
+    
+    
+    
 
     <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -124,7 +86,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     
     <!-- Custom Main CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=13.0.0">
+    <link rel="stylesheet" href="assets/css/main.css?v=14.0.0">
 </head>
 <body>
 
@@ -191,6 +153,7 @@
 
     <div id="smooth-wrapper">
         <div id="smooth-content">
+
 
 
 
@@ -452,10 +415,10 @@
         </p>
 
         <div class="d-flex justify-content-center gap-3 flex-wrap wow fadeInUp" data-wow-delay=".4s">
-            <a href="contact" class="btn text-dark rounded-pill px-5 py-3 fw-bold d-flex align-items-center" style="background: #C8E019; color: #000000 !important; border: none; box-shadow: 0 10px 30px rgba(200, 224, 25, 0.45); transition: transform 0.2s, box-shadow 0.2s;">
-                Start Your Project <i class="fa-solid fa-arrow-right ms-2 text-dark"></i>
+            <a href="contact" class="btn text-white rounded-pill px-5 py-3 fw-semibold d-flex align-items-center" style="background: linear-gradient(135deg, #0D6171, #C8E019); border: none; box-shadow: 0 10px 25px rgba(200, 224, 25,0.4); transition: transform 0.2s;">
+                Start Your Project <i class="fa-solid fa-arrow-right ms-2"></i>
             </a>
-            <a href="#portfolio-section" class="btn rounded-pill px-5 py-3 fw-semibold border" style="background: rgba(255,255,255,0.05); color: #ffffff; border-color: rgba(255,255,255,0.12); transition: background 0.2s;">
+            <a href="#portfolio-section" class="btn rounded-pill px-5 py-3 fw-semibold border" style="background: rgba(255,255,255,0.05); color: #ffffff; border-color: rgba(255,255,255,0.1); transition: background 0.2s;">
                 View Our Work
             </a>
         </div>
@@ -468,8 +431,8 @@
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-5">
-                <div class="about-image-wrapper wow fadeInLeft" data-wow-delay=".3s">
-                    <img src="assets/img/about-team.jpg" alt="AI Automation Team at Automatixes" loading="lazy" class="img-fluid rounded-4 shadow-sm border border-secondary border-opacity-25">
+                <div class="about-image-wrapper wow fadeInLeft position-relative" data-wow-delay=".3s">
+                    <img src="assets/img/about-team.jpg" alt="AI Automation Team at Automatixes" loading="lazy" class="img-fluid rounded-4 shadow-lg border border-secondary" style="object-fit: cover; width: 100%; aspect-ratio: 4/3; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -927,7 +890,6 @@
 
 
 
-
 <!-- Packages Section Start -->
 <section id="packages-section" class="packages-area section-padding bg-dark position-relative overflow-hidden">
     <div class="container position-relative z-1">
@@ -986,337 +948,7 @@
                         <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Dedicated Pipeline Monitoring & Support</span></li>
                     </ul>
                     <div class="mt-auto pt-4">
-                        <a href="ai-automated-solutions" class="btn btn-accent-brand w-100 rounded-pill py-3 text-dark fw-extrabold shadow-sm hover-lift">Explore Solutions</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Package 3: AI Product Staging & Visuals -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                <div class="card pricing-card h-100 bg-surface border-0 rounded-4 p-4 p-lg-5 position-relative text-center hover-lift d-flex flex-column" style="box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05) !important;">
-                    <div class="mb-4">
-                        <div class="bg-brand-translucent text-accent-brand rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 60px; height: 60px; font-size: 24px;">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        </div>
-                        <h3 class="h4 fw-bold text-white mb-2">AI Product Staging</h3>
-                        <p class="text-muted small">Photorealistic AI backgrounds & edits</p>
-                    </div>
-                    <hr class="border-secondary opacity-25 mb-4">
-                    <ul class="list-unstyled text-white-50 mb-5 text-start" style="font-size: 0.95rem;">
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>AI Background Replacement & 3D Staging</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Dynamic Cinematic Lighting & Shadows</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>High-End Retouching & Color Correction</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Studio-Quality Visuals from Raw Photos</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>E-Commerce & Social Media Ready Assets</span></li>
-                    </ul>
-                    <div class="mt-auto pt-4">
-                        <a href="product-shoot" class="btn btn-outline-light w-100 rounded-pill py-3 fw-bold">Explore AI Visuals</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Packages Section End -->
-
-<!-- CTA Section Start -->
-<section class="cta-section section-padding bg-surface border-top border-light-subtle text-center">
-    <div class="container max-w-700">
-        <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">LET'S BUILD SOMETHING GREAT</span>
-        <h2 class="display-4 fw-extrabold mb-4 text-white">Ready to grow your business online?</h2>
-        <p class="fs-5 text-white-50 mb-5">Book a free, no-pressure consultation. We'll review your goals and tell you exactly what it'll take.</p>
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
-            <a href="contact" class="btn btn-brand btn-lg px-5 py-3 shadow-sm">
-                <span>Book a Free Consultation</span>
-                <span class="arrow-btn"><i class="fa-solid fa-calendar-check"></i></span>
-            </a>
-            <a href="ai-automated-solutions" class="btn btn-outline-light btn-lg px-5 py-3">
-                <span>See Services</span>
-            </a>
-        </div>
-    </div>
-</section>
-<!-- CTA Section End -->
-<!-- Testimonials Section Start -->
-<!-- TODO: When collecting future testimonials, prioritize ones with specific measurable results (e.g., "reduced resolution time by 70%") -->
-<section id="testimonials-section" class="section-padding bg-surface text-white border-top border-light-subtle">
-    <div class="container max-w-800">
-        <div class="text-center mb-5">
-            <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">TESTIMONIALS</span>
-            <h2 class="display-5 fw-extrabold mb-3 text-white typewriter-anim">What Our Clients Say</h2>
-            <p class="text-white-50 fs-5">Trusted by tech companies and service providers worldwide.</p>
-        </div>
-        
-        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active text-center py-4">
-                    <div class="fs-2 text-accent-brand mb-3"><i class="fa-solid fa-quote-left"></i></div>
-                    <p class="fs-5 text-white-50 px-md-5 italic">
-                        "Automatixes transformed our sales onboarding. They built a custom n8n lead scoring agent that synced our calendar, CRM, and emails seamlessly. The team was fast, professional, and precise!"
-                    </p>
-                    <h5 class="fw-bold text-white mt-4 mb-1">M. Ibrahim</h5>
-                    <p class="text-white-50 small">CEO, TechVantage Corp</p>
-                </div>
-                <div class="carousel-item text-center py-4">
-                    <div class="fs-2 text-accent-brand mb-3"><i class="fa-solid fa-quote-left"></i></div>
-                    <p class="fs-5 text-white-50 px-md-5 italic">
-                        "The AI Voice Agent they deployed handles our customer queries and call bookings around the clock without latency. Coupled with their mind-blowing AI product staging and background edits, our brand conversion rate skyrocketed!"
-                    </p>
-                    <h5 class="fw-bold text-white mt-4 mb-1">Sarah K.</h5>
-                    <p class="text-white-50 small">Brand Manager, Luxe Aesthetics</p>
-                </div>
-            </div>
-            <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true" style="background-size: 50%; opacity: 0.8;"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true" style="background-size: 50%; opacity: 0.8;"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-</section>
-<!-- Testimonials Section End -->
-
-<!-- FAQ Section Start -->
-<section id="faq-section" class="section-padding bg-transparent text-white border-top border-light-subtle">
-    <div class="container max-w-800">
-        <div class="text-center mb-5">
-            <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">QUESTIONS</span>
-            <h2 class="display-5 fw-extrabold mb-3 text-white typewriter-anim">Frequently Asked Questions</h2>
-            <p class="text-white-50 fs-5">Common queries answered about our AI Voice Agents and automation systems.</p>
-        </div>
-        
-        <div class="accordion accordion-flush" id="faqAccordion">
-            <!-- FAQ 1 -->
-            <div class="accordion-item bg-transparent border-bottom border-light-subtle">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button collapsed bg-transparent fw-bold text-white fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        How long does an AI Automation workflow setup take?
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body text-white-50 py-3">
-                        Generally, standard workflow automations (like email pipelines, CRM syncing, or simple chatbots) take between 1 to 2 weeks to design, integrate, test, and launch.
-                    </div>
-                </div>
-            </div>
-            <!-- FAQ 2 -->
-            <div class="accordion-item bg-transparent border-bottom border-light-subtle">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed bg-transparent fw-bold text-white fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Are my client leads and databases secure with your setup?
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body text-white-50 py-3">
-                        Yes. Your data is protected by strict Firestore security rules that control exactly who can read or write it, and all form submissions are validated and sanitized server-side to block spam and malicious input.
-                    </div>
-                </div>
-            </div>
-            <!-- FAQ 3 -->
-            <div class="accordion-item bg-transparent border-bottom border-light-subtle">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed bg-transparent fw-bold text-white fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Can we link third-party tools like Slack or WhatsApp?
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                    <div class="accordion-body text-white-50 py-3">
-                        Yes, we integrate n8n, Make, or custom API endpoints to route data triggers to WhatsApp business channels, Slack workspaces, or local Discord systems.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- FAQ Section End -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How long does an AI Automation workflow setup take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Generally, standard workflow automations (like email pipelines, CRM syncing, or simple chatbots) take between 1 to 2 weeks to design, integrate, test, and launch."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are my client leads and databases secure with your setup?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Your data is protected by strict Firestore security rules that control exactly who can read or write it, and all form submissions are validated and sanitized server-side to block spam and malicious input."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can we link third-party tools like Slack or WhatsApp?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we integrate n8n, Make, or custom API endpoints to route data triggers to WhatsApp business channels, Slack workspaces, or local Discord systems."
-      }
-    }
-  ]
-}
-</script>
-
-<!-- Contact Section Start -->
-<section id="contact-section" class="section-padding bg-surface text-white">
-    <div class="container">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-5">
-                <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">GET IN TOUCH</span>
-                <h2 class="display-6 fw-extrabold text-white mb-4 typewriter-anim">Start Your Automation Journey</h2>
-                <p class="text-white-50 fs-5 mb-4">
-                    Send us your details. Submitting this form writes directly to our Firestore database and triggers our notifications.
-                </p>
-                <div class="contact-details mt-4">
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="icon-box me-3"><i class="fa-solid fa-envelope text-accent-brand"></i></div>
-                        <div>
-                            <h6 class="mb-0 text-white-50">Email Us</h6>
-                            <a href="mailto:contact@automatixes.com" class="text-white text-decoration-none fw-bold">contact@automatixes.com</a>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <div class="icon-box me-3"><i class="fa-solid fa-phone text-accent-brand"></i></div>
-                        <div>
-                            <h6 class="mb-0 text-white-50">Call Us</h6>
-                            <a href="tel:+923366920141" class="text-white text-decoration-none fw-bold">+92 336 6920141</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-7">
-                <div class="contact-form-wrapper p-4 p-md-5 rounded-4 shadow-sm bg-surface-1 border border-secondary border-opacity-25">
-                    <form id="contact-firebase-form" novalidate>
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <label for="contact-name" class="form-label text-white fw-bold">Full Name</label>
-                                <input type="text" class="form-control border-light-subtle bg-transparent text-white" id="contact-name" placeholder="John Doe" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="contact-email" class="form-label text-white fw-bold">Email Address</label>
-                                <input type="email" class="form-control border-light-subtle bg-transparent text-white" id="contact-email" placeholder="john@example.com" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="contact-phone" class="form-label text-white fw-bold">Phone</label>
-                                <input type="tel" class="form-control border-light-subtle bg-transparent text-white" id="contact-phone" placeholder="+92 300 1234567">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="contact-biz-link" class="form-label text-white fw-bold">Business / Freelancer Link</label>
-                                <input type="url" class="form-control border-light-subtle bg-transparent text-white" id="contact-biz-link" placeholder="https://yourprofile.com">
-                            </div>
-                            <div class="col-12">
-                                <label for="contact-service" class="form-label text-white fw-bold">Service Required</label>
-                                <select class="form-select border-light-subtle bg-transparent text-white" id="contact-service" required>
-                                    <option value="" disabled selected>Select a Service</option>
-                                    <option value="AI Voice Agents">Autonomous AI Voice Agents</option>
-                                    <option value="AI Automations">AI Automations (n8n/Make)</option>
-                                    <option value="Product Shoot">Commercial Product Shoot</option>
-                                    <option value="CRM Integration">CRM & Custom API Integration</option>
-                                    <option value="Consultation">General Automation Consultation</option>
-                                </select>
-                            </div>
-                            <div class="col-12">
-                                <label for="contact-message" class="form-label text-white fw-bold">Project Description</label>
-                                <textarea class="form-control border-light-subtle bg-transparent text-white" id="contact-message" rows="4" placeholder="Tell us about your requirements..." required></textarea>
-                            </div>
-                            <div class="col-12 mt-4">
-                                <button type="submit" class="btn btn-brand w-100 py-3"><span>Send Message</span> <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span></button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Contact Section End -->
-
-<!-- JSON-LD FAQ and Review Schemas -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "How long does an AI Automation workflow setup take?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Generally, standard workflow automations (like email pipelines, CRM syncing, or simple chatbots) take between 1 to 2 weeks to design, integrate, test, and launch."
-    }
-  },{
-    "@type": "Question",
-    "name": "Are my client leads and databases secure with your setup?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Yes. Your data is protected by strict Firestore security rules that control exactly who can read or write it, and all form submissions are validated and sanitized server-side to block spam and malicious input."
-    }
-  },{
-    "@type": "Question",
-    "name": "Can we link third-party tools like Slack or WhatsApp?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Yes, we integrate n8n, Make, or custom API endpoints to route data triggers to WhatsApp business channels, Slack workspaces, or local Discord systems."
-    }
-  }]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": {
-    "@type": "LocalBusiness",
-    "name": "Automatixes"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "M. Ibrahim"
-  },
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": "5"
-  },
-  "reviewBody": "Automatixes transformed our sales onboarding. They built a custom n8n lead scoring agent that synced our calendar, CRM, and emails seamlessly. The team was fast, professional, and precise!"
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Review",
-  "itemReviewed": {
-    "@type": "LocalBusiness",
-    "name": "Automatixes"
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Sarah K."
-  },
-  "reviewRating": {
-    "@type": "Rating",
-    "ratingValue": "5"
-  },
-  "reviewBody": "The AI Voice Agent they deployed handles our customer queries and call bookings around the clock without latency. Coupled with their high-end product shoot photography, our brand conversion rate skyrocketed!"
-}
-</script>
-
-
-
-
-
-
-
+                        <a href="ai-automated-solutions" class="btn btn-outline-brand w-100 rounded-pill py-3 fw-extrabold shadow-sm hover-lift">Explore Solutions</a>
     </div> <!-- End smooth-content -->
     </div> <!-- End smooth-wrapper -->
 
@@ -1324,7 +956,7 @@
     <footer class="footer-area bg-dark text-white pt-5 pb-3">
         <div class="container">
             <div class="row g-4 mb-5">
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <a href="index" class="footer-logo mb-3 d-inline-block text-decoration-none">
                             <img src="assets/img/logo/automatixes-logo-new.png" alt="Automatixes" style="height: 48px; width: auto; object-fit: contain;">
@@ -1343,20 +975,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-2 col-md-4 col-6">
                     <div class="footer-widget">
                         <h5 class="widget-title">Quick Links</h5>
-                        <ul class="list-unstyled footer-menu">
+                        <ul class="list-unstyled footer-menu mb-4">
                             <li><a href="index">Home</a></li>
                             <li><a href="about">About Us</a></li>
                             <li><a href="blogs">Blogs</a></li>
                             <li><a href="contact">Contact Us</a></li>
+                        </ul>
+                        <h5 class="widget-title">Legal</h5>
+                        <ul class="list-unstyled footer-menu">
                             <li><a href="privacy">Privacy Policy</a></li>
                             <li><a href="terms">Terms of Service</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-2 col-md-4 col-6">
                     <div class="footer-widget">
                         <h5 class="widget-title">Our Services</h5>
                         <ul class="list-unstyled footer-menu">
@@ -1366,7 +1001,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-2 col-md-4 col-6">
                     <div class="footer-widget">
                         <h5 class="widget-title">SaaS Tools</h5>
                         <ul class="list-unstyled footer-menu">
@@ -1382,13 +1017,13 @@
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-widget">
                         <h5 class="widget-title">Contact Info</h5>
-                        <ul class="list-unstyled contact-info text-muted">
-                            <li class="d-flex align-items-center mb-2">
-                                <i class="fa-solid fa-envelope text-accent-brand me-2 fs-6"></i>
+                        <ul class="list-unstyled footer-menu">
+                            <li class="d-flex align-items-center mb-3">
+                                <i class="fa-solid fa-envelope text-accent-brand me-2.5" style="width: 18px; text-align: center; font-size: 14px;"></i>
                                 <a href="mailto:contact@automatixes.com" class="text-decoration-none">contact@automatixes.com</a>
                             </li>
                             <li class="d-flex align-items-center mb-2">
-                                <i class="fa-solid fa-phone text-accent-brand me-2 fs-6"></i>
+                                <i class="fa-solid fa-phone text-accent-brand me-2.5" style="width: 18px; text-align: center; font-size: 14px;"></i>
                                 <a href="tel:+923366920141" class="text-decoration-none" style="font-weight: 400 !important; color: var(--text-secondary);">+92 336 6920141</a>
                             </li>
                         </ul>
@@ -1399,13 +1034,10 @@
             <hr class="border-secondary">
             
             <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start">
+                <div class="col-12 text-center">
                     <p class="mb-0 text-muted">&copy; 2026 Automatixes. All rights reserved.</p>
                 </div>
-                <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
-                    <a href="privacy" class="text-muted text-decoration-none me-3">Privacy Policy</a>
-                    <a href="terms" class="text-muted text-decoration-none">Terms of Service</a>
-                </div>
+                
             </div>
         </div>
     </footer>
@@ -1417,7 +1049,7 @@
             <button class="close-modal" id="closeModal">&times;</button>
             <div class="modal-content-side" style="padding: 40px 30px; text-align: center;">
                 <div class="modal-logo">
-                    <img src="assets/img/logo/automatixes-logo.svg" alt="Automatixes Logo" style="width: 48px; height: 48px; object-fit: cover; border-radius: 12px; mix-blend-mode: darken; border: 1px solid rgba(0,0,0,0.1); display: block; margin: 0 auto;">
+                    <img src="assets/img/logo/automatixes-icon.png" alt="Automatixes Logo" style="width: 64px; height: 64px; object-fit: contain; display: block; margin: 0 auto; margin-bottom: 10px;">
                 </div>
                 <h2 style="font-size: 28px; margin-bottom: 10px; ">Exclusive 10% Discount!</h2>
                 <p style="font-size: 15px; color: #666; margin-bottom: 25px;">Subscribe to our newsletter and save <b>10%</b> on your first project with us.</p>
@@ -1430,7 +1062,7 @@
                             <span id="popup-email-error" style="color: #ff3333; font-size: 13px; display: none;">Please enter a valid email address.</span>
                         </div>
 
-                        <button type="submit" class="btn btn-brand w-100 py-3"><span>Claim Now</span> <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span></button>
+                        <button type="submit" class="btn btn-brand w-100 py-3 d-flex align-items-center justify-content-center gap-2"><span>Claim Now</span> <i class="fa-solid fa-arrow-right"></i></button>
                     </div>
                 </form>
             </div>
@@ -1484,7 +1116,7 @@
         window.db = db;
         console.log("Firebase initialized successfully!");
 
-        // --- REAL-TIME TESTIMONIALS (rating >= 4) ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"šÃ‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ auto-populate TESTIMONIALS section ---
+        // --- REAL-TIME TESTIMONIALS (rating >= 4) ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"šÃ‚Â ⭐ auto-populate TESTIMONIALS section ---
         function escapeHTMLInner(str) {
             if (!str) return '';
             return String(str).replace(/[&<>'\"]/g, tag => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[tag] || tag));
@@ -1672,6 +1304,7 @@
         }
     </script>
 
+    
     <!-- Floating WhatsApp Button (Bottom-Left) -->
     <a href="https://wa.me/923366920141?text=Hi%20Automatixes%20team%2C%20I%20want%20to%20know%20more%20about%20your%20AI%20automation%20services." target="_blank" id="sticky-whatsapp-btn" class="floating-whatsapp-btn" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
@@ -2034,19 +1667,11 @@
 
             function openModal(e) {
                 if (e && e.preventDefault) e.preventDefault();
-                modal.style.display = 'flex';
-                modal.style.opacity = '1';
-                modal.style.pointerEvents = 'auto';
                 modal.classList.add('active');
             }
 
             function closeModal() {
                 modal.classList.remove('active');
-                modal.style.opacity = '0';
-                modal.style.pointerEvents = 'none';
-                setTimeout(() => {
-                    modal.style.display = 'none';
-                }, 300);
             }
 
             stickyBtn.addEventListener('click', openModal);
@@ -2112,8 +1737,10 @@
 
 
 
-    <!-- Custom Main JS -->
+    <!-- Main Custom JS -->
     <script src="assets/js/main.js?v=5.0.0"></script>
+    <!-- Agentation Visual Feedback Toolbar -->
+    <script src="assets/js/agentation-widget.js" defer></script>
 </body>
 </html>
 
