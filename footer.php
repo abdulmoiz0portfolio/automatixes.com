@@ -787,7 +787,7 @@
 
 
     <!-- Main Custom JS -->
-    <script src="assets/js/main.js?v=4.2.0"></script>
+    <script src="assets/js/main.js?v=5.0.0"></script>
     <!-- Agentation Visual Feedback Toolbar -->
     <script src="assets/js/agentation-widget.js" defer></script>
 </body>
