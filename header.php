@@ -84,14 +84,52 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNFRW1GPJR"></script>
+    <!-- Google Consent Mode v2 (must fire BEFORE gtag.js) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+      // If user already accepted, update immediately
+      if (localStorage.getItem('cookie_consent') === 'granted') {
+        gtag('consent', 'update', {
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted',
+          'analytics_storage': 'granted'
+        });
+      }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNFRW1GPJR"></script>
+    <script>
       gtag('js', new Date());
       gtag('config', 'G-QNFRW1GPJR');
     </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'PLACEHOLDER_PIXEL_ID');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=PLACEHOLDER_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -179,6 +217,50 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
         "@type": "Place",
         "name": "Worldwide"
       }
+    }
+    </script>
+    <?php endif; ?>
+
+    <!-- FAQPage Schema for Services -->
+    <?php if (in_array($page_key, ['ai-automated-solutions', 'website-development'])): ?>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How much does AI automation cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The cost of custom AI automation varies based on complexity. We offer a free initial audit to provide a tailored quote and estimated ROI."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What platforms do you integrate with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We integrate with leading platforms including HubSpot, Salesforce, Slack, WhatsApp, n8n, Make, GoHighLevel, and various CRM and ERP systems."
+        }
+      }]
+    }
+    </script>
+    <?php endif; ?>
+
+    <!-- SoftwareApplication Schema for Free Tools -->
+    <?php if (in_array($page_key, ['invoice-maker'])): ?>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Free Invoice Maker by Automatixes",
+      "operatingSystem": "All",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Generate professional, customizable invoices instantly with live math calculations, dynamic line items, and print/PDF export."
     }
     </script>
     <?php endif; ?>
