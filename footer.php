@@ -61,6 +61,9 @@
                             <li>
                                 <a href="https://invoicemaker.automatixes.com" target="_blank">Free Invoice Maker</a>
                             </li>
+                            <li>
+                                <a href="https://upscaler.automatixes.com" target="_blank">AI Image Upscaler 4K</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
