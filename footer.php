@@ -796,6 +796,42 @@
     <script src="assets/js/main.js?v=5.0.0"></script>
     <!-- Agentation Visual Feedback Toolbar -->
     <script src="assets/js/agentation-widget.js" defer></script>
+    <!-- Cookie Consent Banner (Google Consent Mode v2 Compliant) -->
+    <div id="cookieConsentBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:2147483646;background:rgba(11,15,25,0.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid rgba(255,255,255,0.1);padding:18px 24px;font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;box-shadow:0 -10px 30px rgba(0,0,0,0.5);">
+        <div style="max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+            <p style="margin:0;color:#94a3b8;font-size:14px;line-height:1.6;flex:1;min-width:280px;">
+                We use cookies and Google Analytics to understand how you interact with our website and improve your experience. By clicking <strong style="color:#fff;">"Accept All"</strong>, you consent to analytics and personalization cookies in accordance with our 
+                <a href="/privacy.php" style="color:#C8E019;text-decoration:underline;margin-left:4px;font-weight:600;">Privacy Policy</a>.
+            </p>
+            <div style="display:flex;gap:12px;flex-shrink:0;">
+                <button onclick="handleCookieConsent('denied')" style="padding:10px 22px;border-radius:10px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.05);color:#94a3b8;font-size:13px;font-weight:600;cursor:pointer;transition:all .2s;">Reject All</button>
+                <button onclick="handleCookieConsent('granted')" style="padding:10px 24px;border-radius:10px;border:none;background:linear-gradient(135deg, #C8E019 0%, #A6BC09 100%);color:#0b0f19;font-size:13px;font-weight:700;cursor:pointer;transition:all .2s;box-shadow:0 4px 14px rgba(200,224,25,0.3);">Accept All</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    (function(){
+        var consent = localStorage.getItem('cookie_consent');
+        if (!consent) {
+            var b = document.getElementById('cookieConsentBanner');
+            if (b) b.style.display = 'block';
+        }
+    })();
+    function handleCookieConsent(choice) {
+        localStorage.setItem('cookie_consent', choice);
+        var b = document.getElementById('cookieConsentBanner');
+        if (b) b.style.display = 'none';
+        if (typeof gtag === 'function') {
+            var granted = choice === 'granted';
+            gtag('consent', 'update', {
+                'ad_storage': granted ? 'granted' : 'denied',
+                'ad_user_data': granted ? 'granted' : 'denied',
+                'ad_personalization': granted ? 'granted' : 'denied',
+                'analytics_storage': granted ? 'granted' : 'denied'
+            });
+        }
+    }
+    </script>
 </body>
 </html>
 
