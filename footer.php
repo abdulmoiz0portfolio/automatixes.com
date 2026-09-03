@@ -97,16 +97,6 @@
     </footer>
     <!-- Footer Section End -->
 
-    <!-- WhatsApp Floating Chat Button -->
-    <a href="https://wa.me/923366920141?text=Hi%20Automatixes!%20I'm%20interested%20in%20your%20AI%20automation%20services." 
-       target="_blank" rel="noopener"
-       id="whatsapp-float"
-       style="position: fixed; bottom: 24px; right: 24px; z-index: 9999; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4); transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease; text-decoration: none;"
-       onmouseenter="this.style.transform='scale(1.1)'; this.style.boxShadow='0 6px 24px rgba(37,211,102,0.5)'"
-       onmouseleave="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'"
-       title="Chat on WhatsApp">
-        <i class="fab fa-whatsapp" style="font-size: 28px; color: #fff;"></i>
-    </a>
 
     <!-- Newsletter Discount Popup Modal (Light Theme like SoftNest Technologies) -->
     <div id="newsletterModal" class="newsletter-modal">
