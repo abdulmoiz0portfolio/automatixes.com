@@ -243,6 +243,85 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     
     <!-- Custom Main CSS -->
     <link rel="stylesheet" href="assets/css/main.css?v=14.0.0">
+
+    <!-- Google Sitelinks & SiteNavigationElement Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ItemList",
+          "name": "Automatixes Core Services & Tools",
+          "itemListElement": [
+            {
+              "@type": "SiteNavigationElement",
+              "position": 1,
+              "name": "AI Automated Solutions",
+              "description": "Custom autonomous AI agents and n8n/Make workflows for CRM, lead qualification, and support.",
+              "url": "https://www.automatixes.com/ai-automated-solutions"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 2,
+              "name": "AI Voice Agents",
+              "description": "Human-like conversational AI voice agents for inbound support and automated outbound qualification.",
+              "url": "https://www.automatixes.com/voice-agent"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 3,
+              "name": "AI Product Staging & Shoots",
+              "description": "Photorealistic 3D AI staging and commercial product mockups for e-commerce brands.",
+              "url": "https://www.automatixes.com/product-shoot"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 4,
+              "name": "Bespoke Web & App Development",
+              "description": "High-performance full-stack web applications, single page apps, and lead conversion platforms.",
+              "url": "https://www.automatixes.com/website-development"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 5,
+              "name": "Our Process & Methodology",
+              "description": "4-stage engineering blueprint: Audit, Architecture, Integration, and 24/7 Operations.",
+              "url": "https://www.automatixes.com/process"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 6,
+              "name": "Client Reviews & Case Studies",
+              "description": "Verified client testimonials and real ROI case studies from enterprise automation deployments.",
+              "url": "https://www.automatixes.com/reviews"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 7,
+              "name": "Book AI Operations Consultation",
+              "description": "Schedule a 1-on-1 strategy call to identify automation bottlenecks and calculate projected ROI.",
+              "url": "https://www.automatixes.com/contact"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 8,
+              "name": "Free Dynamic QR Studio",
+              "description": "Enterprise-grade QR generator with custom logo branding and live scan telemetry.",
+              "url": "https://qrcode.automatixes.com/"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 9,
+              "name": "Free Invoice Maker & PDF Ledger",
+              "description": "Professional A4 PDF financial ledger generator with instant tax calculations.",
+              "url": "https://invoicemaker.automatixes.com/"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
 </head>
 <body>
 
