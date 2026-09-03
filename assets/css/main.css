@@ -7,14 +7,14 @@
    00. DESIGN TOKENS & ROOT VARIABLES
    ========================================================================== */
 :root {
-    /* --- 1. Obsidian Abyss Color Foundation --- */
-    --bg-void: #050505;              /* Purest obsidian background for hero & body canvas */
-    --bg-base: #0a0a0a;              /* Primary dark background canvas */
-    --bg-surface-1: #111113;          /* Elevation 1: Primary cards, containers, panels */
-    --bg-surface-2: #18181b;          /* Elevation 2: Secondary cards, form inputs, dropdowns */
-    --bg-surface-3: #222226;          /* Elevation 3: Elevated tags, active badges, modals */
-    --bg-glass: rgba(18, 18, 20, 0.72); /* Translucent frosted glass for cards */
-    --bg-glass-heavy: rgba(10, 10, 10, 0.85); /* Heavy frosted backdrop for navbar & modals */
+    /* --- 1. Deep Midnight Slate & Charcoal Color Foundation --- */
+    --bg-void: #0b0f19;              /* Deep Midnight Slate background for hero & body canvas */
+    --bg-base: #0f172a;              /* Primary rich slate canvas */
+    --bg-surface-1: #161f33;          /* Elevation 1: Primary cards, containers, panels */
+    --bg-surface-2: #1e293b;          /* Elevation 2: Secondary cards, form inputs, dropdowns */
+    --bg-surface-3: #263654;          /* Elevation 3: Elevated tags, active badges, modals */
+    --bg-glass: rgba(15, 23, 42, 0.75); /* Translucent frosted glass for cards */
+    --bg-glass-heavy: rgba(11, 15, 25, 0.88); /* Heavy frosted backdrop for navbar & modals */
 
     /* --- 2. High-Contrast Typography Palette --- */
     --text-primary: #ffffff;          /* Pure crisp white for massive headlines */
@@ -22,7 +22,7 @@
     --text-muted: #64748b;            /* Architectural slate gray for meta tags & subtitles */
     --text-dim: rgba(255, 255, 255, 0.35); /* Tertiary subtle text */
     --text-faint: rgba(255, 255, 255, 0.18); /* Watermarks, decorative numerals & stamps */
-    --text-on-neon: #050505;          /* Contrast dark text on neon fills */
+    --text-on-neon: #0b0f19;          /* Contrast dark text on neon fills */
     --text-dark: #ffffff;             /* Backward-compatible override for dark theme */
 
     /* --- 3. Electric Neon Accents (Signature QClay Visual Energy) --- */
@@ -38,11 +38,11 @@
     --accent-neon-border: rgba(204, 255, 0, 0.35); /* Neon container stroke */
 
     /* Aliases for backward-compatibility */
-    --bg-light: #0a0a0a;
-    --bg-surface: #111113;
-    --bg-warm-peach: #0a0a0a;
-    --bg-light-gray: #111113;
-    --bg-preloader: #050505;
+    --bg-light: #0f172a;
+    --bg-surface: #161f33;
+    --bg-warm-peach: #0f172a;
+    --bg-light-gray: #161f33;
+    --bg-preloader: #0b0f19;
 
     /* --- 4. Volumetric Light & Neon Glow Filters --- */
     --glow-subtle: 0 0 25px rgba(204, 255, 0, 0.15);
@@ -54,16 +54,15 @@
     --border-subtle: rgba(255, 255, 255, 0.08);
     --border-medium: rgba(255, 255, 255, 0.14);
     --border-bright: rgba(204, 255, 0, 0.3);
-    --border-neon: rgba(204, 255, 0, 0.45);
     --border-neon-bright: #ccff00;
     --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
 
     /* --- 6. Font Families & Typography Stack --- */
-    --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-mono: 'Space Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    --font-preloader: 'Syne', sans-serif;
     --font-sans: var(--font-body);
     --font-jakarta: var(--font-body);
 
@@ -194,7 +193,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 body {
     background-color: var(--bg-void) !important;
     color: var(--text-primary) !important;
-    font-family: var(--font-body);
+    font-family: var(--font-body) !important;
     font-size: var(--font-body-base);
     font-weight: 400;
     line-height: 1.65;
@@ -202,6 +201,13 @@ body {
     overflow-x: hidden;
     min-height: 100vh;
     width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6,
+.navbar-brand, .nav-link, .widget-title, .title, .section-title, .btn {
+    font-family: var(--font-heading) !important;
 }
 
 /* ==========================================================================
@@ -822,9 +828,12 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     border-radius: 50%;
     pointer-events: none;
     z-index: 0;
-    filter: blur(90px);
+    filter: blur(80px);
     opacity: 0.35;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
     will-change: transform;
+    contain: layout paint;
 }
 
 .glow-accent-neon,
@@ -964,7 +973,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background-color: #050505 !important;
+    background-color: var(--bg-void) !important;
     color: var(--accent-neon) !important;
     display: inline-flex;
     align-items: center;
@@ -984,7 +993,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
 
 .btn-brand:hover .arrow-btn,
 .btn-primary:hover .arrow-btn {
-    background-color: #050505 !important;
+    background-color: var(--bg-void) !important;
     color: var(--accent-neon-bright) !important;
     transform: scale(1.08);
 }
@@ -1003,16 +1012,16 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.45);
+    background: rgba(11, 15, 25, 0.75);
     backdrop-filter: blur(12px) saturate(180%);
     -webkit-backdrop-filter: blur(12px) saturate(180%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding: 14px 0;
     transition: var(--transition-smooth);
 }
 
 .header-nav.sticky {
-    background: rgba(0, 0, 0, 0.65) !important;
+    background: rgba(11, 15, 25, 0.92) !important;
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -1042,7 +1051,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
 }
 
 .dropdown-menu {
-    background: rgba(18, 18, 20, 0.95) !important;
+    background: rgba(22, 31, 51, 0.95) !important;
     border: 1px solid var(--border-subtle) !important;
     border-radius: 16px;
     backdrop-filter: blur(20px);
@@ -1211,7 +1220,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="password
     font-weight: 800;
     font-size: clamp(24px, 7vw, 55px);
     color: rgba(255, 255, 255, 0.08);
-    font-family: var(--font-heading);
+    font-family: var(--font-preloader, 'Syne', sans-serif) !important;
     position: relative;
     display: inline-block;
     letter-spacing: clamp(4px, 1.5vw, 12px);

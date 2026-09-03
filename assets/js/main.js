@@ -74,18 +74,23 @@ document.addEventListener("DOMContentLoaded", () => {
  */
 function setupNavigation() {
     const header = document.getElementById("header-sticky");
+    if (!header) return;
+    let isScrolled = false;
+    let ticking = false;
+
     window.addEventListener("scroll", () => {
-        if (!header) return;
-        if (window.scrollY > 50) {
-            header.style.padding = "5px 0";
-            
-            
-        } else {
-            header.style.padding = "10px 0";
-            
-            
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const scrolled = window.scrollY > 50;
+                if (scrolled !== isScrolled) {
+                    isScrolled = scrolled;
+                    header.style.padding = isScrolled ? "5px 0" : "10px 0";
+                }
+                ticking = false;
+            });
+            ticking = true;
         }
-    });
+    }, { passive: true });
 
     // Mark active nav link based on current path
     const currentPath = window.location.pathname.split("/").pop();
@@ -152,13 +157,24 @@ function initThreeJsParticles() {
     particles = new THREE.Points(geometry, material);
     scene.add(particles);
 
-    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(width, height);
     container.appendChild(renderer.domElement);
 
+    let isVisible = true;
+    if ('IntersectionObserver' in window) {
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                isVisible = entry.isIntersecting;
+            });
+        }, { threshold: 0.05 });
+        obs.observe(container);
+    }
+
     function animate() {
         requestAnimationFrame(animate);
+        if (!isVisible) return; // Prevent CPU/GPU cycle waste on scroll
         
         const positions = particles.geometry.attributes.position.array;
         const scales = particles.geometry.attributes.scale.array;
@@ -368,16 +384,24 @@ function initMatterJsPhysics() {
     Render.run(render);
     const runner = Runner.create();
 
-    // Trigger Runner when section is visible in viewport
+    // Trigger & Pause Runner dynamically based on section visibility
     let started = false;
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting && !started) {
-                started = true;
-                Runner.run(runner, engine);
+            if (entry.isIntersecting) {
+                if (!started) {
+                    started = true;
+                    Runner.run(runner, engine);
+                } else {
+                    Runner.start(runner);
+                }
+            } else {
+                if (started) {
+                    Runner.stop(runner);
+                }
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.05 });
 
     observer.observe(container);
 
@@ -947,13 +971,13 @@ function initSmoothScroll() {
     const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const prefersReducedMotion = reducedMotionQuery.matches;
 
-    // 3. Initialize Lenis Singleton
+    // 3. Initialize Lenis with fast, responsive, non-blocking curve
     const lenis = new Lenis({
-        lerp: prefersReducedMotion ? 1 : 0.09,
-        duration: prefersReducedMotion ? 0 : 1.2,
+        lerp: prefersReducedMotion ? 1 : 0.14,
+        duration: prefersReducedMotion ? 0 : 0.75,
         smoothWheel: !prefersReducedMotion,
-        wheelMultiplier: 1,
-        touchMultiplier: 1.5,
+        wheelMultiplier: 1.05,
+        touchMultiplier: 1.0,
         infinite: false,
         autoResize: true
     });
@@ -970,8 +994,8 @@ function initSmoothScroll() {
             lenis.raf(time * 1000);
         });
 
-        // 6. Disable GSAP Lag Smoothing for absolute precision
-        gsap.ticker.lagSmoothing(0);
+        // 6. Resilient lag smoothing to guarantee 60fps without hitching
+        gsap.ticker.lagSmoothing(500, 33);
 
         // Configure ScrollTrigger defaults to prevent pin jitter
         ScrollTrigger.config({
@@ -1354,12 +1378,13 @@ function initMarqueeVelocity() {
 
     let targetMultiplier = 1.0;
     let currentMultiplier = 1.0;
+    let lastApplied = 1.0;
 
     // ScrollTrigger velocity sensor
     ScrollTrigger.create({
         onUpdate: (self) => {
             const velocity = Math.abs(self.getVelocity() || (window.lenis ? window.lenis.velocity : 0));
-            targetMultiplier = 1.0 + Math.min(velocity / 350, 4.0);
+            targetMultiplier = 1.0 + Math.min(velocity / 400, 3.0);
         }
     });
 
@@ -1368,16 +1393,20 @@ function initMarqueeVelocity() {
         currentMultiplier += (targetMultiplier - currentMultiplier) * 0.08;
         targetMultiplier += (1.0 - targetMultiplier) * 0.05; // Decay smoothly back to baseline
 
-        tracks.forEach(track => {
-            if (typeof track.getAnimations === 'function') {
-                const animations = track.getAnimations();
-                if (animations && animations.length) {
-                    animations.forEach(anim => {
-                        anim.playbackRate = Math.max(0.1, currentMultiplier);
-                    });
+        // Only touch DOM animations if velocity change is perceptible (>0.02 delta)
+        if (Math.abs(currentMultiplier - lastApplied) > 0.02) {
+            lastApplied = currentMultiplier;
+            tracks.forEach(track => {
+                if (typeof track.getAnimations === 'function') {
+                    const animations = track.getAnimations();
+                    if (animations && animations.length) {
+                        animations.forEach(anim => {
+                            anim.playbackRate = Math.max(0.2, currentMultiplier);
+                        });
+                    }
                 }
-            }
-        });
+            });
+        }
     });
 
     // Window resize recalibration & visibility change handling
