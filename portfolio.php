@@ -3,150 +3,321 @@ $page_key = 'portfolio';
 include 'header.php'; 
 ?>
 
-<!-- Hero Section -->
-<section class="section-padding bg-base pt-5 pb-4 mt-5">
-    <div class="container text-center pt-4">
-        <div class="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style="background: rgba(200, 224, 25, 0.1); border: 1px solid rgba(200, 224, 25, 0.3);">
-            <span class="badge rounded-pill" style="background: #C8E019; color: #000; font-size: 0.7rem; font-weight: 800;">PROVEN ROI</span>
-            <span class="text-white small fw-bold">Live AI Deployments & Client Case Studies</span>
+<!-- Portfolio Hero Section -->
+<section class="position-relative py-5 overflow-hidden" style="background: #050507; padding-top: 160px !important; min-height: 55vh;">
+    <!-- Ambient Radial Lighting -->
+    <div class="position-absolute top-0 start-50 translate-middle-x pointer-events-none" style="width: 800px; height: 600px; background: radial-gradient(circle, rgba(200, 224, 25, 0.12) 0%, rgba(99, 102, 241, 0.05) 50%, transparent 70%); filter: blur(80px); z-index: 0;"></div>
+    <div class="position-absolute top-50 start-0 pointer-events-none" style="width: 450px; height: 450px; background: radial-gradient(circle, rgba(0, 255, 136, 0.07) 0%, transparent 70%); filter: blur(60px); z-index: 0;"></div>
+
+    <div class="container position-relative" style="z-index: 1;">
+        
+        <!-- Eyebrow Pill -->
+        <div class="text-center mb-4">
+            <span class="d-inline-flex align-items-center gap-2 px-3.5 py-1.5 rounded-pill" style="background: rgba(200, 224, 25, 0.08); border: 1px solid rgba(200, 224, 25, 0.25); box-shadow: 0 0 25px rgba(200, 224, 25, 0.15);">
+                <span class="badge rounded-pill px-2 py-0.5" style="background: #C8E019; color: #000; font-size: 0.65rem; font-weight: 800; letter-spacing: 0.05em;">ENTERPRISE DEPLOYMENTS</span>
+                <span class="text-white small fw-bold" style="font-size: 0.85rem;">Client Case Studies & Autonomous AI Systems</span>
+            </span>
         </div>
-        <h1 class="display-4 fw-extrabold text-white mb-3" style="letter-spacing: -0.03em;">
-            AI Automations & Systems Portfolio
-        </h1>
-        <p class="lead text-secondary max-w-2xl mx-auto" style="max-width: 720px; font-size: 1.1rem;">
-            Real-world autonomous AI agents, n8n workflow pipelines, conversational voice bots, and proprietary SaaS platforms engineered by Automatixes.
-        </p>
+
+        <!-- Main Heading -->
+        <div class="text-center max-width-800 mx-auto mb-5">
+            <h1 class="display-3 fw-extrabold text-white mb-3" style="letter-spacing: -0.04em; font-weight: 800;">
+                Engineered for <span style="background: linear-gradient(135deg, #FFFFFF 30%, #C8E019 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Autonomous Scale</span>
+            </h1>
+            <p class="lead text-secondary mx-auto" style="max-width: 680px; font-size: 1.15rem; line-height: 1.7; color: #94a3b8 !important;">
+                Explore production AI deployments: 24/7 conversational voice systems, autonomous agentic support pipelines, 3D commercial staging, and scalable SaaS infrastructure.
+            </p>
+        </div>
+
+        <!-- Metric Counters Row -->
+        <div class="row g-3 justify-content-center text-center mb-5 pb-3">
+            <div class="col-6 col-md-3">
+                <div class="p-3 rounded-4" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06); backdrop-blur-md;">
+                    <div class="display-6 fw-extrabold text-white font-monospace mb-1" style="color: #C8E019 !important;">98.4%</div>
+                    <div class="text-secondary small text-uppercase" style="font-size: 0.7rem; letter-spacing: 0.08em;">Workflow Accuracy</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-3 rounded-4" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06);">
+                    <div class="display-6 fw-extrabold text-white font-monospace mb-1">&lt;450ms</div>
+                    <div class="text-secondary small text-uppercase" style="font-size: 0.7rem; letter-spacing: 0.08em;">Voice Agent Latency</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-3 rounded-4" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06);">
+                    <div class="display-6 fw-extrabold text-white font-monospace mb-1" style="color: #38bdf8 !important;">150K+</div>
+                    <div class="text-secondary small text-uppercase" style="font-size: 0.7rem; letter-spacing: 0.08em;">Monthly Interactions</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-3 rounded-4" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06);">
+                    <div class="display-6 fw-extrabold text-white font-monospace mb-1" style="color: #4ade80 !important;">10x</div>
+                    <div class="text-secondary small text-uppercase" style="font-size: 0.7rem; letter-spacing: 0.08em;">Speed to Resolution</div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
-<!-- Portfolio Grid -->
-<section class="section-padding bg-base pb-5">
-    <div class="container pb-5">
+<!-- Portfolio Bento Section -->
+<section class="position-relative py-5" style="background: #08090d; border-top: 1px solid rgba(255, 255, 255, 0.05);">
+    <div class="container py-4">
+        
         <div class="row g-4">
 
-            <!-- Case Study 1: AI Support Agent -->
-            <div class="col-lg-6">
-                <div class="p-4 p-md-5 rounded-4 h-100" style="background: #0d0f17; border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.2s ease;">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <span class="badge px-3 py-1.5 rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.75rem;">AI AGENT SYSTEM</span>
-                        <span class="text-success small fw-bold font-monospace">85% Automated</span>
-                    </div>
-                    <h3 class="h4 text-white fw-bold mb-2">Autonomous 24/7 Customer Support Agent</h3>
-                    <p class="text-secondary small mb-4">
-                        Custom RAG-powered AI agent trained on internal knowledge base. Resolves user tickets across WhatsApp, Zendesk, and live chat with instant human-level reasoning.
-                    </p>
-                    <div class="d-flex flex-wrap gap-2 pt-3 border-top border-secondary border-opacity-25">
-                        <span class="badge bg-dark border border-secondary text-secondary">n8n</span>
-                        <span class="badge bg-dark border border-secondary text-secondary">OpenAI GPT-4o</span>
-                        <span class="badge bg-dark border border-secondary text-secondary">Pinecone Vector DB</span>
-                        <span class="badge bg-dark border border-secondary text-secondary">WhatsApp API</span>
+            <!-- 1. FEATURED HERO BENTO: Autonomous AI Support Agent -->
+            <div class="col-lg-8">
+                <div class="rounded-5 overflow-hidden h-100 position-relative p-1" style="background: linear-gradient(145deg, rgba(200, 224, 25, 0.15), rgba(255, 255, 255, 0.03)); border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div class="rounded-5 p-4 p-md-5 h-100 d-flex flex-column justify-content-between" style="background: #0d0f17;">
+                        <div>
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
+                                <span class="badge px-3 py-1.5 rounded-pill" style="background: rgba(200, 224, 25, 0.12); color: #C8E019; border: 1px solid rgba(200, 224, 25, 0.3); font-size: 0.75rem; font-weight: 700;">
+                                    <i class="fa-solid fa-robot me-1.5"></i> AUTONOMOUS AGENT SYSTEM
+                                </span>
+                                <span class="badge px-3 py-1 rounded-pill" style="background: rgba(34, 197, 94, 0.1); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.25); font-size: 0.75rem;">
+                                    ● 85% First-Contact Resolution
+                                </span>
+                            </div>
+
+                            <h2 class="h3 fw-extrabold text-white mb-3" style="letter-spacing: -0.02em;">
+                                Multi-Channel Autonomous Customer Operations Agent
+                            </h2>
+                            <p class="text-secondary mb-4" style="line-height: 1.7; font-size: 0.95rem; color: #94a3b8 !important;">
+                                An enterprise-grade autonomous customer service agent connected with internal product catalogs, order APIs, and knowledge base vector stores. Automatically processes returns, refunds, order tracking, and dynamic upsells across WhatsApp, Web Chat, and Zendesk with sub-second intelligent reasoning.
+                            </p>
+                        </div>
+
+                        <!-- Visual Showcase Frame -->
+                        <div class="rounded-4 overflow-hidden position-relative my-3 border border-secondary border-opacity-25" style="background: #050507; max-height: 260px;">
+                            <img src="assets/img/services/ai_agents.jpg" alt="AI Agent Operations Architecture" class="img-fluid w-100 object-fit-cover" style="height: 260px; filter: brightness(0.9);">
+                            <div class="position-absolute bottom-0 start-0 end-0 p-3 d-flex justify-content-between align-items-center" style="background: linear-gradient(to top, rgba(5, 5, 7, 0.95), transparent);">
+                                <span class="text-white small fw-bold"><i class="fa-solid fa-microchip text-accent-brand me-1.5"></i> Live RAG Memory Engine</span>
+                                <span class="badge bg-dark border border-secondary text-secondary font-monospace text-xs">Vector Search &lt;15ms</span>
+                            </div>
+                        </div>
+
+                        <!-- Tech Stack Tags -->
+                        <div class="d-flex flex-wrap gap-2 pt-3 border-top border-secondary border-opacity-25 mt-2">
+                            <span class="badge px-2.5 py-1.5 rounded-3 bg-dark border border-secondary border-opacity-25 text-white-50 small">OpenAI GPT-4o</span>
+                            <span class="badge px-2.5 py-1.5 rounded-3 bg-dark border border-secondary border-opacity-25 text-white-50 small">Pinecone Vector DB</span>
+                            <span class="badge px-2.5 py-1.5 rounded-3 bg-dark border border-secondary border-opacity-25 text-white-50 small">n8n Orchestrator</span>
+                            <span class="badge px-2.5 py-1.5 rounded-3 bg-dark border border-secondary border-opacity-25 text-white-50 small">WhatsApp Cloud API</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Case Study 2: Voice Outreach Agent -->
-            <div class="col-lg-6">
-                <div class="p-4 p-md-5 rounded-4 h-100" style="background: #0d0f17; border: 1px solid rgba(255, 255, 255, 0.08);">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <span class="badge px-3 py-1.5 rounded-pill" style="background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 0.75rem;">VOICE AUTOMATION</span>
-                        <span class="text-success small fw-bold font-monospace">3.8x Meeting Rate</span>
-                    </div>
-                    <h3 class="h4 text-white fw-bold mb-2">Conversational AI Voice Qualification Bot</h3>
-                    <p class="text-secondary small mb-4">
-                        Sub-second latency voice assistant conducting inbound & outbound qualification calls. Books vetted appointments directly into Google Calendar and HubSpot CRM.
-                    </p>
-                    <div class="d-flex flex-wrap gap-2 pt-3 border-top border-secondary border-opacity-25">
-                        <span class="badge bg-dark border border-secondary text-secondary">LiveKit Voice</span>
-                        <span class="badge bg-dark border border-secondary text-secondary">Deepgram STT</span>
-                        <span class="badge bg-dark border border-secondary text-secondary">ElevenLabs TTS</span>
-                        <span class="badge bg-dark border border-secondary text-secondary">HubSpot CRM</span>
+            <!-- 2. BENTO CARD: AI Conversational Voice Bot -->
+            <div class="col-lg-4">
+                <div class="rounded-5 overflow-hidden h-100 position-relative p-1" style="background: linear-gradient(145deg, rgba(99, 102, 241, 0.2), rgba(255, 255, 255, 0.03)); border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div class="rounded-5 p-4 p-md-5 h-100 d-flex flex-column justify-content-between" style="background: #0d0f17;">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <span class="badge px-3 py-1.5 rounded-pill" style="background: rgba(239, 68, 68, 0.12); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 0.75rem; font-weight: 700;">
+                                    <i class="fa-solid fa-microphone-lines me-1.5"></i> VOICE INFRASTRUCTURE
+                                </span>
+                            </div>
+
+                            <h3 class="h4 fw-extrabold text-white mb-3">
+                                Conversational Inbound & Outbound Calling Voice Bot
+                            </h3>
+                            <p class="text-secondary small mb-4" style="line-height: 1.6; color: #94a3b8 !important;">
+                                Ultra-low latency voice agent conducting human-like telephone consultations, answering customer FAQs, qualifying high-ticket leads, and booking qualified appointments directly into Google Calendar & CRM.
+                            </p>
+
+                            <!-- Interactive Soundwave Pulse Display -->
+                            <div class="p-3.5 rounded-4 mb-4 text-center" style="background: rgba(99, 102, 241, 0.08); border: 1px dashed rgba(99, 102, 241, 0.3);">
+                                <div class="d-flex justify-content-center align-items-center gap-1 mb-2" style="height: 36px;">
+                                    <span style="width: 4px; height: 16px; background: #818cf8; border-radius: 4px; animation: pulse 1s infinite alternate;"></span>
+                                    <span style="width: 4px; height: 28px; background: #C8E019; border-radius: 4px; animation: pulse 0.7s infinite alternate;"></span>
+                                    <span style="width: 4px; height: 36px; background: #818cf8; border-radius: 4px; animation: pulse 1.2s infinite alternate;"></span>
+                                    <span style="width: 4px; height: 20px; background: #C8E019; border-radius: 4px; animation: pulse 0.8s infinite alternate;"></span>
+                                    <span style="width: 4px; height: 32px; background: #818cf8; border-radius: 4px; animation: pulse 1.1s infinite alternate;"></span>
+                                    <span style="width: 4px; height: 14px; background: #C8E019; border-radius: 4px; animation: pulse 0.9s infinite alternate;"></span>
+                                </div>
+                                <span class="text-white small fw-bold font-monospace" style="font-size: 0.75rem;">&lt;450ms Human Latency</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="voice-agent" class="btn btn-brand w-100 rounded-pill py-2.5 fw-bold d-flex align-items-center justify-content-center gap-2">
+                                <span>Try Live Voice Demo</span>
+                                <i class="fa-solid fa-arrow-right small"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Case Study 3: n8n Lead Pipeline -->
+            <!-- 3. BENTO CARD: AI Product Staging & 3D Visuals -->
             <div class="col-lg-6">
-                <div class="p-4 p-md-5 rounded-4 h-100" style="background: #0d0f17; border: 1px solid rgba(255, 255, 255, 0.08);">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <span class="badge px-3 py-1.5 rounded-pill" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.75rem;">CRM INTEGRATION</span>
-                        <span class="text-success small fw-bold font-monospace">0s Lead Delay</span>
-                    </div>
-                    <h3 class="h4 text-white fw-bold mb-2">Automated Multi-Channel Lead Enrichment Pipeline</h3>
-                    <p class="text-secondary small mb-4">
-                        Instant lead capture from Meta ads, automatic LinkedIn / Apollo profile enrichment, Slack alerts to sales reps, and personalized cold email sequences.
-                    </p>
-                    <div class="d-flex flex-wrap gap-2 pt-3 border-top border-secondary border-opacity-25">
-                        <span class="badge bg-dark border border-secondary text-secondary">Make.com</span>
-                        <span class="badge bg-dark border border-secondary text-secondary">GoHighLevel</span>
-                        <span class="badge bg-dark border border-secondary text-secondary">Apollo API</span>
-                        <span class="badge bg-dark border border-secondary text-secondary">Slack Webhooks</span>
+                <div class="rounded-5 overflow-hidden h-100 position-relative p-1" style="background: linear-gradient(145deg, rgba(245, 158, 11, 0.15), rgba(255, 255, 255, 0.03)); border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div class="rounded-5 p-4 p-md-5 h-100 d-flex flex-column justify-content-between" style="background: #0d0f17;">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <span class="badge px-3 py-1.5 rounded-pill" style="background: rgba(245, 158, 11, 0.12); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); font-size: 0.75rem; font-weight: 700;">
+                                    <i class="fa-solid fa-wand-magic-sparkles me-1.5"></i> AI 3D PRODUCT STAGING
+                                </span>
+                                <span class="badge px-2.5 py-1 rounded-pill" style="background: rgba(34, 197, 94, 0.1); color: #4ade80; font-size: 0.75rem;">
+                                    90% Studio Cost Saved
+                                </span>
+                            </div>
+
+                            <h3 class="h4 fw-extrabold text-white mb-2">
+                                Photorealistic Commercial Product Scenes & E-Commerce Staging
+                            </h3>
+                            <p class="text-secondary small mb-4" style="line-height: 1.6; color: #94a3b8 !important;">
+                                Raw white-background bottle and luxury packaging photos digitally composited into high-end 3D environments with ray-traced lighting, natural reflections, and studio color grading.
+                            </p>
+
+                            <!-- Gallery Strip -->
+                            <div class="row g-2 mb-4">
+                                <div class="col-4">
+                                    <img src="assets/img/services/skincare_shoot.jpg" class="img-fluid rounded-3 border border-secondary border-opacity-25 w-100 object-fit-cover" style="height: 110px;" alt="Skincare AI Staging">
+                                </div>
+                                <div class="col-4">
+                                    <img src="assets/img/services/headphones_shoot.jpg" class="img-fluid rounded-3 border border-secondary border-opacity-25 w-100 object-fit-cover" style="height: 110px;" alt="Headphones Commercial Staging">
+                                </div>
+                                <div class="col-4">
+                                    <img src="assets/img/services/watch_shoot.jpg" class="img-fluid rounded-3 border border-secondary border-opacity-25 w-100 object-fit-cover" style="height: 110px;" alt="Watch Luxury Staging">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="product-shoot" class="btn btn-outline-light rounded-pill w-100 py-2.5 small fw-semibold">
+                                View Full Product Showcase Gallery &rarr;
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Case Study 4: AI Product Shoot -->
+            <!-- 4. BENTO CARD: n8n Multi-Channel CRM Lead Pipeline -->
             <div class="col-lg-6">
-                <div class="p-4 p-md-5 rounded-4 h-100" style="background: #0d0f17; border: 1px solid rgba(255, 255, 255, 0.08);">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <span class="badge px-3 py-1.5 rounded-pill" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); font-size: 0.75rem;">AI CREATIVE</span>
-                        <span class="text-success small fw-bold font-monospace">90% Cost Reduction</span>
-                    </div>
-                    <h3 class="h4 text-white fw-bold mb-2">E-Commerce 3D Product Staging & Shoots</h3>
-                    <p class="text-secondary small mb-4">
-                        Transformed raw studio bottle & packaging photos into 50+ cinematic commercial advertising scenes without renting physical studio sets.
-                    </p>
-                    <div class="d-flex flex-wrap gap-2 pt-3 border-top border-secondary border-opacity-25">
-                        <span class="badge bg-dark border border-secondary text-secondary">Stable Diffusion XL</span>
-                        <span class="badge bg-dark border border-secondary text-secondary">ControlNet</span>
-                        <span class="badge bg-dark border border-secondary text-secondary">ComfyUI</span>
-                        <span class="badge bg-dark border border-secondary text-secondary">Photoshop Automation</span>
+                <div class="rounded-5 overflow-hidden h-100 position-relative p-1" style="background: linear-gradient(145deg, rgba(16, 185, 129, 0.15), rgba(255, 255, 255, 0.03)); border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div class="rounded-5 p-4 p-md-5 h-100 d-flex flex-column justify-content-between" style="background: #0d0f17;">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <span class="badge px-3 py-1.5 rounded-pill" style="background: rgba(16, 185, 129, 0.12); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.75rem; font-weight: 700;">
+                                    <i class="fa-solid fa-diagram-project me-1.5"></i> CRM WORKFLOW PIPELINE
+                                </span>
+                                <span class="badge px-2.5 py-1 rounded-pill" style="background: rgba(56, 189, 248, 0.1); color: #38bdf8; font-size: 0.75rem;">
+                                    0s Lead Handoff Delay
+                                </span>
+                            </div>
+
+                            <h3 class="h4 fw-extrabold text-white mb-2">
+                                Automated Multi-Source Lead Enrichment & Sales Engine
+                            </h3>
+                            <p class="text-secondary small mb-4" style="line-height: 1.6; color: #94a3b8 !important;">
+                                End-to-end webhook architecture that captures leads from Meta & LinkedIn ads, enriches prospect profiles via Apollo API, alerts account executives in Slack with tailored briefing notes, and triggers personalized email flows.
+                            </p>
+
+                            <!-- Architecture Node Flow -->
+                            <div class="p-3 rounded-4 mb-4" style="background: #050507; border: 1px solid rgba(255, 255, 255, 0.08);">
+                                <div class="d-flex align-items-center justify-content-between text-center small text-secondary">
+                                    <div class="px-2 py-1 rounded bg-dark border border-secondary text-white font-monospace text-xs">Meta / Ads</div>
+                                    <span class="text-accent-brand">&rarr;</span>
+                                    <div class="px-2 py-1 rounded bg-dark border border-secondary text-white font-monospace text-xs">Apollo AI</div>
+                                    <span class="text-accent-brand">&rarr;</span>
+                                    <div class="px-2 py-1 rounded bg-dark border border-secondary text-white font-monospace text-xs">HubSpot CRM</div>
+                                    <span class="text-accent-brand">&rarr;</span>
+                                    <div class="px-2 py-1 rounded bg-dark border border-secondary text-white font-monospace text-xs">Slack Alert</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-wrap gap-2 pt-2">
+                            <span class="badge bg-dark border border-secondary border-opacity-25 text-white-50">Make.com</span>
+                            <span class="badge bg-dark border border-secondary border-opacity-25 text-white-50">n8n</span>
+                            <span class="badge bg-dark border border-secondary border-opacity-25 text-white-50">GoHighLevel</span>
+                            <span class="badge bg-dark border border-secondary border-opacity-25 text-white-50">HubSpot</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- SaaS Product 1: AutomatixQR -->
+            <!-- 5. SAAS CARD: AutomatixQR Dynamic Studio -->
             <div class="col-lg-6">
-                <div class="p-4 p-md-5 rounded-4 h-100" style="background: #0d0f17; border: 1px solid rgba(255, 255, 255, 0.08);">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <span class="badge px-3 py-1.5 rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.75rem;">LIVE SAAS PRODUCT</span>
-                        <span class="badge bg-success text-white">Live Platform</span>
+                <div class="rounded-5 overflow-hidden h-100 position-relative p-1" style="background: linear-gradient(145deg, rgba(99, 102, 241, 0.2), rgba(255, 255, 255, 0.03)); border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div class="rounded-5 p-4 p-md-5 h-100 d-flex flex-column justify-content-between" style="background: #0d0f17;">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge px-3 py-1.5 rounded-pill" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3); font-size: 0.75rem; font-weight: 700;">
+                                    <i class="fa-solid fa-qrcode me-1.5"></i> PROPRIETARY SAAS PRODUCT
+                                </span>
+                                <span class="badge bg-success text-white px-2.5 py-1 rounded-pill small">● LIVE PLATFORM</span>
+                            </div>
+
+                            <h3 class="h4 fw-extrabold text-white mb-2">AutomatixQR — Free Dynamic QR Studio</h3>
+                            <p class="text-secondary small mb-4" style="line-height: 1.6; color: #94a3b8 !important;">
+                                Enterprise dynamic QR generator with custom brand logo embed, matrix pattern styling, live URL re-routing, and telemetry analytics dashboard.
+                            </p>
+                        </div>
+
+                        <div>
+                            <a href="https://qrcode.automatixes.com/" target="_blank" class="btn btn-outline-light rounded-pill w-100 py-2.5 font-monospace fw-bold d-flex align-items-center justify-content-center gap-2">
+                                <span>Launch qrcode.automatixes.com</span>
+                                <span>&nearr;</span>
+                            </a>
+                        </div>
                     </div>
-                    <h3 class="h4 text-white fw-bold mb-2">AutomatixQR — Free Dynamic QR Studio</h3>
-                    <p class="text-secondary small mb-3">
-                        Enterprise QR generator featuring custom logo branding, dot matrices, editable dynamic URLs, and real-time scan telemetry dashboard.
-                    </p>
-                    <a href="https://qrcode.automatixes.com/" target="_blank" class="btn btn-outline-light btn-sm rounded-pill px-3">
-                        Launch qrcode.automatixes.com &rarr;
-                    </a>
                 </div>
             </div>
 
-            <!-- SaaS Product 2: AutomatixInvoice -->
+            <!-- 6. SAAS CARD: AutomatixInvoice Financial Ledger -->
             <div class="col-lg-6">
-                <div class="p-4 p-md-5 rounded-4 h-100" style="background: #0d0f17; border: 1px solid rgba(255, 255, 255, 0.08);">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <span class="badge px-3 py-1.5 rounded-pill" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.75rem;">LIVE SAAS PRODUCT</span>
-                        <span class="badge bg-success text-white">Live Platform</span>
+                <div class="rounded-5 overflow-hidden h-100 position-relative p-1" style="background: linear-gradient(145deg, rgba(16, 185, 129, 0.2), rgba(255, 255, 255, 0.03)); border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <div class="rounded-5 p-4 p-md-5 h-100 d-flex flex-column justify-content-between" style="background: #0d0f17;">
+                        <div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge px-3 py-1.5 rounded-pill" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.75rem; font-weight: 700;">
+                                    <i class="fa-solid fa-file-invoice-dollar me-1.5"></i> PROPRIETARY SAAS PRODUCT
+                                </span>
+                                <span class="badge bg-success text-white px-2.5 py-1 rounded-pill small">● LIVE PLATFORM</span>
+                            </div>
+
+                            <h3 class="h4 fw-extrabold text-white mb-2">AutomatixInvoice — A4 PDF Financial Ledger</h3>
+                            <p class="text-secondary small mb-4" style="line-height: 1.6; color: #94a3b8 !important;">
+                                Modern browser ledger with dynamic currency calculation, multi-tier tax presets, instant draft caching, and crisp vector A4 PDF export.
+                            </p>
+                        </div>
+
+                        <div>
+                            <a href="https://invoicemaker.automatixes.com/" target="_blank" class="btn btn-outline-light rounded-pill w-100 py-2.5 font-monospace fw-bold d-flex align-items-center justify-content-center gap-2">
+                                <span>Launch invoicemaker.automatixes.com</span>
+                                <span>&nearr;</span>
+                            </a>
+                        </div>
                     </div>
-                    <h3 class="h4 text-white fw-bold mb-2">AutomatixInvoice — A4 PDF Financial Ledger</h3>
-                    <p class="text-secondary small mb-3">
-                        Clean browser-based invoice generator with dynamic math, multi-currency tax presets, saved clients directory, and instant vector PDF export.
-                    </p>
-                    <a href="https://invoicemaker.automatixes.com/" target="_blank" class="btn btn-outline-light btn-sm rounded-pill px-3">
-                        Launch invoicemaker.automatixes.com &rarr;
-                    </a>
                 </div>
             </div>
 
         </div>
 
-        <!-- CTA Section -->
-        <div class="text-center mt-5 pt-4">
-            <h3 class="h4 text-white fw-bold mb-3">Want custom automations built for your operations?</h3>
-            <a href="contact" class="btn btn-brand rounded-pill px-5 py-3 fw-bold">
-                Book a Free 15-Minute AI Audit &rarr;
-            </a>
+        <!-- High-Impact Bottom CTA Strip -->
+        <div class="mt-5 pt-4">
+            <div class="p-4 p-md-5 rounded-5 text-center position-relative overflow-hidden" style="background: radial-gradient(circle at center, #131722 0%, #08090d 100%); border: 1px solid rgba(200, 224, 25, 0.25); box-shadow: 0 0 50px rgba(200, 224, 25, 0.08);">
+                <span class="badge px-3 py-1.5 rounded-pill mb-3" style="background: rgba(200, 224, 25, 0.1); color: #C8E019; border: 1px solid rgba(200, 224, 25, 0.3);">
+                    READY TO AUTOMATE?
+                </span>
+                <h2 class="display-5 fw-extrabold text-white mb-3" style="letter-spacing: -0.03em;">
+                    Build Custom AI Infrastructure for Your Business
+                </h2>
+                <p class="text-secondary mx-auto mb-4" style="max-width: 600px; font-size: 1.05rem; color: #94a3b8 !important;">
+                    Book a free 15-minute engineering discovery call. We'll audit your operational bottlenecks and map out a custom automation blueprint.
+                </p>
+                <div>
+                    <a href="contact" class="btn btn-brand rounded-pill px-5 py-3.5 fw-bold shadow-lg d-inline-flex align-items-center gap-2" style="font-size: 1rem;">
+                        <span>Book Your Free AI Audit & Consultation</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
         </div>
+
     </div>
 </section>
 
