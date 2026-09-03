@@ -122,6 +122,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="shortcut icon" href="favicon.ico">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="canonical" href="<?php echo $canonical_url; ?>">
     
     <!-- Meta SEO Tags -->
