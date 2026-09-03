@@ -12,6 +12,12 @@ $meta_config = [
         'keywords' => 'AI Automation Agency, n8n, Make, GoHighLevel, Zapier, AI Agents, software development, CRM integration',
         'url' => ''
     ],
+        'portfolio' => [
+        'title' => 'Client Case Studies & AI Deployment Portfolio | Automatixes',
+        'desc' => 'Explore live case studies of custom autonomous AI agents, n8n CRM automations, voice qualification bots, and SaaS tools built by Automatixes.',
+        'keywords' => 'AI Portfolio, Automation Case Studies, n8n deployments, AI Voice Agents portfolio, Automatixes',
+        'url' => 'portfolio'
+    ],
     'about' => [
         'title' => 'Our Mission & Automation Experts | Automatixes',
         'desc' => 'Meet Automatixes. We design custom AI agent systems, API integrations, and e-commerce growth strategies to help small & mid-sized businesses automate operations.',
