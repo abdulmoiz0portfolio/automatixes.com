@@ -54,6 +54,12 @@ $meta_config = [
         'keywords' => 'Free Invoice Maker, online invoice generator, Automatixes invoice tool, automated invoice PDF, billing software',
         'url' => 'invoice-maker'
     ],
+    'whatsapp-api' => [
+        'title' => 'Automatixes WhatsApp Multi-Device API & Automation Engine | Moiz Baig',
+        'desc' => 'Connect, automate, and scale WhatsApp conversations with ultra-fast Baileys v6+ REST & WebSocket API, native AI bots, and multi-tenant management.',
+        'keywords' => 'WhatsApp API, Automatixes WhatsApp API, WhatsApp Multi-Device API, WhatsApp Chatbot, WhatsApp Baileys REST API, Moiz Baig',
+        'url' => 'whatsapp-api'
+    ],
     'voice-agent' => [
         'title' => 'Talk to our AI Voice Agent | Automatixes',
         'desc' => 'Experience the future of customer support. Click to start a live voice conversation with our autonomous AI agent.',
@@ -359,6 +365,7 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
                                 Services
                             </a>
                             <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item py-2 fw-semibold" href="whatsapp-api"><i class="fa-brands fa-whatsapp text-success me-2"></i>WhatsApp Multi-Device API</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold" href="ai-automated-solutions">AI Automated Solutions</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold d-flex align-items-center justify-content-between" href="voice-agent"><span>AI Voice Agents</span> <span class="badge bg-danger rounded-pill ms-2" style="font-size: 0.65rem; background: linear-gradient(135deg, #FF3B30, #FF9500) !important;">🔥 HIGH DEMAND</span></a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold" href="product-shoot">AI Product Staging & Visuals</a></li>
