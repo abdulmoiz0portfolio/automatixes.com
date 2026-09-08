@@ -47,7 +47,7 @@
                         <h5 class="widget-title">Our Services</h5>
                         <ul class="list-unstyled footer-menu">
                             <li><a href="ai-automated-solutions">AI Automations</a></li>
-                            <li><a href="voice-agent" class="d-inline-flex align-items-center gap-1.5"><span>AI Voice Agents</span> <span class="badge bg-danger" style="font-size: 9px; font-weight: 700; border-radius: 4px; background: #FF3B30 !important;">HOT</span></a></li>
+                            <li><a href="voice-agent" class="d-inline-flex align-items-center gap-1.5"><span>AI Voice Agents</span> <span class="badge" style="font-size: 9px; font-weight: 700; border-radius: 4px; background: #D4FF3D !important; color: #0a0e1a !important;">HOT</span></a></li>
                             <li><a href="product-shoot">AI Product Staging</a></li>
                             <li><a href="case-study" class="d-inline-flex align-items-center gap-1.5"><span style="color: var(--accent-neon, #C8E019);">n8n Lead Recovery</span> <span class="badge" style="font-size: 8px; font-weight: 700; border-radius: 4px; background: rgba(200, 224, 25, 0.15); color: #C8E019; border: 1px solid rgba(200, 224, 25, 0.3);">DEMO</span></a></li>
                         </ul>
@@ -407,19 +407,19 @@
                 <!-- Fast Contact Options Grid -->
                 <div class="expert-channels-grid mb-3">
                     <!-- Option 1: AI Voice Agent (Featured / High Demand) -->
-                    <a href="voice-agent" class="expert-channel-card voice-channel" style="border: 1px solid rgba(255, 59, 48, 0.4); background: rgba(255, 59, 48, 0.08);">
-                        <div class="channel-icon-box" style="background: rgba(255, 59, 48, 0.2); color: #FF3B30;">
+                    <a href="voice-agent" class="expert-channel-card voice-channel" style="border: 1px solid rgba(212, 255, 61, 0.3); background: rgba(212, 255, 61, 0.05);">
+                        <div class="channel-icon-box" style="background: rgba(212, 255, 61, 0.15); color: #D4FF3D;">
                             <i class="fa-solid fa-microphone-lines fs-5"></i>
                         </div>
                         <div class="channel-info">
                             <div class="d-flex align-items-center gap-2">
                                 <h6 class="fw-bold text-white mb-0" style="font-size: 13.5px;">Live AI Voice Agent Call</h6>
-                                <span class="badge bg-danger rounded-pill px-2 py-0.5" style="font-size: 9px; font-weight: 800; background: linear-gradient(135deg, #FF3B30, #FF9500) !important;">HOT</span>
+                                <span class="badge rounded-pill px-2 py-0.5" style="font-size: 9px; font-weight: 800; background: #D4FF3D !important; color: #0a0e1a !important;">HOT</span>
                             </div>
                             <p class="text-white-50 mb-0" style="font-size: 11px;">Instant real-time browser voice call (&lt;500ms)</p>
                         </div>
                         <div class="channel-action">
-                            <span class="action-btn" style="background: #FF3B30; color: #fff;">Talk Now <i class="fa-solid fa-phone ms-1"></i></span>
+                            <span class="action-btn" style="background: #D4FF3D; color: #0a0e1a !important; font-weight: 700;">Talk Now <i class="fa-solid fa-phone ms-1"></i></span>
                         </div>
                     </a>
 

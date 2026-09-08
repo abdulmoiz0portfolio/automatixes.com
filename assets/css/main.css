@@ -1831,6 +1831,11 @@ td, th {
     border-radius: 999px;
 }
 
+.bg-accent-brand {
+    background-color: var(--accent-neon, #D4FF3D) !important;
+    color: #0a0e1a !important;
+}
+
 .badge.bg-brand-translucent {
     font-size: 13px !important;
     letter-spacing: 1.5px !important;

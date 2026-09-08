@@ -354,30 +354,30 @@
         <div class="row g-4 justify-content-center">
             <!-- Core Offering 1: Autonomous AI Voice Agents -->
             <div class="col-lg-6 col-md-6">
-                <div class="card-service-item h-100 d-flex flex-column justify-content-between wow fadeInUp" data-wow-delay=".2s" style="border: 1px solid rgba(255, 59, 48, 0.35); background: rgba(18, 24, 38, 0.75); position: relative; overflow: hidden; border-radius: 20px;">
+                <div class="card-service-item h-100 d-flex flex-column justify-content-between wow fadeInUp" data-wow-delay=".2s" style="border: 1px solid rgba(212, 255, 61, 0.3); background: rgba(18, 24, 38, 0.75); position: relative; overflow: hidden; border-radius: 20px;">
                     <div>
                         <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm position-relative">
                             <img src="assets/img/services/ai_agents.jpg" alt="Autonomous AI Voice Agents" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;">
-                            <span class="badge position-absolute top-0 end-0 m-3 text-white rounded-pill px-3 py-1.5 shadow" style="font-size: 11px; font-weight: 800; background: linear-gradient(135deg, #FF3B30, #FF9500) !important; letter-spacing: 0.5px;">
+                            <span class="badge position-absolute top-0 end-0 m-3 text-dark rounded-pill px-3 py-1.5 shadow fw-bold" style="font-size: 11px; background: #D4FF3D; color: #0a0e1a !important; letter-spacing: 0.5px;">
                                 <i class="fa-solid fa-fire me-1"></i> HIGH DEMAND
                             </span>
                         </div>
                         <div class="content p-2">
                             <div class="d-flex align-items-center gap-2 mb-2">
-                                <i class="fa-solid fa-microphone-lines" style="font-size: 1.3rem; color: #FF3B30;"></i>
+                                <i class="fa-solid fa-microphone-lines" style="font-size: 1.3rem; color: var(--accent-neon, #D4FF3D);"></i>
                                 <span class="text-white-50 font-monospace small">Conversational Voice Engine</span>
                             </div>
                             <h3 class="mb-3"><a href="voice-agent" class="text-white text-decoration-none">Autonomous AI Voice Agents</a></h3>
                             <p class="text-white-50 mb-3">Human-like voice bots that handle customer inquiries, inbound call routing, qualify leads, and book appointments 24/7 with zero human lag.</p>
                             <ul class="list-unstyled text-white-50 small mb-4" style="line-height: 2;">
-                                <li><i class="fa-solid fa-check me-2" style="color: #FF3B30;"></i>Inbound & Outbound Calling (<500ms response)</li>
-                                <li><i class="fa-solid fa-check me-2" style="color: #FF3B30;"></i>Automated Appointment Booking & Calendar Sync</li>
-                                <li><i class="fa-solid fa-check me-2" style="color: #FF3B30;"></i>Live CRM integration & dynamic lead qualification</li>
+                                <li><i class="fa-solid fa-check me-2" style="color: var(--accent-neon, #D4FF3D);"></i>Inbound & Outbound Calling (&lt;500ms response)</li>
+                                <li><i class="fa-solid fa-check me-2" style="color: var(--accent-neon, #D4FF3D);"></i>Automated Appointment Booking & Calendar Sync</li>
+                                <li><i class="fa-solid fa-check me-2" style="color: var(--accent-neon, #D4FF3D);"></i>Live CRM integration & dynamic lead qualification</li>
                             </ul>
                         </div>
                     </div>
                     <div class="p-2 pt-0">
-                        <a href="voice-agent" class="btn btn-sm btn-danger rounded-pill px-4 py-2 fw-bold text-nowrap d-inline-flex align-items-center gap-2 shadow" style="background: linear-gradient(135deg, #FF3B30, #E02828); border: none;">
+                        <a href="voice-agent" class="btn btn-sm btn-brand rounded-pill px-4 py-2 fw-bold text-nowrap d-inline-flex align-items-center gap-2 shadow text-dark" style="background: #D4FF3D; color: #0a0e1a !important; border: none;">
                             <span>Try Live Voice Demo</span>
                             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                         </a>
@@ -390,7 +390,7 @@
                 <div class="card-service-item h-100 d-flex flex-column justify-content-between wow fadeInUp" data-wow-delay=".4s" style="border: 1px solid rgba(200, 224, 25, 0.3); background: rgba(18, 24, 38, 0.75); position: relative; overflow: hidden; border-radius: 20px;">
                     <div>
                         <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm position-relative">
-                            <img src="assets/img/services/ai_agents.jpg" alt="AI Automated Solutions" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover; filter: hue-rotate(180deg);">
+                            <img src="assets/img/services/ai_automations.jpg" alt="AI Automated Solutions" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;">
                             <span class="badge position-absolute top-0 end-0 m-3 text-dark rounded-pill px-3 py-1.5 shadow fw-bold" style="font-size: 11px; background: #C8E019; letter-spacing: 0.5px;">
                                 <i class="fa-solid fa-bolt me-1"></i> CORE AGENTIC
                             </span>
@@ -1107,25 +1107,25 @@ function openWorkflowModal() {
             
             <!-- Package 1: AI Voice Agent Deployment -->
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                <div class="card pricing-card h-100 bg-surface border-0 rounded-4 p-4 p-lg-5 position-relative text-center hover-lift d-flex flex-column" style="box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 1px solid rgba(255,59,48,0.3) !important;">
+                <div class="card pricing-card h-100 bg-surface border-0 rounded-4 p-4 p-lg-5 position-relative text-center hover-lift d-flex flex-column" style="box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05) !important;">
                     <div class="mb-4">
-                        <div class="rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 60px; height: 60px; font-size: 24px; background: rgba(255,59,48,0.15); color: #FF3B30;">
+                        <div class="bg-brand-translucent text-accent-brand rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 60px; height: 60px; font-size: 24px;">
                             <i class="fa-solid fa-microphone-lines"></i>
                         </div>
-                        <span class="badge bg-danger rounded-pill px-2.5 py-1 mb-2" style="font-size: 10px; font-weight: 800; background: linear-gradient(135deg, #FF3B30, #FF9500) !important;">HIGH DEMAND</span>
+                        <div class="badge rounded-pill py-1 px-3 fw-bold mb-2 shadow-sm" style="font-size: 0.75rem; letter-spacing: 1px; background-color: #D4FF3D; color: #0a0e1a !important;">HIGH DEMAND</div>
                         <h3 class="h4 fw-bold text-white mb-2">AI Voice Agent</h3>
                         <p class="text-muted small">Autonomous conversational calling</p>
                     </div>
                     <hr class="border-secondary opacity-25 mb-4">
                     <ul class="list-unstyled text-white-50 mb-5 text-start" style="font-size: 0.95rem;">
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-danger mt-1 me-3 flex-shrink-0"></i> <span>Inbound & Outbound Voice Calling</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-danger mt-1 me-3 flex-shrink-0"></i> <span>Sub-500ms Human Cadence & Latency</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-danger mt-1 me-3 flex-shrink-0"></i> <span>Automated Appointment Booking & Calendar</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-danger mt-1 me-3 flex-shrink-0"></i> <span>CRM Data Sync & Live Call Transcripts</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-danger mt-1 me-3 flex-shrink-0"></i> <span>24/7 Autonomous Inbound Lead Triage</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Inbound & Outbound Voice Calling</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Sub-500ms Human Cadence & Latency</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Automated Appointment Booking & Calendar</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>CRM Data Sync & Live Call Transcripts</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>24/7 Autonomous Inbound Lead Triage</span></li>
                     </ul>
                     <div class="mt-auto pt-4">
-                        <a href="voice-agent" class="btn btn-outline-danger w-100 rounded-pill py-3 fw-bold" style="border-color: rgba(255,59,48,0.5); color: #FF6B6B;">Try Voice Demo</a>
+                        <a href="voice-agent" class="btn btn-outline-brand w-100 rounded-pill py-3 fw-extrabold shadow-sm hover-lift">Try Voice Demo</a>
                     </div>
                 </div>
             </div>
@@ -1135,7 +1135,7 @@ function openWorkflowModal() {
                 <div class="card pricing-card scale-lg-up h-100 bg-surface rounded-4 p-4 p-lg-5 position-relative text-center d-flex flex-column" style="box-shadow: 0 15px 40px rgba(200, 224, 25, 0.15); border: 2px solid var(--accent-neon) !important;">
                     
                     <div class="mb-4 mt-2">
-                        <div class="badge bg-accent-brand text-dark rounded-pill py-1 px-3 fw-bold mb-4 shadow-sm" style="font-size: 0.75rem; letter-spacing: 1px;">MOST POPULAR</div>
+                        <div class="badge rounded-pill py-1 px-3 fw-bold mb-4 shadow-sm" style="font-size: 0.75rem; letter-spacing: 1px; background-color: #D4FF3D; color: #0a0e1a !important;">MOST POPULAR</div>
                         <div class="bg-brand-translucent text-accent-brand rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 60px; height: 60px; font-size: 24px;">
                             <i class="fa-solid fa-robot"></i>
                         </div>
@@ -1175,7 +1175,7 @@ function openWorkflowModal() {
                         <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>E-Commerce & Social Media Ready Assets</span></li>
                     </ul>
                     <div class="mt-auto pt-4">
-                        <a href="product-shoot" class="btn btn-outline-light w-100 rounded-pill py-3 fw-bold">Explore AI Visuals</a>
+                        <a href="product-shoot" class="btn btn-outline-brand w-100 rounded-pill py-3 fw-extrabold shadow-sm hover-lift">Explore AI Visuals</a>
                     </div>
                 </div>
             </div>
