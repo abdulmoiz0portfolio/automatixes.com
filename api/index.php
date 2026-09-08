@@ -32,7 +32,8 @@ $allowed_pages = [
     'invoice-maker',
     'blogs',
     'blog-detail',
-    'voice-agent'
+    'voice-agent',
+    'case-study'
 ];
 
 if (in_array($path, $allowed_pages)) {

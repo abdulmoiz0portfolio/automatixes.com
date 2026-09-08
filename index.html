@@ -1,3 +1,15 @@
+$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'automatixes.com';
+$forwarded_proto = isset($_SERVER['HTTP_X_FORWARDED_PROTO']) ? strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) : '';
+$protocol = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') || $forwarded_proto === 'https') ? "https" : "http";
+$canonical_url = "{$protocol}://{$host}/" . $active_meta['url'];
+$og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Consent Mode v2 (must fire BEFORE gtag.js) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('consent', 'default', {
         'ad_storage': 'denied',
@@ -237,6 +249,7 @@
                                 Services
                             </a>
                             <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
+                                <li><a class="dropdown-item py-2 fw-semibold" href="whatsapp-api"><i class="fa-brands fa-whatsapp text-success me-2"></i>WhatsApp Multi-Device API</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold" href="ai-automated-solutions">AI Automated Solutions</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold d-flex align-items-center justify-content-between" href="voice-agent"><span>AI Voice Agents</span> <span class="badge bg-danger rounded-pill ms-2" style="font-size: 0.65rem; background: linear-gradient(135deg, #FF3B30, #FF9500) !important;">🔥 HIGH DEMAND</span></a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold" href="product-shoot">AI Product Staging & Visuals</a></li>
@@ -773,6 +786,371 @@
 </section>
 <!-- AI Comparison Section End -->
 
+<!-- Case Study & Demo Section Start -->
+<section id="case-study-section" class="py-5 text-white position-relative overflow-hidden" style="background: linear-gradient(180deg, #070a12 0%, #0c1222 50%, #070a12 100%); border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
+    <!-- Ambient Atmospheric Glows -->
+    <div class="position-absolute rounded-circle pointer-events-none" style="background: radial-gradient(circle, rgba(200, 224, 25, 0.12) 0%, rgba(0,0,0,0) 70%); width: 600px; height: 600px; top: 5%; right: -150px; filter: blur(90px); z-index: 0;"></div>
+    <div class="position-absolute rounded-circle pointer-events-none" style="background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, rgba(0,0,0,0) 70%); width: 500px; height: 500px; bottom: 10%; left: -100px; filter: blur(80px); z-index: 0;"></div>
+
+    <div class="container position-relative" style="z-index: 1;">
+        <!-- Header / Eyebrow -->
+        <div class="text-center mb-5 max-w-800 mx-auto">
+            <div class="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style="background: rgba(200, 224, 25, 0.08); border: 1px solid rgba(200, 224, 25, 0.25); box-shadow: 0 0 20px rgba(200, 224, 25, 0.1);">
+                <span class="badge rounded-pill px-2 py-0.5" style="background: #C8E019; color: #000; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.05em;">CASE STUDY</span>
+                <span class="text-white small fw-bold" style="font-size: 0.85rem;"><i class="fa-solid fa-bolt me-1 text-accent-neon"></i> n8n Autonomous Lead Recovery &amp; Verification</span>
+            </div>
+            <h2 class="display-5 fw-extrabold text-white mb-3" style="letter-spacing: -0.03em;">
+                How B2B Agencies Recover <span style="background: linear-gradient(135deg, #FFFFFF 30%, #C8E019 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">30%+ Lost Pipeline</span>
+            </h2>
+            <p class="text-white-50 fs-5 mx-auto" style="max-width: 680px; line-height: 1.6;">
+                Most outbound and inbound campaigns bleed revenue due to slow response times and dirty CRM data. Here is the exact production n8n engine we deploy to capture, clean, and verify leads in real time.
+            </p>
+        </div>
+
+        <!-- Problem vs Solution Breakdown (Bento Style) -->
+        <div class="row g-4 mb-5">
+            <!-- Problem Card -->
+            <div class="col-lg-6">
+                <div class="p-4 p-md-4 rounded-4 h-100" style="background: rgba(239, 68, 68, 0.03); border: 1px solid rgba(239, 68, 68, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+                    <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom border-danger border-opacity-25">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="badge bg-danger bg-opacity-20 text-danger border border-danger border-opacity-50 px-2.5 py-1 rounded-pill">
+                                <i class="fa-solid fa-triangle-exclamation me-1"></i> THE BOTTLENECK
+                            </span>
+                            <h4 class="h5 fw-bold text-white mb-0">The Leaky Pipeline</h4>
+                        </div>
+                        <span class="text-danger small font-monospace"><i class="fa-solid fa-arrow-trend-down me-1"></i>Lost ROI</span>
+                    </div>
+                    
+                    <ul class="list-unstyled d-flex flex-column gap-3 mb-4">
+                        <li class="d-flex align-items-start gap-3">
+                            <div class="rounded-circle bg-danger bg-opacity-10 text-danger d-flex align-items-center justify-content-center flex-shrink-0 mt-1" style="width: 28px; height: 28px;">
+                                <i class="fa-solid fa-hourglass-half" style="font-size: 13px;"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white d-block">Speed-to-Lead Drop-off (Leads Go Ice-Cold)</strong>
+                                <span class="text-white-50 small">78% of B2B buyers purchase from the vendor who replies first. Leaving inquiries or replies sitting for 15+ minutes causes lead response rates to drop by up to 391%.</span>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start gap-3">
+                            <div class="rounded-circle bg-danger bg-opacity-10 text-danger d-flex align-items-center justify-content-center flex-shrink-0 mt-1" style="width: 28px; height: 28px;">
+                                <i class="fa-solid fa-envelope-circle-check" style="font-size: 13px;"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white d-block">High Bounce Rates &amp; Burned Mailboxes</strong>
+                                <span class="text-white-50 small">Scraped raw leads contain typos, non-existent corporate domains, and dead inboxes. Blasting unchecked data wrecks domain reputation and triggers spam filters.</span>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start gap-3">
+                            <div class="rounded-circle bg-danger bg-opacity-10 text-danger d-flex align-items-center justify-content-center flex-shrink-0 mt-1" style="width: 28px; height: 28px;">
+                                <i class="fa-solid fa-table-list" style="font-size: 13px;"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white d-block">Manual CSV Scrubbing Drains SDR Hours</strong>
+                                <span class="text-white-50 small">Sales reps waste 10–14 hours per week manually formatting strings, stripping "LLC/Inc" suffixes, and cross-checking records instead of taking calls and closing.</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="p-3 rounded-3" style="background: rgba(239, 68, 68, 0.08); border: 1px dashed rgba(239, 68, 68, 0.3);">
+                        <span class="text-danger fw-bold small"><i class="fa-solid fa-xmark me-1"></i> Net Impact:</span>
+                        <span class="text-white-50 small ms-1">Agencies lose 25–40% of potentially closed-won revenue simply due to delayed response times and bad data hygiene.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution Card -->
+            <div class="col-lg-6">
+                <div class="p-4 p-md-4 rounded-4 h-100" style="background: rgba(200, 224, 25, 0.03); border: 1px solid rgba(200, 224, 25, 0.25); box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+                    <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom border-light border-opacity-10">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="badge rounded-pill px-2.5 py-1 text-dark fw-bold" style="background: #C8E019;">
+                                <i class="fa-solid fa-check-double me-1"></i> OUR AUTOMATION
+                            </span>
+                            <h4 class="h5 fw-bold text-white mb-0">Autonomous n8n Recovery Engine</h4>
+                        </div>
+                        <span class="text-accent-brand small font-monospace"><i class="fa-solid fa-bolt me-1"></i>Sub-60s Action</span>
+                    </div>
+
+                    <ul class="list-unstyled d-flex flex-column gap-3 mb-4">
+                        <li class="d-flex align-items-start gap-3">
+                            <div class="rounded-circle text-dark d-flex align-items-center justify-content-center flex-shrink-0 mt-1" style="background: #C8E019; width: 28px; height: 28px;">
+                                <i class="fa-solid fa-bolt-lightning" style="font-size: 13px;"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white d-block">Instant Trigger &amp; Sub-60s Speed-to-Lead</strong>
+                                <span class="text-white-50 small">Webhooks and scheduled polling monitor incoming form fills and inbox replies 24/7. When a prospect engages, the pipeline catches it within seconds before they go cold.</span>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start gap-3">
+                            <div class="rounded-circle text-dark d-flex align-items-center justify-content-center flex-shrink-0 mt-1" style="background: #C8E019; width: 28px; height: 28px;">
+                                <i class="fa-solid fa-network-wired" style="font-size: 13px;"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white d-block">Autonomous Cloudflare DNS MX Validation</strong>
+                                <span class="text-white-50 small">The workflow queries live DNS servers to verify mail exchange records on the fly, auto-flagging invalid mailboxes and protecting sender reputation with zero paid API costs.</span>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-start gap-3">
+                            <div class="rounded-circle text-dark d-flex align-items-center justify-content-center flex-shrink-0 mt-1" style="background: #C8E019; width: 28px; height: 28px;">
+                                <i class="fa-solid fa-wand-magic-sparkles" style="font-size: 13px;"></i>
+                            </div>
+                            <div>
+                                <strong class="text-white d-block">JavaScript Data Sanitization &amp; CRM Sync</strong>
+                                <span class="text-white-50 small">Embedded JavaScript cleans names to proper Title Case, strips entity tags (LLC, Inc, Corp), and appends clean data directly into Google Sheets, Airtable, or your CRM.</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="p-3 rounded-3" style="background: rgba(200, 224, 25, 0.08); border: 1px dashed rgba(200, 224, 25, 0.35);">
+                        <span class="text-accent-brand fw-bold small"><i class="fa-solid fa-circle-check me-1"></i> Measurable Result:</span>
+                        <span class="text-white small ms-1">Zero dropped leads, 99.2% verified deliverability rate, and 12+ hours saved every week per account.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Workflow Visual Demo & Video Player Card -->
+        <div class="card rounded-4 overflow-hidden mb-5" style="background: #0d1322; border: 1px solid rgba(200, 224, 25, 0.2); box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
+            <!-- Window Title Bar / Tab Bar -->
+            <div class="px-4 py-3 border-bottom d-flex flex-wrap align-items-center justify-content-between gap-3" style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.07) !important;">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex align-items-center gap-1.5">
+                        <span class="rounded-circle d-inline-block" style="width: 11px; height: 11px; background: #ff5f56;"></span>
+                        <span class="rounded-circle d-inline-block" style="width: 11px; height: 11px; background: #ffbd2e;"></span>
+                        <span class="rounded-circle d-inline-block" style="width: 11px; height: 11px; background: #27c93f;"></span>
+                    </div>
+                    <span class="text-white-50 small font-monospace ms-2 d-none d-sm-inline">lead-recovery-workflow.n8n · Production v2.4</span>
+                </div>
+
+                <!-- View Switcher Tabs -->
+                <div class="d-flex align-items-center gap-2">
+                    <button type="button" class="btn btn-sm px-3 py-1.5 rounded-pill fw-semibold active case-study-tab-btn" id="tabBtnArchitecture" onclick="switchCaseStudyTab('architecture')" style="font-size: 0.8rem; background: #C8E019; color: #000; border: 1px solid #C8E019;">
+                        <i class="fa-solid fa-diagram-project me-1.5"></i> Workflow Blueprint
+                    </button>
+                    <button type="button" class="btn btn-sm px-3 py-1.5 rounded-pill fw-semibold case-study-tab-btn" id="tabBtnVideo" onclick="switchCaseStudyTab('video')" style="font-size: 0.8rem; background: rgba(255,255,255,0.05); color: #cbd5e1; border: 1px solid rgba(255,255,255,0.1);">
+                        <i class="fa-solid fa-circle-play me-1.5"></i> Video Walkthrough
+                    </button>
+                    <a href="https://screenrec.com/share/7SxeCZsImJ" target="_blank" rel="noopener noreferrer" class="btn btn-sm px-3 py-1.5 rounded-pill fw-semibold d-none d-md-inline-flex align-items-center gap-1 text-white" style="font-size: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                        <span>ScreenRec HD</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square small"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tab Content 1: Architecture Blueprint (Image) -->
+            <div id="tabContentArchitecture" class="p-3 p-md-4 text-center">
+                <div class="position-relative rounded-3 overflow-hidden" style="border: 1px solid rgba(255,255,255,0.08); background: #07090e; max-height: 540px;">
+                    <img src="assets/media/n8n/n8n-workflow.webp" alt="n8n Lead Cleaner and Recovery Production Workflow" class="img-fluid w-100" style="object-fit: cover; object-position: center; cursor: zoom-in;" onclick="openWorkflowModal()" title="Click to view full blueprint">
+                    
+                    <div class="position-absolute bottom-0 start-0 end-0 p-3 d-flex flex-wrap align-items-center justify-content-between gap-2" style="background: linear-gradient(to top, rgba(7,9,14,0.95) 0%, rgba(7,9,14,0) 100%);">
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="badge bg-dark bg-opacity-75 text-accent-brand border border-secondary border-opacity-50 px-2.5 py-1">
+                                <i class="fa-solid fa-code-branch me-1"></i> 6 Production Nodes
+                            </span>
+                            <span class="text-white small d-none d-sm-inline">Click diagram to expand full view</span>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-light rounded-pill px-3 py-1" onclick="openWorkflowModal()">
+                            <i class="fa-solid fa-expand me-1"></i> Fullscreen Blueprint
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 6 Step Pipeline Flow Badges -->
+                <div class="row g-2 mt-3 pt-2 text-start">
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="p-2.5 rounded-3 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+                            <div class="text-accent-brand font-monospace small fw-bold mb-1">01 • TRIGGER</div>
+                            <div class="text-white small fw-semibold">Webhook / Poll</div>
+                            <div class="text-white-50" style="font-size: 0.72rem;">Detects new reply or form entry</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="p-2.5 rounded-3 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+                            <div class="text-accent-brand font-monospace small fw-bold mb-1">02 • INGEST</div>
+                            <div class="text-white small fw-semibold">Read Google Sheet</div>
+                            <div class="text-white-50" style="font-size: 0.72rem;">Streams raw prospect data</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="p-2.5 rounded-3 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+                            <div class="text-accent-brand font-monospace small fw-bold mb-1">03 • CLEANSE</div>
+                            <div class="text-white small fw-semibold">Format &amp; Suffixes</div>
+                            <div class="text-white-50" style="font-size: 0.72rem;">Removes LLC/Inc, fixes casing</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="p-2.5 rounded-3 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+                            <div class="text-accent-brand font-monospace small fw-bold mb-1">04 • DNS LOOKUP</div>
+                            <div class="text-white small fw-semibold">Cloudflare MX Check</div>
+                            <div class="text-white-50" style="font-size: 0.72rem;">Validates real mail servers</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="p-2.5 rounded-3 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+                            <div class="text-accent-brand font-monospace small fw-bold mb-1">05 • EVALUATE</div>
+                            <div class="text-white small fw-semibold">Delivery Logic Gate</div>
+                            <div class="text-white-50" style="font-size: 0.72rem;">Filters valid vs dead records</div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="p-2.5 rounded-3 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+                            <div class="text-accent-brand font-monospace small fw-bold mb-1">06 • SYNC &amp; ROUTE</div>
+                            <div class="text-white small fw-semibold">Append &amp; Alert</div>
+                            <div class="text-white-50" style="font-size: 0.72rem;">Pushes to clean sheet &amp; Slack</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content 2: Live Video Walkthrough -->
+            <div id="tabContentVideo" class="p-3 p-md-4 d-none">
+                <div class="rounded-3 overflow-hidden position-relative" style="background: #000; border: 1px solid rgba(255,255,255,0.1); max-height: 560px;">
+                    <video id="caseStudyVideoPlayer" class="w-100" controls preload="metadata" poster="assets/media/n8n/n8n-workflow.webp" style="max-height: 520px; object-fit: contain; outline: none; display: block; margin: 0 auto;">
+                        <source src="assets/media/n8n/n8n-demo.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video. You can view the demo directly on <a href="https://screenrec.com/share/7SxeCZsImJ" target="_blank" class="text-accent-brand">ScreenRec</a>.
+                    </video>
+                </div>
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mt-3 pt-2">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-success bg-opacity-20 text-success border border-success border-opacity-50 px-2.5 py-1">
+                            <i class="fa-solid fa-play me-1"></i> Live Execution Demo
+                        </span>
+                        <span class="text-white-50 small">Watch how the workflow handles live lead ingestion and verification end-to-end.</span>
+                    </div>
+                    <a href="https://screenrec.com/share/7SxeCZsImJ" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light rounded-pill px-3 py-1.5">
+                        <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Open in ScreenRec
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Verified Impact Metric Counters -->
+        <div class="row g-3 text-center mb-5">
+            <div class="col-6 col-md-3">
+                <div class="p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);">
+                    <div class="display-6 fw-extrabold text-accent-brand font-monospace mb-1">&lt; 60s</div>
+                    <div class="text-white small fw-bold mb-1">Speed-to-Lead</div>
+                    <div class="text-white-50" style="font-size: 0.75rem;">From initial form reply to verified CRM sync</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);">
+                    <div class="display-6 fw-extrabold text-white font-monospace mb-1">99.2%</div>
+                    <div class="text-white small fw-bold mb-1">Deliverability Score</div>
+                    <div class="text-white-50" style="font-size: 0.75rem;">Real-time MX verification stops sender penalties</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);">
+                    <div class="display-6 fw-extrabold font-monospace mb-1" style="color: #38bdf8;">+34%</div>
+                    <div class="text-white small fw-bold mb-1">Pipeline Recovery</div>
+                    <div class="text-white-50" style="font-size: 0.75rem;">Inbound leads recaptured before going cold</div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);">
+                    <div class="display-6 fw-extrabold font-monospace mb-1" style="color: #4ade80;">12+ hrs</div>
+                    <div class="text-white small fw-bold mb-1">Saved Per SDR/Wk</div>
+                    <div class="text-white-50" style="font-size: 0.75rem;">Manual copy-pasting &amp; sheet cleaning removed</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- High-Impact CTA Banner -->
+        <div class="p-4 p-md-5 rounded-4 text-center position-relative overflow-hidden" style="background: radial-gradient(ellipse at center, rgba(200, 224, 25, 0.12) 0%, rgba(15, 23, 42, 0.95) 75%), #0d1424; border: 1px solid rgba(200, 224, 25, 0.35); box-shadow: 0 0 50px rgba(200, 224, 25, 0.1);">
+            <div class="position-relative" style="z-index: 2;">
+                <div class="badge rounded-pill px-3 py-1.5 mb-3" style="background: rgba(200, 224, 25, 0.15); color: #C8E019; border: 1px solid rgba(200, 224, 25, 0.3); font-size: 0.75rem; letter-spacing: 0.5px;">
+                    <i class="fa-solid fa-clock-rotate-left me-1"></i> ZERO PITCH · 100% TECHNICAL VALUE
+                </div>
+                <h3 class="display-6 fw-extrabold text-white mb-3">
+                    Want to plug the leaks in your agency's lead pipeline?
+                </h3>
+                <p class="lead text-white-50 mx-auto mb-4" style="max-width: 640px; font-size: 1.1rem; line-height: 1.6;">
+                    We will inspect your current lead intake, CRM connections, and reply speed — and outline the exact n8n or Make.com blueprint to automate it completely.
+                </p>
+                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center gap-3">
+                    <a href="#contact-section" class="btn btn-brand btn-lg rounded-pill px-5 py-3 fw-extrabold text-dark shadow d-inline-flex align-items-center gap-2" style="background: #C8E019; border: none; font-size: 1.05rem;">
+                        <i class="fa-solid fa-calendar-check fs-5"></i>
+                        <span>Book a 15-min workflow audit</span>
+                        <i class="fa-solid fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+                <div class="mt-3 text-white-50 small">
+                    <i class="fa-solid fa-shield-halved text-accent-neon me-1"></i> Free 1-on-1 audit with an automation engineer. No high-pressure sales.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Fullscreen Blueprint Modal -->
+<div class="modal fade" id="workflowModal" tabindex="-1" aria-labelledby="workflowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content text-white" style="background: #0b0f19; border: 1px solid rgba(200, 224, 25, 0.3); box-shadow: 0 0 50px rgba(0,0,0,0.8);">
+            <div class="modal-header border-bottom border-light border-opacity-10 py-3 px-4">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="badge rounded-pill px-2.5 py-1 text-dark fw-bold" style="background: #C8E019;">n8n Production Canvas</span>
+                    <h5 class="modal-title h6 mb-0 text-white" id="workflowModalLabel">Lead Cleaner &amp; Email Validator Workflow</h5>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-2 text-center" style="background: #07090e; overflow-x: auto;">
+                <img src="assets/media/n8n/n8n-workflow.webp" alt="Full Blueprint" class="img-fluid rounded-2" style="min-width: 100%; object-fit: contain;">
+            </div>
+            <div class="modal-footer border-top border-light border-opacity-10 py-2.5 px-4 d-flex justify-content-between">
+                <span class="text-white-50 small">6 active nodes: Manual/Schedule Trigger &rarr; Google Sheet Ingestion &rarr; Regex Cleanse &rarr; Cloudflare DNS MX &rarr; Validation Gate &rarr; Clean Sheet Sync</span>
+                <button type="button" class="btn btn-sm btn-secondary rounded-pill px-3" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Case Study Interactive Script -->
+<script>
+function switchCaseStudyTab(tab) {
+    var archTab = document.getElementById('tabContentArchitecture');
+    var vidTab = document.getElementById('tabContentVideo');
+    var archBtn = document.getElementById('tabBtnArchitecture');
+    var vidBtn = document.getElementById('tabBtnVideo');
+    var videoPlayer = document.getElementById('caseStudyVideoPlayer');
+
+    if (tab === 'architecture') {
+        archTab.classList.remove('d-none');
+        vidTab.classList.add('d-none');
+        archBtn.style.background = '#C8E019';
+        archBtn.style.color = '#000';
+        archBtn.style.borderColor = '#C8E019';
+        vidBtn.style.background = 'rgba(255,255,255,0.05)';
+        vidBtn.style.color = '#cbd5e1';
+        vidBtn.style.borderColor = 'rgba(255,255,255,0.1)';
+        if (videoPlayer) videoPlayer.pause();
+    } else {
+        archTab.classList.add('d-none');
+        vidTab.classList.remove('d-none');
+        vidBtn.style.background = '#C8E019';
+        vidBtn.style.color = '#000';
+        vidBtn.style.borderColor = '#C8E019';
+        archBtn.style.background = 'rgba(255,255,255,0.05)';
+        archBtn.style.color = '#cbd5e1';
+        archBtn.style.borderColor = 'rgba(255,255,255,0.1)';
+    }
+}
+
+function openWorkflowModal() {
+    var modalEl = document.getElementById('workflowModal');
+    if (modalEl && typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+        var modal = new bootstrap.Modal(modalEl);
+        modal.show();
+    } else if (modalEl) {
+        modalEl.classList.add('show');
+        modalEl.style.display = 'block';
+        document.body.classList.add('modal-open');
+    }
+}
+</script>
+<!-- Case Study & Demo Section End -->
+
 <!-- Technologies We're Using Marquee Section Start -->
 <section id="technologies-section" class="py-5 bg-surface text-white border-top border-light-subtle overflow-hidden">
     <div class="container mb-4">
@@ -1055,6 +1433,330 @@
                     </ul>
                     <div class="mt-auto pt-4">
                         <a href="ai-automated-solutions" class="btn btn-outline-brand w-100 rounded-pill py-3 fw-extrabold shadow-sm hover-lift">Explore Solutions</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 3: AI Product Staging & Visuals -->
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                <div class="card pricing-card h-100 bg-surface border-0 rounded-4 p-4 p-lg-5 position-relative text-center hover-lift d-flex flex-column" style="box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05) !important;">
+                    <div class="mb-4">
+                        <div class="bg-brand-translucent text-accent-brand rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 60px; height: 60px; font-size: 24px;">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="h4 fw-bold text-white mb-2">AI Product Staging</h3>
+                        <p class="text-muted small">Photorealistic AI backgrounds & edits</p>
+                    </div>
+                    <hr class="border-secondary opacity-25 mb-4">
+                    <ul class="list-unstyled text-white-50 mb-5 text-start" style="font-size: 0.95rem;">
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>AI Background Replacement & 3D Staging</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Dynamic Cinematic Lighting & Shadows</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>High-End Retouching & Color Correction</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Studio-Quality Visuals from Raw Photos</span></li>
+                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>E-Commerce & Social Media Ready Assets</span></li>
+                    </ul>
+                    <div class="mt-auto pt-4">
+                        <a href="product-shoot" class="btn btn-outline-light w-100 rounded-pill py-3 fw-bold">Explore AI Visuals</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Packages Section End -->
+
+<!-- CTA Section Start -->
+<section class="cta-section section-padding bg-surface border-top border-light-subtle text-center">
+    <div class="container max-w-700">
+        <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">LET'S BUILD SOMETHING GREAT</span>
+        <h2 class="display-4 fw-extrabold mb-4 text-white">Ready to grow your business online?</h2>
+        <p class="fs-5 text-white-50 mb-5">Book a free, no-pressure consultation. We'll review your goals and tell you exactly what it'll take.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="contact" class="btn btn-brand btn-lg px-5 py-3 shadow-sm">
+                <span>Book a Free Consultation</span>
+                <span class="arrow-btn"><i class="fa-solid fa-calendar-check"></i></span>
+            </a>
+            <a href="ai-automated-solutions" class="btn btn-outline-light btn-lg px-5 py-3">
+                <span>See Services</span>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- CTA Section End -->
+<!-- Testimonials Section Start -->
+<!-- TODO: When collecting future testimonials, prioritize ones with specific measurable results (e.g., "reduced resolution time by 70%") -->
+<section id="testimonials-section" class="section-padding bg-surface text-white border-top border-light-subtle">
+    <div class="container max-w-800">
+        <div class="text-center mb-5">
+            <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">TESTIMONIALS</span>
+            <h2 class="display-5 fw-extrabold mb-3 text-white typewriter-anim">What Our Clients Say</h2>
+            <p class="text-white-50 fs-5">Trusted by tech companies and service providers worldwide.</p>
+        </div>
+        
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active text-center py-4">
+                    <div class="fs-2 text-accent-brand mb-3"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="fs-5 text-white-50 px-md-5 italic">
+                        "Automatixes transformed our sales onboarding. They built a custom n8n lead scoring agent that synced our calendar, CRM, and emails seamlessly. The team was fast, professional, and precise!"
+                    </p>
+                    <h5 class="fw-bold text-white mt-4 mb-1">M. Ibrahim</h5>
+                    <p class="text-white-50 small">CEO, TechVantage Corp</p>
+                </div>
+                <div class="carousel-item text-center py-4">
+                    <div class="fs-2 text-accent-brand mb-3"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="fs-5 text-white-50 px-md-5 italic">
+                        "The AI Voice Agent they deployed handles our customer queries and call bookings around the clock without latency. Coupled with their mind-blowing AI product staging and background edits, our brand conversion rate skyrocketed!"
+                    </p>
+                    <h5 class="fw-bold text-white mt-4 mb-1">Sarah K.</h5>
+                    <p class="text-white-50 small">Brand Manager, Luxe Aesthetics</p>
+                </div>
+            </div>
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true" style="background-size: 50%; opacity: 0.8;"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true" style="background-size: 50%; opacity: 0.8;"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+<!-- Testimonials Section End -->
+
+<!-- FAQ Section Start -->
+<section id="faq-section" class="section-padding bg-transparent text-white border-top border-light-subtle">
+    <div class="container max-w-800">
+        <div class="text-center mb-5">
+            <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">QUESTIONS</span>
+            <h2 class="display-5 fw-extrabold mb-3 text-white typewriter-anim">Frequently Asked Questions</h2>
+            <p class="text-white-50 fs-5">Common queries answered about our AI Voice Agents and automation systems.</p>
+        </div>
+        
+        <div class="accordion accordion-flush" id="faqAccordion">
+            <!-- FAQ 1 -->
+            <div class="accordion-item bg-transparent border-bottom border-light-subtle">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed bg-transparent fw-bold text-white fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        How long does an AI Automation workflow setup take?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-white-50 py-3">
+                        Generally, standard workflow automations (like email pipelines, CRM syncing, or simple chatbots) take between 1 to 2 weeks to design, integrate, test, and launch.
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 2 -->
+            <div class="accordion-item bg-transparent border-bottom border-light-subtle">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed bg-transparent fw-bold text-white fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Are my client leads and databases secure with your setup?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-white-50 py-3">
+                        Yes. Your data is protected by strict Firestore security rules that control exactly who can read or write it, and all form submissions are validated and sanitized server-side to block spam and malicious input.
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ 3 -->
+            <div class="accordion-item bg-transparent border-bottom border-light-subtle">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed bg-transparent fw-bold text-white fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Can we link third-party tools like Slack or WhatsApp?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-white-50 py-3">
+                        Yes, we integrate n8n, Make, or custom API endpoints to route data triggers to WhatsApp business channels, Slack workspaces, or local Discord systems.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FAQ Section End -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long does an AI Automation workflow setup take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally, standard workflow automations (like email pipelines, CRM syncing, or simple chatbots) take between 1 to 2 weeks to design, integrate, test, and launch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my client leads and databases secure with your setup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Your data is protected by strict Firestore security rules that control exactly who can read or write it, and all form submissions are validated and sanitized server-side to block spam and malicious input."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we link third-party tools like Slack or WhatsApp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we integrate n8n, Make, or custom API endpoints to route data triggers to WhatsApp business channels, Slack workspaces, or local Discord systems."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Contact Section Start -->
+<section id="contact-section" class="section-padding bg-surface text-white">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5">
+                <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">GET IN TOUCH</span>
+                <h2 class="display-6 fw-extrabold text-white mb-4 typewriter-anim">Start Your Automation Journey</h2>
+                <p class="text-white-50 fs-5 mb-4">
+                    Send us your details. Submitting this form writes directly to our Firestore database and triggers our notifications.
+                </p>
+                <div class="contact-details mt-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-box me-3"><i class="fa-solid fa-envelope text-accent-brand"></i></div>
+                        <div>
+                            <h6 class="mb-0 text-white-50">Email Us</h6>
+                            <a href="mailto:contact@automatixes.com" class="text-white text-decoration-none fw-bold">contact@automatixes.com</a>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="icon-box me-3"><i class="fa-solid fa-phone text-accent-brand"></i></div>
+                        <div>
+                            <h6 class="mb-0 text-white-50">Call Us</h6>
+                            <a href="tel:+923366920141" class="text-white text-decoration-none fw-bold">+92 336 6920141</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-7">
+                <div class="contact-form-wrapper p-4 p-md-5 rounded-4 shadow-sm bg-surface-1 border border-secondary border-opacity-25">
+                    <form id="contact-firebase-form" novalidate>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label for="contact-name" class="form-label text-white fw-bold">Full Name</label>
+                                <input type="text" class="form-control border-light-subtle bg-transparent text-white" id="contact-name" placeholder="John Doe" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="contact-email" class="form-label text-white fw-bold">Email Address</label>
+                                <input type="email" class="form-control border-light-subtle bg-transparent text-white" id="contact-email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="contact-phone" class="form-label text-white fw-bold">Phone</label>
+                                <input type="tel" class="form-control border-light-subtle bg-transparent text-white" id="contact-phone" placeholder="+92 300 1234567">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="contact-biz-link" class="form-label text-white fw-bold">Business / Freelancer Link</label>
+                                <input type="url" class="form-control border-light-subtle bg-transparent text-white" id="contact-biz-link" placeholder="https://yourprofile.com">
+                            </div>
+                            <div class="col-12">
+                                <label for="contact-service" class="form-label text-white fw-bold">Service Required</label>
+                                <select class="form-select border-light-subtle bg-transparent text-white" id="contact-service" required>
+                                    <option value="" disabled selected>Select a Service</option>
+                                    <option value="AI Voice Agents">Autonomous AI Voice Agents</option>
+                                    <option value="AI Automations">AI Automations (n8n/Make)</option>
+                                    <option value="Product Shoot">Commercial Product Shoot</option>
+                                    <option value="CRM Integration">CRM & Custom API Integration</option>
+                                    <option value="Consultation">General Automation Consultation</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="contact-message" class="form-label text-white fw-bold">Project Description</label>
+                                <textarea class="form-control border-light-subtle bg-transparent text-white" id="contact-message" rows="4" placeholder="Tell us about your requirements..." required></textarea>
+                            </div>
+                            <div class="col-12 mt-4">
+                                <button type="submit" class="btn btn-brand w-100 py-3"><span>Send Message</span> <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section End -->
+
+<!-- JSON-LD FAQ and Review Schemas -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "How long does an AI Automation workflow setup take?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Generally, standard workflow automations (like email pipelines, CRM syncing, or simple chatbots) take between 1 to 2 weeks to design, integrate, test, and launch."
+    }
+  },{
+    "@type": "Question",
+    "name": "Are my client leads and databases secure with your setup?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Your data is protected by strict Firestore security rules that control exactly who can read or write it, and all form submissions are validated and sanitized server-side to block spam and malicious input."
+    }
+  },{
+    "@type": "Question",
+    "name": "Can we link third-party tools like Slack or WhatsApp?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, we integrate n8n, Make, or custom API endpoints to route data triggers to WhatsApp business channels, Slack workspaces, or local Discord systems."
+    }
+  }]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "LocalBusiness",
+    "name": "Automatixes"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "M. Ibrahim"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5"
+  },
+  "reviewBody": "Automatixes transformed our sales onboarding. They built a custom n8n lead scoring agent that synced our calendar, CRM, and emails seamlessly. The team was fast, professional, and precise!"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "LocalBusiness",
+    "name": "Automatixes"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Sarah K."
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "5"
+  },
+  "reviewBody": "The AI Voice Agent they deployed handles our customer queries and call bookings around the clock without latency. Coupled with their high-end product shoot photography, our brand conversion rate skyrocketed!"
+}
+</script>
+
     </div> <!-- End smooth-content -->
     </div> <!-- End smooth-wrapper -->
 
@@ -1088,6 +1790,7 @@
                         <ul class="list-unstyled footer-menu mb-4">
                             <li><a href="index">Home</a></li>
                             <li><a href="about">About Us</a></li>
+                            <li><a href="case-study">Case Studies</a></li>
                             <li><a href="blogs">Blogs</a></li>
                             <li><a href="contact">Contact Us</a></li>
                         </ul>
@@ -1105,13 +1808,14 @@
                             <li><a href="ai-automated-solutions">AI Automations</a></li>
                             <li><a href="voice-agent" class="d-inline-flex align-items-center gap-1.5"><span>AI Voice Agents</span> <span class="badge bg-danger" style="font-size: 9px; font-weight: 700; border-radius: 4px; background: #FF3B30 !important;">HOT</span></a></li>
                             <li><a href="product-shoot">AI Product Staging</a></li>
+                            <li><a href="case-study" class="d-inline-flex align-items-center gap-1.5"><span style="color: var(--accent-neon, #C8E019);">n8n Lead Recovery</span> <span class="badge" style="font-size: 8px; font-weight: 700; border-radius: 4px; background: rgba(200, 224, 25, 0.15); color: #C8E019; border: 1px solid rgba(200, 224, 25, 0.3);">DEMO</span></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-6">
                     <div class="footer-widget">
                         <h5 class="widget-title">SaaS Tools</h5>
-                        <ul class="list-unstyled footer-menu">
+                        <ul class="list-unstyled footer-menu mb-4">
                             <li>
                                 <a href="https://qrcode.automatixes.com" target="_blank">QR Code Generator</a>
                             </li>
@@ -1120,6 +1824,16 @@
                             </li>
                             <li>
                                 <a href="https://upscaler.automatixes.com" target="_blank">AI Image Upscaler 4K</a>
+                            </li>
+                        </ul>
+                        <h5 class="widget-title">Case Studies</h5>
+                        <ul class="list-unstyled footer-menu">
+                            <li>
+                                <a href="case-study" class="d-inline-flex align-items-center gap-1.5">
+                                    <i class="fa-solid fa-bolt text-accent-brand" style="font-size: 11px;"></i>
+                                    <span>Lead Recovery</span>
+                                    <span class="badge" style="font-size: 8px; font-weight: 700; border-radius: 4px; background: rgba(200, 224, 25, 0.15); color: #C8E019; border: 1px solid rgba(200, 224, 25, 0.3);">NEW</span>
+                                </a>
                             </li>
                         </ul>
                     </div>

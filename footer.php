@@ -31,6 +31,7 @@
                         <ul class="list-unstyled footer-menu mb-4">
                             <li><a href="index">Home</a></li>
                             <li><a href="about">About Us</a></li>
+                            <li><a href="case-study">Case Studies</a></li>
                             <li><a href="blogs">Blogs</a></li>
                             <li><a href="contact">Contact Us</a></li>
                         </ul>
@@ -48,13 +49,14 @@
                             <li><a href="ai-automated-solutions">AI Automations</a></li>
                             <li><a href="voice-agent" class="d-inline-flex align-items-center gap-1.5"><span>AI Voice Agents</span> <span class="badge bg-danger" style="font-size: 9px; font-weight: 700; border-radius: 4px; background: #FF3B30 !important;">HOT</span></a></li>
                             <li><a href="product-shoot">AI Product Staging</a></li>
+                            <li><a href="case-study" class="d-inline-flex align-items-center gap-1.5"><span style="color: var(--accent-neon, #C8E019);">n8n Lead Recovery</span> <span class="badge" style="font-size: 8px; font-weight: 700; border-radius: 4px; background: rgba(200, 224, 25, 0.15); color: #C8E019; border: 1px solid rgba(200, 224, 25, 0.3);">DEMO</span></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-4 col-6">
                     <div class="footer-widget">
                         <h5 class="widget-title">SaaS Tools</h5>
-                        <ul class="list-unstyled footer-menu">
+                        <ul class="list-unstyled footer-menu mb-4">
                             <li>
                                 <a href="https://qrcode.automatixes.com" target="_blank">QR Code Generator</a>
                             </li>
@@ -63,6 +65,16 @@
                             </li>
                             <li>
                                 <a href="https://upscaler.automatixes.com" target="_blank">AI Image Upscaler 4K</a>
+                            </li>
+                        </ul>
+                        <h5 class="widget-title">Case Studies</h5>
+                        <ul class="list-unstyled footer-menu">
+                            <li>
+                                <a href="case-study" class="d-inline-flex align-items-center gap-1.5">
+                                    <i class="fa-solid fa-bolt text-accent-brand" style="font-size: 11px;"></i>
+                                    <span>Lead Recovery</span>
+                                    <span class="badge" style="font-size: 8px; font-weight: 700; border-radius: 4px; background: rgba(200, 224, 25, 0.15); color: #C8E019; border: 1px solid rgba(200, 224, 25, 0.3);">NEW</span>
+                                </a>
                             </li>
                         </ul>
                     </div>

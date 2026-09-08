@@ -77,6 +77,12 @@ $meta_config = [
         'desc' => 'Read the full article and gain insights into AI automation, digital operations, and bespoke software development.',
         'keywords' => 'Automatixes blog, article',
         'url' => 'blog-detail'
+    ],
+    'case-study' => [
+        'title' => 'Case Study: n8n Lead Recovery & Verification Engine | Automatixes',
+        'desc' => 'How B2B lead generation agencies recover 30%+ lost pipeline with autonomous n8n workflows, Cloudflare DNS MX verification, and <60s speed-to-lead.',
+        'keywords' => 'n8n Case Study, Lead Recovery Automation, Speed to Lead, DNS MX verification, Automatixes Case Study, n8n workflow',
+        'url' => 'case-study'
     ]
 ];
 
