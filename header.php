@@ -190,7 +190,7 @@ $og_image = (!empty($active_meta['image']))
       "@type": "ProfessionalService",
       "name": "Automatixes",
       "url": "<?php echo $protocol; ?>://<?php echo $host; ?>",
-      "logo": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/services/ai_automations.jpg",
+      "logo": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/logo/automatixes-logo-new.png",
       "image": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/services/ai_automations.jpg",
       "description": "An AI-first automation agency that designs custom AI agents and workflow automations to run business operations 24/7.",
       "telephone": "+92-336-6920141",
