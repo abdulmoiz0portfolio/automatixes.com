@@ -54,6 +54,97 @@
             </div>
         </div>
 
+        <!-- 4-Stage AI Staging Architecture -->
+        <div class="row g-4 mt-4 mb-5 pb-5 border-top border-light-subtle pt-5">
+            <div class="col-12 text-center max-w-700 mx-auto mb-4">
+                <span class="badge bg-brand-translucent text-accent-brand mb-2 font-monospace px-3 py-2 border border-brand-50">THE RENDERING PIPELINE</span>
+                <h3 class="display-6 fw-extrabold text-dark">How Our AI Generates Commercial Realism</h3>
+                <p class="text-secondary">Generic AI tools generate blurry borders and fake-looking textures. We use a proprietary four-stage rendering pipeline that guarantees physical accuracy.</p>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 rounded-4 border border-light-subtle bg-light h-100">
+                    <span class="badge bg-dark text-white rounded-pill px-3 py-1 fw-bold mb-3">STAGE 01</span>
+                    <h5 class="fw-bold text-dark mb-2">Sub-Pixel Matting</h5>
+                    <p class="text-muted small mb-0">We isolate your physical product using high-precision alpha-matte neural networks, preserving hairline edges, transparent glass bevels, and micro-textures without jagged clipping.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 rounded-4 border border-light-subtle bg-light h-100">
+                    <span class="badge bg-dark text-white rounded-pill px-3 py-1 fw-bold mb-3">STAGE 02</span>
+                    <h5 class="fw-bold text-dark mb-2">3D Depth & Horizon Matching</h5>
+                    <p class="text-muted small mb-0">Our artists calculate camera focal lengths, field-of-view, and horizon vanishing points using ControlNet depth maps so your product sits naturally on synthetic surfaces.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 rounded-4 border border-light-subtle bg-light h-100">
+                    <span class="badge bg-dark text-white rounded-pill px-3 py-1 fw-bold mb-3">STAGE 03</span>
+                    <h5 class="fw-bold text-dark mb-2">Physically Based Relighting</h5>
+                    <p class="text-muted small mb-0">We cast real-time ray-traced shadows, ambient bounce light, and environment-matched specular reflections across packaging foils, chrome accents, and liquid containers.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 rounded-4 border border-light-subtle bg-light h-100">
+                    <span class="badge bg-dark text-white rounded-pill px-3 py-1 fw-bold mb-3">STAGE 04</span>
+                    <h5 class="fw-bold text-dark mb-2">4K Upscaling & Color Pass</h5>
+                    <p class="text-muted small mb-0">The composite image passes through commercial enhancement passes, matching CMYK/sRGB print standards and exporting crystal-clear 4K files ready for storefront hero banners.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Physical Studio vs AI Staging Table -->
+        <div class="row mt-4 mb-5 pb-5 border-top border-light-subtle pt-5">
+            <div class="col-12 text-center max-w-700 mx-auto mb-5">
+                <span class="badge bg-brand-translucent text-accent-brand mb-2 font-monospace px-3 py-2 border border-brand-50">EFFICIENCY & ROI</span>
+                <h3 class="display-6 fw-extrabold text-dark">Traditional Photo Studio vs Automatixes AI</h3>
+                <p class="text-secondary">Why leading e-commerce founders and DTC brands are replacing physical commercial shoots.</p>
+            </div>
+
+            <div class="col-12">
+                <div class="table-responsive rounded-4 border border-light-subtle shadow-sm overflow-hidden">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col" class="py-3 px-4 font-monospace">METRIC / REQUIREMENT</th>
+                                <th scope="col" class="py-3 px-4 text-danger font-monospace">TRADITIONAL PHOTO SHOOT</th>
+                                <th scope="col" class="py-3 px-4 text-accent-neon font-monospace">AUTOMATIXES AI STAGING</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                            <tr>
+                                <td class="py-3 px-4 fw-bold text-dark">Production Cost</td>
+                                <td class="py-3 px-4 text-muted">$2,000 - $8,000+ (Studio rental, lighting crew, photographer, model fees)</td>
+                                <td class="py-3 px-4 text-dark fw-bold"><i class="fa-solid fa-check text-success me-2"></i>Fraction of the cost with zero studio or equipment overhead</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 fw-bold text-dark">Turnaround Time</td>
+                                <td class="py-3 px-4 text-muted">2 to 4 weeks (Shipping inventory, studio scheduling, manual retouching)</td>
+                                <td class="py-3 px-4 text-dark fw-bold"><i class="fa-solid fa-check text-success me-2"></i>24 to 48 hours from raw upload to finished 4K deliverables</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 fw-bold text-dark">Location & Props</td>
+                                <td class="py-3 px-4 text-muted">Constrained by physical sets, rented furniture, weather, and studio space</td>
+                                <td class="py-3 px-4 text-dark fw-bold"><i class="fa-solid fa-check text-success me-2"></i>Limitless photorealistic locations (Icelandic glaciers, luxury marble kitchens, tropical beaches)</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 fw-bold text-dark">Physical Shipping Risk</td>
+                                <td class="py-3 px-4 text-muted">Risk of lost inventory, packaging denting, and international customs delays</td>
+                                <td class="py-3 px-4 text-dark fw-bold"><i class="fa-solid fa-check text-success me-2"></i>Zero physical shipping; shoot products directly with your smartphone</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 fw-bold text-dark">Revision Flexibility</td>
+                                <td class="py-3 px-4 text-muted">Requires entire re-shoot and re-booking of studio if background changes</td>
+                                <td class="py-3 px-4 text-dark fw-bold"><i class="fa-solid fa-check text-success me-2"></i>Instant background swaps, seasonal holiday variations, and A/B ad testing</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
         <!-- Product Photography Portfolio Gallery -->
         <div class="row mt-5 pt-5 border-top border-light-subtle">
             <div class="col-12 text-center mb-5">
@@ -254,6 +345,250 @@
     document.getElementById('nextSlide')?.addEventListener('click', () => goTo(current + 1));
     dots.forEach(d => d.addEventListener('click', () => goTo(parseInt(d.dataset.index))));
 })();
+</script>
+
+<!-- Marketplace Compliance & Format Matrix Section -->
+<section class="section-padding bg-light text-dark border-top border-light-subtle">
+    <div class="container">
+        <div class="text-center max-w-700 mx-auto mb-5">
+            <span class="badge bg-brand-translucent text-accent-brand mb-2 font-monospace px-3 py-2 border border-brand-50">MARKETPLACE READY</span>
+            <h3 class="display-6 fw-extrabold text-dark">Engineered for Global Sales Channels</h3>
+            <p class="text-secondary">Every visual asset is exported to exact platform dimension and color space standards.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="card p-4 rounded-4 border border-light-subtle h-100 bg-white shadow-sm">
+                    <span class="badge bg-dark text-white rounded-pill px-3 py-1 fw-bold mb-3 font-monospace">AMAZON & WALMART</span>
+                    <h5 class="fw-bold text-dark mb-2">Pure White Backgrounds</h5>
+                    <p class="text-muted small mb-0">RGB (255, 255, 255) pure white isolation adhering strictly to Amazon Main Image compliance rules with natural contact shadows.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card p-4 rounded-4 border border-light-subtle h-100 bg-white shadow-sm">
+                    <span class="badge bg-dark text-white rounded-pill px-3 py-1 fw-bold mb-3 font-monospace">SHOPIFY & DTC</span>
+                    <h5 class="fw-bold text-dark mb-2">Editorial Lifestyle Comps</h5>
+                    <p class="text-muted small mb-0">High-converting 4:5 and 1:1 lifestyle scenes placing cosmetics, apparel, or electronics in luxury home and nature settings.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card p-4 rounded-4 border border-light-subtle h-100 bg-white shadow-sm">
+                    <span class="badge bg-dark text-white rounded-pill px-3 py-1 fw-bold mb-3 font-monospace">TIKTOK & REELS</span>
+                    <h5 class="fw-bold text-dark mb-2">9:16 Video Loops</h5>
+                    <p class="text-muted small mb-0">Dynamic product rotations, lighting shifts, and depth parallax loops designed specifically for viral vertical video ad creative.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card p-4 rounded-4 border border-light-subtle h-100 bg-white shadow-sm">
+                    <span class="badge bg-dark text-white rounded-pill px-3 py-1 fw-bold mb-3 font-monospace">PACKAGING & PRINT</span>
+                    <h5 class="fw-bold text-dark mb-2">300 DPI CMYK Master</h5>
+                    <p class="text-muted small mb-0">Ultra-high-definition exports suitable for trade show banners, retail catalogs, and billboard print advertising.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section-padding bg-white text-dark border-top border-light-subtle">
+    <div class="container">
+        <div class="text-center max-w-700 mx-auto mb-5">
+            <span class="badge bg-brand-translucent text-accent-brand mb-2 font-monospace px-3 py-2 border border-brand-50">FREQUENTLY ASKED QUESTIONS</span>
+            <h3 class="display-6 fw-extrabold text-dark">Questions About AI Product Staging</h3>
+            <p class="text-secondary">Everything you need to know about our digital commercial photography workflows.</p>
+        </div>
+
+        <div class="accordion accordion-flush max-w-900 mx-auto" id="productShootFaqAccordion">
+            <!-- FAQ 1 -->
+            <div class="accordion-item bg-transparent border-bottom border-light-subtle">
+                <h2 class="accordion-header" id="pHeadingOne">
+                    <button class="accordion-button collapsed bg-transparent fw-bold text-dark fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#pCollapseOne" aria-expanded="false" aria-controls="pCollapseOne">
+                        How do you ensure the product labels and branding do not look warped or fake?
+                    </button>
+                </h2>
+                <div id="pCollapseOne" class="accordion-collapse collapse" aria-labelledby="pHeadingOne" data-bs-parent="#productShootFaqAccordion">
+                    <div class="accordion-body text-muted py-3 leading-relaxed">
+                        Unlike amateur text-to-image prompts that redraw your product from scratch (causing gibberish text and altered proportions), we use neural alpha-matting and ControlNet conditioning. Your actual physical product—including typography, barcode, logo, and label geometry—is 100% preserved pixel-for-pixel; only the surrounding 3D environment, ground plane, shadows, and ambient reflections are synthesized.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item bg-transparent border-bottom border-light-subtle">
+                <h2 class="accordion-header" id="pHeadingTwo">
+                    <button class="accordion-button collapsed bg-transparent fw-bold text-dark fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#pCollapseTwo" aria-expanded="false" aria-controls="pCollapseTwo">
+                        What kind of raw product photos do I need to supply?
+                    </button>
+                </h2>
+                <div id="pCollapseTwo" class="accordion-collapse collapse" aria-labelledby="pHeadingTwo" data-bs-parent="#productShootFaqAccordion">
+                    <div class="accordion-body text-muted py-3 leading-relaxed">
+                        You do not need a professional DSLR. A clear, well-lit photo taken on a modern iPhone or Android phone against a plain table or wall is completely sufficient. We advise shooting at eye level with minimal harsh shadows. If you have multiple angles, send them over and we can stage an entire multi-angle set.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item bg-transparent border-bottom border-light-subtle">
+                <h2 class="accordion-header" id="pHeadingThree">
+                    <button class="accordion-button collapsed bg-transparent fw-bold text-dark fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#pCollapseThree" aria-expanded="false" aria-controls="pCollapseThree">
+                        Can you stage complex items like transparent glass bottles and reflective jewelry?
+                    </button>
+                </h2>
+                <div id="pCollapseThree" class="accordion-collapse collapse" aria-labelledby="pHeadingThree" data-bs-parent="#productShootFaqAccordion">
+                    <div class="accordion-body text-muted py-3 leading-relaxed">
+                        Yes. Glassware, perfumes, liquids, and polished metals are our specialty. We apply secondary ray-tracing shaders to simulate caustics, refractive light bending through liquids, and environment-accurate reflections across metallic surfaces.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item bg-transparent border-bottom border-light-subtle">
+                <h2 class="accordion-header" id="pHeadingFour">
+                    <button class="accordion-button collapsed bg-transparent fw-bold text-dark fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#pCollapseFour" aria-expanded="false" aria-controls="pCollapseFour">
+                        Are the staged images approved for Amazon, Shopify, and Google Shopping?
+                    </button>
+                </h2>
+                <div id="pCollapseFour" class="accordion-collapse collapse" aria-labelledby="pHeadingFour" data-bs-parent="#productShootFaqAccordion">
+                    <div class="accordion-body text-muted py-3 leading-relaxed">
+                        Yes. For Amazon Main Listing photos, we deliver pure white RGB (255, 255, 255) backgrounds with clean contact shadows conforming to Amazon's strict seller policies. For secondary carousel images and Shopify hero sections, we deliver rich lifestyle scenes that maximize buyer click-through and conversion rates.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="accordion-item bg-transparent border-bottom border-light-subtle">
+                <h2 class="accordion-header" id="pHeadingFive">
+                    <button class="accordion-button collapsed bg-transparent fw-bold text-dark fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#pCollapseFive" aria-expanded="false" aria-controls="pCollapseFive">
+                        Can you create animated video clips or social media ads from static images?
+                    </button>
+                </h2>
+                <div id="pCollapseFive" class="accordion-collapse collapse" aria-labelledby="pHeadingFive" data-bs-parent="#productShootFaqAccordion">
+                    <div class="accordion-body text-muted py-3 leading-relaxed">
+                        Yes. We transform static staged products into looping 4K MP4 videos with dynamic lighting sweeps, floating particulate effects, depth parallax, and 360-degree orbital camera motion—ideal for high-converting TikTok, Instagram Reels, and Meta Ads.
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="accordion-item bg-transparent border-bottom border-light-subtle">
+                <h2 class="accordion-header" id="pHeadingSix">
+                    <button class="accordion-button collapsed bg-transparent fw-bold text-dark fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#pCollapseSix" aria-expanded="false" aria-controls="pCollapseSix">
+                        How fast can you deliver a batch of product images?
+                    </button>
+                </h2>
+                <div id="pCollapseSix" class="accordion-collapse collapse" aria-labelledby="pHeadingSix" data-bs-parent="#productShootFaqAccordion">
+                    <div class="accordion-body text-muted py-3 leading-relaxed">
+                        Single SKU transformations are delivered within 24 to 48 hours. For entire product catalogs (20 to 100+ SKUs), we establish dedicated batch pipelines with typical delivery within 3 to 5 business days.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JSON-LD Service & FAQPage Schema for Google Indexing -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://automatixes.com/product-shoot#service",
+      "url": "https://automatixes.com/product-shoot",
+      "name": "AI Product Staging & Commercial CGI Photography",
+      "serviceType": "Commercial Digital Photography & AI Staging",
+      "description": "Transform raw e-commerce product photos into studio-grade commercial visuals with AI background replacement, 3D staging, and cinematic ray-traced lighting.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Automatixes",
+        "url": "https://automatixes.com",
+        "logo": "https://automatixes.com/favicon.png"
+      },
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "AI Product Visual Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "E-Commerce Lifestyle AI Staging"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Amazon Pure White RGB 255 Compliance Edits"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Commercial Product Video Animation Loops"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://automatixes.com/product-shoot#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you ensure the product labels and branding do not look warped or fake?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We use neural alpha-matting and ControlNet conditioning. Your actual physical product typography, barcode, logo, and label geometry are 100% preserved pixel-for-pixel; only the surrounding 3D environment and lighting are synthesized."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kind of raw product photos do I need to supply?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A clear, well-lit photo taken on a modern smartphone against a plain table or wall is completely sufficient. Shoot at eye level with minimal harsh shadows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you stage complex items like transparent glass bottles and reflective jewelry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We apply secondary ray-tracing shaders to simulate caustics, refractive light bending through liquids, and environment-accurate reflections across metallic surfaces."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the staged images approved for Amazon, Shopify, and Google Shopping?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. For Amazon Main Listing photos, we deliver pure white RGB (255, 255, 255) backgrounds with clean contact shadows conforming to Amazon seller policies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you create animated video clips or social media ads from static images?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We transform static staged products into looping 4K MP4 videos with dynamic lighting sweeps, floating particulate effects, depth parallax, and orbital camera motion."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can you deliver a batch of product images?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Single SKU transformations are delivered within 24 to 48 hours. Entire product catalogs of 20 to 100+ SKUs are delivered within 3 to 5 business days."
+          }
+        }
+      ]
+    }
+  ]
+}
 </script>
 
 <!-- Consult Section Start -->

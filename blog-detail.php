@@ -1,8 +1,13 @@
 <?php 
 $page_key = 'blog-detail'; 
 
-// 1. Get and sanitize the blog ID
-$id = isset($_GET['id']) ? preg_replace('/[^a-zA-Z0-9\-]/', '', $_GET['id']) : '';
+// 1. Get and sanitize the blog ID or slug
+$id = '';
+if (!empty($_GET['slug'])) {
+    $id = preg_replace('/[^a-zA-Z0-9\-]/', '', $_GET['slug']);
+} elseif (!empty($_GET['id'])) {
+    $id = preg_replace('/[^a-zA-Z0-9\-]/', '', $_GET['id']);
+}
 $file_path = __DIR__ . "/content/articles/{$id}.md";
 
 // 2. Validate file exists
@@ -44,18 +49,60 @@ if (preg_match('/<body[^>]*>(.*?)<\/body>/is', $raw_body, $body_match)) {
     $html_body = $raw_body;
 }
 
+// Format description for search engines
+$desc_match = preg_match('/description:\s*"([^"]+)"/', $frontmatter, $matches) ? trim($matches[1]) : '';
+if (!empty($desc_match) && strpos($desc_match, 'SEO blog post on') === false) {
+    $description = $desc_match;
+} else {
+    $clean_body = strip_tags($html_body);
+    $clean_body = preg_replace('/\s+/', ' ', $clean_body);
+    $description = substr($clean_body, 0, 155) . '...';
+}
+
+// Canonical URL matching whichever parameter was requested (slug or id)
+$canonical_slug = !empty($_GET['slug']) ? 'blog-detail?slug=' . $id : 'blog-detail?id=' . $id;
+
 // Dynamically override header metadata for this specific blog
-$meta_config = [
-    'blog-detail' => [
-        'title' => $title . ' | Automatixes',
-        'desc' => substr(strip_tags($html_body), 0, 150) . '...',
-        'keywords' => $category . ', Automatixes Blog, Automation',
-        'url' => 'blog-detail?id=' . $id
-    ]
+$custom_meta = [
+    'title' => $title . ' | Automatixes',
+    'desc' => $description,
+    'keywords' => $category . ', Automatixes Blog, AI Automation, AI Agents, Enterprise Automation',
+    'url' => $canonical_slug,
+    'image' => $image
 ];
 
 include 'header.php'; 
 ?>
+
+<!-- Schema.org Article / BlogPosting Structured Data for Google Indexing -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": <?php echo json_encode($title); ?>,
+  "description": <?php echo json_encode($description); ?>,
+  "image": <?php echo json_encode(strpos($image, 'http') === 0 ? $image : 'https://automatixes.com' . $image); ?>,
+  "datePublished": <?php echo json_encode(date('c', strtotime($date))); ?>,
+  "dateModified": <?php echo json_encode(date('c', strtotime($date))); ?>,
+  "author": {
+    "@type": "Organization",
+    "name": <?php echo json_encode($author); ?>,
+    "url": "https://automatixes.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Automatixes",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://automatixes.com/favicon.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": <?php echo json_encode('https://automatixes.com/' . $canonical_slug); ?>
+  }
+}
+</script>
 
 <!-- Blog Header -->
 <section class="subpage-hero position-relative pb-5">

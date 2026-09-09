@@ -86,12 +86,18 @@ $meta_config = [
     ]
 ];
 
-$active_meta = isset($meta_config[$page_key]) ? $meta_config[$page_key] : $meta_config['index'];
-$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'automatixes.com';
-$forwarded_proto = isset($_SERVER['HTTP_X_FORWARDED_PROTO']) ? strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) : '';
-$protocol = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') || $forwarded_proto === 'https') ? "https" : "http";
-$canonical_url = "{$protocol}://{$host}/" . $active_meta['url'];
-$og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
+// Support dynamic meta tags supplied by individual pages (e.g. blog-detail.php)
+$default_meta = isset($meta_config[$page_key]) ? $meta_config[$page_key] : $meta_config['index'];
+$active_meta = (isset($custom_meta) && is_array($custom_meta)) ? array_merge($default_meta, $custom_meta) : $default_meta;
+
+// Standardize canonical domain (https://automatixes.com)
+$canonical_base = "https://automatixes.com";
+$canonical_url = $canonical_base . (!empty($active_meta['url']) ? '/' . ltrim($active_meta['url'], '/') : '');
+
+// Dynamic or standard OpenGraph image
+$og_image = (!empty($active_meta['image'])) 
+    ? (strpos($active_meta['image'], 'http') === 0 ? $active_meta['image'] : $canonical_base . '/' . ltrim($active_meta['image'], '/'))
+    : "{$canonical_base}/assets/img/services/ai_automations.jpg";
 ?>
 <!DOCTYPE html>
 <html lang="en">
