@@ -215,16 +215,16 @@
                     const col = document.createElement('div');
                     col.className = 'col-md-6 col-lg-4';
                     col.innerHTML = `
-                        <div class="review-card p-4 border rounded-4 bg-white shadow-sm h-100">
+                        <div class="review-card card-glass p-4 rounded-4 h-100">
                             <div class="d-flex justify-content-between align-items-start mb-2">
                                 <div>
-                                    <h5 class="fw-bold text-dark mb-0">${escapeHTMLInner(d.name)}</h5>
+                                    <h5 class="fw-bold text-white mb-0">${escapeHTMLInner(d.name)}</h5>
                                     <div class="review-stars-display mt-1">${starsHtml}</div>
                                     ${profileLink}
                                 </div>
-                                <small class="text-muted">${d.rating} ÃƒÆ’Ã†'Ãƒ"šÃ‚Â¢ÃƒÆ’Ã¢â‚¬Â¹Ãƒ"¦Ã¢â‚¬Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒ"šÃ‚Â¦</small>
+                                <small class="text-white-50">${d.rating} &#9733;</small>
                             </div>
-                            <p class="text-secondary mb-0 mt-2" style="white-space:pre-line;">${escapeHTMLInner(d.comment)}</p>
+                            <p class="text-white-50 mb-0 mt-2" style="white-space:pre-line;">${escapeHTMLInner(d.comment)}</p>
                         </div>`;
                     testimonialsContainer.appendChild(col);
                 });
@@ -330,16 +330,16 @@
                     const reviewCard = document.createElement("div");
                     reviewCard.className = "col-md-6 col-lg-4";
                     reviewCard.innerHTML = `
-                        <div class="review-card p-4 border rounded-4 bg-white shadow-sm h-100">
+                        <div class="review-card card-glass p-4 rounded-4 h-100">
                             <div class="d-flex justify-content-between align-items-start mb-2">
                                 <div>
-                                    <h5 class="fw-bold text-dark mb-0">${escapeHTML(review.name)}</h5>
+                                    <h5 class="fw-bold text-white mb-0">${escapeHTML(review.name)}</h5>
                                     <div class="review-stars-display mt-1">${starsHtml}</div>
                                     ${profileLink}
                                 </div>
-                                <small class="text-muted">${dateStr}</small>
+                                <small class="text-white-50">${dateStr}</small>
                             </div>
-                            <p class="text-secondary mb-0 mt-2 text-start" style="white-space: pre-line;">${escapeHTML(review.comment)}</p>
+                            <p class="text-white-50 mb-0 mt-2 text-start" style="white-space: pre-line;">${escapeHTML(review.comment)}</p>
                         </div>
                     `;
                     reviewsList.appendChild(reviewCard);

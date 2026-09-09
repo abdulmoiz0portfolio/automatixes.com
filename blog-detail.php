@@ -14,7 +14,7 @@ $file_path = __DIR__ . "/content/articles/{$id}.md";
 if (empty($id) || !file_exists($file_path)) {
     include 'header.php';
     echo '<div class="container text-center py-5 my-5">
-            <h1 class="display-1 fw-bold text-dark">404</h1>
+            <h1 class="display-1 fw-bold text-white">404</h1>
             <p class="lead text-secondary">Blog article not found.</p>
             <a href="blogs" class="btn btn-brand mt-3">Back to Blogs</a>
           </div>';

@@ -1,17 +1,17 @@
 <?php $page_key = 'privacy'; include 'header.php'; ?>
 
 <!-- Privacy Hero Section -->
-<section class="subpage-hero text-start text-dark">
+<section class="subpage-hero text-start text-white">
     <div class="container max-w-800">
-        <h1 class="display-4 fw-extrabold text-dark">Privacy Policy</h1>
+        <h1 class="display-4 fw-extrabold text-white">Privacy Policy</h1>
         <div class="title-underline"></div>
-        <p class="lead text-secondary mt-4">
+        <p class="lead text-white-50 mt-4">
             Last updated: September 2026. This Privacy Policy explains how Automatixes and its sub-domains collect, use, store, and protect your information.
         </p>
     </div>
 </section>
 
-<section class="section-padding bg-white text-dark">
+<section class="section-padding bg-surface-1 text-white border-top border-secondary border-opacity-25">
     <div class="container max-w-800">
         <div class="row g-5">
             <div class="col-12">

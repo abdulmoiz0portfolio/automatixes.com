@@ -18,10 +18,10 @@
 
     /* --- 2. High-Contrast Typography Palette --- */
     --text-primary: #ffffff;          /* Pure crisp white for massive headlines */
-    --text-secondary: #94a3b8;        /* High-legibility silver slate for body copy */
-    --text-muted: #64748b;            /* Architectural slate gray for meta tags & subtitles */
-    --text-dim: rgba(255, 255, 255, 0.35); /* Tertiary subtle text */
-    --text-faint: rgba(255, 255, 255, 0.18); /* Watermarks, decorative numerals & stamps */
+    --text-secondary: #cbd5e1;        /* High-legibility bright silver slate for body copy */
+    --text-muted: #94a3b8;            /* Architectural clear slate gray for meta tags & subtitles */
+    --text-dim: rgba(255, 255, 255, 0.5); /* Tertiary subtle text */
+    --text-faint: rgba(255, 255, 255, 0.25); /* Watermarks, decorative numerals & stamps */
     --text-on-neon: #0b0f19;          /* Contrast dark text on neon fills */
     --text-dark: #ffffff;             /* Backward-compatible override for dark theme */
 
@@ -272,7 +272,7 @@ h1, h2, h3, h4, h5, h6,
 .display-6,
 .toss-away-title {
     font-family: var(--font-heading) !important;
-    color: var(--text-primary);
+    color: var(--text-primary, #ffffff) !important;
     margin-bottom: 0.75rem;
 }
 
@@ -1854,11 +1854,38 @@ td, th {
     text-transform: uppercase !important;
 }
 
-.text-primary { color: var(--text-primary) !important; }
-.text-secondary { color: var(--text-secondary) !important; }
-.text-muted { color: var(--text-muted) !important; }
+.text-primary { color: var(--text-primary, #ffffff) !important; }
+.text-secondary { color: var(--text-secondary, #cbd5e1) !important; }
+.text-muted { color: var(--text-muted, #94a3b8) !important; }
 .text-dark { color: var(--text-primary, #ffffff) !important; }
 .text-white { color: #ffffff !important; }
+
+/* Subpage hero guaranteed bright text */
+.subpage-hero,
+.subpage-hero h1,
+.subpage-hero h2,
+.subpage-hero .display-4,
+.subpage-hero .display-5,
+.subpage-hero .display-6 {
+    color: #ffffff !important;
+}
+.subpage-hero .lead,
+.subpage-hero p {
+    color: var(--text-secondary, #cbd5e1) !important;
+}
+
+/* Table default dark contrast */
+.table {
+    color: #ffffff !important;
+}
+.table td, .table th {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+.table td.text-muted,
+.table td .text-muted {
+    color: var(--text-secondary, #cbd5e1) !important;
+}
 
 /* High contrast dark readable text on any light-green / neon fills */
 .badge.text-dark,
@@ -1866,13 +1893,17 @@ td, th {
 .badge[style*="#D4FF3D"],
 .badge[style*="#C8E019"],
 .badge[style*="#ccff00"],
+.btn[style*="#D4FF3D"],
+.btn[style*="#C8E019"],
+.btn[style*="#ccff00"],
 .bg-accent-brand {
     color: #0a0e1a !important;
 }
 
 .badge[style*="#D4FF3D"] *,
 .badge[style*="#C8E019"] *,
-.badge.text-dark * {
+.btn[style*="#D4FF3D"] *,
+.btn[style*="#C8E019"] * {
     color: #0a0e1a !important;
 }
 

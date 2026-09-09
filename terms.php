@@ -1,17 +1,17 @@
 <?php $page_key = 'terms'; include 'header.php'; ?>
 
 <!-- Terms Hero Section -->
-<section class="subpage-hero text-start text-dark">
+<section class="subpage-hero text-start text-white">
     <div class="container max-w-800">
-        <h1 class="display-4 fw-extrabold text-dark">Terms of Service</h1>
+        <h1 class="display-4 fw-extrabold text-white">Terms of Service</h1>
         <div class="title-underline"></div>
-        <p class="lead text-secondary mt-4">
+        <p class="lead text-white-50 mt-4">
             Last updated: August 2026. Please read these terms carefully before using Automatixes's services.
         </p>
     </div>
 </section>
 
-<section class="section-padding bg-white text-dark">
+<section class="section-padding bg-surface-1 text-white border-top border-secondary border-opacity-25">
     <div class="container max-w-800">
         <div class="row g-5">
             <div class="col-12">

@@ -248,9 +248,9 @@ include 'header.php';
 </section>
 
 <!-- Call to Action -->
-<section class="section-padding bg-warm-peach text-dark text-center">
+<section class="section-padding bg-surface-1 text-white border-top border-secondary border-opacity-25 text-center">
     <div class="container max-w-700">
-        <h2 class="display-6 fw-extrabold text-dark mb-4">Ready to automate your workflows?</h2>
+        <h2 class="display-6 fw-extrabold text-white mb-4">Ready to automate your workflows?</h2>
         <a href="contact" class="btn btn-brand btn-lg">
             <span>Book a Discovery Call</span>
             <span class="arrow-btn"><i class="fa-solid fa-arrow-up-right"></i></span>

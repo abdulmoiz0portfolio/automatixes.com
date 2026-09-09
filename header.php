@@ -260,7 +260,7 @@ $og_image = (!empty($active_meta['image']))
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     
     <!-- Custom Main CSS -->
-    <link rel="stylesheet" href="assets/css/main.css?v=14.0.0">
+    <link rel="stylesheet" href="assets/css/main.css?v=14.1.0">
 
         <!-- Google Sitelinks & SiteNavigationElement Schema -->
     <script type="application/ld+json">

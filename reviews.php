@@ -7,12 +7,12 @@
 </script>
 
 <!-- Reviews Hero -->
-<section class="subpage-hero text-center text-dark">
+<section class="subpage-hero text-center text-white">
     <div class="container">
         <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">CUSTOMER REVIEWS</span>
-        <h1 class="display-4 fw-extrabold text-dark">Ratings &amp; Reviews</h1>
+        <h1 class="display-4 fw-extrabold text-white">Ratings &amp; Reviews</h1>
         <div class="title-underline"></div>
-        <p class="lead text-secondary mx-auto mt-4 max-w-700">
+        <p class="lead text-white-50 mx-auto mt-4 max-w-700">
             Share your experience with Automatixes. Your feedback helps us grow.
         </p>
     </div>
@@ -23,9 +23,9 @@
     <div class="container">
         <div class="row g-5 justify-content-center">
             <div class="col-lg-8">
-                <div class="contact-form-wrapper p-4 p-md-5 rounded-4 shadow-sm bg-light">
-                    <h3 class="mb-2 fw-extrabold text-dark text-center">Leave a Review</h3>
-                    <p class="text-center text-muted mb-4">Share your experience and link to your business profile.</p>
+                <div class="card-glass p-4 p-md-5 rounded-4 shadow-sm">
+                    <h3 class="mb-2 fw-extrabold text-white text-center">Leave a Review</h3>
+                    <p class="text-center text-white-50 mb-4">Share your experience and link to your business profile.</p>
 
                     <form id="review-firebase-form" novalidate>
                         <div class="row g-4">
@@ -113,13 +113,13 @@ function copyReviewLink() {
 }
 </script>
 <!-- Live Reviews List Section -->
-<section class="section-padding bg-light text-dark">
+<section class="section-padding bg-surface-1 text-white border-top border-secondary border-opacity-25">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="display-6 fw-extrabold text-dark">What Our Clients Say</h2>
-            <p class="text-muted">
-                Average: <strong id="averageRating">0 &#9733;</strong>
-                &nbsp;<span id="reviewCount" class="text-muted small">(0 reviews)</span>
+            <h2 class="display-6 fw-extrabold text-white">What Our Clients Say</h2>
+            <p class="text-white-50">
+                Average: <strong id="averageRating" class="text-accent-brand">0 &#9733;</strong>
+                &nbsp;<span id="reviewCount" class="text-white-50 small">(0 reviews)</span>
             </p>
         </div>
         <div id="reviewsList" class="row g-4">

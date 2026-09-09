@@ -1,10 +1,10 @@
 <?php $page_key = 'admin'; include 'header.php'; ?>
 
 <!-- Admin Header Section -->
-<section class="subpage-hero text-center text-dark">
+<section class="subpage-hero text-center text-white">
     <div class="container">
         <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">Automatixes CRM</span>
-        <h1 class="display-4 fw-extrabold text-dark">Lead Logs & Database Viewer</h1>
+        <h1 class="display-4 fw-extrabold text-white">Lead Logs & Database Viewer</h1>
         <div class="title-underline"></div>
         <p class="lead text-secondary mx-auto mt-4 max-w-700">
             Real-time viewer querying contact queries and newsletter subscribers directly from Firebase Firestore.
@@ -13,20 +13,20 @@
 </section>
 
 <!-- Leads Data Section -->
-<section class="section-padding bg-white text-dark">
+<section class="section-padding bg-surface-1 text-white border-top border-secondary border-opacity-25">
     <div class="container">
         <div class="row g-4">
             <!-- Contact Submissions Table -->
             <div class="col-12">
-                <div class="card border-light-subtle rounded-4 p-4 p-md-5 mb-5 shadow-sm bg-light">
+                <div class="card card-glass rounded-4 p-4 p-md-5 mb-5 shadow-sm">
                     <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
-                        <h3 class="fw-extrabold text-dark mb-0"><i class="fa-solid fa-list-check text-accent-brand me-2"></i> Project Leads</h3>
+                        <h3 class="fw-extrabold text-white mb-0"><i class="fa-solid fa-list-check text-accent-brand me-2"></i> Project Leads</h3>
                         <button id="refresh-contact-leads" class="btn btn-outline-neon btn-sm"><i class="fa-solid fa-arrows-rotate me-1"></i> Refresh</button>
                     </div>
                     <div class="table-responsive">
-                        <table class="table table-hover align-middle" id="contact-leads-table">
+                        <table class="table table-hover align-middle text-white" id="contact-leads-table">
                             <thead>
-                                <tr class="text-muted border-light-subtle">
+                                <tr class="text-secondary border-secondary border-opacity-25">
                                     <th>#</th>
                                     <th>Name</th>
                                     <th>Email</th>
@@ -49,15 +49,15 @@
 
             <!-- Calculator Project Quotes Table -->
             <div class="col-12">
-                <div class="card border-light-subtle rounded-4 p-4 p-md-5 mb-5 shadow-sm bg-light">
+                <div class="card card-glass rounded-4 p-4 p-md-5 mb-5 shadow-sm">
                     <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h4 class="fw-extrabold text-dark mb-0"><i class="fa-solid fa-calculator text-accent-brand me-2"></i> Project Cost Quote Queries</h4>
+                        <h4 class="fw-extrabold text-white mb-0"><i class="fa-solid fa-calculator text-accent-brand me-2"></i> Project Cost Quote Queries</h4>
                         <button id="refresh-calc-leads" class="btn btn-outline-neon"><i class="fa-solid fa-arrows-rotate"></i> Refresh</button>
                     </div>
                     <div class="table-responsive">
-                        <table class="table table-hover align-middle" id="calc-table">
+                        <table class="table table-hover align-middle text-white" id="calc-table">
                             <thead>
-                                <tr class="text-muted border-light-subtle">
+                                <tr class="text-secondary border-secondary border-opacity-25">
                                     <th>#</th>
                                     <th>Email</th>
                                     <th>Selected Services</th>
@@ -80,15 +80,15 @@
             
             <!-- Newsletter Subscribers Table -->
             <div class="col-12 col-lg-6">
-                <div class="card border-light-subtle rounded-4 p-4 shadow-sm bg-light h-100">
+                <div class="card card-glass rounded-4 p-4 shadow-sm h-100">
                     <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h4 class="fw-extrabold text-dark mb-0"><i class="fa-solid fa-envelope text-accent-brand me-2"></i> Subscribers</h4>
+                        <h4 class="fw-extrabold text-white mb-0"><i class="fa-solid fa-envelope text-accent-brand me-2"></i> Subscribers</h4>
                         <button id="refresh-sub-leads" class="btn btn-outline-neon btn-sm"><i class="fa-solid fa-arrows-rotate"></i></button>
                     </div>
                     <div class="table-responsive">
-                        <table class="table table-hover align-middle" id="subscribers-table">
+                        <table class="table table-hover align-middle text-white" id="subscribers-table">
                             <thead>
-                                <tr class="text-muted border-light-subtle">
+                                <tr class="text-secondary border-secondary border-opacity-25">
                                     <th>#</th>
                                     <th>Email</th>
                                     <th>Subscribed On</th>
@@ -108,9 +108,9 @@
             
             <!-- Simulated Logs Terminal -->
             <div class="col-12 col-lg-6">
-                <div class="card border-light-subtle rounded-4 p-4 shadow-sm bg-light h-100">
-                    <h4 class="fw-extrabold text-dark mb-4"><i class="fa-solid fa-terminal text-accent-brand me-2"></i> Live Integration Logs</h4>
-                    <div class="terminal-body bg-dark text-success p-3 rounded font-monospace border border-secondary border-opacity-10" id="admin-terminal" style="height: 250px; overflow-y: auto; font-size: 13px; line-height: 1.5;">
+                <div class="card card-glass rounded-4 p-4 shadow-sm h-100">
+                    <h4 class="fw-extrabold text-white mb-4"><i class="fa-solid fa-terminal text-accent-brand me-2"></i> Live Integration Logs</h4>
+                    <div class="terminal-body bg-dark text-success p-3 rounded font-monospace border border-secondary border-opacity-25" id="admin-terminal" style="height: 250px; overflow-y: auto; font-size: 13px; line-height: 1.5;">
                         <div class="text-white-50">// System initialized. Webhook listeners online.</div>
                         <div class="text-white-50">// Slack notifications route: ACTIVE [Mock]</div>
                         <div class="text-white-50">// n8n chat widget connected: ACTIVE</div>
@@ -161,7 +161,7 @@
                 const tr = document.createElement("tr");
                 tr.innerHTML = `
                     <td>${idx++}</td>
-                    <td class="fw-bold text-dark">${name}</td>
+                    <td class="fw-bold text-white">${name}</td>
                     <td><a href="mailto:${email}" class="text-accent-brand">${email}</a></td>
                     <td><span class="badge bg-brand-translucent text-accent-brand border border-brand-50">${service}</span></td>
                     <td class="text-secondary" style="max-width: 250px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">${description}</td>
@@ -260,7 +260,7 @@
                     <td>${idx++}</td>
                     <td><a href="mailto:${email}" class="text-accent-brand fw-bold">${email}</a></td>
                     <td class="text-secondary">${services}</td>
-                    <td><span class="badge bg-secondary-subtle text-dark border border-secondary-subtle">${scope}</span></td>
+                    <td><span class="badge bg-secondary-subtle text-white border border-secondary border-opacity-25">${scope}</span></td>
                     <td class="fw-bold text-accent-brand">${total}</td>
                     <td class="text-muted">${dateStr}</td>
                 `;
