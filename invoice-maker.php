@@ -9,8 +9,8 @@ include 'header.php';
         <span class="badge bg-warm-peach text-accent-brand rounded-pill px-3 py-2 fw-semibold mb-3">
             <i class="fa-solid fa-file-invoice me-1"></i> Free Online Invoice Generator
         </span>
-        <h1 class="display-4 fw-extrabold text-dark mb-3">Professional Invoice Maker</h1>
-        <p class="lead text-secondary max-width-600 mx-auto">
+        <h1 class="display-4 fw-extrabold text-white mb-3">Professional Invoice Maker</h1>
+        <p class="lead text-white-50 max-width-600 mx-auto">
             Create, customize, and export high-quality A4 PDF invoices instantly. Powered by live calculations and Automatixes design system.
         </p>
     </div>
@@ -386,115 +386,115 @@ include 'header.php';
     </div>
 </div>
 
-<!-- Educational Invoicing & Automation Guide (Screen Only) -->
-<section class="section-padding bg-white text-dark border-top border-light-subtle no-print">
+<!-- In-Depth Content & SEO Guide for Google Indexing -->
+<section class="section-padding bg-surface-1 text-white border-top border-secondary border-opacity-25 no-print">
     <div class="container">
         <!-- Section Header -->
         <div class="text-center max-w-700 mx-auto mb-5">
             <span class="badge bg-brand-translucent text-accent-brand mb-2 font-monospace px-3 py-2 border border-brand-50">BILLING & OPERATIONS GUIDE</span>
-            <h2 class="display-6 fw-extrabold text-dark">Mastering B2B Invoicing & Automated Billing</h2>
-            <p class="text-secondary fs-5">Everything you need to know about creating legally compliant commercial invoices and automating payment pipelines.</p>
+            <h2 class="display-6 fw-extrabold text-white">Mastering B2B Invoicing & Automated Billing</h2>
+            <p class="text-white-50 fs-5">Everything you need to know about creating legally compliant commercial invoices and automating payment pipelines.</p>
         </div>
 
         <!-- 3 Core Pillars -->
         <div class="row g-4 mb-5">
             <div class="col-lg-4">
-                <div class="p-4 rounded-4 border border-light-subtle bg-light h-100">
-                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-dark text-white mb-3" style="width: 48px; height: 48px;">
+                <div class="card-glass p-4 rounded-4 h-100">
+                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-dark text-white mb-3 border border-secondary border-opacity-25" style="width: 48px; height: 48px;">
                         <i class="fa-solid fa-scale-balanced text-accent-brand"></i>
                     </div>
-                    <h4 class="fw-bold text-dark mb-2">Legal Compliance</h4>
-                    <p class="text-secondary small mb-0">Discover mandatory line-item requirements, tax identification rules (EIN/VAT), and clear payment dispute terms needed to protect your revenue.</p>
+                    <h4 class="fw-bold text-white mb-2">Legal Compliance</h4>
+                    <p class="text-white-50 small mb-0">Discover mandatory line-item requirements, tax identification rules (EIN/VAT), and clear payment dispute terms needed to protect your revenue.</p>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="p-4 rounded-4 border border-light-subtle bg-light h-100">
-                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-dark text-white mb-3" style="width: 48px; height: 48px;">
+                <div class="card-glass p-4 rounded-4 h-100">
+                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-dark text-white mb-3 border border-secondary border-opacity-25" style="width: 48px; height: 48px;">
                         <i class="fa-solid fa-bolt text-accent-neon"></i>
                     </div>
-                    <h4 class="fw-bold text-dark mb-2">Webhook Automation</h4>
-                    <p class="text-secondary small mb-0">Learn how modern operations teams link CRM deal closures (HubSpot, GoHighLevel) to automatic PDF generation, Stripe links, and accounting syncs.</p>
+                    <h4 class="fw-bold text-white mb-2">Webhook Automation</h4>
+                    <p class="text-white-50 small mb-0">Learn how modern operations teams link CRM deal closures (HubSpot, GoHighLevel) to automatic PDF generation, Stripe links, and accounting syncs.</p>
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="p-4 rounded-4 border border-light-subtle bg-light h-100">
-                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-dark text-white mb-3" style="width: 48px; height: 48px;">
+                <div class="card-glass p-4 rounded-4 h-100">
+                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle bg-dark text-white mb-3 border border-secondary border-opacity-25" style="width: 48px; height: 48px;">
                         <i class="fa-solid fa-globe text-accent-orange"></i>
                     </div>
-                    <h4 class="fw-bold text-dark mb-2">Global Currencies</h4>
-                    <p class="text-secondary small mb-0">Best practices for cross-border transactions, multi-currency pricing, IBAN/SWIFT wire clearing, and preventing international remittance delays.</p>
+                    <h4 class="fw-bold text-white mb-2">Global Currencies</h4>
+                    <p class="text-white-50 small mb-0">Best practices for cross-border transactions, multi-currency pricing, IBAN/SWIFT wire clearing, and preventing international remittance delays.</p>
                 </div>
             </div>
         </div>
 
         <!-- In-Depth Content Grid -->
-        <div class="row g-5 align-items-start mb-5 pb-4 border-bottom border-light-subtle">
+        <div class="row g-5 align-items-start mb-5 pb-4 border-bottom border-secondary border-opacity-25">
             <div class="col-lg-6">
-                <h3 class="fw-bold text-dark mb-3">7 Mandatory Elements of a Commercial Invoice</h3>
-                <p class="text-secondary leading-relaxed mb-4">
+                <h3 class="fw-bold text-white mb-3">7 Mandatory Elements of a Commercial Invoice</h3>
+                <p class="text-white-50 leading-relaxed mb-4">
                     Incomplete invoices cause payment disputes, delayed remittances, and tax accounting headaches. Whether you are billing an enterprise client or a DTC partner, ensure every invoice contains:
                 </p>
-                <ul class="list-unstyled text-secondary d-flex flex-column gap-3 small">
+                <ul class="list-unstyled text-white-50 d-flex flex-column gap-3 small">
                     <li class="d-flex align-items-start gap-2">
-                        <i class="fa-solid fa-circle-check text-success mt-1"></i>
-                        <div><strong>Unique Sequential Identifier:</strong> A distinct numbering schema (e.g. <code>INV-2026-0042</code>) that never repeats, ensuring compliance with general audit practices.</div>
+                        <i class="fa-solid fa-circle-check text-accent-neon mt-1"></i>
+                        <div><strong class="text-white">Unique Sequential Identifier:</strong> A distinct numbering schema (e.g. <code>INV-2026-0042</code>) that never repeats, ensuring compliance with general audit practices.</div>
                     </li>
                     <li class="d-flex align-items-start gap-2">
-                        <i class="fa-solid fa-circle-check text-success mt-1"></i>
-                        <div><strong>Both Parties' Legal Entities:</strong> Complete registered company names, physical registered business addresses, contact emails, and tax numbers (VAT/EIN).</div>
+                        <i class="fa-solid fa-circle-check text-accent-neon mt-1"></i>
+                        <div><strong class="text-white">Both Parties' Legal Entities:</strong> Complete registered company names, physical registered business addresses, contact emails, and tax numbers (VAT/EIN).</div>
                     </li>
                     <li class="d-flex align-items-start gap-2">
-                        <i class="fa-solid fa-circle-check text-success mt-1"></i>
-                        <div><strong>Issue Date & Strict Due Date:</strong> Explicit dates (e.g. Net 14 or Net 30) rather than ambiguous terms like "Upon Receipt" to enforce overdue interest terms.</div>
+                        <i class="fa-solid fa-circle-check text-accent-neon mt-1"></i>
+                        <div><strong class="text-white">Issue Date & Strict Due Date:</strong> Explicit dates (e.g. Net 14 or Net 30) rather than ambiguous terms like "Upon Receipt" to enforce overdue interest terms.</div>
                     </li>
                     <li class="d-flex align-items-start gap-2">
-                        <i class="fa-solid fa-circle-check text-success mt-1"></i>
-                        <div><strong>Granular Itemization:</strong> Clear breakdown of each deliverable, hourly rate or unit price, quantity, and subtotal.</div>
+                        <i class="fa-solid fa-circle-check text-accent-neon mt-1"></i>
+                        <div><strong class="text-white">Granular Itemization:</strong> Clear breakdown of each deliverable, hourly rate or unit price, quantity, and subtotal.</div>
                     </li>
                     <li class="d-flex align-items-start gap-2">
-                        <i class="fa-solid fa-circle-check text-success mt-1"></i>
-                        <div><strong>Taxes & Discounts:</strong> Disclosed sales tax, VAT percentages, or pre-negotiated discount amounts applied before the grand total.</div>
+                        <i class="fa-solid fa-circle-check text-accent-neon mt-1"></i>
+                        <div><strong class="text-white">Taxes & Discounts:</strong> Disclosed sales tax, VAT percentages, or pre-negotiated discount amounts applied before the grand total.</div>
                     </li>
                     <li class="d-flex align-items-start gap-2">
-                        <i class="fa-solid fa-circle-check text-success mt-1"></i>
-                        <div><strong>Verified Settlement Details:</strong> Exact IBAN, SWIFT/BIC codes, ACH routing numbers, or direct electronic payment links (Stripe / PayPal).</div>
+                        <i class="fa-solid fa-circle-check text-accent-neon mt-1"></i>
+                        <div><strong class="text-white">Verified Settlement Details:</strong> Exact IBAN, SWIFT/BIC codes, ACH routing numbers, or direct electronic payment links (Stripe / PayPal).</div>
                     </li>
                 </ul>
             </div>
 
             <div class="col-lg-6">
-                <h3 class="fw-bold text-dark mb-3">Automating Your Invoicing Pipeline with n8n</h3>
-                <p class="text-secondary leading-relaxed mb-4">
+                <h3 class="fw-bold text-white mb-3">Automating Your Invoicing Pipeline with n8n</h3>
+                <p class="text-white-50 leading-relaxed mb-4">
                     Manual data entry into invoice generators drains valuable time and invites calculation errors. Automatixes builds autonomous webhook workflows that eliminate manual billing entirely:
                 </p>
-                <div class="p-4 rounded-4 bg-light border border-light-subtle">
+                <div class="card-glass p-4 rounded-4">
                     <div class="d-flex flex-column gap-3 small">
                         <div class="d-flex align-items-start gap-3">
-                            <span class="badge bg-dark text-white rounded-pill px-2.5 py-1 font-monospace">01</span>
+                            <span class="badge bg-dark text-white rounded-pill px-2.5 py-1 font-monospace border border-secondary border-opacity-25">01</span>
                             <div>
-                                <strong class="text-dark">Trigger from CRM Won Deal:</strong>
-                                <p class="text-muted mb-0">When a sales representative marks an opportunity as "Closed-Won" in HubSpot or GoHighLevel, a secure webhook payload fires instantly.</p>
+                                <strong class="text-white">Trigger from CRM Won Deal:</strong>
+                                <p class="text-white-50 mb-0">When a sales representative marks an opportunity as "Closed-Won" in HubSpot or GoHighLevel, a secure webhook payload fires instantly.</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-start gap-3">
-                            <span class="badge bg-dark text-white rounded-pill px-2.5 py-1 font-monospace">02</span>
+                            <span class="badge bg-dark text-white rounded-pill px-2.5 py-1 font-monospace border border-secondary border-opacity-25">02</span>
                             <div>
-                                <strong class="text-dark">Dynamic Computation & PDF Generation:</strong>
-                                <p class="text-muted mb-0">n8n parses client records, generates a custom-branded vector PDF matching your exact typography and color palette, and attaches live payment links.</p>
+                                <strong class="text-white">Dynamic Computation & PDF Generation:</strong>
+                                <p class="text-white-50 mb-0">n8n parses client records, generates a custom-branded vector PDF matching your exact typography and color palette, and attaches live payment links.</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-start gap-3">
-                            <span class="badge bg-dark text-white rounded-pill px-2.5 py-1 font-monospace">03</span>
+                            <span class="badge bg-dark text-white rounded-pill px-2.5 py-1 font-monospace border border-secondary border-opacity-25">03</span>
                             <div>
-                                <strong class="text-dark">Dispatch & Accounting Synchronization:</strong>
-                                <p class="text-muted mb-0">The invoice is dispatched via customer email / WhatsApp, recorded in QuickBooks or Xero, and marked as pending in your internal financial dashboard.</p>
+                                <strong class="text-white">Dispatch & Accounting Synchronization:</strong>
+                                <p class="text-white-50 mb-0">The invoice is dispatched via customer email / WhatsApp, recorded in QuickBooks or Xero, and marked as pending in your internal financial dashboard.</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-start gap-3">
-                            <span class="badge bg-dark text-white rounded-pill px-2.5 py-1 font-monospace">04</span>
+                            <span class="badge bg-dark text-white rounded-pill px-2.5 py-1 font-monospace border border-secondary border-opacity-25">04</span>
                             <div>
-                                <strong class="text-dark">Automatic Payment Reconciliation:</strong>
-                                <p class="text-muted mb-0">When the Stripe charge succeeds, n8n marks the invoice "Paid", issues a receipt, and notifies your team in Slack.</p>
+                                <strong class="text-white">Automatic Payment Reconciliation:</strong>
+                                <p class="text-white-50 mb-0">When the Stripe charge succeeds, n8n marks the invoice "Paid", issues a receipt, and notifies your team in Slack.</p>
                             </div>
                         </div>
                     </div>
@@ -506,91 +506,91 @@ include 'header.php';
         <div class="row pt-4">
             <div class="col-12 text-center max-w-700 mx-auto mb-5">
                 <span class="badge bg-brand-translucent text-accent-brand mb-2 font-monospace px-3 py-2 border border-brand-50">FREQUENTLY ASKED QUESTIONS</span>
-                <h3 class="display-6 fw-extrabold text-dark">Questions About Invoicing & Billing Tools</h3>
-                <p class="text-secondary">Common questions on free online invoice makers, PDF exports, and payment security.</p>
+                <h3 class="display-6 fw-extrabold text-white">Questions About Invoicing & Billing Tools</h3>
+                <p class="text-white-50">Common questions on free online invoice makers, PDF exports, and payment security.</p>
             </div>
 
             <div class="col-12">
                 <div class="accordion accordion-flush max-w-900 mx-auto" id="invoiceFaqAccordion">
                     <!-- FAQ 1 -->
-                    <div class="accordion-item bg-transparent border-bottom border-light-subtle">
+                    <div class="accordion-item bg-transparent border-bottom border-secondary border-opacity-25">
                         <h2 class="accordion-header" id="invHeadingOne">
-                            <button class="accordion-button collapsed bg-transparent fw-bold text-dark fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#invCollapseOne" aria-expanded="false" aria-controls="invCollapseOne">
+                            <button class="accordion-button collapsed bg-transparent fw-bold text-white fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#invCollapseOne" aria-expanded="false" aria-controls="invCollapseOne">
                                 Is this online invoice generator completely free to use?
                             </button>
                         </h2>
                         <div id="invCollapseOne" class="accordion-collapse collapse" aria-labelledby="invHeadingOne" data-bs-parent="#invoiceFaqAccordion">
-                            <div class="accordion-body text-muted py-3 leading-relaxed">
+                            <div class="accordion-body text-white-50 py-3 leading-relaxed">
                                 Yes. The Automatixes Invoice Maker is 100% free with no sign-up, credit card, or recurring subscription required. You can generate unlimited professional invoices, customize currency formats, upload custom brand logos, and export print-ready A4 PDFs directly from your browser.
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 2 -->
-                    <div class="accordion-item bg-transparent border-bottom border-light-subtle">
+                    <div class="accordion-item bg-transparent border-bottom border-secondary border-opacity-25">
                         <h2 class="accordion-header" id="invHeadingTwo">
-                            <button class="accordion-button collapsed bg-transparent fw-bold text-dark fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#invCollapseTwo" aria-expanded="false" aria-controls="invCollapseTwo">
+                            <button class="accordion-button collapsed bg-transparent fw-bold text-white fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#invCollapseTwo" aria-expanded="false" aria-controls="invCollapseTwo">
                                 Are our financial figures and client data stored on your servers?
                             </button>
                         </h2>
                         <div id="invCollapseTwo" class="accordion-collapse collapse" aria-labelledby="invHeadingTwo" data-bs-parent="#invoiceFaqAccordion">
-                            <div class="accordion-body text-muted py-3 leading-relaxed">
+                            <div class="accordion-body text-white-50 py-3 leading-relaxed">
                                 No. The generator executes entirely client-side inside your local browser runtime via Vue 3. None of your client names, bank details, tax numbers, or line items are transmitted to or stored on external servers. Your billing information remains private and secure.
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 3 -->
-                    <div class="accordion-item bg-transparent border-bottom border-light-subtle">
+                    <div class="accordion-item bg-transparent border-bottom border-secondary border-opacity-25">
                         <h2 class="accordion-header" id="invHeadingThree">
-                            <button class="accordion-button collapsed bg-transparent fw-bold text-dark fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#invCollapseThree" aria-expanded="false" aria-controls="invCollapseThree">
+                            <button class="accordion-button collapsed bg-transparent fw-bold text-white fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#invCollapseThree" aria-expanded="false" aria-controls="invCollapseThree">
                                 How do I save the generated invoice as a PDF?
                             </button>
                         </h2>
                         <div id="invCollapseThree" class="accordion-collapse collapse" aria-labelledby="invHeadingThree" data-bs-parent="#invoiceFaqAccordion">
-                            <div class="accordion-body text-muted py-3 leading-relaxed">
+                            <div class="accordion-body text-white-50 py-3 leading-relaxed">
                                 Click the "Print / Download PDF" button at the top right of the builder. In your browser's print dialog window, set the "Destination" dropdown to "Save as PDF", verify that the paper size is set to A4, and click "Save". All navigation menus, buttons, and helper text are automatically stripped out.
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 4 -->
-                    <div class="accordion-item bg-transparent border-bottom border-light-subtle">
+                    <div class="accordion-item bg-transparent border-bottom border-secondary border-opacity-25">
                         <h2 class="accordion-header" id="invHeadingFour">
-                            <button class="accordion-button collapsed bg-transparent fw-bold text-dark fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#invCollapseFour" aria-expanded="false" aria-controls="invCollapseFour">
+                            <button class="accordion-button collapsed bg-transparent fw-bold text-white fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#invCollapseFour" aria-expanded="false" aria-controls="invCollapseFour">
                                 Can I change the currency symbol to EUR, GBP, AED, or CAD?
                             </button>
                         </h2>
                         <div id="invCollapseFour" class="accordion-collapse collapse" aria-labelledby="invHeadingFour" data-bs-parent="#invoiceFaqAccordion">
-                            <div class="accordion-body text-muted py-3 leading-relaxed">
+                            <div class="accordion-body text-white-50 py-3 leading-relaxed">
                                 Yes. Use the Currency dropdown in the Invoice Meta block to choose from major global currencies including USD ($), EUR (€), GBP (£), CAD ($), AUD ($), AED (د.إ), SAR (﷼), and PKR (Rs). All subtotal and grand total math recalculates dynamically.
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 5 -->
-                    <div class="accordion-item bg-transparent border-bottom border-light-subtle">
+                    <div class="accordion-item bg-transparent border-bottom border-secondary border-opacity-25">
                         <h2 class="accordion-header" id="invHeadingFive">
-                            <button class="accordion-button collapsed bg-transparent fw-bold text-dark fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#invCollapseFive" aria-expanded="false" aria-controls="invCollapseFive">
+                            <button class="accordion-button collapsed bg-transparent fw-bold text-white fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#invCollapseFive" aria-expanded="false" aria-controls="invCollapseFive">
                                 Can Automatixes automate our company's end-to-end billing workflow?
                             </button>
                         </h2>
                         <div id="invCollapseFive" class="accordion-collapse collapse" aria-labelledby="invHeadingFive" data-bs-parent="#invoiceFaqAccordion">
-                            <div class="accordion-body text-muted py-3 leading-relaxed">
+                            <div class="accordion-body text-white-50 py-3 leading-relaxed">
                                 Yes. While this web application provides immediate on-demand invoice generation, Automatixes engineers custom backend workflows using n8n, Make, and cloud webhooks. We can automatically generate, send, and reconcile hundreds of invoices monthly directly from your CRM or e-commerce store.
                             </div>
                         </div>
                     </div>
 
                     <!-- FAQ 6 -->
-                    <div class="accordion-item bg-transparent border-bottom border-light-subtle">
+                    <div class="accordion-item bg-transparent border-bottom border-secondary border-opacity-25">
                         <h2 class="accordion-header" id="invHeadingSix">
-                            <button class="accordion-button collapsed bg-transparent fw-bold text-dark fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#invCollapseSix" aria-expanded="false" aria-controls="invCollapseSix">
+                            <button class="accordion-button collapsed bg-transparent fw-bold text-white fs-5 py-4" type="button" data-bs-toggle="collapse" data-bs-target="#invCollapseSix" aria-expanded="false" aria-controls="invCollapseSix">
                                 What payment terms should I specify on my commercial invoices?
                             </button>
                         </h2>
                         <div id="invCollapseSix" class="accordion-collapse collapse" aria-labelledby="invHeadingSix" data-bs-parent="#invoiceFaqAccordion">
-                            <div class="accordion-body text-muted py-3 leading-relaxed">
+                            <div class="accordion-body text-white-50 py-3 leading-relaxed">
                                 Standard B2B terms range from "Net 14" (payment due within 14 calendar days) to "Net 30". For service agencies and software projects, we recommend specifying clear terms including wire transfer details, late payment interest fees, and accepted electronic payment methods.
                             </div>
                         </div>

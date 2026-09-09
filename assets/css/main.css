@@ -1857,7 +1857,7 @@ td, th {
 .text-primary { color: var(--text-primary) !important; }
 .text-secondary { color: var(--text-secondary) !important; }
 .text-muted { color: var(--text-muted) !important; }
-.text-dark { color: #0a0e1a !important; }
+.text-dark { color: var(--text-primary, #ffffff) !important; }
 .text-white { color: #ffffff !important; }
 
 /* High contrast dark readable text on any light-green / neon fills */
@@ -1893,6 +1893,27 @@ td, th {
 .max-w-700 { max-width: 700px; }
 .max-w-1000 { max-width: 1000px; }
 .fw-extrabold { font-weight: 800; }
+
+/* Accordion Dark Theme High-Contrast Visibility */
+.accordion-button {
+    color: #ffffff !important;
+    background-color: transparent !important;
+}
+.accordion-button:not(.collapsed) {
+    color: var(--accent-neon, #D4FF3D) !important;
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    box-shadow: none !important;
+}
+.accordion-button::after {
+    filter: invert(1) brightness(200%) !important;
+}
+.accordion-item {
+    background-color: transparent !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.accordion-body {
+    color: var(--text-secondary, #9ca3af) !important;
+}
 
 /* ==========================================================================
    09. INVOICE MAKER PRINT ISOLATION (@media print)
