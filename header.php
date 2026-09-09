@@ -377,7 +377,6 @@ $og_image = "{$protocol}://{$host}/assets/img/services/ai_automations.jpg";
                                 <li><a class="dropdown-item py-2 fw-semibold" href="product-shoot">AI Product Staging & Visuals</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link text-nowrap" href="reviews">Customer Ratings</a></li>
                                                 <li class="nav-item"><a class="nav-link text-nowrap" href="portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="process">Process</a></li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="blogs">Blogs</a></li>

@@ -70,27 +70,96 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /**
- * 1. Navigation & Sticky Scroll Handler
+ * 1. Navigation & Smart Scroll-Aware Sticky Handler
+ * Smoothly slides up when scrolling down, and reveals immediately when scrolling up.
  */
 function setupNavigation() {
     const header = document.getElementById("header-sticky");
     if (!header) return;
-    let isScrolled = false;
+
+    let lastScrollY = window.scrollY || window.pageYOffset || 0;
     let ticking = false;
+    let isHovered = false;
+    const scrollThreshold = 8; // Delta needed to toggle visibility, preventing micro-bounce
+    const topThreshold = 80;   // Top zone where navbar stays fully visible and relaxed
+
+    // Track mouse hover so header does not hide while user is clicking links / menus
+    header.addEventListener("mouseenter", () => { isHovered = true; });
+    header.addEventListener("mouseleave", () => { isHovered = false; });
+
+    // Proximity reveal: if cursor moves near the very top of viewport (<= 25px), slide header down
+    window.addEventListener("mousemove", (e) => {
+        if (e.clientY <= 25 && header.classList.contains("header-hidden")) {
+            header.classList.remove("header-hidden");
+            header.classList.add("header-visible");
+        }
+    }, { passive: true });
+
+    function handleScroll(currentScrollY) {
+        if (currentScrollY < 0) currentScrollY = 0;
+
+        // At or near top of the page
+        if (currentScrollY <= topThreshold) {
+            header.classList.remove("sticky", "header-hidden");
+            header.classList.add("header-visible");
+            header.style.padding = "14px 0";
+            lastScrollY = currentScrollY;
+            return;
+        }
+
+        // Past top threshold: apply sticky backdrop and compact padding
+        if (!header.classList.contains("sticky")) {
+            header.classList.add("sticky");
+        }
+        header.style.padding = "10px 0";
+
+        // If mobile nav menu or dropdown is currently open or hovered, keep visible
+        const isMobileMenuOpen = document.querySelector("#mainNavbar.show") !== null;
+        const isDropdownOpen = document.querySelector(".dropdown-menu.show") !== null;
+        if (isMobileMenuOpen || isDropdownOpen || isHovered) {
+            header.classList.remove("header-hidden");
+            header.classList.add("header-visible");
+            lastScrollY = currentScrollY;
+            return;
+        }
+
+        const delta = currentScrollY - lastScrollY;
+
+        if (delta > scrollThreshold) {
+            // Scrolling DOWN -> smoothly hide header
+            if (!header.classList.contains("header-hidden")) {
+                header.classList.add("header-hidden");
+                header.classList.remove("header-visible");
+            }
+            lastScrollY = currentScrollY;
+        } else if (delta < -scrollThreshold) {
+            // Scrolling UP -> reveal header immediately
+            if (header.classList.contains("header-hidden")) {
+                header.classList.remove("header-hidden");
+                header.classList.add("header-visible");
+            }
+            lastScrollY = currentScrollY;
+        }
+    }
 
     window.addEventListener("scroll", () => {
         if (!ticking) {
             window.requestAnimationFrame(() => {
-                const scrolled = window.scrollY > 50;
-                if (scrolled !== isScrolled) {
-                    isScrolled = scrolled;
-                    header.style.padding = isScrolled ? "5px 0" : "10px 0";
-                }
+                const currentY = window.scrollY || window.pageYOffset || 0;
+                handleScroll(currentY);
                 ticking = false;
             });
             ticking = true;
         }
     }, { passive: true });
+
+    // Connect with Lenis smooth scroll if initialized
+    if (window.lenis && typeof window.lenis.on === "function") {
+        window.lenis.on("scroll", (e) => {
+            const currentY = typeof e.scroll === "number" ? e.scroll : (window.scrollY || 0);
+            handleScroll(currentY);
+        });
+    }
 
     // Mark active nav link based on current path
     const currentPath = window.location.pathname.split("/").pop();

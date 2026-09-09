@@ -45,6 +45,32 @@ if (in_array($path, $allowed_pages)) {
         echo "404 - Page not found in root.";
     }
 } else {
+    // Check if the requested path is an existing static file (e.g., images/blog/...)
+    $staticFile = realpath(__DIR__ . '/../' . $path);
+    $rootPath = realpath(__DIR__ . '/..');
+    
+    if ($staticFile && file_exists($staticFile) && strpos($staticFile, $rootPath) === 0) {
+        $ext = strtolower(pathinfo($staticFile, PATHINFO_EXTENSION));
+        $mimes = [
+            'png'  => 'image/png',
+            'jpg'  => 'image/jpeg',
+            'jpeg' => 'image/jpeg',
+            'webp' => 'image/webp',
+            'svg'  => 'image/svg+xml',
+            'gif'  => 'image/gif',
+            'ico'  => 'image/x-icon',
+            'css'  => 'text/css',
+            'js'   => 'application/javascript'
+        ];
+        if (isset($mimes[$ext])) {
+            header('Content-Type: ' . $mimes[$ext]);
+            header('Content-Length: ' . filesize($staticFile));
+            header('Cache-Control: public, max-age=31536000, immutable');
+            readfile($staticFile);
+            exit;
+        }
+    }
+
     http_response_code(404);
     echo "404 - Page not allowed.";
 }

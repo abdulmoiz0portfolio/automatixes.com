@@ -29,10 +29,11 @@ $title = preg_match('/title:\s*"([^"]+)"/', $frontmatter, $matches) ? $matches[1
 $category = preg_match('/category:\s*"([^"]+)"/', $frontmatter, $matches) ? ucfirst(trim($matches[1])) : 'General';
 $date = preg_match('/date:\s*"([^"]+)"/', $frontmatter, $matches) ? $matches[1] : date('Y-m-d');
 $author = preg_match('/author:\s*"([^"]+)"/', $frontmatter, $matches) ? $matches[1] : 'Automatixes';
-$image = preg_match('/image:\s*"([^"]+)"/', $frontmatter, $matches) ? $matches[1] : 'assets/img/services/ai_agents.jpg';
+$image = preg_match('/image:\s*"([^"]+)"/', $frontmatter, $matches) ? trim($matches[1]) : '/assets/img/services/ai_agents.jpg';
 
-if (strpos($image, '/') === 0) {
-    $image = ltrim($image, '/');
+// Ensure absolute root path for web assets (e.g. "/images/blog/...")
+if (strpos($image, 'http') !== 0 && strpos($image, '/') !== 0) {
+    $image = '/' . $image;
 }
 
 // Extract HTML body if it's a full HTML document
@@ -85,7 +86,7 @@ include 'header.php';
         <div class="row justify-content-center">
             <div class="col-lg-9">
                 <!-- Featured Image -->
-                <img src="<?php echo htmlspecialchars($image); ?>" class="img-fluid rounded-4 shadow mb-5 w-100 object-fit-cover border border-secondary border-opacity-25" alt="<?php echo htmlspecialchars($title); ?>" style="max-height: 500px;" onerror="this.src='assets/img/services/ai_agents.jpg'">
+                <img src="<?php echo htmlspecialchars($image); ?>" class="img-fluid rounded-4 shadow mb-5 w-100 object-fit-cover border border-secondary border-opacity-25" alt="<?php echo htmlspecialchars($title); ?>" style="max-height: 500px;" onerror="this.src='/assets/img/services/ai_agents.jpg'">
                 
                 <!-- Article Body -->
                 <div class="article-body text-white-50" style="font-size: 1.15rem; line-height: 1.9;">

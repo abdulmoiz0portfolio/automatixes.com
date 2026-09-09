@@ -14,11 +14,11 @@ function get_blogs() {
             $description = preg_match('/description:\s*"([^"]+)"/', $content, $matches) ? $matches[1] : '';
             $category = preg_match('/category:\s*"([^"]+)"/', $content, $matches) ? ucfirst(trim($matches[1])) : 'General';
             $date = preg_match('/date:\s*"([^"]+)"/', $content, $matches) ? $matches[1] : date('Y-m-d');
-            $image = preg_match('/image:\s*"([^"]+)"/', $content, $matches) ? $matches[1] : 'assets/img/services/ai_automations.jpg';
+            $image = preg_match('/image:\s*"([^"]+)"/', $content, $matches) ? trim($matches[1]) : '/assets/img/services/ai_automations.jpg';
             
-            // Fix image path if n8n pushes it with a leading slash (e.g. "/images/...")
-            if (strpos($image, '/') === 0) {
-                $image = ltrim($image, '/');
+            // Ensure absolute root path for web assets (e.g. "/images/blog/...")
+            if (strpos($image, 'http') !== 0 && strpos($image, '/') !== 0) {
+                $image = '/' . $image;
             }
             
             $blogs[] = [
@@ -72,7 +72,7 @@ $all_blogs = get_blogs();
                 <div class="col-lg-4 col-md-6">
                     <div class="card border border-secondary border-opacity-25 shadow-sm h-100 rounded-4 overflow-hidden blog-card bg-surface-1 text-white">
                         <div class="position-relative">
-                            <img src="<?php echo htmlspecialchars($blog['image']); ?>" class="card-img-top object-fit-cover" alt="<?php echo htmlspecialchars($blog['title']); ?>" style="height: 220px;" onerror="this.src='assets/img/services/ai_automations.jpg'">
+                            <img src="<?php echo htmlspecialchars($blog['image']); ?>" class="card-img-top object-fit-cover" alt="<?php echo htmlspecialchars($blog['title']); ?>" style="height: 220px;" onerror="this.src='/assets/img/services/ai_automations.jpg'">
                             <span class="badge bg-brand text-dark position-absolute top-0 end-0 m-3 rounded-pill px-3 py-2 fw-bold">
                                 <?php echo htmlspecialchars($blog['category']); ?>
                             </span>

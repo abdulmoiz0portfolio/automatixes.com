@@ -31,6 +31,7 @@
                         <ul class="list-unstyled footer-menu mb-4">
                             <li><a href="index">Home</a></li>
                             <li><a href="about">About Us</a></li>
+                            <li><a href="reviews">Customer Ratings</a></li>
                             <li><a href="case-study">Case Studies</a></li>
                             <li><a href="blogs">Blogs</a></li>
                             <li><a href="contact">Contact Us</a></li>

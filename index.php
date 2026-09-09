@@ -354,30 +354,30 @@
         <div class="row g-4 justify-content-center">
             <!-- Core Offering 1: Autonomous AI Voice Agents -->
             <div class="col-lg-6 col-md-6">
-                <div class="card-service-item h-100 d-flex flex-column justify-content-between wow fadeInUp" data-wow-delay=".2s" style="border: 1px solid rgba(212, 255, 61, 0.3); background: rgba(18, 24, 38, 0.75); position: relative; overflow: hidden; border-radius: 20px;">
+                <div class="card-service-item h-100 d-flex flex-column justify-content-between wow fadeInUp" data-wow-delay=".2s" style="border: 1px solid rgba(255, 255, 255, 0.08); background: rgba(18, 24, 38, 0.75); position: relative; overflow: hidden; border-radius: 20px;">
                     <div>
                         <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm position-relative">
                             <img src="assets/img/services/ai_agents.jpg" alt="Autonomous AI Voice Agents" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;">
-                            <span class="badge position-absolute top-0 end-0 m-3 text-dark rounded-pill px-3 py-1.5 shadow fw-bold" style="font-size: 11px; background: #D4FF3D; color: #0a0e1a !important; letter-spacing: 0.5px;">
-                                <i class="fa-solid fa-fire me-1"></i> HIGH DEMAND
+                            <span class="badge position-absolute top-0 end-0 m-3 text-dark rounded-pill px-3 py-1.5 shadow fw-bold" style="font-size: 11px; background: #D4FF3D !important; color: #0a0e1a !important; letter-spacing: 0.5px; border: none;">
+                                <i class="fa-solid fa-fire me-1" style="color: #0a0e1a !important;"></i> HIGH DEMAND
                             </span>
                         </div>
                         <div class="content p-2">
                             <div class="d-flex align-items-center gap-2 mb-2">
-                                <i class="fa-solid fa-microphone-lines" style="font-size: 1.3rem; color: var(--accent-neon, #D4FF3D);"></i>
+                                <i class="fa-solid fa-microphone-lines" style="font-size: 1.3rem; color: #D4FF3D !important;"></i>
                                 <span class="text-white-50 font-monospace small">Conversational Voice Engine</span>
                             </div>
                             <h3 class="mb-3"><a href="voice-agent" class="text-white text-decoration-none">Autonomous AI Voice Agents</a></h3>
                             <p class="text-white-50 mb-3">Human-like voice bots that handle customer inquiries, inbound call routing, qualify leads, and book appointments 24/7 with zero human lag.</p>
                             <ul class="list-unstyled text-white-50 small mb-4" style="line-height: 2;">
-                                <li><i class="fa-solid fa-check me-2" style="color: var(--accent-neon, #D4FF3D);"></i>Inbound & Outbound Calling (&lt;500ms response)</li>
-                                <li><i class="fa-solid fa-check me-2" style="color: var(--accent-neon, #D4FF3D);"></i>Automated Appointment Booking & Calendar Sync</li>
-                                <li><i class="fa-solid fa-check me-2" style="color: var(--accent-neon, #D4FF3D);"></i>Live CRM integration & dynamic lead qualification</li>
+                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>Inbound &amp; Outbound Calling (&lt;500ms response)</li>
+                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>Automated Appointment Booking &amp; Calendar Sync</li>
+                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>Live CRM integration &amp; dynamic lead qualification</li>
                             </ul>
                         </div>
                     </div>
                     <div class="p-2 pt-0">
-                        <a href="voice-agent" class="btn btn-sm btn-brand rounded-pill px-4 py-2 fw-bold text-nowrap d-inline-flex align-items-center gap-2 shadow text-dark" style="background: #D4FF3D; color: #0a0e1a !important; border: none;">
+                        <a href="voice-agent" class="btn btn-sm btn-brand rounded-pill px-4 py-2 fw-bold text-nowrap d-inline-flex align-items-center gap-2 shadow text-dark" style="background: #D4FF3D !important; color: #0a0e1a !important; border: none;">
                             <span>Try Live Voice Demo</span>
                             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                         </a>
@@ -387,30 +387,30 @@
 
             <!-- Core Offering 2: AI Automated Solutions -->
             <div class="col-lg-6 col-md-6">
-                <div class="card-service-item h-100 d-flex flex-column justify-content-between wow fadeInUp" data-wow-delay=".4s" style="border: 1px solid rgba(200, 224, 25, 0.3); background: rgba(18, 24, 38, 0.75); position: relative; overflow: hidden; border-radius: 20px;">
+                <div class="card-service-item h-100 d-flex flex-column justify-content-between wow fadeInUp" data-wow-delay=".4s" style="border: 1px solid rgba(255, 255, 255, 0.08); background: rgba(18, 24, 38, 0.75); position: relative; overflow: hidden; border-radius: 20px;">
                     <div>
                         <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm position-relative">
                             <img src="assets/img/services/ai_automations.jpg" alt="AI Automated Solutions" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;">
-                            <span class="badge position-absolute top-0 end-0 m-3 text-dark rounded-pill px-3 py-1.5 shadow fw-bold" style="font-size: 11px; background: #C8E019; letter-spacing: 0.5px;">
-                                <i class="fa-solid fa-bolt me-1"></i> CORE AGENTIC
+                            <span class="badge position-absolute top-0 end-0 m-3 text-dark rounded-pill px-3 py-1.5 shadow fw-bold" style="font-size: 11px; background: #D4FF3D !important; color: #0a0e1a !important; letter-spacing: 0.5px; border: none;">
+                                <i class="fa-solid fa-bolt me-1" style="color: #0a0e1a !important;"></i> CORE AGENTIC
                             </span>
                         </div>
                         <div class="content p-2">
                             <div class="d-flex align-items-center gap-2 mb-2">
-                                <i class="fa-solid fa-robot" style="font-size: 1.3rem; color: var(--accent-neon, #C8E019);"></i>
-                                <span class="text-white-50 font-monospace small">AI Agents & Workflow Automations</span>
+                                <i class="fa-solid fa-robot" style="font-size: 1.3rem; color: #D4FF3D !important;"></i>
+                                <span class="text-white-50 font-monospace small">AI Agents &amp; Workflow Automations</span>
                             </div>
                             <h3 class="mb-3"><a href="ai-automated-solutions" class="text-white text-decoration-none">AI Automated Solutions</a></h3>
                             <p class="text-white-50 mb-3">Smart digital agents and custom n8n / Make pipelines that automate support, lead triage, and sync your business software 24/7.</p>
                             <ul class="list-unstyled text-white-50 small mb-4" style="line-height: 2;">
-                                <li><i class="fa-solid fa-check me-2" style="color: var(--accent-neon, #C8E019);"></i>Multi-Platform Sync (WhatsApp, CRM, Email, Slack)</li>
-                                <li><i class="fa-solid fa-check me-2" style="color: var(--accent-neon, #C8E019);"></i>Custom Knowledge-Base Agents & Data Extractors</li>
-                                <li><i class="fa-solid fa-check me-2" style="color: var(--accent-neon, #C8E019);"></i>n8n, Make, GoHighLevel, Zapier & API Workflows</li>
+                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>Multi-Platform Sync (WhatsApp, CRM, Email, Slack)</li>
+                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>Custom Knowledge-Base Agents &amp; Data Extractors</li>
+                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>n8n, Make, GoHighLevel, Zapier &amp; API Workflows</li>
                             </ul>
                         </div>
                     </div>
                     <div class="p-2 pt-0">
-                        <a href="ai-automated-solutions" class="btn btn-sm btn-brand rounded-pill px-4 py-2 fw-bold text-nowrap d-inline-flex align-items-center gap-2 shadow text-dark">
+                        <a href="ai-automated-solutions" class="btn btn-sm btn-brand rounded-pill px-4 py-2 fw-bold text-nowrap d-inline-flex align-items-center gap-2 shadow text-dark" style="background: #D4FF3D !important; color: #0a0e1a !important; border: none;">
                             <span>Explore Automations</span>
                             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                         </a>
@@ -429,19 +429,31 @@
         <!-- Row 2: Additional Services (AI Product Staging) -->
         <div class="row g-4 justify-content-center">
             <div class="col-lg-6 col-md-8">
-                <div class="card-service-item wow fadeInUp" data-wow-delay=".6s" style="border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(18, 24, 38, 0.7); border-radius: 20px;">
-                    <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm">
-                        <img src="assets/img/services/product_shoot.jpg" alt="AI Product Staging and Visuals" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;">
-                    </div>
-                    <div class="content p-2">
-                        <div class="d-flex align-items-center gap-2 mb-2">
-                            <i class="fa-solid fa-wand-magic-sparkles" style="font-size: 1.3rem; color: #60A5FA;"></i>
-                            <span class="text-white-50 font-monospace small">AI Visuals & Background Staging</span>
+                <div class="card-service-item h-100 d-flex flex-column justify-content-between wow fadeInUp" data-wow-delay=".6s" style="border: 1px solid rgba(255, 255, 255, 0.08); background: rgba(18, 24, 38, 0.75); position: relative; overflow: hidden; border-radius: 20px;">
+                    <div>
+                        <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm position-relative">
+                            <img src="assets/img/services/product_shoot.jpg" alt="AI Product Staging and Visuals" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;">
+                            <span class="badge position-absolute top-0 end-0 m-3 text-dark rounded-pill px-3 py-1.5 shadow fw-bold" style="font-size: 11px; background: #D4FF3D !important; color: #0a0e1a !important; letter-spacing: 0.5px; border: none;">
+                                <i class="fa-solid fa-wand-magic-sparkles me-1" style="color: #0a0e1a !important;"></i> 3D STAGING
+                            </span>
                         </div>
-                        <h3 class="mb-2"><a href="product-shoot" class="text-white text-decoration-none">AI Product Staging & Visuals</a></h3>
-                        <p class="text-white-50 mb-3">Transform basic raw product shots into stunning, high-converting commercial assets with hyper-realistic AI background replacement, 3D lighting, and cinematic manipulation.</p>
-                        <a href="product-shoot" class="btn btn-sm btn-outline-light rounded-pill px-4 py-2 fw-bold text-nowrap d-inline-flex align-items-center gap-2" style="border-color: rgba(255, 255, 255, 0.3);">
-                            <span>View AI Product Staging Details</span>
+                        <div class="content p-2">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <i class="fa-solid fa-wand-magic-sparkles" style="font-size: 1.3rem; color: #D4FF3D !important;"></i>
+                                <span class="text-white-50 font-monospace small">AI Visuals &amp; Background Staging</span>
+                            </div>
+                            <h3 class="mb-3"><a href="product-shoot" class="text-white text-decoration-none">AI Product Staging &amp; Visuals</a></h3>
+                            <p class="text-white-50 mb-3">Transform basic raw product shots into stunning, high-converting commercial assets with hyper-realistic AI background replacement, 3D lighting, and cinematic manipulation.</p>
+                            <ul class="list-unstyled text-white-50 small mb-4" style="line-height: 2;">
+                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>Photorealistic 3D AI Product Staging &amp; Shadowing</li>
+                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>Studio Lighting &amp; Cinematic Background Replacement</li>
+                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>High-Converting E-Commerce Visual Assets (&lt;24h)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="p-2 pt-0">
+                        <a href="product-shoot" class="btn btn-sm btn-brand rounded-pill px-4 py-2 fw-bold text-nowrap d-inline-flex align-items-center gap-2 shadow text-dark" style="background: #D4FF3D !important; color: #0a0e1a !important; border: none;">
+                            <span>Explore Product Staging</span>
                             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                         </a>
                     </div>
