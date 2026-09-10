@@ -882,6 +882,429 @@ function openWorkflowModal() {
 </script>
 <!-- Case Study & Demo Section End -->
 
+<!-- =========================================================================
+     SAAS TOOLS & PRODUCTS SHOWCASE SECTION (INTERACTIVE SLIDES & BUTTONS)
+     ========================================================================= -->
+<section id="saas-tools" class="section-padding position-relative text-white border-top border-light-subtle overflow-hidden" style="background: radial-gradient(circle at 50% 0%, #0c1427 0%, #070a12 100%);">
+    <!-- Atmospheric Glow Effects -->
+    <div class="position-absolute pointer-events-none rounded-circle" style="top: -120px; left: 15%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(200, 224, 25, 0.08) 0%, rgba(0,0,0,0) 70%); filter: blur(90px); z-index: 0;"></div>
+    <div class="position-absolute pointer-events-none rounded-circle" style="bottom: -100px; right: 10%; width: 550px; height: 550px; background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, rgba(0,0,0,0) 70%); filter: blur(90px); z-index: 0;"></div>
+
+    <div class="container position-relative" style="z-index: 2;">
+        <!-- Header & Category Badge -->
+        <div class="text-center max-w-850 mx-auto mb-5">
+            <span class="badge bg-surface-2 border border-light-subtle text-accent-neon font-monospace px-3 py-2 mb-3">
+                <i class="fa-solid fa-layer-group me-1.5"></i> PROPRIETARY SAAS SUITE
+            </span>
+            <h2 class="display-5 fw-bold text-white mb-3">
+                Production Micro-SaaS <span style="color: var(--accent-neon);">Tools & Applications</span>
+            </h2>
+            <p class="fs-5 text-secondary">
+                Explore live, battle-tested SaaS tools engineered and deployed by Automatixes. Fast, private, and built with zero bloat.
+            </p>
+
+            <!-- Slide Quick Selector Tabs (Buttons) -->
+            <div class="d-inline-flex flex-wrap justify-content-center gap-2 p-1.5 rounded-pill bg-dark border border-secondary border-opacity-25 mt-3" id="saasSlideTabs">
+                <button type="button" class="btn btn-sm rounded-pill px-3 py-1.5 fw-semibold saas-tab-btn active" data-slide-index="0">
+                    <i class="fa-solid fa-file-invoice-dollar text-success me-1.5"></i>Invoice Maker
+                </button>
+                <button type="button" class="btn btn-sm rounded-pill px-3 py-1.5 fw-semibold saas-tab-btn text-white-50" data-slide-index="1">
+                    <i class="fa-solid fa-qrcode text-info me-1.5"></i>QR Studio
+                </button>
+                <button type="button" class="btn btn-sm rounded-pill px-3 py-1.5 fw-semibold saas-tab-btn text-white-50" data-slide-index="2">
+                    <i class="fa-solid fa-wand-magic-sparkles text-accent-neon me-1.5"></i>AI Upscaler 4K
+                </button>
+            </div>
+        </div>
+
+        <!-- Carousel / Slides Container -->
+        <div class="position-relative" id="saasSliderContainer">
+            
+            <!-- SLIDE 1: AutomatixInvoice -->
+            <div class="saas-slide active" data-slide="0">
+                <div class="card card-glass rounded-4 p-4 p-lg-5 border border-light-subtle shadow-lg">
+                    <div class="row g-4 align-items-center">
+                        <!-- Left: Info & Action Buttons -->
+                        <div class="col-lg-6 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <span class="badge rounded-pill bg-success bg-opacity-20 text-success border border-success border-opacity-25 px-3 py-1 font-monospace">
+                                        <i class="fa-solid fa-bolt me-1"></i> LIVE APPLICATION
+                                    </span>
+                                    <span class="badge rounded-pill bg-dark border border-light-subtle text-white-50 px-2.5 py-1 font-monospace">
+                                        ZERO SIGN-UP REQUIRED
+                                    </span>
+                                </div>
+                                <h3 class="display-6 fw-bold text-white mb-3">
+                                    AutomatixInvoice <br>
+                                    <span style="color: #25D366;">Instant Financial Ledger</span>
+                                </h3>
+                                <p class="text-secondary leading-relaxed mb-4">
+                                    Generate crisp, professional A4 invoices in seconds. Features real-time client-side subtotal math, line-item tax calculation, custom currency symbol rotation, and automated vector PDF generation.
+                                </p>
+
+                                <div class="row g-3 mb-4">
+                                    <div class="col-sm-6">
+                                        <div class="p-2.5 rounded-3 bg-surface-2 border border-light-subtle">
+                                            <div class="text-accent-neon fw-bold small"><i class="fa-solid fa-shield-halved me-1.5"></i> 100% Private</div>
+                                            <div class="text-white-50 small" style="font-size: 11px;">Zero data saved on external servers</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="p-2.5 rounded-3 bg-surface-2 border border-light-subtle">
+                                            <div class="text-success fw-bold small"><i class="fa-solid fa-file-pdf me-1.5"></i> Vector PDF</div>
+                                            <div class="text-white-50 small" style="font-size: 11px;">Ultra-sharp printable output</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="d-flex flex-wrap gap-2.5 pt-3 border-top border-light-subtle">
+                                <a href="https://invoicemaker.automatixes.com" target="_blank" rel="noopener" class="btn btn-brand rounded-pill px-4 py-2.5 fw-bold d-inline-flex align-items-center gap-2 shadow">
+                                    <i class="fa-solid fa-rocket"></i>
+                                    <span>Launch Invoice Maker (Live)</span>
+                                </a>
+                                <a href="invoice-maker" class="btn btn-outline-light rounded-pill px-3.5 py-2.5 small fw-semibold d-inline-flex align-items-center gap-1.5">
+                                    <i class="fa-solid fa-eye text-accent-neon"></i>
+                                    <span>Open In-App</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right: Visual Interactive Card Mockup -->
+                        <div class="col-lg-6">
+                            <div class="p-4 rounded-4 bg-dark bg-opacity-75 border border-secondary border-opacity-25 position-relative shadow-sm" style="background: linear-gradient(145deg, #0e172a 0%, #0a0f1d 100%);">
+                                <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom border-secondary border-opacity-25">
+                                    <div class="d-flex align-items-center gap-2">
+                                        <span class="rounded-circle bg-danger d-inline-block" style="width: 10px; height: 10px;"></span>
+                                        <span class="rounded-circle bg-warning d-inline-block" style="width: 10px; height: 10px;"></span>
+                                        <span class="rounded-circle bg-success d-inline-block" style="width: 10px; height: 10px;"></span>
+                                        <span class="text-white-50 font-monospace ms-2 small">invoice-engine.automatixes</span>
+                                    </div>
+                                    <span class="badge bg-success bg-opacity-25 text-success font-monospace small">CALC: OK</span>
+                                </div>
+                                <div class="p-3 rounded-3 bg-surface-2 border border-light-subtle mb-3">
+                                    <div class="d-flex justify-content-between text-white-50 small mb-1">
+                                        <span>Client Bill To:</span>
+                                        <span class="text-white fw-semibold">Acme Global Tech LLC</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between text-white-50 small mb-1">
+                                        <span>Service Scope:</span>
+                                        <span class="text-accent-neon fw-semibold">Autonomous AI Agent (Q1)</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between text-white-50 small">
+                                        <span>Invoice Status:</span>
+                                        <span class="badge bg-brand-translucent text-accent-brand">PAID // RECONCILED</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center p-3 rounded-3 bg-dark border border-light-subtle">
+                                    <span class="text-secondary small">Total Balance:</span>
+                                    <span class="fs-4 fw-bold text-white font-monospace">$4,850.00 <span class="text-success fs-6">USD</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: AutomatixQR Studio -->
+            <div class="saas-slide d-none" data-slide="1">
+                <div class="card card-glass rounded-4 p-4 p-lg-5 border border-light-subtle shadow-lg">
+                    <div class="row g-4 align-items-center">
+                        <!-- Left: Info & Action Buttons -->
+                        <div class="col-lg-6 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <span class="badge rounded-pill bg-info bg-opacity-20 text-info border border-info border-opacity-25 px-3 py-1 font-monospace">
+                                        <i class="fa-solid fa-qrcode me-1"></i> ENTERPRISE TOOL
+                                    </span>
+                                    <span class="badge rounded-pill bg-dark border border-light-subtle text-white-50 px-2.5 py-1 font-monospace">
+                                        VECTOR SVG / EPS
+                                    </span>
+                                </div>
+                                <h3 class="display-6 fw-bold text-white mb-3">
+                                    AutomatixQR <br>
+                                    <span style="color: #38bdf8;">Dynamic Brand Matrix</span>
+                                </h3>
+                                <p class="text-secondary leading-relaxed mb-4">
+                                    Enterprise QR generation with high-resolution vector precision. Embed your company logo, customize foreground and background hex gradients, and configure dynamic destination URLs with live visit telemetry.
+                                </p>
+
+                                <div class="row g-3 mb-4">
+                                    <div class="col-sm-6">
+                                        <div class="p-2.5 rounded-3 bg-surface-2 border border-light-subtle">
+                                            <div class="text-info fw-bold small"><i class="fa-solid fa-palette me-1.5"></i> Custom Branding</div>
+                                            <div class="text-white-50 small" style="font-size: 11px;">Hex palettes & embedded logos</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="p-2.5 rounded-3 bg-surface-2 border border-light-subtle">
+                                            <div class="text-accent-neon fw-bold small"><i class="fa-solid fa-chart-simple me-1.5"></i> Dynamic Links</div>
+                                            <div class="text-white-50 small" style="font-size: 11px;">Change destination without reprinting</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="d-flex flex-wrap gap-2.5 pt-3 border-top border-light-subtle">
+                                <a href="https://qrcode.automatixes.com" target="_blank" rel="noopener" class="btn btn-brand rounded-pill px-4 py-2.5 fw-bold d-inline-flex align-items-center gap-2 shadow">
+                                    <i class="fa-solid fa-qrcode"></i>
+                                    <span>Launch QR Studio (Live)</span>
+                                </a>
+                                <a href="https://wa.me/923366920141?text=Hi!%20I%20want%20to%20build%20a%20custom%20SaaS%20product%20like%20AutomatixQR." target="_blank" rel="noopener" class="btn btn-outline-light rounded-pill px-3.5 py-2.5 small fw-semibold d-inline-flex align-items-center gap-1.5">
+                                    <i class="fa-brands fa-whatsapp text-success"></i>
+                                    <span>Build Custom SaaS</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right: Visual Interactive Card Mockup -->
+                        <div class="col-lg-6">
+                            <div class="p-4 rounded-4 bg-dark bg-opacity-75 border border-secondary border-opacity-25 position-relative shadow-sm text-center" style="background: linear-gradient(145deg, #0a172c 0%, #070e1b 100%);">
+                                <div class="d-inline-flex p-3 rounded-4 bg-white shadow-lg mb-3" style="width: 170px; height: 170px; align-items: center; justify-content: center;">
+                                    <i class="fa-solid fa-qrcode text-dark" style="font-size: 130px;"></i>
+                                </div>
+                                <div class="d-flex justify-content-center gap-2 mt-2">
+                                    <span class="badge bg-dark border border-info text-info font-monospace small">SVG Vector</span>
+                                    <span class="badge bg-dark border border-light-subtle text-white-50 font-monospace small">PNG 300 DPI</span>
+                                    <span class="badge bg-dark border border-light-subtle text-white-50 font-monospace small">EPS Print</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 3: AI Image Upscaler 4K -->
+            <div class="saas-slide d-none" data-slide="2">
+                <div class="card card-glass rounded-4 p-4 p-lg-5 border border-light-subtle shadow-lg">
+                    <div class="row g-4 align-items-center">
+                        <!-- Left: Info & Action Buttons -->
+                        <div class="col-lg-6 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex align-items-center gap-2 mb-3">
+                                    <span class="badge rounded-pill bg-warning bg-opacity-20 text-warning border border-warning border-opacity-25 px-3 py-1 font-monospace">
+                                        <i class="fa-solid fa-wand-magic-sparkles me-1"></i> NEURAL ENGINE
+                                    </span>
+                                    <span class="badge rounded-pill bg-dark border border-light-subtle text-white-50 px-2.5 py-1 font-monospace">
+                                        4X SUPER-RESOLUTION
+                                    </span>
+                                </div>
+                                <h3 class="display-6 fw-bold text-white mb-3">
+                                    AI Image Upscaler <br>
+                                    <span style="color: var(--accent-neon);">4K Commercial Engine</span>
+                                </h3>
+                                <p class="text-secondary leading-relaxed mb-4">
+                                    Deep learning super-resolution for commercial photography and e-commerce listings. Reconstructs missing micro-textures, eliminates JPEG blur artifacts, and enhances resolution up to 4x without pixelation.
+                                </p>
+
+                                <div class="row g-3 mb-4">
+                                    <div class="col-sm-6">
+                                        <div class="p-2.5 rounded-3 bg-surface-2 border border-light-subtle">
+                                            <div class="text-accent-neon fw-bold small"><i class="fa-solid fa-image me-1.5"></i> 4x Magnification</div>
+                                            <div class="text-white-50 small" style="font-size: 11px;">720p &rarr; Ultra HD 4K</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="p-2.5 rounded-3 bg-surface-2 border border-light-subtle">
+                                            <div class="text-warning fw-bold small"><i class="fa-solid fa-bag-shopping me-1.5"></i> E-Commerce Ready</div>
+                                            <div class="text-white-50 small" style="font-size: 11px;">Amazon & Shopify compliant</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="d-flex flex-wrap gap-2.5 pt-3 border-top border-light-subtle">
+                                <a href="https://upscaler.automatixes.com" target="_blank" rel="noopener" class="btn btn-brand rounded-pill px-4 py-2.5 fw-bold d-inline-flex align-items-center gap-2 shadow">
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                    <span>Launch AI Upscaler (Live)</span>
+                                </a>
+                                <a href="product-shoot" class="btn btn-outline-light rounded-pill px-3.5 py-2.5 small fw-semibold d-inline-flex align-items-center gap-1.5">
+                                    <i class="fa-solid fa-camera text-accent-neon"></i>
+                                    <span>Explore Product Staging</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Right: Visual Interactive Card Mockup -->
+                        <div class="col-lg-6">
+                            <div class="p-4 rounded-4 bg-dark bg-opacity-75 border border-secondary border-opacity-25 position-relative shadow-sm" style="background: linear-gradient(145deg, #181926 0%, #0d0f1a 100%);">
+                                <div class="row g-2 align-items-center">
+                                    <div class="col-6">
+                                        <div class="p-3 rounded-3 bg-surface-2 border border-secondary border-opacity-25 text-center">
+                                            <span class="badge bg-secondary mb-2 small">ORIGINAL (720p)</span>
+                                            <div class="py-4 text-white-50 small"><i class="fa-regular fa-image fs-1 opacity-50 mb-2 d-block"></i>Low Res Input</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="p-3 rounded-3 bg-dark border border-accent-brand text-center" style="box-shadow: 0 0 20px rgba(200, 224, 25, 0.15);">
+                                            <span class="badge bg-brand-translucent text-accent-brand border border-brand-50 mb-2 small">ENHANCED (4K)</span>
+                                            <div class="py-4 text-white small fw-bold"><i class="fa-solid fa-wand-magic-sparkles text-accent-neon fs-1 mb-2 d-block"></i>Neural Super Res</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-3 text-center">
+                                    <span class="text-white-50 font-monospace small"><i class="fa-solid fa-circle-check text-success me-1"></i> Model Confidence: 99.4% // Sub-second inference</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide Navigation Buttons (Prev / Next & Dots) -->
+            <div class="d-flex justify-content-between align-items-center mt-4 pt-2">
+                <!-- Prev Button -->
+                <button type="button" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center saas-nav-btn" id="saasPrevBtn" style="width: 44px; height: 44px;" aria-label="Previous Slide">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <!-- Dots & Counter -->
+                <div class="d-flex align-items-center gap-3">
+                    <div class="d-flex gap-2" id="saasDotsContainer">
+                        <span class="saas-dot active rounded-pill" data-slide-index="0" style="width: 28px; height: 8px; background: var(--accent-neon); cursor: pointer; transition: all 0.3s ease;"></span>
+                        <span class="saas-dot rounded-circle" data-slide-index="1" style="width: 8px; height: 8px; background: rgba(255, 255, 255, 0.25); cursor: pointer; transition: all 0.3s ease;"></span>
+                        <span class="saas-dot rounded-circle" data-slide-index="2" style="width: 8px; height: 8px; background: rgba(255, 255, 255, 0.25); cursor: pointer; transition: all 0.3s ease;"></span>
+                    </div>
+                    <span class="font-monospace text-white-50 small" id="saasSlideCounter">01 / 03</span>
+                </div>
+
+                <!-- Next Button -->
+                <button type="button" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center saas-nav-btn" id="saasNextBtn" style="width: 44px; height: 44px;" aria-label="Next Slide">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SaaS Slider Logic -->
+<script>
+(function() {
+    function initSaasSlider() {
+        const slides = document.querySelectorAll('.saas-slide');
+        const tabs = document.querySelectorAll('.saas-tab-btn');
+        const dots = document.querySelectorAll('.saas-dot');
+        const counter = document.getElementById('saasSlideCounter');
+        const prevBtn = document.getElementById('saasPrevBtn');
+        const nextBtn = document.getElementById('saasNextBtn');
+        const container = document.getElementById('saasSliderContainer');
+
+        if (!slides.length) return;
+
+        let currentIndex = 0;
+        let autoplayTimer = null;
+
+        function showSlide(index) {
+            if (index < 0) index = slides.length - 1;
+            if (index >= slides.length) index = 0;
+            currentIndex = index;
+
+            slides.forEach((slide, i) => {
+                if (i === currentIndex) {
+                    slide.classList.remove('d-none');
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.add('d-none');
+                    slide.classList.remove('active');
+                }
+            });
+
+            tabs.forEach((tab, i) => {
+                if (i === currentIndex) {
+                    tab.classList.add('active', 'btn-brand');
+                    tab.classList.remove('text-white-50', 'btn-dark');
+                } else {
+                    tab.classList.remove('active', 'btn-brand');
+                    tab.classList.add('text-white-50');
+                }
+            });
+
+            dots.forEach((dot, i) => {
+                if (i === currentIndex) {
+                    dot.classList.add('active');
+                    dot.style.width = '28px';
+                    dot.style.borderRadius = '50rem';
+                    dot.style.background = 'var(--accent-neon)';
+                } else {
+                    dot.classList.remove('active');
+                    dot.style.width = '8px';
+                    dot.style.borderRadius = '50%';
+                    dot.style.background = 'rgba(255, 255, 255, 0.25)';
+                }
+            });
+
+            if (counter) {
+                counter.textContent = String(currentIndex + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0');
+            }
+        }
+
+        function startAutoplay() {
+            stopAutoplay();
+            autoplayTimer = setInterval(() => {
+                showSlide(currentIndex + 1);
+            }, 6000);
+        }
+
+        function stopAutoplay() {
+            if (autoplayTimer) {
+                clearInterval(autoplayTimer);
+                autoplayTimer = null;
+            }
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                showSlide(currentIndex - 1);
+                startAutoplay();
+            });
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                showSlide(currentIndex + 1);
+                startAutoplay();
+            });
+        }
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const idx = parseInt(tab.getAttribute('data-slide-index'), 10);
+                showSlide(idx);
+                startAutoplay();
+            });
+        });
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const idx = parseInt(dot.getAttribute('data-slide-index'), 10);
+                showSlide(idx);
+                startAutoplay();
+            });
+        });
+
+        if (container) {
+            container.addEventListener('mouseenter', stopAutoplay);
+            container.addEventListener('mouseleave', startAutoplay);
+        }
+
+        // Initialize state
+        showSlide(0);
+        startAutoplay();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSaasSlider);
+    } else {
+        initSaasSlider();
+    }
+})();
+</script>
+
 <!-- Technologies We're Using Marquee Section Start -->
 <section id="technologies-section" class="py-5 bg-surface text-white border-top border-light-subtle overflow-hidden">
     <div class="container mb-4">
