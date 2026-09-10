@@ -1907,6 +1907,19 @@ td, th {
     color: #0a0e1a !important;
 }
 
+/* High contrast pure white text on solid red badges */
+.badge.bg-danger,
+.badge[style*="#ef4444"],
+.badge[style*="#dc2626"] {
+    color: #ffffff !important;
+}
+
+.badge.bg-danger *,
+.badge[style*="#ef4444"] *,
+.badge[style*="#dc2626"] * {
+    color: #ffffff !important;
+}
+
 .border-light-subtle,
 .border {
     border-color: var(--border-subtle) !important;
