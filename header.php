@@ -353,10 +353,10 @@ $og_image = (!empty($active_meta['image']))
 <body>
 
     <!-- Preloader Start -->
-    <div id="preloader">
-        <div class="animation-preloader">
+    <div id="preloader" style="direction: ltr !important; unicode-bidi: isolate !important;">
+        <div class="animation-preloader" style="direction: ltr !important; unicode-bidi: isolate !important;">
             <div class="spinner"></div>
-            <div class="txt-loading">
+            <div class="txt-loading" style="direction: ltr !important; unicode-bidi: isolate !important; flex-direction: row !important;">
                 <span data-text-preloader="A" class="letters-loading">A</span>
                 <span data-text-preloader="U" class="letters-loading">U</span>
                 <span data-text-preloader="T" class="letters-loading">T</span>
@@ -369,7 +369,7 @@ $og_image = (!empty($active_meta['image']))
                 <span data-text-preloader="E" class="letters-loading">E</span>
                 <span data-text-preloader="S" class="letters-loading">S</span>
             </div>
-            <p class="text-center loading-subtitle">Loading</p>
+            <p class="text-center loading-subtitle" style="direction: ltr !important;">Loading</p>
         </div>
     </div>
     <!-- Preloader End -->

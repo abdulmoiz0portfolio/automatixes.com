@@ -683,9 +683,9 @@ function bindFormSubmit(form, nameId, emailId, serviceId, messageId) {
         submitBtn.disabled = true;
 
         try {
-            // Capture optional fields if present
-            const phone   = (document.getElementById('contact-phone')?.value   || '').trim();
-            const bizLink = (document.getElementById('contact-biz-link')?.value || '').trim();
+            // Capture optional fields if present (supporting both index and contact-page IDs)
+            const phone   = (document.getElementById('contact-phone')?.value || document.getElementById('contact-phone-page')?.value || '').trim();
+            const bizLink = (document.getElementById('contact-biz-link')?.value || document.getElementById('contact-biz-link-page')?.value || '').trim();
 
             let firestoreSuccess = false;
             if (window.db) {

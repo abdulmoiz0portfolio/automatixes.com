@@ -778,18 +778,62 @@
             }
 
             if (quickForm) {
-                quickForm.addEventListener('submit', (e) => {
+                quickForm.addEventListener('submit', async (e) => {
                     e.preventDefault();
                     const name = document.getElementById('expertName').value.trim();
                     const contact = document.getElementById('expertContact').value.trim();
                     if (!name || !contact) return;
 
-                    const waUrl = `https://wa.me/923366920141?text=${encodeURIComponent(`Hi Automatixes! My name is ${name} (${contact}). I want to connect with an automation expert for my business.`)}`;
+                    const submitBtn = quickForm.querySelector("button[type='submit']");
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
+                    }
+
+                    // 1. Save to Firebase Firestore database
+                    try {
+                        if (window.db) {
+                            const { collection, addDoc, serverTimestamp } = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js");
+                            await addDoc(collection(window.db, "contacts"), {
+                                name: name,
+                                email: contact.includes('@') ? contact : "callback-request@automatixes.com",
+                                phone: contact,
+                                service: "Instant Callback Request",
+                                description: `Quick expert callback requested via popup. Contact: ${contact}`,
+                                timestamp: serverTimestamp()
+                            });
+                        }
+                    } catch (fsErr) {
+                        console.warn("Callback Firestore write error:", fsErr);
+                    }
+
+                    // 2. Dispatch to FormSubmit.co
+                    try {
+                        fetch("https://formsubmit.co/ajax/contact@automatixes.com", {
+                            method: "POST",
+                            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                            body: JSON.stringify({
+                                name: name,
+                                phone: contact,
+                                service: 'Instant Callback Request',
+                                message: `User ${name} (${contact}) requested an instant callback via the floating expert modal.`,
+                                _subject: `⚡ Instant Callback Request: ${name} (${contact})`
+                            })
+                        }).catch(() => {});
+                    } catch (_) {}
+
                     if (successMsg) successMsg.style.display = 'block';
+
+                    const waUrl = `https://wa.me/923366920141?text=${encodeURIComponent(`Hi Automatixes! My name is ${name} (${contact}). I want to connect with an automation expert for my business.`)}`;
+
                     setTimeout(() => {
                         window.open(waUrl, '_blank');
                         closeModal();
-                    }, 800);
+                        if (submitBtn) {
+                            submitBtn.disabled = false;
+                            submitBtn.innerHTML = 'Send';
+                        }
+                    }, 600);
                 });
             }
 
@@ -856,6 +900,23 @@
         }
         html[dir="rtl"] .fa-arrow-right::before {
             content: "\f060" !important; /* Left arrow for RTL */
+        }
+        /* Preloader & Brand Logo MUST ALWAYS be LTR */
+        #preloader, 
+        .animation-preloader, 
+        .txt-loading, 
+        .letters-loading, 
+        .navbar-brand, 
+        .footer-logo {
+            direction: ltr !important;
+            unicode-bidi: isolate !important;
+        }
+        html[dir="rtl"] #preloader,
+        html[dir="rtl"] .animation-preloader,
+        html[dir="rtl"] .txt-loading {
+            direction: ltr !important;
+            flex-direction: row !important;
+            unicode-bidi: isolate !important;
         }
     </style>
 
