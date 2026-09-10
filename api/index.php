@@ -49,7 +49,8 @@ $allowed_pages = [
     'blogs',
     'blog-detail',
     'voice-agent',
-    'case-study'
+    'case-study',
+    'whatsapp-api'
 ];
 
 if (in_array($path, $allowed_pages) || in_array(strtolower($path), array_map('strtolower', $allowed_pages))) {
