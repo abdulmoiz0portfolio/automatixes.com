@@ -53,10 +53,6 @@ include 'header.php';
                     <i class="fa-solid fa-code text-info"></i>
                     <span>n8n, Make & Custom Python/Node</span>
                 </div>
-                <div class="d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-language text-warning"></i>
-                    <span>Multi-Lingual (Global & Persian/Farsi)</span>
-                </div>
             </div>
         </div>
     </div>
@@ -576,8 +572,368 @@ include 'header.php';
 </section>
 
 <!-- =========================================================================
-     SECTION 6: FREQUENTLY ASKED QUESTIONS
+     SECTION 5B: LIVE PRODUCTION N8N WORKFLOWS & CANVAS BLUEPRINTS
      ========================================================================= -->
+<section class="section-padding position-relative bg-void border-top border-light-subtle" id="n8n-blueprints">
+    <div class="container">
+        <!-- Section Heading -->
+        <div class="text-center max-w-850 mx-auto mb-5">
+            <span class="badge bg-surface-2 border border-light-subtle text-accent-neon font-monospace px-3 py-2 mb-3">
+                <i class="fa-solid fa-diagram-project me-1"></i> LIVE PRODUCTION ARCHITECTURES
+            </span>
+            <h2 class="display-5 fw-bold text-white mb-3">
+                Real-World <span style="color: var(--accent-neon);">n8n Workflows & Canvas Blueprints</span>
+            </h2>
+            <p class="fs-5 text-secondary">
+                We do not just talk theory. Here are real production-grade automation canvases engineered, hardened, and deployed for our clients. Every node is tuned for error resilience, zero data loss, and seamless AI tool-calling.
+            </p>
+        </div>
+
+        <!-- Featured Video Walkthrough & Engineering Capabilities -->
+        <div class="card-glass rounded-4 p-4 p-lg-5 mb-5 border border-light-subtle">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                    <div class="position-relative rounded-4 overflow-hidden shadow-lg border border-light-subtle bg-surface-2" style="aspect-ratio: 16/9;">
+                        <video controls preload="metadata" class="w-100 h-100 object-fit-cover" poster="assets/media/n8n/workflows/fiverr-gig-cover-main.jpg">
+                            <source src="assets/media/n8n/workflows/Moiz-Baig-AI-Automation-Showcase.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="position-absolute top-0 start-0 m-3">
+                            <span class="badge rounded-pill bg-dark bg-opacity-75 border border-light-subtle text-accent-neon font-monospace px-3 py-2">
+                                <i class="fa-solid fa-play me-1 text-danger"></i> LIVE VIDEO SHOWCASE
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-flex flex-column justify-content-between">
+                    <div>
+                        <div class="d-inline-flex align-items-center gap-2 mb-3">
+                            <span class="badge rounded-pill bg-dark border border-warning text-warning px-3 py-1 font-monospace">SELF-HOSTED & CLOUD</span>
+                            <span class="badge rounded-pill bg-dark border border-light-subtle text-accent-brand px-3 py-1 font-monospace">ZERO RECURRING FEES</span>
+                        </div>
+                        <h3 class="text-white fw-bold mb-3">Full-Stack Enterprise Automation Engineering</h3>
+                        <p class="text-secondary small mb-4">
+                            Watch our live canvas walkthrough showing how we wire webhook listeners, vector embeddings, multi-model AI logic branches (OpenAI, Claude, DeepSeek), and distributed queue workers to execute high-volume business tasks autonomously.
+                        </p>
+                        <div class="d-flex flex-column gap-2 small text-secondary mb-4">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-accent-neon"></i>
+                                <span><strong>Self-Hosted Docker Deployments:</strong> Full data ownership with zero Zapier per-task fees.</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-accent-neon"></i>
+                                <span><strong>Dead-Letter Error Queues:</strong> Auto-retry mechanisms and Slack/Telegram fault alerts.</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="fa-solid fa-circle-check text-accent-neon"></i>
+                                <span><strong>High-Throughput Execution:</strong> Redis queue mode supporting 100k+ executions/day.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2 pt-3 border-top border-light-subtle">
+                        <a href="assets/media/n8n/workflows/Moiz-Baig-AI-Automation-Portfolio.pdf" target="_blank" class="btn btn-outline-light rounded-pill px-3 py-2 small fw-semibold flex-fill text-center">
+                            <i class="fa-solid fa-file-pdf text-danger me-1"></i> View Portfolio PDF
+                        </a>
+                        <a href="https://wa.me/923366920141?text=Hi!%20I%20saw%20your%20n8n%20workflows%20and%20want%20to%20deploy%20a%20custom%20pipeline%20for%20my%20business." target="_blank" class="btn btn-brand rounded-pill px-3 py-2 small fw-bold flex-fill text-center">
+                            <i class="fa-brands fa-whatsapp me-1"></i> Deploy This System
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 Production Workflow Canvases Gallery -->
+        <div class="row g-4 mb-5">
+            <!-- Workflow 1: Cold Email Outreach -->
+            <div class="col-lg-6">
+                <div class="card-glass rounded-4 p-4 h-100 d-flex flex-column justify-content-between border border-light-subtle hover-glow transition-all">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <span class="badge rounded-pill bg-dark border border-light-subtle text-accent-neon font-monospace px-3 py-1">WORKFLOW 01</span>
+                            <span class="text-secondary small font-monospace"><i class="fa-solid fa-envelope-open-text text-accent-neon me-1"></i> COLD OUTREACH</span>
+                        </div>
+                        <h4 class="text-white fw-bold mb-2">Automated Cold Email Engine & Deliverability Safeguard</h4>
+                        <p class="text-secondary small mb-3">
+                            High-deliverability multi-mailbox cold outreach system integrating Zoho Mail, Google Sheets, and DNS MX validation. Features automated spintax rotation, smart rate-limiting, bounce quarantining, and reply sentiment tracking.
+                        </p>
+                        
+                        <!-- Clickable Image Preview -->
+                        <div class="position-relative rounded-3 overflow-hidden mb-3 border border-light-subtle bg-surface-2 group-hover-zoom cursor-pointer" 
+                             role="button"
+                             onclick="openWorkflowModal('assets/media/n8n/workflows/n8n-email-marketing-workflow.png', 'Automated Cold Email Engine & Deliverability Safeguard', 'Zoho Mail, Google Sheets API, DNS MX Validator, n8n Spintax Engine', 'Full production architecture running distributed outbound campaigns with automated reply sentiment classification, multi-account rotation, and CRM contact synchronization.')">
+                            <img src="assets/media/n8n/workflows/n8n-email-marketing-workflow.png" 
+                                 alt="n8n Cold Email Marketing Workflow Canvas" 
+                                 class="w-100 object-fit-cover transition-transform" 
+                                 style="max-height: 240px;" 
+                                 loading="lazy">
+                            <div class="position-absolute bottom-0 start-0 end-0 p-2 bg-dark bg-opacity-75 d-flex justify-content-between align-items-center">
+                                <span class="badge bg-surface-1 text-accent-neon font-monospace small"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> Click to Inspect Canvas</span>
+                                <span class="text-muted small">Zoho + Sheets + n8n</span>
+                            </div>
+                        </div>
+
+                        <!-- Tech Stack Tags -->
+                        <div class="d-flex flex-wrap gap-1 mb-3">
+                            <span class="badge bg-surface-2 text-secondary border border-light-subtle font-monospace small">Zoho Mail API</span>
+                            <span class="badge bg-surface-2 text-secondary border border-light-subtle font-monospace small">Google Sheets</span>
+                            <span class="badge bg-surface-2 text-secondary border border-light-subtle font-monospace small">DNS MX Check</span>
+                            <span class="badge bg-surface-2 text-secondary border border-light-subtle font-monospace small">Spintax Rotator</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2 pt-3 border-top border-light-subtle">
+                        <button type="button" 
+                                class="btn btn-sm btn-outline-light rounded-pill flex-fill py-2"
+                                onclick="openWorkflowModal('assets/media/n8n/workflows/n8n-email-marketing-workflow.png', 'Automated Cold Email Engine & Deliverability Safeguard', 'Zoho Mail, Google Sheets API, DNS MX Validator, n8n Spintax Engine', 'Full production architecture running distributed outbound campaigns with automated reply sentiment classification, multi-account rotation, and CRM contact synchronization.')">
+                            <i class="fa-solid fa-diagram-project me-1"></i> Inspect Nodes
+                        </button>
+                        <a href="https://wa.me/923366920141?text=Hi!%20I%20need%20the%20Cold%20Email%20n8n%20automation%20workflow%20for%20my%20business." target="_blank" class="btn btn-sm btn-brand rounded-pill flex-fill py-2 fw-semibold">
+                            Deploy Pipeline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workflow 2: Real Estate AI Agent -->
+            <div class="col-lg-6">
+                <div class="card-glass rounded-4 p-4 h-100 d-flex flex-column justify-content-between border border-light-subtle hover-glow transition-all">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <span class="badge rounded-pill bg-dark border border-light-subtle text-accent-brand font-monospace px-3 py-1">WORKFLOW 02</span>
+                            <span class="text-secondary small font-monospace"><i class="fa-solid fa-building text-accent-brand me-1"></i> REAL ESTATE AI</span>
+                        </div>
+                        <h4 class="text-white fw-bold mb-2">Autonomous Real Estate Agent & Instant Lead Routing</h4>
+                        <p class="text-secondary small mb-3">
+                            Conversational inbound qualifier for property agencies. Engages leads under 45 seconds on WhatsApp and website, extracts buyer budget, timeline, and financing status, then auto-schedules viewings on Google Calendar.
+                        </p>
+                        
+                        <!-- Clickable Image Preview -->
+                        <div class="position-relative rounded-3 overflow-hidden mb-3 border border-light-subtle bg-surface-2 group-hover-zoom cursor-pointer"
+                             role="button"
+                             onclick="openWorkflowModal('assets/media/n8n/workflows/workflow-02-real-estate-ai-agent.png', 'Autonomous Real Estate Agent & Instant Lead Routing', 'OpenAI / Claude LLM, WhatsApp Cloud API, Google Calendar, PostgreSQL', 'Full conversational pipeline qualifying buyers and tenants, checking property availability in database, and booking private walkthroughs.')">
+                            <img src="assets/media/n8n/workflows/workflow-02-real-estate-ai-agent.png" 
+                                 alt="Real Estate AI Agent Workflow Blueprint" 
+                                 class="w-100 object-fit-cover transition-transform" 
+                                 style="max-height: 240px;" 
+                                 loading="lazy">
+                            <div class="position-absolute bottom-0 start-0 end-0 p-2 bg-dark bg-opacity-75 d-flex justify-content-between align-items-center">
+                                <span class="badge bg-surface-1 text-accent-brand font-monospace small"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> Click to Inspect Canvas</span>
+                                <span class="text-muted small">WhatsApp + LLM + CRM</span>
+                            </div>
+                        </div>
+
+                        <!-- Tech Stack Tags -->
+                        <div class="d-flex flex-wrap gap-1 mb-3">
+                            <span class="badge bg-surface-2 text-secondary border border-light-subtle font-monospace small">WhatsApp Business API</span>
+                            <span class="badge bg-surface-2 text-secondary border border-light-subtle font-monospace small">OpenAI GPT-4o</span>
+                            <span class="badge bg-surface-2 text-secondary border border-light-subtle font-monospace small">Google Calendar API</span>
+                            <span class="badge bg-surface-2 text-secondary border border-light-subtle font-monospace small">PostgreSQL</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2 pt-3 border-top border-light-subtle">
+                        <button type="button" 
+                                class="btn btn-sm btn-outline-light rounded-pill flex-fill py-2"
+                                onclick="openWorkflowModal('assets/media/n8n/workflows/workflow-02-real-estate-ai-agent.png', 'Autonomous Real Estate Agent & Instant Lead Routing', 'OpenAI / Claude LLM, WhatsApp Cloud API, Google Calendar, PostgreSQL', 'Full conversational pipeline qualifying buyers and tenants, checking property availability in database, and booking private walkthroughs.')">
+                            <i class="fa-solid fa-diagram-project me-1"></i> Inspect Nodes
+                        </button>
+                        <a href="https://wa.me/923366920141?text=Hi!%20I%20want%20to%20deploy%20the%20Real%20Estate%20AI%20Agent%20pipeline." target="_blank" class="btn btn-sm btn-brand rounded-pill flex-fill py-2 fw-semibold">
+                            Deploy Pipeline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workflow 3: Multi-Channel Customer Support -->
+            <div class="col-lg-6">
+                <div class="card-glass rounded-4 p-4 h-100 d-flex flex-column justify-content-between border border-light-subtle hover-glow transition-all">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <span class="badge rounded-pill bg-dark border border-light-subtle text-info font-monospace px-3 py-1">WORKFLOW 03</span>
+                            <span class="text-secondary small font-monospace"><i class="fa-solid fa-headset text-info me-1"></i> 24/7 SUPPORT & RAG</span>
+                        </div>
+                        <h4 class="text-white fw-bold mb-2">Multi-Channel Customer Support & Smart Ticket Escalation</h4>
+                        <p class="text-secondary small mb-3">
+                            Enterprise support architecture with semantic vector knowledge retrieval. Instantly resolves customer questions, executes live order tracking lookups, and automatically routes complex escalations to Slack with full transcript summaries.
+                        </p>
+                        
+                        <!-- Clickable Image Preview -->
+                        <div class="position-relative rounded-3 overflow-hidden mb-3 border border-light-subtle bg-surface-2 group-hover-zoom cursor-pointer"
+                             role="button"
+                             onclick="openWorkflowModal('assets/media/n8n/workflows/workflow-03-website-support-lead-capture.png', 'Multi-Channel Customer Support & Smart Ticket Escalation', 'Vector Database, Pinecone / pgvector, n8n Agent Node, Slack Webhook, HubSpot', 'End-to-end customer support pipeline with hallucination guardrails, order database querying, and automated Slack escalation.')">
+                            <img src="assets/media/n8n/workflows/workflow-03-website-support-lead-capture.png" 
+                                 alt="Customer Support and Lead Capture n8n Workflow" 
+                                 class="w-100 object-fit-cover transition-transform" 
+                                 style="max-height: 240px;" 
+                                 loading="lazy">
+                            <div class="position-absolute bottom-0 start-0 end-0 p-2 bg-dark bg-opacity-75 d-flex justify-content-between align-items-center">
+                                <span class="badge bg-surface-1 text-info font-monospace small"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> Click to Inspect Canvas</span>
+                                <span class="text-muted small">Vector RAG + Slack</span>
+                            </div>
+                        </div>
+
+                        <!-- Tech Stack Tags -->
+                        <div class="d-flex flex-wrap gap-1 mb-3">
+                            <span class="badge bg-surface-2 text-secondary border border-light-subtle font-monospace small">Vector RAG</span>
+                            <span class="badge bg-surface-2 text-secondary border border-light-subtle font-monospace small">Pinecone / pgvector</span>
+                            <span class="badge bg-surface-2 text-secondary border border-light-subtle font-monospace small">Slack Alert Webhooks</span>
+                            <span class="badge bg-surface-2 text-secondary border border-light-subtle font-monospace small">HubSpot / GHL</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2 pt-3 border-top border-light-subtle">
+                        <button type="button" 
+                                class="btn btn-sm btn-outline-light rounded-pill flex-fill py-2"
+                                onclick="openWorkflowModal('assets/media/n8n/workflows/workflow-03-website-support-lead-capture.png', 'Multi-Channel Customer Support & Smart Ticket Escalation', 'Vector Database, Pinecone / pgvector, n8n Agent Node, Slack Webhook, HubSpot', 'End-to-end customer support pipeline with hallucination guardrails, order database querying, and automated Slack escalation.')">
+                            <i class="fa-solid fa-diagram-project me-1"></i> Inspect Nodes
+                        </button>
+                        <a href="https://wa.me/923366920141?text=Hi!%20I%20need%20the%20Customer%20Support%20AI%20Agent%20pipeline%20for%20my%20business." target="_blank" class="btn btn-sm btn-brand rounded-pill flex-fill py-2 fw-semibold">
+                            Deploy Pipeline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workflow 4: Autonomous SEO Publisher -->
+            <div class="col-lg-6">
+                <div class="card-glass rounded-4 p-4 h-100 d-flex flex-column justify-content-between border border-light-subtle hover-glow transition-all">
+                    <div>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <span class="badge rounded-pill bg-dark border border-light-subtle text-warning font-monospace px-3 py-1">WORKFLOW 04</span>
+                            <span class="text-secondary small font-monospace"><i class="fa-solid fa-pen-nib text-warning me-1"></i> AUTONOMOUS SEO</span>
+                        </div>
+                        <h4 class="text-white fw-bold mb-2">Autonomous SEO Content Engine & WordPress Publisher</h4>
+                        <p class="text-secondary small mb-3">
+                            End-to-end organic growth automation. Researches keyword clusters with live web search, compiles 2,500+ word deep guides with proper schema markup, generates featured imagery, and publishes directly into WordPress.
+                        </p>
+                        
+                        <!-- Clickable Image Preview -->
+                        <div class="position-relative rounded-3 overflow-hidden mb-3 border border-light-subtle bg-surface-2 group-hover-zoom cursor-pointer"
+                             role="button"
+                             onclick="openWorkflowModal('assets/media/n8n/workflows/workflow-04-automated-seo-content-publisher.png', 'Autonomous SEO Content Engine & WordPress Publisher', 'Perplexity API, GPT-4o, WordPress REST API, RankMath SEO, Dall-E 3', 'Hands-off content machine producing search-optimized, structured blog articles directly to WordPress drafts or scheduled queues.')">
+                            <img src="assets/media/n8n/workflows/workflow-04-automated-seo-content-publisher.png" 
+                                 alt="Autonomous SEO Content Publisher n8n Workflow Canvas" 
+                                 class="w-100 object-fit-cover transition-transform" 
+                                 style="max-height: 240px;" 
+                                 loading="lazy">
+                            <div class="position-absolute bottom-0 start-0 end-0 p-2 bg-dark bg-opacity-75 d-flex justify-content-between align-items-center">
+                                <span class="badge bg-surface-1 text-warning font-monospace small"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> Click to Inspect Canvas</span>
+                                <span class="text-muted small">Perplexity + WP API</span>
+                            </div>
+                        </div>
+
+                        <!-- Tech Stack Tags -->
+                        <div class="d-flex flex-wrap gap-1 mb-3">
+                            <span class="badge bg-surface-2 text-secondary border border-light-subtle font-monospace small">Perplexity API</span>
+                            <span class="badge bg-surface-2 text-secondary border border-light-subtle font-monospace small">GPT-4o Reasoning</span>
+                            <span class="badge bg-surface-2 text-secondary border border-light-subtle font-monospace small">WordPress REST API</span>
+                            <span class="badge bg-surface-2 text-secondary border border-light-subtle font-monospace small">RankMath SEO Schema</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2 pt-3 border-top border-light-subtle">
+                        <button type="button" 
+                                class="btn btn-sm btn-outline-light rounded-pill flex-fill py-2"
+                                onclick="openWorkflowModal('assets/media/n8n/workflows/workflow-04-automated-seo-content-publisher.png', 'Autonomous SEO Content Engine & WordPress Publisher', 'Perplexity API, GPT-4o, WordPress REST API, RankMath SEO, Dall-E 3', 'Hands-off content machine producing search-optimized, structured blog articles directly to WordPress drafts or scheduled queues.')">
+                            <i class="fa-solid fa-diagram-project me-1"></i> Inspect Nodes
+                        </button>
+                        <a href="https://wa.me/923366920141?text=Hi!%20I%20want%20to%20deploy%20the%20Autonomous%20SEO%20Content%20Publisher%20pipeline." target="_blank" class="btn btn-sm btn-brand rounded-pill flex-fill py-2 fw-semibold">
+                            Deploy Pipeline
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pre-Built JSON Blueprints Catalog Bar -->
+        <div class="card-glass rounded-4 p-4 p-lg-5 border border-light-subtle bg-surface-1">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-8">
+                    <div class="d-inline-flex align-items-center gap-2 mb-2">
+                        <i class="fa-solid fa-code text-accent-neon"></i>
+                        <span class="text-white fw-bold font-monospace small">READY-TO-IMPORT JSON BLUEPRINT TEMPLATES</span>
+                    </div>
+                    <h3 class="text-white fw-bold mb-2">Have Your Own n8n Instance? Grab Our Proven Blueprints</h3>
+                    <p class="text-secondary small mb-3">
+                        We have packaged our internal production JSON configurations for instant import into your self-hosted n8n or cloud server:
+                    </p>
+                    <div class="row g-2 small text-secondary">
+                        <div class="col-md-6 d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-file-code text-accent-neon"></i>
+                            <span><code>Cold Email Sender - Zoho + Sheets.json</code></span>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-file-code text-accent-brand"></i>
+                            <span><code>Meeting Booking & Stripe Deposit.json</code></span>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-file-code text-warning"></i>
+                            <span><code>Data Cleaner & Deduplication Worker.json</code></span>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-file-code text-info"></i>
+                            <span><code>Multi-Account High-Throughput Orchestrator.json</code></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="https://wa.me/923366920141?text=Hi!%20I%20want%20to%20request%20the%20n8n%20JSON%20blueprint%20templates%20and%20consult%20on%20setup." target="_blank" class="btn btn-brand rounded-pill px-4 py-3 fw-bold w-100 mb-2">
+                        <i class="fa-solid fa-download me-2"></i> Request Blueprints & Setup
+                    </a>
+                    <span class="text-muted d-block text-center small">Includes environment variable guide & Docker compose</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Modal for Inspecting Workflow Canvases -->
+<div class="modal fade" id="workflowModal" tabindex="-1" aria-labelledby="workflowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content bg-surface-1 border border-light-subtle rounded-4 text-white shadow-2xl">
+            <div class="modal-header border-bottom border-light-subtle px-4 py-3">
+                <div>
+                    <h5 class="modal-title fw-bold text-white mb-0" id="workflowModalLabel">Production Canvas Architecture</h5>
+                    <small class="text-secondary font-monospace" id="workflowModalStack">n8n Node Topology</small>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-3 p-lg-4 text-center bg-void">
+                <div class="position-relative overflow-auto rounded-3 border border-light-subtle p-2 mb-3 bg-dark" style="max-height: 70vh;">
+                    <img id="workflowModalImg" src="" alt="n8n Workflow Blueprint High Resolution" class="img-fluid rounded" style="min-width: 100%; object-fit: contain;">
+                </div>
+                <p class="text-secondary small text-start px-2 mb-0" id="workflowModalDesc"></p>
+            </div>
+            <div class="modal-footer border-top border-light-subtle px-4 py-3 d-flex justify-content-between">
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Close Canvas</button>
+                <a id="workflowModalDeployBtn" href="https://wa.me/923366920141?text=Hi!%20I%20want%20to%20deploy%20this%20n8n%20workflow." target="_blank" class="btn btn-sm btn-brand rounded-pill px-4 fw-bold">
+                    <i class="fa-brands fa-whatsapp me-1"></i> Deploy This System
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function openWorkflowModal(imgSrc, title, techStack, description) {
+    document.getElementById('workflowModalImg').src = imgSrc;
+    document.getElementById('workflowModalLabel').textContent = title;
+    document.getElementById('workflowModalStack').textContent = techStack;
+    document.getElementById('workflowModalDesc').textContent = description;
+    document.getElementById('workflowModalDeployBtn').href = 'https://wa.me/923366920141?text=' + encodeURIComponent('Hi! I want to deploy the "' + title + '" n8n workflow for my business.');
+    
+    var modalEl = document.getElementById('workflowModal');
+    if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+        var myModal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+        myModal.show();
+    } else {
+        // Fallback in case bootstrap hasn't attached yet
+        modalEl.classList.add('show');
+        modalEl.style.display = 'block';
+        document.body.classList.add('modal-open');
+    }
+}
+</script>
 <section class="section-padding position-relative border-top border-light-subtle">
     <div class="container">
         <div class="text-center max-w-700 mx-auto mb-5">
