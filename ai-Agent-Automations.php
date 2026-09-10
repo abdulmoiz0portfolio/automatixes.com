@@ -574,6 +574,41 @@ include 'header.php';
 <!-- =========================================================================
      SECTION 5B: LIVE PRODUCTION N8N WORKFLOWS & CANVAS BLUEPRINTS
      ========================================================================= -->
+<style>
+/* Section 5B High-Performance Scroll Tuning (60/120fps Zero-Lag) */
+#n8n-blueprints {
+    content-visibility: auto;
+    contain-intrinsic-size: 850px;
+}
+#n8n-blueprints .card-glass,
+#n8n-blueprints .workflow-card-perf {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: #161f33 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    transform: translateZ(0);
+    will-change: transform;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+}
+#n8n-blueprints .card-glass:hover,
+#n8n-blueprints .workflow-card-perf:hover {
+    transform: translateY(-4px) translateZ(0) !important;
+    border-color: rgba(212, 255, 61, 0.35) !important;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6) !important;
+}
+#n8n-blueprints img {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+.play-pulse-btn {
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+.video-preview-wrapper:hover .play-pulse-btn {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(212, 255, 61, 0.7) !important;
+}
+</style>
+
 <section class="section-padding position-relative bg-void border-top border-light-subtle" id="n8n-blueprints">
     <div class="container">
         <!-- Section Heading -->
@@ -590,17 +625,31 @@ include 'header.php';
         </div>
 
         <!-- Featured Video Walkthrough & Engineering Capabilities -->
-        <div class="card-glass rounded-4 p-4 p-lg-5 mb-5 border border-light-subtle">
+        <div class="card-glass rounded-4 p-4 p-lg-5 mb-5">
             <div class="row g-4 align-items-center">
                 <div class="col-lg-7">
-                    <div class="position-relative rounded-4 overflow-hidden shadow-lg border border-light-subtle bg-surface-2" style="aspect-ratio: 16/9;">
-                        <video controls preload="metadata" class="w-100 h-100 object-fit-cover" poster="assets/media/n8n/workflows/fiverr-gig-cover-main.jpg">
-                            <source src="assets/media/n8n/workflows/Moiz-Baig-AI-Automation-Showcase.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="position-absolute top-0 start-0 m-3">
+                    <div id="videoShowcaseWrapper" 
+                         class="position-relative rounded-4 overflow-hidden shadow-lg border border-light-subtle bg-surface-2 video-preview-wrapper cursor-pointer" 
+                         style="aspect-ratio: 16/9;" 
+                         onclick="playShowcaseVideo()">
+                        <img id="videoPosterImg" 
+                             src="assets/media/n8n/workflows/fiverr-gig-cover-main.jpg" 
+                             alt="AI Automation Showcase Video Preview" 
+                             class="w-100 h-100 object-fit-cover" 
+                             loading="lazy" 
+                             decoding="async">
+                        <div class="position-absolute top-0 start-0 m-3 z-2">
                             <span class="badge rounded-pill bg-dark bg-opacity-75 border border-light-subtle text-accent-neon font-monospace px-3 py-2">
-                                <i class="fa-solid fa-play me-1 text-danger"></i> LIVE VIDEO SHOWCASE
+                                <i class="fa-solid fa-play me-1 text-danger"></i> 1-MIN VIDEO SHOWCASE
+                            </span>
+                        </div>
+                        <div id="videoPlayOverlay" class="position-absolute top-0 start-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center bg-dark bg-opacity-40">
+                            <div class="play-pulse-btn rounded-circle d-flex align-items-center justify-content-center shadow-lg mb-2" 
+                                 style="width: 72px; height: 72px; background: var(--accent-neon); color: #0b0f19; font-size: 26px;">
+                                <i class="fa-solid fa-play ms-1"></i>
+                            </div>
+                            <span class="badge rounded-pill bg-dark bg-opacity-85 border border-light-subtle text-white font-monospace px-3 py-1 small">
+                                Click to Watch Architecture Demo
                             </span>
                         </div>
                     </div>
@@ -646,7 +695,7 @@ include 'header.php';
         <div class="row g-4 mb-5">
             <!-- Workflow 1: Cold Email Outreach -->
             <div class="col-lg-6">
-                <div class="card-glass rounded-4 p-4 h-100 d-flex flex-column justify-content-between border border-light-subtle hover-glow transition-all">
+                <div class="card-glass workflow-card-perf rounded-4 p-4 h-100 d-flex flex-column justify-content-between">
                     <div>
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <span class="badge rounded-pill bg-dark border border-light-subtle text-accent-neon font-monospace px-3 py-1">WORKFLOW 01</span>
@@ -658,14 +707,15 @@ include 'header.php';
                         </p>
                         
                         <!-- Clickable Image Preview -->
-                        <div class="position-relative rounded-3 overflow-hidden mb-3 border border-light-subtle bg-surface-2 group-hover-zoom cursor-pointer" 
+                        <div class="position-relative rounded-3 overflow-hidden mb-3 border border-light-subtle bg-surface-2 cursor-pointer" 
                              role="button"
                              onclick="openWorkflowModal('assets/media/n8n/workflows/n8n-email-marketing-workflow.png', 'Automated Cold Email Engine & Deliverability Safeguard', 'Zoho Mail, Google Sheets API, DNS MX Validator, n8n Spintax Engine', 'Full production architecture running distributed outbound campaigns with automated reply sentiment classification, multi-account rotation, and CRM contact synchronization.')">
                             <img src="assets/media/n8n/workflows/n8n-email-marketing-workflow.png" 
                                  alt="n8n Cold Email Marketing Workflow Canvas" 
-                                 class="w-100 object-fit-cover transition-transform" 
+                                 class="w-100 object-fit-cover" 
                                  style="max-height: 240px;" 
-                                 loading="lazy">
+                                 loading="lazy"
+                                 decoding="async">
                             <div class="position-absolute bottom-0 start-0 end-0 p-2 bg-dark bg-opacity-75 d-flex justify-content-between align-items-center">
                                 <span class="badge bg-surface-1 text-accent-neon font-monospace small"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> Click to Inspect Canvas</span>
                                 <span class="text-muted small">Zoho + Sheets + n8n</span>
@@ -696,7 +746,7 @@ include 'header.php';
 
             <!-- Workflow 2: Real Estate AI Agent -->
             <div class="col-lg-6">
-                <div class="card-glass rounded-4 p-4 h-100 d-flex flex-column justify-content-between border border-light-subtle hover-glow transition-all">
+                <div class="card-glass workflow-card-perf rounded-4 p-4 h-100 d-flex flex-column justify-content-between">
                     <div>
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <span class="badge rounded-pill bg-dark border border-light-subtle text-accent-brand font-monospace px-3 py-1">WORKFLOW 02</span>
@@ -708,14 +758,15 @@ include 'header.php';
                         </p>
                         
                         <!-- Clickable Image Preview -->
-                        <div class="position-relative rounded-3 overflow-hidden mb-3 border border-light-subtle bg-surface-2 group-hover-zoom cursor-pointer"
+                        <div class="position-relative rounded-3 overflow-hidden mb-3 border border-light-subtle bg-surface-2 cursor-pointer"
                              role="button"
                              onclick="openWorkflowModal('assets/media/n8n/workflows/workflow-02-real-estate-ai-agent.png', 'Autonomous Real Estate Agent & Instant Lead Routing', 'OpenAI / Claude LLM, WhatsApp Cloud API, Google Calendar, PostgreSQL', 'Full conversational pipeline qualifying buyers and tenants, checking property availability in database, and booking private walkthroughs.')">
                             <img src="assets/media/n8n/workflows/workflow-02-real-estate-ai-agent.png" 
                                  alt="Real Estate AI Agent Workflow Blueprint" 
-                                 class="w-100 object-fit-cover transition-transform" 
+                                 class="w-100 object-fit-cover" 
                                  style="max-height: 240px;" 
-                                 loading="lazy">
+                                 loading="lazy"
+                                 decoding="async">
                             <div class="position-absolute bottom-0 start-0 end-0 p-2 bg-dark bg-opacity-75 d-flex justify-content-between align-items-center">
                                 <span class="badge bg-surface-1 text-accent-brand font-monospace small"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> Click to Inspect Canvas</span>
                                 <span class="text-muted small">WhatsApp + LLM + CRM</span>
@@ -746,7 +797,7 @@ include 'header.php';
 
             <!-- Workflow 3: Multi-Channel Customer Support -->
             <div class="col-lg-6">
-                <div class="card-glass rounded-4 p-4 h-100 d-flex flex-column justify-content-between border border-light-subtle hover-glow transition-all">
+                <div class="card-glass workflow-card-perf rounded-4 p-4 h-100 d-flex flex-column justify-content-between">
                     <div>
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <span class="badge rounded-pill bg-dark border border-light-subtle text-info font-monospace px-3 py-1">WORKFLOW 03</span>
@@ -758,14 +809,15 @@ include 'header.php';
                         </p>
                         
                         <!-- Clickable Image Preview -->
-                        <div class="position-relative rounded-3 overflow-hidden mb-3 border border-light-subtle bg-surface-2 group-hover-zoom cursor-pointer"
+                        <div class="position-relative rounded-3 overflow-hidden mb-3 border border-light-subtle bg-surface-2 cursor-pointer"
                              role="button"
                              onclick="openWorkflowModal('assets/media/n8n/workflows/workflow-03-website-support-lead-capture.png', 'Multi-Channel Customer Support & Smart Ticket Escalation', 'Vector Database, Pinecone / pgvector, n8n Agent Node, Slack Webhook, HubSpot', 'End-to-end customer support pipeline with hallucination guardrails, order database querying, and automated Slack escalation.')">
                             <img src="assets/media/n8n/workflows/workflow-03-website-support-lead-capture.png" 
                                  alt="Customer Support and Lead Capture n8n Workflow" 
-                                 class="w-100 object-fit-cover transition-transform" 
+                                 class="w-100 object-fit-cover" 
                                  style="max-height: 240px;" 
-                                 loading="lazy">
+                                 loading="lazy"
+                                 decoding="async">
                             <div class="position-absolute bottom-0 start-0 end-0 p-2 bg-dark bg-opacity-75 d-flex justify-content-between align-items-center">
                                 <span class="badge bg-surface-1 text-info font-monospace small"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> Click to Inspect Canvas</span>
                                 <span class="text-muted small">Vector RAG + Slack</span>
@@ -796,7 +848,7 @@ include 'header.php';
 
             <!-- Workflow 4: Autonomous SEO Publisher -->
             <div class="col-lg-6">
-                <div class="card-glass rounded-4 p-4 h-100 d-flex flex-column justify-content-between border border-light-subtle hover-glow transition-all">
+                <div class="card-glass workflow-card-perf rounded-4 p-4 h-100 d-flex flex-column justify-content-between">
                     <div>
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <span class="badge rounded-pill bg-dark border border-light-subtle text-warning font-monospace px-3 py-1">WORKFLOW 04</span>
@@ -808,14 +860,15 @@ include 'header.php';
                         </p>
                         
                         <!-- Clickable Image Preview -->
-                        <div class="position-relative rounded-3 overflow-hidden mb-3 border border-light-subtle bg-surface-2 group-hover-zoom cursor-pointer"
+                        <div class="position-relative rounded-3 overflow-hidden mb-3 border border-light-subtle bg-surface-2 cursor-pointer"
                              role="button"
                              onclick="openWorkflowModal('assets/media/n8n/workflows/workflow-04-automated-seo-content-publisher.png', 'Autonomous SEO Content Engine & WordPress Publisher', 'Perplexity API, GPT-4o, WordPress REST API, RankMath SEO, Dall-E 3', 'Hands-off content machine producing search-optimized, structured blog articles directly to WordPress drafts or scheduled queues.')">
                             <img src="assets/media/n8n/workflows/workflow-04-automated-seo-content-publisher.png" 
                                  alt="Autonomous SEO Content Publisher n8n Workflow Canvas" 
-                                 class="w-100 object-fit-cover transition-transform" 
+                                 class="w-100 object-fit-cover" 
                                  style="max-height: 240px;" 
-                                 loading="lazy">
+                                 loading="lazy"
+                                 decoding="async">
                             <div class="position-absolute bottom-0 start-0 end-0 p-2 bg-dark bg-opacity-75 d-flex justify-content-between align-items-center">
                                 <span class="badge bg-surface-1 text-warning font-monospace small"><i class="fa-solid fa-magnifying-glass-plus me-1"></i> Click to Inspect Canvas</span>
                                 <span class="text-muted small">Perplexity + WP API</span>
@@ -846,7 +899,7 @@ include 'header.php';
         </div>
 
         <!-- Pre-Built JSON Blueprints Catalog Bar -->
-        <div class="card-glass rounded-4 p-4 p-lg-5 border border-light-subtle bg-surface-1">
+        <div class="card-glass workflow-card-perf rounded-4 p-4 p-lg-5">
             <div class="row g-4 align-items-center">
                 <div class="col-lg-8">
                     <div class="d-inline-flex align-items-center gap-2 mb-2">
@@ -886,54 +939,6 @@ include 'header.php';
         </div>
     </div>
 </section>
-
-<!-- Lightbox Modal for Inspecting Workflow Canvases -->
-<div class="modal fade" id="workflowModal" tabindex="-1" aria-labelledby="workflowModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content bg-surface-1 border border-light-subtle rounded-4 text-white shadow-2xl">
-            <div class="modal-header border-bottom border-light-subtle px-4 py-3">
-                <div>
-                    <h5 class="modal-title fw-bold text-white mb-0" id="workflowModalLabel">Production Canvas Architecture</h5>
-                    <small class="text-secondary font-monospace" id="workflowModalStack">n8n Node Topology</small>
-                </div>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body p-3 p-lg-4 text-center bg-void">
-                <div class="position-relative overflow-auto rounded-3 border border-light-subtle p-2 mb-3 bg-dark" style="max-height: 70vh;">
-                    <img id="workflowModalImg" src="" alt="n8n Workflow Blueprint High Resolution" class="img-fluid rounded" style="min-width: 100%; object-fit: contain;">
-                </div>
-                <p class="text-secondary small text-start px-2 mb-0" id="workflowModalDesc"></p>
-            </div>
-            <div class="modal-footer border-top border-light-subtle px-4 py-3 d-flex justify-content-between">
-                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Close Canvas</button>
-                <a id="workflowModalDeployBtn" href="https://wa.me/923366920141?text=Hi!%20I%20want%20to%20deploy%20this%20n8n%20workflow." target="_blank" class="btn btn-sm btn-brand rounded-pill px-4 fw-bold">
-                    <i class="fa-brands fa-whatsapp me-1"></i> Deploy This System
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-function openWorkflowModal(imgSrc, title, techStack, description) {
-    document.getElementById('workflowModalImg').src = imgSrc;
-    document.getElementById('workflowModalLabel').textContent = title;
-    document.getElementById('workflowModalStack').textContent = techStack;
-    document.getElementById('workflowModalDesc').textContent = description;
-    document.getElementById('workflowModalDeployBtn').href = 'https://wa.me/923366920141?text=' + encodeURIComponent('Hi! I want to deploy the "' + title + '" n8n workflow for my business.');
-    
-    var modalEl = document.getElementById('workflowModal');
-    if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
-        var myModal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
-        myModal.show();
-    } else {
-        // Fallback in case bootstrap hasn't attached yet
-        modalEl.classList.add('show');
-        modalEl.style.display = 'block';
-        document.body.classList.add('modal-open');
-    }
-}
-</script>
 <section class="section-padding position-relative border-top border-light-subtle">
     <div class="container">
         <div class="text-center max-w-700 mx-auto mb-5">
@@ -1078,5 +1083,66 @@ function openWorkflowModal(imgSrc, title, techStack, description) {
         </div>
     </div>
 </section>
+
+<!-- Lightbox Modal for Inspecting Workflow Canvases -->
+<div class="modal fade" id="workflowModal" tabindex="-1" aria-labelledby="workflowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content bg-surface-1 border border-light-subtle rounded-4 text-white shadow-2xl">
+            <div class="modal-header border-bottom border-light-subtle px-4 py-3">
+                <div>
+                    <h5 class="modal-title fw-bold text-white mb-0" id="workflowModalLabel">Production Canvas Architecture</h5>
+                    <small class="text-secondary font-monospace" id="workflowModalStack">n8n Node Topology</small>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-3 p-lg-4 text-center bg-void">
+                <div class="position-relative overflow-auto rounded-3 border border-light-subtle p-2 mb-3 bg-dark" style="max-height: 70vh;">
+                    <img id="workflowModalImg" src="" alt="n8n Workflow Blueprint High Resolution" class="img-fluid rounded" style="min-width: 100%; object-fit: contain;" loading="lazy">
+                </div>
+                <p class="text-secondary small text-start px-2 mb-0" id="workflowModalDesc"></p>
+            </div>
+            <div class="modal-footer border-top border-light-subtle px-4 py-3 d-flex justify-content-between">
+                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Close Canvas</button>
+                <a id="workflowModalDeployBtn" href="https://wa.me/923366920141?text=Hi!%20I%20want%20to%20deploy%20this%20n8n%20workflow." target="_blank" class="btn btn-sm btn-brand rounded-pill px-4 fw-bold">
+                    <i class="fa-brands fa-whatsapp me-1"></i> Deploy This System
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function playShowcaseVideo() {
+    var wrapper = document.getElementById('videoShowcaseWrapper');
+    if (!wrapper) return;
+    wrapper.innerHTML = '<video controls autoplay class="w-100 h-100 object-fit-cover" style="will-change: transform;"><source src="assets/media/n8n/workflows/Moiz-Baig-AI-Automation-Showcase.mp4" type="video/mp4">Your browser does not support the video tag.</video>';
+}
+
+function openWorkflowModal(imgSrc, title, techStack, description) {
+    var img = document.getElementById('workflowModalImg');
+    var label = document.getElementById('workflowModalLabel');
+    var stack = document.getElementById('workflowModalStack');
+    var desc = document.getElementById('workflowModalDesc');
+    var btn = document.getElementById('workflowModalDeployBtn');
+    
+    if (img) img.src = imgSrc;
+    if (label) label.textContent = title;
+    if (stack) stack.textContent = techStack;
+    if (desc) desc.textContent = description;
+    if (btn) btn.href = 'https://wa.me/923366920141?text=' + encodeURIComponent('Hi! I want to deploy the "' + title + '" n8n workflow for my business.');
+    
+    var modalEl = document.getElementById('workflowModal');
+    if (modalEl) {
+        if (typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+            var myModal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+            myModal.show();
+        } else {
+            modalEl.classList.add('show');
+            modalEl.style.display = 'block';
+            document.body.classList.add('modal-open');
+        }
+    }
+}
+</script>
 
 <?php include 'footer.php'; ?>
