@@ -1040,12 +1040,12 @@ function initSmoothScroll() {
     const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const prefersReducedMotion = reducedMotionQuery.matches;
 
-    // 3. Initialize Lenis with fast, responsive, non-blocking curve
+    // 3. Initialize Lenis with fast, responsive, non-blocking curve (Zero-Lag tuning)
     const lenis = new Lenis({
-        lerp: prefersReducedMotion ? 1 : 0.14,
-        duration: prefersReducedMotion ? 0 : 0.75,
+        lerp: prefersReducedMotion ? 1 : 0.22,
+        duration: prefersReducedMotion ? 0 : 0.5,
         smoothWheel: !prefersReducedMotion,
-        wheelMultiplier: 1.05,
+        wheelMultiplier: 1.15,
         touchMultiplier: 1.0,
         infinite: false,
         autoResize: true

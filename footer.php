@@ -47,7 +47,7 @@
                     <div class="footer-widget">
                         <h5 class="widget-title">Our Services</h5>
                         <ul class="list-unstyled footer-menu">
-                            <li><a href="ai-automated-solutions">AI Automations</a></li>
+                            <li><a href="ai-Agent-Automations">AI Agent & Automations</a></li>
                             <li><a href="voice-agent" class="d-inline-flex align-items-center gap-1.5"><span>AI Voice Agents</span> <span class="badge" style="font-size: 9px; font-weight: 700; border-radius: 4px; background: #D4FF3D !important; color: #0a0e1a !important;">HOT</span></a></li>
                             <li><a href="product-shoot">AI Product Staging</a></li>
                             <li><a href="case-study" class="d-inline-flex align-items-center gap-1.5"><span style="color: var(--accent-neon, #C8E019);">n8n Lead Recovery</span> <span class="badge" style="font-size: 8px; font-weight: 700; border-radius: 4px; background: rgba(200, 224, 25, 0.15); color: #C8E019; border: 1px solid rgba(200, 224, 25, 0.3);">DEMO</span></a></li>
@@ -806,9 +806,153 @@
 
 
     <!-- Main Custom JS -->
-    <script src="assets/js/main.js?v=5.0.0"></script>
-    <!-- Agentation Visual Feedback Toolbar -->
-    <script src="assets/js/agentation-widget.js" defer></script>
+    <script src="assets/js/main.js?v=5.1.0"></script>
+
+    <!-- Global Multi-Language Google Translate Engine with Persian/Farsi & Auto-Detection -->
+    <style>
+        /* Modern Clean Google Translate - Hide default top banner */
+        .goog-te-banner-frame.skiptranslate, 
+        .goog-te-banner-frame,
+        #goog-gt-tt, 
+        .goog-te-balloon-frame { 
+            display: none !important; 
+        }
+        body { 
+            top: 0px !important; 
+        }
+        .goog-text-highlight { 
+            background: transparent !important; 
+            box-shadow: none !important; 
+        }
+        .skiptranslate:not(.keep-visible) { 
+            display: none !important; 
+        }
+        /* RTL text alignment support for Persian, Arabic, Urdu */
+        html[dir="rtl"] {
+            direction: rtl;
+            text-align: right;
+        }
+        html[dir="rtl"] body {
+            direction: rtl;
+            text-align: right;
+        }
+        html[dir="rtl"] .ms-auto {
+            margin-left: unset !important;
+            margin-right: auto !important;
+        }
+        html[dir="rtl"] .me-auto {
+            margin-right: unset !important;
+            margin-left: auto !important;
+        }
+        html[dir="rtl"] .text-start {
+            text-align: right !important;
+        }
+        html[dir="rtl"] .text-end {
+            text-align: left !important;
+        }
+        html[dir="rtl"] .dropdown-menu-end {
+            right: auto !important;
+            left: 0 !important;
+        }
+        html[dir="rtl"] .fa-arrow-right::before {
+            content: "\f060" !important; /* Left arrow for RTL */
+        }
+    </style>
+
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,fa,ar,ur,es,fr,de,ru,zh-CN,tr',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        // Language switching handler
+        function setSiteLanguage(langCode) {
+            if (!langCode || langCode === 'en') {
+                // Clear cookies for all domains
+                document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + location.hostname + ";";
+                const hostParts = location.hostname.split('.');
+                if (hostParts.length > 1) {
+                    document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + hostParts.slice(-2).join('.') + ";";
+                }
+                localStorage.setItem('user_selected_lang', 'en');
+                document.documentElement.removeAttribute('dir');
+                location.reload();
+                return;
+            }
+
+            const cookieStr = '/en/' + langCode;
+            document.cookie = "googtrans=" + cookieStr + "; path=/;";
+            document.cookie = "googtrans=" + cookieStr + "; path=/; domain=" + location.hostname + ";";
+            const hostParts = location.hostname.split('.');
+            if (hostParts.length > 1) {
+                document.cookie = "googtrans=" + cookieStr + "; path=/; domain=." + hostParts.slice(-2).join('.') + ";";
+            }
+            localStorage.setItem('user_selected_lang', langCode);
+
+            if (['fa', 'ar', 'ur'].includes(langCode)) {
+                document.documentElement.setAttribute('dir', 'rtl');
+            } else {
+                document.documentElement.removeAttribute('dir');
+            }
+
+            location.reload();
+        }
+
+        // Initialize active language display & Auto-detect Persian/Farsi & other visitors
+        (function initLangState() {
+            let activeLang = 'en';
+            const match = document.cookie.match(/(?:^|;\s*)googtrans=\/en\/([a-zA-Z\-]+)/);
+            if (match && match[1]) {
+                activeLang = match[1];
+            } else {
+                const stored = localStorage.getItem('user_selected_lang');
+                if (stored) {
+                    activeLang = stored;
+                } else {
+                    // Browser Language Auto-Detection
+                    const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+                    // Persian / Farsi: fa, fa-ir, fa-af
+                    if (browserLang.startsWith('fa')) {
+                        activeLang = 'fa';
+                        setSiteLanguage('fa');
+                        return;
+                    } else if (browserLang.startsWith('ar')) {
+                        activeLang = 'ar';
+                        setSiteLanguage('ar');
+                        return;
+                    }
+                }
+            }
+
+            // Update UI dropdown button text
+            const labelEl = document.getElementById('activeLangText');
+            if (labelEl) {
+                const langLabels = {
+                    'en': 'EN',
+                    'fa': 'FA (فارسی)',
+                    'ar': 'AR (العربية)',
+                    'ur': 'UR (اردو)',
+                    'es': 'ES',
+                    'fr': 'FR',
+                    'de': 'DE',
+                    'ru': 'RU',
+                    'zh-CN': 'ZH',
+                    'tr': 'TR'
+                };
+                labelEl.textContent = langLabels[activeLang] || activeLang.toUpperCase();
+            }
+
+            // Apply RTL if Persian, Arabic, or Urdu
+            if (['fa', 'ar', 'ur'].includes(activeLang)) {
+                document.documentElement.setAttribute('dir', 'rtl');
+            }
+        })();
+    </script>
+    <script async src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <!-- Cookie Consent Banner (Google Consent Mode v2 Compliant) -->
     <div id="cookieConsentBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:2147483646;background:rgba(11,15,25,0.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid rgba(255,255,255,0.1);padding:18px 24px;font-family:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;box-shadow:0 -10px 30px rgba(0,0,0,0.5);">
         <div style="max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">

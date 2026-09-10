@@ -26,7 +26,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . PHP_EOL;
         <priority>0.8</priority>
     </url>
     <url>
-        <loc><?php echo $base_url; ?>/ai-automated-solutions</loc>
+        <loc><?php echo $base_url; ?>/ai-Agent-Automations</loc>
         <lastmod><?php echo date('Y-m-d'); ?></lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>

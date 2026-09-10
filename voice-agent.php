@@ -143,7 +143,7 @@ include 'header.php';
                     <a href="contact" class="btn btn-brand rounded-pill px-4 py-2 fw-bold">
                         Deploy Voice Agent <i class="fa-solid fa-arrow-right ms-2"></i>
                     </a>
-                    <a href="ai-automated-solutions" class="btn btn-outline-brand rounded-pill px-4 py-2 fw-bold">
+                    <a href="ai-Agent-Automations" class="btn btn-outline-brand rounded-pill px-4 py-2 fw-bold">
                         Explore All Solutions
                     </a>
                 </div>

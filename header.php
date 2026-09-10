@@ -24,11 +24,23 @@ $meta_config = [
         'keywords' => 'About Automatixes, AI Engineers, CRM automation experts, n8n consultants',
         'url' => 'about'
     ],
+    'ai-Agent-Automations' => [
+        'title' => 'AI Agent & Automation Systems (Autonomous Agents & n8n Workflows) | Automatixes',
+        'desc' => 'Deploy custom autonomous AI agents and end-to-end workflow automations connecting WhatsApp, CRM, Slack, and email. Scale your operations 24/7 with Automatixes.',
+        'keywords' => 'AI Agent, AI Automation, Autonomous AI Agents, n8n agency, Make.com integration, custom RAG, workflow automation',
+        'url' => 'ai-Agent-Automations'
+    ],
+    'ai-agent-automations' => [
+        'title' => 'AI Agent & Automation Systems (Autonomous Agents & n8n Workflows) | Automatixes',
+        'desc' => 'Deploy custom autonomous AI agents and end-to-end workflow automations connecting WhatsApp, CRM, Slack, and email. Scale your operations 24/7 with Automatixes.',
+        'keywords' => 'AI Agent, AI Automation, Autonomous AI Agents, n8n agency, Make.com integration, custom RAG, workflow automation',
+        'url' => 'ai-Agent-Automations'
+    ],
     'ai-automated-solutions' => [
-        'title' => 'AI Automated Solutions (Agents & Workflows) | Automatixes',
-        'desc' => 'Deploy custom AI agents for 24/7 support and eliminate manual tasks with end-to-end automations connecting your CRM, Slack, and email platforms.',
-        'keywords' => 'AI Automations, Autonomous AI Agents, n8n agency, Make.com integration, custom RAG, workflow automation',
-        'url' => 'ai-automated-solutions'
+        'title' => 'AI Agent & Automation Systems (Autonomous Agents & n8n Workflows) | Automatixes',
+        'desc' => 'Deploy custom autonomous AI agents and end-to-end workflow automations connecting WhatsApp, CRM, Slack, and email. Scale your operations 24/7 with Automatixes.',
+        'keywords' => 'AI Agent, AI Automation, Autonomous AI Agents, n8n agency, Make.com integration, custom RAG, workflow automation',
+        'url' => 'ai-Agent-Automations'
     ],
     'product-shoot' => [
         'title' => 'AI Product Staging, 3D Backgrounds & Commercial Edits | Automatixes',
@@ -93,6 +105,9 @@ $active_meta = (isset($custom_meta) && is_array($custom_meta)) ? array_merge($de
 // Standardize canonical domain (https://automatixes.com)
 $canonical_base = "https://automatixes.com";
 $canonical_url = $canonical_base . (!empty($active_meta['url']) ? '/' . ltrim($active_meta['url'], '/') : '');
+
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)) ? "https" : "http";
+$host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'automatixes.com';
 
 // Dynamic or standard OpenGraph image
 $og_image = (!empty($active_meta['image'])) 
@@ -170,6 +185,7 @@ $og_image = (!empty($active_meta['image']))
     <link rel="alternate" hreflang="en-gb" href="<?php echo $canonical_url; ?>">
     <link rel="alternate" hreflang="en-ca" href="<?php echo $canonical_url; ?>">
     <link rel="alternate" hreflang="ar" href="<?php echo $canonical_url; ?>">
+    <link rel="alternate" hreflang="fa" href="<?php echo $canonical_url; ?>">
 
     <!-- JSON-LD Structured Data Schema -->
     <!-- WebSite Schema -->
@@ -178,7 +194,7 @@ $og_image = (!empty($active_meta['image']))
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Automatixes",
-      "url": "<?php echo $protocol; ?>://<?php echo $host; ?>",
+      "url": "<?php echo $canonical_base; ?>",
       "description": "An AI-first automation agency that designs custom AI agents and workflow automations to run business operations 24/7."
     }
     </script>
@@ -189,9 +205,9 @@ $og_image = (!empty($active_meta['image']))
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Automatixes",
-      "url": "<?php echo $protocol; ?>://<?php echo $host; ?>",
-      "logo": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/logo/automatixes-logo-new.png",
-      "image": "<?php echo $protocol; ?>://<?php echo $host; ?>/assets/img/services/ai_automations.jpg",
+      "url": "<?php echo $canonical_base; ?>",
+      "logo": "<?php echo $canonical_base; ?>/assets/img/logo/automatixes-logo-new.png",
+      "image": "<?php echo $canonical_base; ?>/assets/img/services/ai_automations.jpg",
       "description": "An AI-first automation agency that designs custom AI agents and workflow automations to run business operations 24/7.",
       "telephone": "+92-336-6920141",
       "email": "contact@automatixes.com",
@@ -206,7 +222,7 @@ $og_image = (!empty($active_meta['image']))
     </script>
 
     <!-- Service Schema -->
-    <?php if (in_array($page_key, ['ai-automated-solutions', 'website-development', 'product-shoot'])): ?>
+    <?php if (in_array($page_key, ['ai-Agent-Automations', 'ai-agent-automations', 'ai-automated-solutions', 'website-development', 'product-shoot'])): ?>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -216,7 +232,7 @@ $og_image = (!empty($active_meta['image']))
       "provider": {
         "@type": "Organization",
         "name": "Automatixes",
-        "url": "<?php echo $protocol; ?>://<?php echo $host; ?>"
+        "url": "<?php echo $canonical_base; ?>"
       },
       "description": "<?php echo $active_meta['desc']; ?>",
       "areaServed": {
@@ -237,7 +253,7 @@ $og_image = (!empty($active_meta['image']))
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "<?php echo $protocol; ?>://<?php echo $host; ?>"
+        "item": "<?php echo $canonical_base; ?>"
       },{
         "@type": "ListItem",
         "position": 2,
@@ -274,9 +290,9 @@ $og_image = (!empty($active_meta['image']))
             {
               "@type": "SiteNavigationElement",
               "position": 1,
-              "name": "AI Automated Solutions",
+              "name": "AI Agent & Automations",
               "description": "Custom autonomous AI agents and n8n/Make workflows for CRM, lead qualification, and support.",
-              "url": "https://www.automatixes.com/ai-automated-solutions"
+              "url": "https://www.automatixes.com/ai-Agent-Automations"
             },
             {
               "@type": "SiteNavigationElement",
@@ -378,17 +394,59 @@ $og_image = (!empty($active_meta['image']))
                             </a>
                             <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
                                 <li><a class="dropdown-item py-2 fw-semibold" href="whatsapp-api"><i class="fa-brands fa-whatsapp text-success me-2"></i>WhatsApp Multi-Device API</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold" href="ai-automated-solutions">AI Automated Solutions</a></li>
+                                <li><a class="dropdown-item py-2 fw-semibold" href="ai-Agent-Automations"><i class="fa-solid fa-robot text-accent-neon me-2"></i>AI Agent & Automations</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold d-flex align-items-center justify-content-between" href="voice-agent"><span>AI Voice Agents</span> <span class="badge rounded-pill ms-2" style="font-size: 0.65rem; background: #D4FF3D !important; color: #0a0e1a !important; font-weight: 700;">🔥 HIGH DEMAND</span></a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold" href="product-shoot">AI Product Staging & Visuals</a></li>
                             </ul>
                         </li>
-                                                <li class="nav-item"><a class="nav-link text-nowrap" href="portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link text-nowrap" href="portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="process">Process</a></li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="blogs">Blogs</a></li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="contact">Contact us</a></li>
+
+                        <!-- Mobile Language Switcher -->
+                        <li class="nav-item d-lg-none mt-2 pt-2 border-top border-secondary">
+                            <div class="d-flex align-items-center justify-content-between px-2">
+                                <span class="text-white-50 small"><i class="fa-solid fa-globe me-2 text-accent-neon"></i>Language</span>
+                                <select class="form-select form-select-sm bg-dark text-white border-secondary w-auto" onchange="setSiteLanguage(this.value)">
+                                    <option value="en">English (EN)</option>
+                                    <option value="fa">فارسی (Persian)</option>
+                                    <option value="ar">العربية (Arabic)</option>
+                                    <option value="ur">اردو (Urdu)</option>
+                                    <option value="es">Español (Spanish)</option>
+                                    <option value="fr">Français (French)</option>
+                                    <option value="de">Deutsch (German)</option>
+                                    <option value="ru">Русский (Russian)</option>
+                                    <option value="zh-CN">中文 (Chinese)</option>
+                                    <option value="tr">Türkçe (Turkish)</option>
+                                </select>
+                            </div>
+                        </li>
                     </ul>
-                    <div class="d-none d-lg-block">
+
+                    <!-- Desktop Actions: Language Selector & CTA -->
+                    <div class="d-none d-lg-flex align-items-center gap-3">
+                        <div class="dropdown language-switcher-dropdown">
+                            <button class="btn btn-sm btn-outline-light rounded-pill px-3 py-1.5 d-flex align-items-center gap-2 border-secondary" type="button" id="langDropdownBtn" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 13px; background: rgba(255,255,255,0.05);">
+                                <i class="fa-solid fa-globe text-accent-neon"></i>
+                                <span id="activeLangText">EN</span>
+                                <i class="fa-solid fa-chevron-down opacity-50" style="font-size: 10px;"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 bg-dark py-2" aria-labelledby="langDropdownBtn" style="min-width: 200px; border: 1px solid rgba(255,255,255,0.12) !important; border-radius: 12px; z-index: 1050;">
+                                <li><h6 class="dropdown-header text-uppercase text-muted" style="font-size: 10px; letter-spacing: 1px;">Select Language</h6></li>
+                                <li><a class="dropdown-item py-1.5 text-white d-flex align-items-center justify-content-between" href="javascript:void(0)" onclick="setSiteLanguage('en')"><span>English</span> <small class="text-white-50">EN</small></a></li>
+                                <li><a class="dropdown-item py-1.5 text-white d-flex align-items-center justify-content-between" href="javascript:void(0)" onclick="setSiteLanguage('fa')"><span class="fw-bold" style="color: var(--accent-neon);">فارسی (Persian)</span> <small class="badge bg-surface-2 text-accent-neon">FA</small></a></li>
+                                <li><a class="dropdown-item py-1.5 text-white d-flex align-items-center justify-content-between" href="javascript:void(0)" onclick="setSiteLanguage('ar')"><span>العربية (Arabic)</span> <small class="text-white-50">AR</small></a></li>
+                                <li><a class="dropdown-item py-1.5 text-white d-flex align-items-center justify-content-between" href="javascript:void(0)" onclick="setSiteLanguage('ur')"><span>اردو (Urdu)</span> <small class="text-white-50">UR</small></a></li>
+                                <li><hr class="dropdown-divider border-secondary opacity-25"></li>
+                                <li><a class="dropdown-item py-1.5 text-white d-flex align-items-center justify-content-between" href="javascript:void(0)" onclick="setSiteLanguage('es')"><span>Español (Spanish)</span> <small class="text-white-50">ES</small></a></li>
+                                <li><a class="dropdown-item py-1.5 text-white d-flex align-items-center justify-content-between" href="javascript:void(0)" onclick="setSiteLanguage('fr')"><span>Français (French)</span> <small class="text-white-50">FR</small></a></li>
+                                <li><a class="dropdown-item py-1.5 text-white d-flex align-items-center justify-content-between" href="javascript:void(0)" onclick="setSiteLanguage('de')"><span>Deutsch (German)</span> <small class="text-white-50">DE</small></a></li>
+                                <li><a class="dropdown-item py-1.5 text-white d-flex align-items-center justify-content-between" href="javascript:void(0)" onclick="setSiteLanguage('ru')"><span>Русский (Russian)</span> <small class="text-white-50">RU</small></a></li>
+                                <li><a class="dropdown-item py-1.5 text-white d-flex align-items-center justify-content-between" href="javascript:void(0)" onclick="setSiteLanguage('zh-CN')"><span>中文 (Chinese)</span> <small class="text-white-50">ZH</small></a></li>
+                                <li><a class="dropdown-item py-1.5 text-white d-flex align-items-center justify-content-between" href="javascript:void(0)" onclick="setSiteLanguage('tr')"><span>Türkçe (Turkish)</span> <small class="text-white-50">TR</small></a></li>
+                            </ul>
+                        </div>
                         <a href="contact" class="btn btn-brand rounded-pill px-4 py-2 fw-semibold text-nowrap">Get Started</a>
                     </div>
                 </div>
@@ -396,6 +454,9 @@ $og_image = (!empty($active_meta['image']))
         </div>
     </header>
     <!-- Header Navigation End -->
+
+    <!-- Hidden Google Translate Element -->
+    <div id="google_translate_element" style="display: none !important;"></div>
 
     <div id="smooth-wrapper">
         <div id="smooth-content">

@@ -400,7 +400,7 @@
                                 <i class="fa-solid fa-robot" style="font-size: 1.3rem; color: #D4FF3D !important;"></i>
                                 <span class="text-white-50 font-monospace small">AI Agents &amp; Workflow Automations</span>
                             </div>
-                            <h3 class="mb-3"><a href="ai-automated-solutions" class="text-white text-decoration-none">AI Automated Solutions</a></h3>
+                            <h3 class="mb-3"><a href="ai-Agent-Automations" class="text-white text-decoration-none">AI Agent & Automations</a></h3>
                             <p class="text-white-50 mb-3">Smart digital agents and custom n8n / Make pipelines that automate support, lead triage, and sync your business software 24/7.</p>
                             <ul class="list-unstyled text-white-50 small mb-4" style="line-height: 2;">
                                 <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>Multi-Platform Sync (WhatsApp, CRM, Email, Slack)</li>
@@ -410,7 +410,7 @@
                         </div>
                     </div>
                     <div class="p-2 pt-0">
-                        <a href="ai-automated-solutions" class="btn btn-sm btn-brand rounded-pill px-4 py-2 fw-bold text-nowrap d-inline-flex align-items-center gap-2 shadow text-dark" style="background: #D4FF3D !important; color: #0a0e1a !important; border: none;">
+                        <a href="ai-Agent-Automations" class="btn btn-sm btn-brand rounded-pill px-4 py-2 fw-bold text-nowrap d-inline-flex align-items-center gap-2 shadow text-dark" style="background: #D4FF3D !important; color: #0a0e1a !important; border: none;">
                             <span>Explore Automations</span>
                             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                         </a>
@@ -489,7 +489,7 @@
                         <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-success mt-1 me-3"></i> <span>Dynamic problem solving</span></li>
                         <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-success mt-1 me-3"></i> <span>Custom trained on your knowledge base</span></li>
                     </ul>
-                    <a href="ai-automated-solutions" class="btn btn-outline-light btn-lg w-100 fw-bold border-2">Explore AI Agents <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    <a href="ai-Agent-Automations" class="btn btn-outline-light btn-lg w-100 fw-bold border-2">Explore AI Agents <i class="fa-solid fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
 
@@ -509,7 +509,7 @@
                         <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-success mt-1 me-3"></i> <span>API & Webhook integrations</span></li>
                         <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-success mt-1 me-3"></i> <span>100% predictable outcomes</span></li>
                     </ul>
-                    <a href="ai-automated-solutions" class="btn btn-outline-light btn-lg w-100 fw-bold border-2">Explore Automations <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    <a href="ai-Agent-Automations" class="btn btn-outline-light btn-lg w-100 fw-bold border-2">Explore Automations <i class="fa-solid fa-arrow-right ms-2"></i></a>
                 </div>
             </div>
         </div>
@@ -1163,7 +1163,7 @@ function openWorkflowModal() {
                         <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Dedicated Pipeline Monitoring & Support</span></li>
                     </ul>
                     <div class="mt-auto pt-4">
-                        <a href="ai-automated-solutions" class="btn btn-outline-brand w-100 rounded-pill py-3 fw-extrabold shadow-sm hover-lift">Explore Solutions</a>
+                        <a href="ai-Agent-Automations" class="btn btn-outline-brand w-100 rounded-pill py-3 fw-extrabold shadow-sm hover-lift">Explore Solutions</a>
                     </div>
                 </div>
             </div>
@@ -1207,7 +1207,7 @@ function openWorkflowModal() {
                 <span>Book a Free Consultation</span>
                 <span class="arrow-btn"><i class="fa-solid fa-calendar-check"></i></span>
             </a>
-            <a href="ai-automated-solutions" class="btn btn-outline-light btn-lg px-5 py-3">
+            <a href="ai-Agent-Automations" class="btn btn-outline-light btn-lg px-5 py-3">
                 <span>See Services</span>
             </a>
         </div>
