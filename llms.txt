@@ -29,11 +29,6 @@ Automatixes operates **Globally**, with primary operational focus and localized 
 - **Features:** Development of secure, responsive single-page apps (SPAs) optimized for page speed, Core Web Vitals, and automated lead conversion.
 - **URL:** [https://automatixes.com/website-development](https://automatixes.com/website-development)
 
-### 4. Commercial Product Shoot
-- **Description:** High-end e-commerce product photography.
-- **Features:** Professional studio lighting and expert prop styling designed to increase conversion rates for luxury and consumer brands.
-- **URL:** [https://automatixes.com/product-shoot](https://automatixes.com/product-shoot)
-
 ## Pricing & Value Proposition
 Automatixes provides transparent pricing, free initial AI operations audits, and focuses on measurable ROI through reduced labor costs and increased lead capture rates. We offer a free online invoice generator tool as a utility to our B2B audience: [https://automatixes.com/invoice-maker](https://automatixes.com/invoice-maker).
 

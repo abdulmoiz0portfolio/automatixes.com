@@ -38,12 +38,6 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . PHP_EOL;
         <priority>0.8</priority>
     </url>
     <url>
-        <loc><?php echo $base_url; ?>/product-shoot</loc>
-        <lastmod><?php echo date('Y-m-d'); ?></lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc><?php echo $base_url; ?>/invoice-maker</loc>
         <lastmod><?php echo date('Y-m-d'); ?></lastmod>
         <changefreq>monthly</changefreq>

@@ -418,48 +418,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Additional Offerings Separator -->
-        <div class="text-center my-5 pt-3 wow fadeInUp" data-wow-delay=".5s">
-            <span class="badge rounded-pill border border-secondary text-light mb-2 px-3 py-1.5" style="background: rgba(255,255,255,0.05); font-size: 11px; letter-spacing: 2px;">SPECIALIZED CAPABILITIES</span>
-            <h4 class="text-white fw-bold font-monospace text-uppercase" style="font-size: 18px; letter-spacing: 1.5px;">Additional Services</h4>
-            <div class="mx-auto bg-secondary bg-opacity-25 mt-2" style="width: 60px; height: 2px;"></div>
-        </div>
-
-        <!-- Row 2: Additional Services (AI Product Staging) -->
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-6 col-md-8">
-                <div class="card-service-item h-100 d-flex flex-column justify-content-between wow fadeInUp" data-wow-delay=".6s" style="border: 1px solid rgba(255, 255, 255, 0.08); background: rgba(18, 24, 38, 0.75); position: relative; overflow: hidden; border-radius: 20px;">
-                    <div>
-                        <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm position-relative">
-                            <img src="assets/img/services/product_shoot.jpg" alt="AI Product Staging and Visuals" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;">
-                            <span class="badge position-absolute top-0 end-0 m-3 text-dark rounded-pill px-3 py-1.5 shadow fw-bold" style="font-size: 11px; background: #D4FF3D !important; color: #0a0e1a !important; letter-spacing: 0.5px; border: none;">
-                                <i class="fa-solid fa-wand-magic-sparkles me-1" style="color: #0a0e1a !important;"></i> 3D STAGING
-                            </span>
-                        </div>
-                        <div class="content p-2">
-                            <div class="d-flex align-items-center gap-2 mb-2">
-                                <i class="fa-solid fa-wand-magic-sparkles" style="font-size: 1.3rem; color: #D4FF3D !important;"></i>
-                                <span class="text-white-50 font-monospace small">AI Visuals &amp; Background Staging</span>
-                            </div>
-                            <h3 class="mb-3"><a href="product-shoot" class="text-white text-decoration-none">AI Product Staging &amp; Visuals</a></h3>
-                            <p class="text-white-50 mb-3">Transform basic raw product shots into stunning, high-converting commercial assets with hyper-realistic AI background replacement, 3D lighting, and cinematic manipulation.</p>
-                            <ul class="list-unstyled text-white-50 small mb-4" style="line-height: 2;">
-                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>Photorealistic 3D AI Product Staging &amp; Shadowing</li>
-                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>Studio Lighting &amp; Cinematic Background Replacement</li>
-                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>High-Converting E-Commerce Visual Assets (&lt;24h)</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="p-2 pt-0">
-                        <a href="product-shoot" class="btn btn-sm btn-brand rounded-pill px-4 py-2 fw-bold text-nowrap d-inline-flex align-items-center gap-2 shadow text-dark" style="background: #D4FF3D !important; color: #0a0e1a !important; border: none;">
-                            <span>Explore Product Staging</span>
-                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -539,13 +497,13 @@
             </p>
         </div>
 
-        <!-- 4-Card Portfolio Grid -->
-        <div class="row g-4 mb-5">
+        <!-- 3-Card Portfolio Grid -->
+        <div class="row g-4 mb-5 justify-content-center">
             <!-- Project 1: Real Estate AI Chatbot -->
-            <div class="col-md-6 col-lg-6">
+            <div class="col-md-6 col-lg-4">
                 <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
                     <!-- Project Image with Floating Badge -->
-                    <div class="position-relative overflow-hidden" style="height: 250px; background: #070a12;">
+                    <div class="position-relative overflow-hidden" style="height: 230px; background: #070a12;">
                         <img src="assets/media/n8n/workflows/workflow-02-real-estate-ai-agent.png" 
                              alt="PropertyBot - Real Estate AI Assistant" 
                              class="w-100 h-100 object-fit-cover" 
@@ -583,17 +541,17 @@
             </div>
 
             <!-- Project 2: AI Voice Calling Agent -->
-            <div class="col-md-6 col-lg-6">
+            <div class="col-md-6 col-lg-4">
                 <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
                     <!-- Project Image with Floating Badge -->
-                    <div class="position-relative overflow-hidden" style="height: 250px; background: #070a12;">
+                    <div class="position-relative overflow-hidden" style="height: 230px; background: #070a12;">
                         <img src="assets/img/services/ai_agents.jpg" 
-                             alt="AI Voice Agent Calling System" 
+                             alt="Autonomous Calling Voice Bot" 
                              class="w-100 h-100 object-fit-cover" 
                              loading="lazy" 
                              style="transition: transform 0.4s ease;">
-                        <span class="badge rounded-pill px-3 py-1.5 position-absolute top-0 start-0 m-3 shadow" style="background: #0284c7; color: #ffffff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;">
-                            <i class="fa-solid fa-microphone-lines me-1"></i> Voice AI Infrastructure
+                        <span class="badge rounded-pill px-3 py-1.5 position-absolute top-0 start-0 m-3 shadow" style="background: #ef4444; color: #ffffff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;">
+                            <i class="fa-solid fa-microphone-lines me-1"></i> Conversational Voice
                         </span>
                     </div>
 
@@ -602,7 +560,7 @@
                         <div>
                             <h4 class="h5 fw-bold text-white mb-2">Autonomous Inbound & Outbound Calling Voice Bot</h4>
                             <p class="text-secondary small mb-3" style="line-height: 1.6;">
-                                Sub-400ms human-like conversational telephone voicebot that answers customer calls, qualifies inbound prospects, takes voice bookings, and writes transcripts directly to CRM and calendar.
+                                Hyper-realistic sub-400ms voice agent answering inbound customer calls, qualifying high-intent prospects, answering objections, and synchronizing appointments directly into Google Calendar & CRM.
                             </p>
                             <div class="d-flex align-items-center gap-1.5 text-white-50 small mb-3 font-monospace">
                                 <i class="fa-solid fa-location-dot text-danger"></i>
@@ -624,10 +582,10 @@
             </div>
 
             <!-- Project 3: Automated Cold Email Outreach Engine -->
-            <div class="col-md-6 col-lg-6">
+            <div class="col-md-6 col-lg-4">
                 <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
                     <!-- Project Image with Floating Badge -->
-                    <div class="position-relative overflow-hidden" style="height: 250px; background: #070a12;">
+                    <div class="position-relative overflow-hidden" style="height: 230px; background: #070a12;">
                         <img src="assets/media/n8n/workflows/n8n-email-marketing-workflow.png" 
                              alt="Automated Cold Email Engine" 
                              class="w-100 h-100 object-fit-cover" 
@@ -657,47 +615,6 @@
                             </span>
                             <a href="ai-Agent-Automations" class="btn btn-sm btn-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1">
                                 <span>Inspect Workflow</span>
-                                <i class="fa-solid fa-arrow-right" style="font-size: 11px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 4: Commercial 3D Product Staging -->
-            <div class="col-md-6 col-lg-6">
-                <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
-                    <!-- Project Image with Floating Badge -->
-                    <div class="position-relative overflow-hidden" style="height: 250px; background: #070a12;">
-                        <img src="assets/img/services/product_shoot.jpg" 
-                             alt="Commercial 3D Product Staging" 
-                             class="w-100 h-100 object-fit-cover" 
-                             loading="lazy" 
-                             style="transition: transform 0.4s ease;">
-                        <span class="badge rounded-pill px-3 py-1.5 position-absolute top-0 start-0 m-3 shadow" style="background: #d97706; color: #ffffff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;">
-                            <i class="fa-solid fa-camera me-1"></i> 3D Neural Staging
-                        </span>
-                    </div>
-
-                    <!-- Card Body -->
-                    <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-                        <div>
-                            <h4 class="h5 fw-bold text-white mb-2">Commercial AI 3D Product Staging Studio</h4>
-                            <p class="text-secondary small mb-3" style="line-height: 1.6;">
-                                High-end virtual product photography studio that transforms flat packaging photos into photorealistic 3D environments with studio lighting, ray-traced reflections, and 4K resolution.
-                            </p>
-                            <div class="d-flex align-items-center gap-1.5 text-white-50 small mb-3 font-monospace">
-                                <i class="fa-solid fa-location-dot text-danger"></i>
-                                <span>Amazon & Shopify Ready • 4K Ray-Tracing</span>
-                            </div>
-                        </div>
-
-                        <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
-                            <span class="badge bg-dark text-success border border-success border-opacity-25 font-monospace small">
-                                <i class="fa-solid fa-image text-success me-1" style="font-size: 8px;"></i> 4K RENDERS
-                            </span>
-                            <a href="product-shoot" class="btn btn-sm btn-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1">
-                                <span>View Showcase</span>
                                 <i class="fa-solid fa-arrow-right" style="font-size: 11px;"></i>
                             </a>
                         </div>
@@ -1322,9 +1239,9 @@ function openWorkflowModal() {
                                     <i class="fa-solid fa-wand-magic-sparkles"></i>
                                     <span>Launch AI Upscaler (Live)</span>
                                 </a>
-                                <a href="product-shoot" class="btn btn-outline-light rounded-pill px-3.5 py-2.5 small fw-semibold d-inline-flex align-items-center gap-1.5">
-                                    <i class="fa-solid fa-camera text-accent-neon"></i>
-                                    <span>Explore Product Staging</span>
+                                <a href="https://wa.me/923366920141?text=Hi!%20I%20want%20to%20build%20a%20custom%20AI%20tool%20like%20AI%20Upscaler." target="_blank" rel="noopener" class="btn btn-outline-light rounded-pill px-3.5 py-2.5 small fw-semibold d-inline-flex align-items-center gap-1.5">
+                                    <i class="fa-solid fa-code text-accent-neon"></i>
+                                    <span>Build Custom AI Tool</span>
                                 </a>
                             </div>
                         </div>
@@ -1741,7 +1658,7 @@ function openWorkflowModal() {
         <div class="row g-4 justify-content-center align-items-stretch">
             
             <!-- Package 1: AI Voice Agent Deployment -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+            <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay=".2s">
                 <div class="card pricing-card h-100 bg-surface border-0 rounded-4 p-4 p-lg-5 position-relative text-center hover-lift d-flex flex-column" style="box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05) !important;">
                     <div class="mb-4">
                         <div class="bg-brand-translucent text-accent-brand rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 60px; height: 60px; font-size: 24px;">
@@ -1766,7 +1683,7 @@ function openWorkflowModal() {
             </div>
 
             <!-- Package 2: AI Automation (POPULAR) -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+            <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                 <div class="card pricing-card scale-lg-up h-100 bg-surface rounded-4 p-4 p-lg-5 position-relative text-center d-flex flex-column" style="box-shadow: 0 15px 40px rgba(200, 224, 25, 0.15); border: 2px solid var(--accent-neon) !important;">
                     
                     <div class="mb-4 mt-2">
@@ -1787,30 +1704,6 @@ function openWorkflowModal() {
                     </ul>
                     <div class="mt-auto pt-4">
                         <a href="ai-Agent-Automations" class="btn btn-outline-brand w-100 rounded-pill py-3 fw-extrabold shadow-sm hover-lift">Explore Solutions</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Package 3: AI Product Staging & Visuals -->
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                <div class="card pricing-card h-100 bg-surface border-0 rounded-4 p-4 p-lg-5 position-relative text-center hover-lift d-flex flex-column" style="box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05) !important;">
-                    <div class="mb-4">
-                        <div class="bg-brand-translucent text-accent-brand rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 60px; height: 60px; font-size: 24px;">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        </div>
-                        <h3 class="h4 fw-bold text-white mb-2">AI Product Staging</h3>
-                        <p class="text-muted small">Photorealistic AI backgrounds & edits</p>
-                    </div>
-                    <hr class="border-secondary opacity-25 mb-4">
-                    <ul class="list-unstyled text-white-50 mb-5 text-start" style="font-size: 0.95rem;">
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>AI Background Replacement & 3D Staging</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Dynamic Cinematic Lighting & Shadows</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>High-End Retouching & Color Correction</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Studio-Quality Visuals from Raw Photos</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>E-Commerce & Social Media Ready Assets</span></li>
-                    </ul>
-                    <div class="mt-auto pt-4">
-                        <a href="product-shoot" class="btn btn-outline-brand w-100 rounded-pill py-3 fw-extrabold shadow-sm hover-lift">Explore AI Visuals</a>
                     </div>
                 </div>
             </div>
@@ -1860,7 +1753,7 @@ function openWorkflowModal() {
                 <div class="carousel-item text-center py-4">
                     <div class="fs-2 text-accent-brand mb-3"><i class="fa-solid fa-quote-left"></i></div>
                     <p class="fs-5 text-white-50 px-md-5 italic">
-                        "The AI Voice Agent they deployed handles our customer queries and call bookings around the clock without latency. Coupled with their mind-blowing AI product staging and background edits, our brand conversion rate skyrocketed!"
+                        "The AI Voice Agent they deployed handles our customer queries and call bookings around the clock without latency. Coupled with their custom automated lead pipelines, our response speed and conversion rate skyrocketed!"
                     </p>
                     <h5 class="fw-bold text-white mt-4 mb-1">Sarah K.</h5>
                     <p class="text-white-50 small">Brand Manager, Luxe Aesthetics</p>
@@ -2020,7 +1913,6 @@ function openWorkflowModal() {
                                     <option value="" disabled selected>Select a Service</option>
                                     <option value="AI Voice Agents">Autonomous AI Voice Agents</option>
                                     <option value="AI Automations">AI Automations (n8n/Make)</option>
-                                    <option value="Product Shoot">Commercial Product Shoot</option>
                                     <option value="CRM Integration">CRM & Custom API Integration</option>
                                     <option value="Consultation">General Automation Consultation</option>
                                 </select>
@@ -2107,7 +1999,7 @@ function openWorkflowModal() {
     "@type": "Rating",
     "ratingValue": "5"
   },
-  "reviewBody": "The AI Voice Agent they deployed handles our customer queries and call bookings around the clock without latency. Coupled with their high-end product shoot photography, our brand conversion rate skyrocketed!"
+  "reviewBody": "The AI Voice Agent they deployed handles our customer queries and call bookings around the clock without latency. Coupled with their custom automated lead pipelines, our response speed and conversion rate skyrocketed!"
 }
 </script>
 

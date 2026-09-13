@@ -49,7 +49,6 @@
                         <ul class="list-unstyled footer-menu">
                             <li><a href="ai-Agent-Automations">AI Agent & Automations</a></li>
                             <li><a href="voice-agent" class="d-inline-flex align-items-center gap-1.5"><span>AI Voice Agents</span> <span class="badge" style="font-size: 9px; font-weight: 700; border-radius: 4px; background: #D4FF3D !important; color: #0a0e1a !important;">HOT</span></a></li>
-                            <li><a href="product-shoot">AI Product Staging</a></li>
                             <li><a href="case-study" class="d-inline-flex align-items-center gap-1.5"><span style="color: var(--accent-neon, #C8E019);">n8n Lead Recovery</span> <span class="badge" style="font-size: 8px; font-weight: 700; border-radius: 4px; background: rgba(200, 224, 25, 0.15); color: #C8E019; border: 1px solid rgba(200, 224, 25, 0.3);">DEMO</span></a></li>
                         </ul>
                     </div>

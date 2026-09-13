@@ -1,4 +1,8 @@
-<?php $page_key = 'product-shoot'; include 'header.php'; ?>
+<?php 
+header("HTTP/1.1 301 Moved Permanently");
+header("Location: ai-Agent-Automations");
+exit();
+?>
 
 <!-- Product Shoot Hero Section -->
 <section class="subpage-hero text-center text-white">

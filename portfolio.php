@@ -216,52 +216,8 @@ include 'header.php';
                 </div>
             </div>
 
-            <!-- 3. BENTO CARD: AI Product Staging & 3D Visuals -->
-            <div class="col-lg-6">
-                <div class="rounded-5 overflow-hidden h-100 position-relative p-1" style="background: linear-gradient(145deg, rgba(245, 158, 11, 0.15), rgba(255, 255, 255, 0.03)); border: 1px solid rgba(255, 255, 255, 0.1);">
-                    <div class="rounded-5 p-4 p-md-5 h-100 d-flex flex-column justify-content-between" style="background: #0d0f17;">
-                        <div>
-                            <div class="d-flex justify-content-between align-items-center mb-4">
-                                <span class="badge px-3 py-1.5 rounded-pill" style="background: rgba(245, 158, 11, 0.12); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); font-size: 0.75rem; font-weight: 700;">
-                                    <i class="fa-solid fa-wand-magic-sparkles me-1.5"></i> AI 3D PRODUCT STAGING
-                                </span>
-                                <span class="badge px-2.5 py-1 rounded-pill" style="background: rgba(34, 197, 94, 0.1); color: #4ade80; font-size: 0.75rem;">
-                                    90% Studio Cost Saved
-                                </span>
-                            </div>
-
-                            <h3 class="h4 fw-extrabold text-white mb-2">
-                                Photorealistic Commercial Product Scenes & E-Commerce Staging
-                            </h3>
-                            <p class="text-secondary small mb-4" style="line-height: 1.6; color: #94a3b8 !important;">
-                                Raw white-background bottle and luxury packaging photos digitally composited into high-end 3D environments with ray-traced lighting, natural reflections, and studio color grading.
-                            </p>
-
-                            <!-- Gallery Strip -->
-                            <div class="row g-2 mb-4">
-                                <div class="col-4">
-                                    <img src="assets/img/services/skincare_shoot.jpg" class="img-fluid rounded-3 border border-secondary border-opacity-25 w-100 object-fit-cover" style="height: 110px;" alt="Skincare AI Staging">
-                                </div>
-                                <div class="col-4">
-                                    <img src="assets/img/services/headphones_shoot.jpg" class="img-fluid rounded-3 border border-secondary border-opacity-25 w-100 object-fit-cover" style="height: 110px;" alt="Headphones Commercial Staging">
-                                </div>
-                                <div class="col-4">
-                                    <img src="assets/img/services/watch_shoot.jpg" class="img-fluid rounded-3 border border-secondary border-opacity-25 w-100 object-fit-cover" style="height: 110px;" alt="Watch Luxury Staging">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <a href="product-shoot" class="btn btn-outline-light rounded-pill w-100 py-2.5 small fw-semibold">
-                                View Full Product Showcase Gallery &rarr;
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 4. BENTO CARD: n8n Multi-Channel CRM Lead Pipeline -->
-            <div class="col-lg-6">
+            <!-- 3. BENTO CARD: n8n Multi-Channel CRM Lead Pipeline -->
+            <div class="col-12">
                 <div class="rounded-5 overflow-hidden h-100 position-relative p-1" style="background: linear-gradient(145deg, rgba(16, 185, 129, 0.15), rgba(255, 255, 255, 0.03)); border: 1px solid rgba(255, 255, 255, 0.1);">
                     <div class="rounded-5 p-4 p-md-5 h-100 d-flex flex-column justify-content-between" style="background: #0d0f17;">
                         <div>

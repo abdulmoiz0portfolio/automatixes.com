@@ -7,7 +7,7 @@
         <h1 class="display-4 fw-extrabold text-white">Our Services & Solutions</h1>
         <div class="title-underline"></div>
         <p class="lead text-white-50 mx-auto mt-4 max-w-700">
-            We provide specialized solutions across four primary areas: autonomous AI deployment, automated integration architecture, bespoke web development, and AI digital product staging.
+            We provide specialized solutions across enterprise AI agents, autonomous workflow pipelines, and bespoke web applications.
         </p>
     </div>
 </section>
@@ -72,25 +72,6 @@
             </div>
         </div>
 
-        <!-- Service 4 (Product Shoot) -->
-        <div class="row align-items-center g-5 mt-5 pt-5 flex-lg-row-reverse">
-            <div class="col-lg-6">
-                <div class="service-icon mb-4"><i class="fa-solid fa-camera text-accent-brand display-5"></i></div>
-                <h2 class="display-6 fw-extrabold text-white mb-3">AI Product Staging & Commercial Visuals</h2>
-                <p class="text-white-50 fs-5">
-                    We deliver high-end AI product staging and commercial edits. Combining neural 3D lighting, virtual scenes, and advanced ray-tracing shaders, we showcase your products with maximum visual appeal without physical studio overhead.
-                </p>
-                <ul class="list-unstyled text-white-50 mt-4">
-                    <li class="mb-2"><i class="fa-solid fa-check text-accent-brand me-2"></i> Photorealistic 3D Environmental Staging</li>
-                    <li class="mb-2"><i class="fa-solid fa-check text-accent-brand me-2"></i> Amazon & Shopify Main Image Compliance</li>
-                    <li class="mb-2"><i class="fa-solid fa-check text-accent-brand me-2"></i> 4K Ultra-High-Resolution Deliverables</li>
-                </ul>
-            </div>
-            <div class="col-lg-6">
-                <img src="assets/img/services/product_shoot.jpg" alt="Commercial Product Photography Studio" class="img-fluid rounded-4 border border-secondary border-opacity-25 shadow-sm">
-            </div>
-        </div>
-
     </div>
 </section>
 
@@ -122,10 +103,6 @@
                         <div class="form-check mb-3">
                             <input class="form-check-input calc-service" type="checkbox" value="1000" id="calcAuto">
                             <label class="form-check-label ms-2 fw-semibold text-white" for="calcAuto">End-to-End AI Automations (+$1,000)</label>
-                        </div>
-                        <div class="form-check mb-3">
-                            <input class="form-check-input calc-service" type="checkbox" value="600" id="calcShoot">
-                            <label class="form-check-label ms-2 fw-semibold text-white" for="calcShoot">AI Product Staging (+$600)</label>
                         </div>
                     </div>
                     

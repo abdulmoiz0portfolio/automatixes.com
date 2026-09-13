@@ -42,12 +42,6 @@ $meta_config = [
         'keywords' => 'AI Agent, AI Automation, Autonomous AI Agents, n8n agency, Make.com integration, custom RAG, workflow automation',
         'url' => 'ai-Agent-Automations'
     ],
-    'product-shoot' => [
-        'title' => 'AI Product Staging, 3D Backgrounds & Commercial Edits | Automatixes',
-        'desc' => 'Transform simple raw product photos into eye-catching commercial masterpieces with photorealistic AI backgrounds, 3D staging, and cinematic lighting.',
-        'keywords' => 'AI Product Staging, AI Background Replacement, Commercial Product Editing, E-commerce Mockup Staging, Automatixes',
-        'url' => 'product-shoot'
-    ],
     'contact' => [
         'title' => 'Book a Free AI Operations Audit & Consultation | Automatixes',
         'desc' => 'Ready to automate your operations? Contact Automatixes to schedule a free automation audit. We connect your calendar, CRM, and communication tools.',
@@ -222,7 +216,7 @@ $og_image = (!empty($active_meta['image']))
     </script>
 
     <!-- Service Schema -->
-    <?php if (in_array($page_key, ['ai-Agent-Automations', 'ai-agent-automations', 'ai-automated-solutions', 'website-development', 'product-shoot'])): ?>
+    <?php if (in_array($page_key, ['ai-Agent-Automations', 'ai-agent-automations', 'ai-automated-solutions', 'website-development'])): ?>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -304,20 +298,13 @@ $og_image = (!empty($active_meta['image']))
             {
               "@type": "SiteNavigationElement",
               "position": 3,
-              "name": "AI Product Staging & Shoots",
-              "description": "Photorealistic 3D AI staging and commercial product mockups for e-commerce brands.",
-              "url": "https://www.automatixes.com/product-shoot"
-            },
-            {
-              "@type": "SiteNavigationElement",
-              "position": 4,
               "name": "Our Process & Methodology",
               "description": "4-stage engineering blueprint: Audit, Architecture, Integration, and 24/7 Operations.",
               "url": "https://www.automatixes.com/process"
             },
             {
               "@type": "SiteNavigationElement",
-              "position": 5,
+              "position": 4,
               "name": "Customer Ratings & Reviews",
               "description": "Verified client testimonials and real ROI case studies from enterprise automation deployments.",
               "url": "https://www.automatixes.com/reviews"
@@ -395,7 +382,6 @@ $og_image = (!empty($active_meta['image']))
                             <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
                                 <li><a class="dropdown-item py-2 fw-semibold" href="ai-Agent-Automations"><i class="fa-solid fa-robot text-accent-neon me-2"></i>AI Agent & Automations</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold d-flex align-items-center justify-content-between" href="voice-agent"><span>AI Voice Agents</span> <span class="badge rounded-pill ms-2" style="font-size: 0.65rem; background: #D4FF3D !important; color: #0a0e1a !important; font-weight: 700;">🔥 HIGH DEMAND</span></a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold" href="product-shoot">AI Product Staging & Visuals</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">

@@ -113,7 +113,7 @@
                     Automatixes is an international AI systems and workflow automation agency. We architect custom autonomous agents, multi-device WhatsApp business integrations, and automated CRM pipelines using industry-standard tools including n8n, Make, GoHighLevel, and custom Node.js/Python microservices.
                 </p>
                 <p class="text-white-50 mb-4 leading-relaxed">
-                    Whether you are an established agency needing automated lead qualification, an e-commerce brand wanting high-volume 3D product staging, or a SaaS company seeking round-the-clock AI support triage, we design custom systems that integrate seamlessly into your existing operations.
+                    Whether you are an established agency needing automated lead qualification, an e-commerce brand wanting intelligent automated customer support, or a SaaS company seeking round-the-clock AI triage, we design custom systems that integrate seamlessly into your existing operations.
                 </p>
                 
                 <!-- Key Expertise Indicators -->
