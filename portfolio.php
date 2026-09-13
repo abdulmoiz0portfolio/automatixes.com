@@ -158,31 +158,31 @@ include 'header.php';
                             <div class="col-lg-6">
                                 <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
                                     <span class="badge px-3 py-1.5 rounded-pill" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.35); font-size: 0.75rem; font-weight: 700;">
-                                        <i class="fa-solid fa-house-chimney me-1.5"></i> REAL ESTATE AI ASSISTANT
+                                        <i class="fa-solid fa-building-columns me-1.5"></i> REAL ESTATE CONCIERGE
                                     </span>
                                     <span class="badge px-3 py-1 rounded-pill" style="background: rgba(34, 197, 94, 0.12); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); font-size: 0.75rem;">
-                                        ● LIVE CLIENT PRODUCTION
+                                        ● LIVE PRODUCTION DESK
                                     </span>
                                 </div>
 
                                 <h2 class="h3 fw-extrabold text-white mb-3" style="letter-spacing: -0.02em;">
-                                    PropertyBot — Pakistan Real Estate AI Assistant
+                                    Property Advisor — Digital Real Estate Concierge
                                 </h2>
                                 <p class="text-secondary mb-4" style="line-height: 1.7; font-size: 0.95rem; color: #94a3b8 !important;">
-                                    A full-stack conversational intelligence agent purpose-built for Pakistan's property sector (Islamabad, Lahore, Karachi). Automatically pre-qualifies home buyer budgets, queries listings in real time, collects verified phone numbers & investor criteria, and books property viewings 24/7 without human intervention.
+                                    A dedicated digital advisory desk engineered for prime real estate developments across Pakistan (Islamabad, Lahore, Karachi). Automatically pre-qualifies buyer investment criteria, delivers verified pricing benchmarks, clarifies documentation (NOC & Fard), and schedules private site viewings 24/7.
                                 </p>
 
                                 <div class="row g-3 mb-4">
                                     <div class="col-sm-6">
                                         <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06);">
-                                            <div class="text-white fw-bold font-monospace mb-1" style="color: #34d399 !important;">100% Conversational</div>
+                                            <div class="text-white fw-bold font-monospace mb-1" style="color: #34d399 !important;">Executive Concierge</div>
                                             <div class="text-secondary small">Smart budget & locality filtering</div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06);">
-                                            <div class="text-white fw-bold font-monospace mb-1" style="color: #C8E019 !important;">24/7 Lead Capture</div>
-                                            <div class="text-secondary small">Zero lead leakage or drop-off</div>
+                                            <div class="text-white fw-bold font-monospace mb-1" style="color: #C8E019 !important;">24/7 Advisory Desk</div>
+                                            <div class="text-secondary small">Zero lead drop-off or latency</div>
                                         </div>
                                     </div>
                                 </div>
@@ -190,23 +190,23 @@ include 'header.php';
                                 <div class="d-flex flex-wrap gap-2 mb-4">
                                     <span class="badge px-2.5 py-1.5 rounded-3 bg-dark border border-secondary border-opacity-25 text-white-50 small">Tailwind CSS</span>
                                     <span class="badge px-2.5 py-1.5 rounded-3 bg-dark border border-secondary border-opacity-25 text-white-50 small">Plus Jakarta Sans</span>
-                                    <span class="badge px-2.5 py-1.5 rounded-3 bg-dark border border-secondary border-opacity-25 text-white-50 small">Conversational Real Estate AI</span>
-                                    <span class="badge px-2.5 py-1.5 rounded-3 bg-dark border border-secondary border-opacity-25 text-white-50 small">Automated Lead Ingest</span>
+                                    <span class="badge px-2.5 py-1.5 rounded-3 bg-dark border border-secondary border-opacity-25 text-white-50 small">Digital Concierge Suite</span>
+                                    <span class="badge px-2.5 py-1.5 rounded-3 bg-dark border border-secondary border-opacity-25 text-white-50 small">Official Advisory Desk</span>
                                 </div>
 
                                 <div>
-                                    <a href="https://abdulmoiz0portfolio.github.io/real-estate-chatbot/" target="_blank" rel="noopener" class="btn btn-brand rounded-pill px-4 py-3 fw-bold d-inline-flex align-items-center gap-2 shadow">
+                                    <a href="propertybot" class="btn btn-brand rounded-pill px-4 py-3 fw-bold d-inline-flex align-items-center gap-2 shadow">
                                         <span>Try Live Demo</span>
-                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        <i class="fa-solid fa-arrow-right"></i>
                                     </a>
                                 </div>
                             </div>
 
                             <div class="col-lg-6">
                                 <div class="rounded-4 overflow-hidden position-relative border border-secondary border-opacity-25 shadow-lg" style="background: #050507; min-height: 300px;">
-                                    <img src="assets/media/n8n/workflows/workflow-02-real-estate-ai-agent.png" alt="PropertyBot Pakistan Real Estate AI" class="img-fluid w-100 object-fit-cover" style="height: 320px;">
+                                    <img src="assets/media/n8n/workflows/workflow-02-real-estate-ai-agent.png" alt="Property Advisor Digital Real Estate Concierge" class="img-fluid w-100 object-fit-cover" style="height: 320px;">
                                     <div class="position-absolute bottom-0 start-0 end-0 p-3 d-flex justify-content-between align-items-center" style="background: linear-gradient(to top, rgba(5, 5, 7, 0.95), transparent);">
-                                        <span class="text-white small fw-bold font-monospace"><i class="fa-solid fa-laptop-code text-accent-neon me-1.5"></i> abdulmoiz0portfolio.github.io/real-estate-chatbot</span>
+                                        <span class="text-white small fw-bold font-monospace"><i class="fa-solid fa-laptop-code text-accent-neon me-1.5"></i> automatixes.com/propertybot</span>
                                         <span class="badge bg-success font-monospace">ONLINE & DEPLOYED</span>
                                     </div>
                                 </div>

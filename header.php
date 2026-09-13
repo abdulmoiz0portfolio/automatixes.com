@@ -89,6 +89,12 @@ $meta_config = [
         'desc' => 'How B2B lead generation agencies recover 30%+ lost pipeline with autonomous n8n workflows, Cloudflare DNS MX verification, and <60s speed-to-lead.',
         'keywords' => 'n8n Case Study, Lead Recovery Automation, Speed to Lead, DNS MX verification, Automatixes Case Study, n8n workflow',
         'url' => 'case-study'
+    ],
+    'propertybot' => [
+        'title' => 'Property Advisor — Digital Real Estate Concierge | Automatixes',
+        'desc' => 'Connect with our dedicated Property Advisory Desk for verified pricing benchmarks, documentation compliance (Fard & NOC), and private site viewings across prime developments in Pakistan.',
+        'keywords' => 'Property Advisor, Real Estate Concierge, DHA Lahore, Bahria Town, Real Estate Consultant, Automatixes',
+        'url' => 'propertybot'
     ]
 ];
 
@@ -382,62 +388,6 @@ $og_image = (!empty($active_meta['image']))
                             <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
                                 <li><a class="dropdown-item py-2 fw-semibold" href="ai-Agent-Automations"><i class="fa-solid fa-robot text-accent-neon me-2"></i>AI Agent & Automations</a></li>
                                 <li><a class="dropdown-item py-2 fw-semibold d-flex align-items-center justify-content-between" href="voice-agent"><span>AI Voice Agents</span> <span class="badge rounded-pill ms-2" style="font-size: 0.65rem; background: #D4FF3D !important; color: #0a0e1a !important; font-weight: 700;">🔥 HIGH DEMAND</span></a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle d-flex align-items-center gap-1.5" href="#" id="saasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <span>SaaS Tools</span>
-                                <span class="badge rounded-pill" style="font-size: 0.6rem; background: rgba(200, 224, 25, 0.2); color: var(--accent-neon); border: 1px solid rgba(200, 224, 25, 0.4);">LIVE</span>
-                            </a>
-                            <ul class="dropdown-menu border-0 shadow-lg p-2" aria-labelledby="saasDropdown" style="min-width: 290px; background: #0c1222; border: 1px solid rgba(255, 255, 255, 0.1) !important;">
-                                <li>
-                                    <a class="dropdown-item py-2 px-2.5 rounded-2 text-white d-flex align-items-center justify-content-between" href="https://invoicemaker.automatixes.com" target="_blank" rel="noopener">
-                                        <div class="d-flex align-items-center gap-2">
-                                            <div class="rounded-2 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; background: rgba(37, 211, 102, 0.15); color: #25D366;">
-                                                <i class="fa-solid fa-file-invoice-dollar fs-6"></i>
-                                            </div>
-                                            <div>
-                                                <div class="fw-bold small">Invoice Maker</div>
-                                                <div class="text-white-50" style="font-size: 11px;">Instant A4 PDF Generator</div>
-                                            </div>
-                                        </div>
-                                        <span class="badge bg-success bg-opacity-25 text-success small font-monospace">FREE</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item py-2 px-2.5 rounded-2 text-white d-flex align-items-center justify-content-between" href="https://qrcode.automatixes.com" target="_blank" rel="noopener">
-                                        <div class="d-flex align-items-center gap-2">
-                                            <div class="rounded-2 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; background: rgba(56, 189, 248, 0.15); color: #38bdf8;">
-                                                <i class="fa-solid fa-qrcode fs-6"></i>
-                                            </div>
-                                            <div>
-                                                <div class="fw-bold small">QR Dynamic Studio</div>
-                                                <div class="text-white-50" style="font-size: 11px;">Vector & Logo QR Codes</div>
-                                            </div>
-                                        </div>
-                                        <span class="badge bg-info bg-opacity-25 text-info small font-monospace">HOT</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item py-2 px-2.5 rounded-2 text-white d-flex align-items-center justify-content-between" href="https://upscaler.automatixes.com" target="_blank" rel="noopener">
-                                        <div class="d-flex align-items-center gap-2">
-                                            <div class="rounded-2 d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; background: rgba(212, 255, 61, 0.15); color: #D4FF3D;">
-                                                <i class="fa-solid fa-wand-magic-sparkles fs-6"></i>
-                                            </div>
-                                            <div>
-                                                <div class="fw-bold small">AI Image Upscaler 4K</div>
-                                                <div class="text-white-50" style="font-size: 11px;">Super-Resolution Engine</div>
-                                            </div>
-                                        </div>
-                                        <span class="badge bg-warning bg-opacity-25 text-warning small font-monospace">AI</span>
-                                    </a>
-                                </li>
-                                <li><hr class="dropdown-divider border-secondary border-opacity-25 my-1"></li>
-                                <li>
-                                    <a class="dropdown-item py-2 px-2.5 rounded-2 text-center text-accent-neon fw-semibold small" href="index#saas-tools">
-                                        <i class="fa-solid fa-sliders me-1"></i> Browse All SaaS Slides &rarr;
-                                    </a>
-                                </li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="portfolio">Portfolio</a></li>

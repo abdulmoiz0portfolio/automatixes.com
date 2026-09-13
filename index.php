@@ -505,25 +505,25 @@
                     <!-- Project Image with Floating Badge -->
                     <div class="position-relative overflow-hidden" style="height: 230px; background: #070a12;">
                         <img src="assets/media/n8n/workflows/workflow-02-real-estate-ai-agent.png" 
-                             alt="PropertyBot - Real Estate AI Assistant" 
+                             alt="Property Advisor - Digital Real Estate Concierge" 
                              class="w-100 h-100 object-fit-cover" 
                              loading="lazy" 
                              style="transition: transform 0.4s ease;">
-                        <span class="badge rounded-pill px-3 py-1.5 position-absolute top-0 start-0 m-3 shadow" style="background: #e65100; color: #ffffff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;">
-                            <i class="fa-solid fa-house-chimney me-1"></i> Real Estate AI Assistant
+                        <span class="badge rounded-pill px-3 py-1.5 position-absolute top-0 start-0 m-3 shadow" style="background: #059669; color: #ffffff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;">
+                            <i class="fa-solid fa-building-columns me-1"></i> Real Estate Concierge
                         </span>
                     </div>
 
                     <!-- Card Body -->
                     <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
                         <div>
-                            <h4 class="h5 fw-bold text-white mb-2">PropertyBot — Pakistan Real Estate AI Assistant</h4>
+                            <h4 class="h5 fw-bold text-white mb-2">Property Advisor — Digital Real Estate Concierge</h4>
                             <p class="text-secondary small mb-3" style="line-height: 1.6;">
-                                Production conversational AI agent trained for the Pakistan real estate market. Interactively qualifies buyer budgets, surfaces verified listings, captures contact records, and schedules property viewings 24/7.
+                                Interactive digital concierge engineered for prime real estate developments. Qualifies buyer investment criteria, surfaces verified pricing benchmarks, clarifies documentation (NOC & Fard), and schedules private property viewings 24/7.
                             </p>
                             <div class="d-flex align-items-center gap-1.5 text-white-50 small mb-3 font-monospace">
                                 <i class="fa-solid fa-location-dot text-danger"></i>
-                                <span>Pakistan Property Market • 24/7 Lead Ingest</span>
+                                <span>Pakistan Property Market • 24/7 Dedicated Concierge</span>
                             </div>
                         </div>
 
@@ -531,9 +531,9 @@
                             <span class="badge bg-dark text-success border border-success border-opacity-25 font-monospace small">
                                 <i class="fa-solid fa-circle text-success me-1" style="font-size: 8px;"></i> LIVE DEMO
                             </span>
-                            <a href="https://abdulmoiz0portfolio.github.io/real-estate-chatbot/" target="_blank" rel="noopener" class="btn btn-sm btn-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1">
+                            <a href="propertybot" class="btn btn-sm btn-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1">
                                 <span>Try Live Demo</span>
-                                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 11px;"></i>
+                                <i class="fa-solid fa-arrow-right" style="font-size: 11px;"></i>
                             </a>
                         </div>
                     </div>
