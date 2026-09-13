@@ -196,7 +196,7 @@ include 'header.php';
 
                                 <div>
                                     <a href="https://abdulmoiz0portfolio.github.io/real-estate-chatbot/" target="_blank" rel="noopener" class="btn btn-brand rounded-pill px-4 py-3 fw-bold d-inline-flex align-items-center gap-2 shadow">
-                                        <span>Launch PropertyBot Live App</span>
+                                        <span>Try Live Demo</span>
                                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                     </a>
                                 </div>
