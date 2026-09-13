@@ -25,10 +25,12 @@ if (strtolower($path) === 'ai-automated-solutions') {
 // Canonical route alias normalization
 $route_map = [
     'ai-agent-automations' => 'ai-Agent-Automations',
-    'ai-Agent-Automations' => 'ai-Agent-Automations'
+    'ai-Agent-Automations' => 'ai-Agent-Automations',
+    'real-estate-chatbot' => 'propertybot'
 ];
 if (isset($route_map[$path]) || isset($route_map[strtolower($path)])) {
-    $path = 'ai-Agent-Automations';
+    $matched_key = isset($route_map[$path]) ? $path : strtolower($path);
+    $path = $route_map[$matched_key];
 }
 
 // Allowed dynamic PHP pages in root directory
@@ -50,7 +52,8 @@ $allowed_pages = [
     'blog-detail',
     'voice-agent',
     'case-study',
-    'whatsapp-api'
+    'whatsapp-api',
+    'propertybot'
 ];
 
 if (in_array($path, $allowed_pages) || in_array(strtolower($path), array_map('strtolower', $allowed_pages))) {
