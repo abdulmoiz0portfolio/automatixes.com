@@ -150,6 +150,72 @@ include 'header.php';
                 </div>
             </div>
 
+            <!-- 2.5 FEATURED SHOWCASE: PropertyBot Pakistan Real Estate AI Assistant -->
+            <div class="col-12">
+                <div class="rounded-5 overflow-hidden position-relative p-1" style="background: linear-gradient(145deg, rgba(16, 185, 129, 0.3), rgba(200, 224, 25, 0.1), rgba(255, 255, 255, 0.04)); border: 1px solid rgba(16, 185, 129, 0.35); box-shadow: 0 20px 50px rgba(0,0,0,0.45);">
+                    <div class="rounded-5 p-4 p-md-5" style="background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.09) 0%, #0d0f17 65%);">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-lg-6">
+                                <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+                                    <span class="badge px-3 py-1.5 rounded-pill" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.35); font-size: 0.75rem; font-weight: 700;">
+                                        <i class="fa-solid fa-house-chimney me-1.5"></i> REAL ESTATE AI ASSISTANT
+                                    </span>
+                                    <span class="badge px-3 py-1 rounded-pill" style="background: rgba(34, 197, 94, 0.12); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); font-size: 0.75rem;">
+                                        ● LIVE CLIENT PRODUCTION
+                                    </span>
+                                </div>
+
+                                <h2 class="h3 fw-extrabold text-white mb-3" style="letter-spacing: -0.02em;">
+                                    PropertyBot — Pakistan Real Estate AI Assistant
+                                </h2>
+                                <p class="text-secondary mb-4" style="line-height: 1.7; font-size: 0.95rem; color: #94a3b8 !important;">
+                                    A full-stack conversational intelligence agent purpose-built for Pakistan's property sector (Islamabad, Lahore, Karachi). Automatically pre-qualifies home buyer budgets, queries listings in real time, collects verified phone numbers & investor criteria, and books property viewings 24/7 without human intervention.
+                                </p>
+
+                                <div class="row g-3 mb-4">
+                                    <div class="col-sm-6">
+                                        <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06);">
+                                            <div class="text-white fw-bold font-monospace mb-1" style="color: #34d399 !important;">100% Conversational</div>
+                                            <div class="text-secondary small">Smart budget & locality filtering</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.06);">
+                                            <div class="text-white fw-bold font-monospace mb-1" style="color: #C8E019 !important;">24/7 Lead Capture</div>
+                                            <div class="text-secondary small">Zero lead leakage or drop-off</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge px-2.5 py-1.5 rounded-3 bg-dark border border-secondary border-opacity-25 text-white-50 small">Tailwind CSS</span>
+                                    <span class="badge px-2.5 py-1.5 rounded-3 bg-dark border border-secondary border-opacity-25 text-white-50 small">Plus Jakarta Sans</span>
+                                    <span class="badge px-2.5 py-1.5 rounded-3 bg-dark border border-secondary border-opacity-25 text-white-50 small">Conversational Real Estate AI</span>
+                                    <span class="badge px-2.5 py-1.5 rounded-3 bg-dark border border-secondary border-opacity-25 text-white-50 small">Automated Lead Ingest</span>
+                                </div>
+
+                                <div>
+                                    <a href="https://abdulmoiz0portfolio.github.io/real-estate-chatbot/" target="_blank" rel="noopener" class="btn btn-brand rounded-pill px-4 py-3 fw-bold d-inline-flex align-items-center gap-2 shadow">
+                                        <span>Launch PropertyBot Live App</span>
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="rounded-4 overflow-hidden position-relative border border-secondary border-opacity-25 shadow-lg" style="background: #050507; min-height: 300px;">
+                                    <img src="assets/media/n8n/workflows/workflow-02-real-estate-ai-agent.png" alt="PropertyBot Pakistan Real Estate AI" class="img-fluid w-100 object-fit-cover" style="height: 320px;">
+                                    <div class="position-absolute bottom-0 start-0 end-0 p-3 d-flex justify-content-between align-items-center" style="background: linear-gradient(to top, rgba(5, 5, 7, 0.95), transparent);">
+                                        <span class="text-white small fw-bold font-monospace"><i class="fa-solid fa-laptop-code text-accent-neon me-1.5"></i> abdulmoiz0portfolio.github.io/real-estate-chatbot</span>
+                                        <span class="badge bg-success font-monospace">ONLINE & DEPLOYED</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- 3. BENTO CARD: AI Product Staging & 3D Visuals -->
             <div class="col-lg-6">
                 <div class="rounded-5 overflow-hidden h-100 position-relative p-1" style="background: linear-gradient(145deg, rgba(245, 158, 11, 0.15), rgba(255, 255, 255, 0.03)); border: 1px solid rgba(255, 255, 255, 0.1);">
