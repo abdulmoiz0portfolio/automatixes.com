@@ -47,16 +47,18 @@ include 'header.php';
                         </span>
                     </div>
 
-                    <!-- Voice Visualizer & ElevenLabs Widget Centerpiece -->
+                    <!-- Voice Visualizer & Dograh Voice Agent Centerpiece -->
                     <div class="voice-visualizer-container my-4 position-relative d-flex justify-content-center align-items-center">
                         <!-- Concentric Soundwave Pulse Rings -->
                         <div class="sound-ring sound-ring-3"></div>
                         <div class="sound-ring sound-ring-2"></div>
                         <div class="sound-ring sound-ring-1"></div>
                         
-                        <!-- ElevenLabs Voice Widget Wrapper -->
-                        <div class="elevenlabs-center-embed position-relative d-flex justify-content-center align-items-center">
-                            <elevenlabs-convai agent-id="agent_1601m004ny6efkns714nfr8vjvqm"></elevenlabs-convai>
+                        <!-- Dograh Voice Call Button -->
+                        <div class="dograh-center-embed position-relative d-flex justify-content-center align-items-center" style="z-index: 10;">
+                            <button id="start-dograh-call" type="button" onclick="startVoiceAgentCall()" class="btn d-flex align-items-center justify-content-center" style="width: 86px; height: 86px; border-radius: 50%; background: linear-gradient(135deg, #C8E019 0%, #A6BC09 100%); border: 3px solid rgba(255,255,255,0.2); box-shadow: 0 0 35px rgba(200, 224, 25, 0.6); cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease;">
+                                <i class="fa-solid fa-microphone" style="font-size: 32px; color: #0b0f19;"></i>
+                            </button>
                         </div>
                     </div>
 
@@ -228,19 +230,17 @@ include 'header.php';
         100% { transform: scale(1.15); opacity: 0; }
     }
 
-    .elevenlabs-center-embed {
-        z-index: 5;
+    .dograh-center-embed {
+        z-index: 10;
     }
 
-    /* Style the ElevenLabs widget inside the voice page */
-    .elevenlabs-center-embed elevenlabs-convai {
-        position: relative !important;
-        bottom: auto !important;
-        right: auto !important;
-        left: auto !important;
-        top: auto !important;
-        display: inline-block !important;
-        pointer-events: auto !important;
+    .dograh-center-embed button:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 50px rgba(200, 224, 25, 0.85) !important;
+    }
+
+    .dograh-center-embed button:active {
+        transform: scale(0.95);
     }
 
     .prompts-box {
@@ -271,6 +271,29 @@ include 'header.php';
     }
 </style>
 
-<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+<!-- Dograh Self-Hosted Voice Agent Widget Integration (Connected via Secure Tunnel) -->
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://factors-cubic-jewellery-freebsd.trycloudflare.com/embed/dograh-widget.js?token=emb_automatixes_live_agent_voice_2026&apiEndpoint=https://factors-cubic-jewellery-freebsd.trycloudflare.com';
+    js.setAttribute('data-dograh-context', JSON.stringify({
+      page_url: window.location.href,
+      agency: 'Automatixes',
+      agent: 'Alex'
+    }));
+    js.async = true;
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'dograh-widget'));
+
+  function startVoiceAgentCall() {
+    if (window.DograhWidget && typeof window.DograhWidget.start === 'function') {
+      window.DograhWidget.start();
+    } else {
+      window.open('https://factors-cubic-jewellery-freebsd.trycloudflare.com', '_blank');
+    }
+  }
+</script>
 
 <?php include 'footer.php'; ?>
