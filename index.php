@@ -499,13 +499,13 @@
 
         <!-- 3-Card Portfolio Grid -->
         <div class="row g-4 mb-5 justify-content-center">
-            <!-- Project 1: Real Estate AI Chatbot -->
+            <!-- Project 1: Real Estate Concierge -->
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
+                <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25 d-flex flex-column" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
                     <!-- Project Image with Floating Badge -->
                     <div class="position-relative overflow-hidden" style="height: 230px; background: #070a12;">
                         <img src="assets/media/n8n/workflows/workflow-02-real-estate-ai-agent.png" 
-                             alt="Property Advisor - Digital Real Estate Concierge" 
+                             alt="Property Advisor - Real Estate Concierge" 
                              class="w-100 h-100 object-fit-cover" 
                              loading="lazy" 
                              style="transition: transform 0.4s ease;">
@@ -515,34 +515,34 @@
                     </div>
 
                     <!-- Card Body -->
-                    <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+                    <div class="p-4 d-flex flex-column flex-grow-1">
                         <div>
-                            <h4 class="h5 fw-bold text-white mb-2">Property Advisor — Digital Real Estate Concierge</h4>
-                            <p class="text-secondary small mb-3" style="line-height: 1.6;">
-                                Interactive digital concierge engineered for prime real estate developments. Qualifies buyer investment criteria, surfaces verified pricing benchmarks, clarifies documentation (NOC & Fard), and schedules private property viewings 24/7.
+                            <h4 class="h5 fw-bold text-white mb-2 d-flex align-items-center" style="min-height: 52px; line-height: 1.35;">Property Advisor — Real Estate Concierge</h4>
+                            <p class="text-secondary small mb-3" style="line-height: 1.6; min-height: 90px;">
+                                Interactive digital concierge for prime developments. Qualifies buyer criteria, delivers verified pricing benchmarks, clarifies documentation (NOC &amp; Fard), and schedules private viewings 24/7.
                             </p>
-                            <div class="d-flex align-items-center gap-1.5 text-white-50 small mb-3 font-monospace">
-                                <i class="fa-solid fa-location-dot text-danger"></i>
-                                <span>Pakistan Property Market • 24/7 Dedicated Concierge</span>
+                            <div class="d-flex align-items-center gap-2 text-white-50 small mb-3 font-monospace" style="min-height: 24px; font-size: 0.78rem;">
+                                <i class="fa-solid fa-location-dot text-danger flex-shrink-0"></i>
+                                <span class="text-truncate">Pakistan Property • 24/7 Concierge</span>
                             </div>
                         </div>
 
-                        <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
-                            <span class="badge bg-dark text-success border border-success border-opacity-25 font-monospace small">
-                                <i class="fa-solid fa-circle text-success me-1" style="font-size: 8px;"></i> LIVE DEMO
+                        <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
+                            <span class="badge bg-dark text-success border border-success border-opacity-25 font-monospace small px-2.5 py-1.5">
+                                <i class="fa-solid fa-circle text-success me-1" style="font-size: 7px;"></i> LIVE DEMO
                             </span>
-                            <a href="propertybot" class="btn btn-sm btn-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1">
+                            <a href="propertybot" class="btn btn-sm btn-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1.5 text-nowrap" style="font-size: 0.8rem; white-space: nowrap;">
                                 <span>Try Live Demo</span>
-                                <i class="fa-solid fa-arrow-right" style="font-size: 11px;"></i>
+                                <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 2: AI Voice Calling Agent -->
+            <!-- Project 2: Voice Calling Agent -->
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
+                <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25 d-flex flex-column" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
                     <!-- Project Image with Floating Badge -->
                     <div class="position-relative overflow-hidden" style="height: 230px; background: #070a12;">
                         <img src="assets/img/services/ai_agents.jpg" 
@@ -556,25 +556,25 @@
                     </div>
 
                     <!-- Card Body -->
-                    <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+                    <div class="p-4 d-flex flex-column flex-grow-1">
                         <div>
-                            <h4 class="h5 fw-bold text-white mb-2">Autonomous Inbound & Outbound Calling Voice Bot</h4>
-                            <p class="text-secondary small mb-3" style="line-height: 1.6;">
-                                Production conversational voice agent answering inbound customer calls, qualifying high-intent prospects, answering objections, and synchronizing appointments directly into HubSpot, GoHighLevel & Google Calendar.
+                            <h4 class="h5 fw-bold text-white mb-2 d-flex align-items-center" style="min-height: 52px; line-height: 1.35;">Autonomous Inbound &amp; Outbound Voice Bot</h4>
+                            <p class="text-secondary small mb-3" style="line-height: 1.6; min-height: 90px;">
+                                Production conversational voice agent answering customer calls, qualifying high-intent prospects, answering objections, and synchronizing appointments directly into HubSpot &amp; Calendar.
                             </p>
-                            <div class="d-flex align-items-center gap-1.5 text-white-50 small mb-3 font-monospace">
-                                <i class="fa-solid fa-location-dot text-danger"></i>
-                                <span>Worldwide Phone Calls • Real-Time Voice</span>
+                            <div class="d-flex align-items-center gap-2 text-white-50 small mb-3 font-monospace" style="min-height: 24px; font-size: 0.78rem;">
+                                <i class="fa-solid fa-phone-volume text-info flex-shrink-0"></i>
+                                <span class="text-truncate">Global Telephony • Real-Time Voice</span>
                             </div>
                         </div>
 
-                        <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
-                            <span class="badge bg-dark text-info border border-info border-opacity-25 font-monospace small">
-                                <i class="fa-solid fa-bolt text-info me-1" style="font-size: 8px;"></i> LIVE DEMO
+                        <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
+                            <span class="badge bg-dark text-info border border-info border-opacity-25 font-monospace small px-2.5 py-1.5">
+                                <i class="fa-solid fa-bolt text-info me-1" style="font-size: 7px;"></i> LIVE DEMO
                             </span>
-                            <a href="voice-agent" class="btn btn-sm btn-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1">
+                            <a href="voice-agent" class="btn btn-sm btn-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1.5 text-nowrap" style="font-size: 0.8rem; white-space: nowrap;">
                                 <span>Try Voice Demo</span>
-                                <i class="fa-solid fa-arrow-right" style="font-size: 11px;"></i>
+                                <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i>
                             </a>
                         </div>
                     </div>
@@ -583,7 +583,7 @@
 
             <!-- Project 3: Automated Cold Email Outreach Engine -->
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
+                <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25 d-flex flex-column" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
                     <!-- Project Image with Floating Badge -->
                     <div class="position-relative overflow-hidden" style="height: 230px; background: #070a12;">
                         <img src="assets/media/n8n/workflows/n8n-email-marketing-workflow.png" 
@@ -597,25 +597,25 @@
                     </div>
 
                     <!-- Card Body -->
-                    <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+                    <div class="p-4 d-flex flex-column flex-grow-1">
                         <div>
-                            <h4 class="h5 fw-bold text-white mb-2">Automated Cold Email Engine & Deliverability Safeguard</h4>
-                            <p class="text-secondary small mb-3" style="line-height: 1.6;">
-                                Multi-mailbox distributed cold outreach architecture integrating Zoho Mail, Google Sheets API, and DNS MX validation with automated reply sentiment tracking and bounce quarantining.
+                            <h4 class="h5 fw-bold text-white mb-2 d-flex align-items-center" style="min-height: 52px; line-height: 1.35;">Automated Cold Outreach &amp; Deliverability Engine</h4>
+                            <p class="text-secondary small mb-3" style="line-height: 1.6; min-height: 90px;">
+                                Multi-mailbox distributed cold outreach architecture integrating Zoho Mail, Google Sheets API, and DNS MX validation with automated reply sentiment tracking and zero-bounce safeguard.
                             </p>
-                            <div class="d-flex align-items-center gap-1.5 text-white-50 small mb-3 font-monospace">
-                                <i class="fa-solid fa-location-dot text-danger"></i>
-                                <span>Multi-Tenant Mailboxes • Zero Deliverability Loss</span>
+                            <div class="d-flex align-items-center gap-2 text-white-50 small mb-3 font-monospace" style="min-height: 24px; font-size: 0.78rem;">
+                                <i class="fa-solid fa-shield-halved text-success flex-shrink-0"></i>
+                                <span class="text-truncate">Multi-Mailbox • 0% Bounce Loss</span>
                             </div>
                         </div>
 
-                        <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25">
-                            <span class="badge bg-dark text-warning border border-warning border-opacity-25 font-monospace small">
-                                <i class="fa-solid fa-code me-1" style="font-size: 8px;"></i> BLUEPRINT
+                        <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
+                            <span class="badge bg-dark text-warning border border-warning border-opacity-25 font-monospace small px-2.5 py-1.5">
+                                <i class="fa-solid fa-code me-1" style="font-size: 7px;"></i> BLUEPRINT
                             </span>
-                            <a href="ai-Agent-Automations" class="btn btn-sm btn-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1">
+                            <a href="ai-Agent-Automations" class="btn btn-sm btn-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1.5 text-nowrap" style="font-size: 0.8rem; white-space: nowrap;">
                                 <span>Inspect Workflow</span>
-                                <i class="fa-solid fa-arrow-right" style="font-size: 11px;"></i>
+                                <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i>
                             </a>
                         </div>
                     </div>
