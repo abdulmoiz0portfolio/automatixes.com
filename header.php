@@ -90,6 +90,60 @@ $meta_config = [
         'keywords' => 'n8n Case Study, Lead Recovery Automation, Speed to Lead, DNS MX verification, Automatixes Case Study, n8n workflow',
         'url' => 'case-study'
     ],
+    'whatsapp-automation' => [
+        'title' => 'WhatsApp Automation & Conversational CRM Engine | Automatixes',
+        'desc' => 'Connect official WhatsApp Business API with n8n and Make to qualify prospects, trigger drip sequences, and sync CRM pipelines 24/7.',
+        'keywords' => 'WhatsApp Automation, WhatsApp Business API, n8n WhatsApp, Make WhatsApp, Conversational CRM',
+        'url' => 'whatsapp-automation'
+    ],
+    'crm-integration' => [
+        'title' => 'Enterprise CRM Integration & Bi-Directional Sync (HubSpot, GoHighLevel) | Automatixes',
+        'desc' => 'Seamless bi-directional syncing between your CRM, email, calendar, and payment systems using n8n and custom webhook APIs.',
+        'keywords' => 'CRM Integration, HubSpot integration, GoHighLevel integration, n8n CRM sync, bi-directional sync',
+        'url' => 'crm-integration'
+    ],
+    'email-automation' => [
+        'title' => 'Automated Cold Email & Inbound Lead Routing Workflows | Automatixes',
+        'desc' => 'Multi-mailbox automated outbound email systems with real-time MX DNS verification, warm reply triage, and zero bounce loss.',
+        'keywords' => 'Email Automation, cold outreach automation, DNS MX verification, email warmup, n8n email workflow',
+        'url' => 'email-automation'
+    ],
+    'lead-recovery' => [
+        'title' => 'Autonomous Lead Recovery & Speed-to-Lead Engine | Automatixes',
+        'desc' => 'Stop lead leakage. Sub-60s instant automated reply, real-time validation, and automated warm re-engagement to recover 30%+ lost pipeline.',
+        'keywords' => 'Lead Recovery, Speed to Lead, pipeline recovery, n8n lead automation, B2B lead response',
+        'url' => 'lead-recovery'
+    ],
+    'support-agents' => [
+        'title' => '24/7 Autonomous Customer Support AI Agents (Custom RAG) | Automatixes',
+        'desc' => 'Deploy custom RAG knowledge-base customer support agents that resolve 70%+ of tier-1 inquiries across web, WhatsApp, and email.',
+        'keywords' => 'AI Support Agents, Customer Service AI, RAG Knowledge Base, Tier-1 support automation, Zendesk AI',
+        'url' => 'support-agents'
+    ],
+    'lead-scoring' => [
+        'title' => 'AI Lead Scoring, Qualification & Priority Routing | Automatixes',
+        'desc' => 'Classify inbound inquiries with AI intent analysis, score high-value prospects, and route directly to top closers in real time.',
+        'keywords' => 'AI Lead Scoring, ICP qualification, lead routing automation, CRM deal scoring, sales qualification',
+        'url' => 'lead-scoring'
+    ],
+    'inbound-voice' => [
+        'title' => 'Inbound AI Voice Receptionist & Call Answering Bot | Automatixes',
+        'desc' => '24/7 AI receptionist that answers inbound phone calls, handles inquiries, qualifies prospects, and books calendar slots in under 500ms.',
+        'keywords' => 'Inbound Voice AI, AI Receptionist, phone call bot, Retell AI, Vapi, automated call booking',
+        'url' => 'inbound-voice'
+    ],
+    'outbound-voice' => [
+        'title' => 'Outbound AI Voice Qualification & Reactivation Bot | Automatixes',
+        'desc' => 'Scale telephone qualification and stale lead re-activation with human-cadence conversational outbound AI agents.',
+        'keywords' => 'Outbound Voice AI, cold call AI bot, lead reactivation, telephony qualification, Retell AI outbound',
+        'url' => 'outbound-voice'
+    ],
+    'tools' => [
+        'title' => 'Internal AI Utilities, Tools & SaaS Blueprints | Automatixes',
+        'desc' => 'Explore our collection of specialized production tools, client utility bots, and internal AI automation demos.',
+        'keywords' => 'Automatixes Tools, invoice maker, QR generator, WhatsApp API engine, AI utilities',
+        'url' => 'tools'
+    ],
     'propertybot' => [
         'title' => 'Property Advisor — Digital Real Estate Concierge | Automatixes',
         'desc' => 'Connect with our dedicated Property Advisory Desk for verified pricing benchmarks, documentation compliance (Fard & NOC), and private site viewings across prime developments in Pakistan.',
@@ -222,7 +276,7 @@ $og_image = (!empty($active_meta['image']))
     </script>
 
     <!-- Service Schema -->
-    <?php if (in_array($page_key, ['ai-Agent-Automations', 'ai-agent-automations', 'ai-automated-solutions', 'website-development'])): ?>
+    <?php if (in_array($page_key, ['ai-Agent-Automations', 'ai-agent-automations', 'ai-automated-solutions', 'website-development', 'whatsapp-automation', 'crm-integration', 'email-automation', 'lead-recovery', 'support-agents', 'lead-scoring', 'inbound-voice', 'outbound-voice'])): ?>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -385,9 +439,21 @@ $og_image = (!empty($active_meta['image']))
                             <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
-                            <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="servicesDropdown">
-                                <li><a class="dropdown-item py-2 fw-semibold" href="ai-Agent-Automations"><i class="fa-solid fa-robot text-accent-neon me-2"></i>AI Agent & Automations</a></li>
-                                <li><a class="dropdown-item py-2 fw-semibold d-flex align-items-center justify-content-between" href="voice-agent"><span>AI Voice Agents</span> <span class="badge rounded-pill ms-2" style="font-size: 0.65rem; background: #D4FF3D !important; color: #0a0e1a !important; font-weight: 700;">🔥 HIGH DEMAND</span></a></li>
+                            <ul class="dropdown-menu border-0 shadow-lg p-3" aria-labelledby="servicesDropdown" style="background: #0d1322 !important; border: 1px solid rgba(255,255,255,0.1) !important; border-radius: 16px; min-width: 320px;">
+                                <li><h6 class="dropdown-header text-uppercase text-accent-brand fw-bold px-2 py-1" style="font-size: 11px; letter-spacing: 1px;"><i class="fa-solid fa-gears me-1"></i> Workflow Automations</h6></li>
+                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center gap-2" href="whatsapp-automation"><i class="fa-brands fa-whatsapp text-success" style="width: 16px;"></i> WhatsApp Automation</a></li>
+                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center gap-2" href="crm-integration"><i class="fa-solid fa-diagram-project text-info" style="width: 16px;"></i> CRM Integration & Sync</a></li>
+                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center gap-2" href="email-automation"><i class="fa-solid fa-envelope-open-text text-warning" style="width: 16px;"></i> Email & Deliverability</a></li>
+                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center gap-2" href="lead-recovery"><i class="fa-solid fa-life-ring text-accent-brand" style="width: 16px;"></i> Lead Recovery Engine</a></li>
+                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center gap-2" href="support-agents"><i class="fa-solid fa-robot text-primary" style="width: 16px;"></i> 24/7 Support AI Agents</a></li>
+                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center gap-2" href="lead-scoring"><i class="fa-solid fa-bullseye text-danger" style="width: 16px;"></i> AI Lead Scoring</a></li>
+                                <li><hr class="dropdown-divider border-secondary opacity-25 my-2"></li>
+                                <li><h6 class="dropdown-header text-uppercase text-accent-brand fw-bold px-2 py-1" style="font-size: 11px; letter-spacing: 1px;"><i class="fa-solid fa-microphone-lines me-1"></i> Voice AI Solutions</h6></li>
+                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center gap-2" href="inbound-voice"><i class="fa-solid fa-phone-volume text-info" style="width: 16px;"></i> Inbound Voice Receptionist</a></li>
+                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center gap-2" href="outbound-voice"><i class="fa-solid fa-phone-arrow-up-right text-success" style="width: 16px;"></i> Outbound Qualification Bot</a></li>
+                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center justify-content-between" href="voice-agent"><span class="d-flex align-items-center gap-2"><i class="fa-solid fa-bolt text-accent-neon" style="width: 16px;"></i> Live Voice Demo</span> <span class="badge rounded-pill" style="font-size: 9px; background: #D4FF3D !important; color: #0a0e1a !important; font-weight: 800;">HOT</span></a></li>
+                                <li><hr class="dropdown-divider border-secondary opacity-25 my-2"></li>
+                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center justify-content-between" href="tools"><span class="d-flex align-items-center gap-2"><i class="fa-solid fa-screwdriver-wrench text-secondary" style="width: 16px;"></i> Internal Tools & Labs</span> <i class="fa-solid fa-arrow-right opacity-50" style="font-size: 10px;"></i></a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="portfolio">Portfolio</a></li>

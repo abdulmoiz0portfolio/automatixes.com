@@ -243,13 +243,22 @@
             <span style="color: #C8E019;" class="me-2">🚀</span> DIGITAL AGENCY FOR AMBITIOUS BRANDS
         </span>
         
-        <h1 class="display-3 fw-bold mb-4" style="line-height: 1.15; letter-spacing: -1.5px; color: #ffffff;">
+        <h1 class="display-3 fw-bold mb-3" style="line-height: 1.15; letter-spacing: -1.5px; color: #ffffff;">
             We Build Systems That Work <br>
             <span style="color: var(--accent-neon);">While You Sleep.</span>
         </h1>
+
+        <!-- Concrete Proof Line -->
+        <div class="d-inline-flex flex-wrap justify-content-center align-items-center gap-2 gap-md-3 px-3 py-1.5 rounded-pill mb-4" style="background: rgba(200, 224, 25, 0.08); border: 1px solid rgba(200, 224, 25, 0.25);">
+            <span class="text-white small fw-bold"><i class="fa-solid fa-chart-line text-accent-neon me-1"></i> 30%+ Pipeline Recovered</span>
+            <span class="text-white-50 small">•</span>
+            <span class="text-white small fw-bold"><i class="fa-solid fa-stopwatch text-accent-neon me-1"></i> Sub-60s Speed-to-Lead</span>
+            <span class="text-white-50 small">•</span>
+            <span class="text-white small fw-bold"><i class="fa-solid fa-clock text-accent-neon me-1"></i> 100+ Hours Saved / Month</span>
+        </div>
         
-        <p class="lead mx-auto mb-5" style="max-width: 650px; font-size: 1.15rem; color: #9ca3af;">
-            Automatixes designs, builds, and scales premium AI agents, automated workflows, and custom web applications for startups, SMBs, and enterprise teams globally.
+        <p class="lead mx-auto mb-5" style="max-width: 720px; font-size: 1.15rem; color: #cbd5e1; line-height: 1.7;">
+            We design and deploy custom AI agents, CRM automations, and voice systems for B2B service firms and real estate operators. Built on n8n, Make, and OpenAI.
         </p>
 
         <div class="d-flex justify-content-center gap-3 flex-wrap wow fadeInUp" data-wow-delay=".4s">
@@ -264,8 +273,40 @@
 </section>
 <!-- Hero Section End -->
 
+<!-- Trusted Tools & Partnerships Strip Start -->
+<div class="py-4 border-top border-bottom border-light-subtle position-relative overflow-hidden" style="background: #080c16;">
+    <div class="container">
+        <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 gap-md-5 text-center">
+            <span class="text-white-50 small text-uppercase font-monospace fw-semibold me-md-2" style="letter-spacing: 1.5px; font-size: 11px;">
+                <i class="fa-solid fa-shield-halved text-accent-neon me-1"></i> Certified Stack &amp; Partners:
+            </span>
+            <div class="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                <img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" style="width: 16px; height: 16px;">
+                <span class="text-white small fw-semibold">n8n Certified</span>
+            </div>
+            <div class="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                <i class="fa-solid fa-bolt text-accent-brand" style="font-size: 13px;"></i>
+                <span class="text-white small fw-semibold">GoHighLevel Partner</span>
+            </div>
+            <div class="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                <img src="https://cdn.simpleicons.org/openai/10A37F" alt="OpenAI" style="width: 16px; height: 16px;">
+                <span class="text-white small fw-semibold">OpenAI API Specialist</span>
+            </div>
+            <div class="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                <img src="https://cdn.simpleicons.org/make/6D3A9C" alt="Make" style="width: 16px; height: 16px;">
+                <span class="text-white small fw-semibold">Make.com Partner</span>
+            </div>
+            <div class="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                <img src="https://cdn.simpleicons.org/zapier/FF4A00" alt="Zapier" style="width: 16px; height: 16px;">
+                <span class="text-white small fw-semibold">Zapier Expert</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Trusted Tools & Partnerships Strip End -->
+
 <!-- About Section Start -->
-<section id="about-section" class="about-section fix section-padding bg-warm-peach">
+<section id="about-section" class="about-section fix section-padding" style="background: #080c16;">
     <div class="container">
         <div class="row align-items-center g-5">
             <div class="col-lg-5">
@@ -283,8 +324,8 @@
                             Who We Are
                         </h2>
                     </div>
-                    <p class="mt-3 wow fadeInUp text-white-50 fs-5" data-wow-delay=".5s">
-                        Automatixes is an AI automation agency that helps businesses automate lead follow-up, CRM syncing, and customer support using tools like n8n, Make, and GoHighLevel. We build custom AI agents and workflow automations for small and mid-sized businesses.
+                    <p class="mt-3 wow fadeInUp text-white-50 fs-5" data-wow-delay=".5s" style="line-height: 1.7;">
+                        We help B2B service firms and real estate operators eliminate repetitive manual work. From lead qualification to invoice processing, we design systems that run without human intervention — built on n8n, Make, and GoHighLevel.
                     </p>
                     
                     <h5 class="fw-bold text-white mt-4 mb-3 wow fadeInUp" data-wow-delay=".3s">Who We Serve:</h5>
@@ -322,24 +363,7 @@
 </section>
 <!-- About Section End -->
 
-<!-- Toss Away Physics Section Start -->
-<section class="section toss-away" style="position: relative; overflow: hidden; padding: 0; background: var(--bg-surface-1, #0a0a0a); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
-    <div class="container toss-away-container" style="position: absolute; top: 60px; left: 50%; transform: translateX(-50%); z-index: 10; pointer-events: none; width: 100%;">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-8">
-                <div class="section__header text-center" style="margin-bottom: 0;">
-                    <h2 class="title title-anim toss-away-title" style="color: #ffffff; font-size: clamp(1.8rem, 4.5vw, 3.4rem); font-weight: 800; line-height: 1.15; letter-spacing: -1px;">
-                        SAY GOODBYE TO THESE<br><span style="color: var(--accent-neon, #C8E019);">BUSINESS HEADACHES</span>
-                    </h2>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="physics-container" style="width: 100%; height: 580px; position: relative; cursor: grab; z-index: 1; overflow: hidden;">
-        <!-- Matter.js Canvas Injected Here -->
-    </div>
-</section>
-<!-- Toss Away Physics Section End -->
+<!-- Toss-away physics section removed per revamp instruction -->
 
 <!-- Services Section Start -->
 <section id="services-section" class="section-padding bg-surface text-white">
@@ -478,6 +502,40 @@
 <!-- =========================================================================
      NOTABLE PROJECTS / PORTFOLIO SECTION (#portfolio-section)
      ========================================================================= -->
+<!-- SaaS Tools Teaser Row Start -->
+<div class="py-4 border-top border-bottom border-light-subtle" style="background: #0a0e1a;">
+    <div class="container">
+        <div class="row align-items-center justify-content-between g-3">
+            <div class="col-lg-4 text-center text-lg-start">
+                <span class="badge bg-secondary bg-opacity-25 text-white-50 font-monospace small mb-1">INTERNAL UTILITIES</span>
+                <h4 class="h5 fw-bold text-white mb-0">Production Tools &amp; Blueprints</h4>
+                <p class="text-white-50 small mb-0">Explore our internal utilities and client tools built by our team.</p>
+            </div>
+            <div class="col-lg-8">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-end gap-3">
+                    <a href="invoice-maker" class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-3 text-decoration-none text-white small" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);">
+                        <i class="fa-solid fa-file-invoice-dollar text-accent-brand"></i>
+                        <span>Invoice Maker</span>
+                    </a>
+                    <a href="https://qrcode.automatixes.com/" target="_blank" class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-3 text-decoration-none text-white small" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);">
+                        <i class="fa-solid fa-qrcode text-info"></i>
+                        <span>Dynamic QR Studio</span>
+                    </a>
+                    <a href="whatsapp-api" class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-3 text-decoration-none text-white small" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);">
+                        <i class="fa-brands fa-whatsapp text-success"></i>
+                        <span>WhatsApp API</span>
+                    </a>
+                    <a href="tools" class="btn btn-sm btn-outline-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1.5 text-nowrap">
+                        <span>View All Tools</span>
+                        <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- SaaS Tools Teaser Row End -->
+
 <section id="portfolio-section" class="py-5 text-white position-relative overflow-hidden" style="background: #080a11; border-top: 1px solid rgba(255,255,255,0.06);">
     <!-- Ambient Atmospheric Glows -->
     <div class="position-absolute rounded-circle pointer-events-none" style="background: radial-gradient(circle, rgba(200, 224, 25, 0.12) 0%, rgba(0,0,0,0) 70%); width: 600px; height: 600px; top: 0; left: 10%; filter: blur(90px); z-index: 0;"></div>
@@ -528,8 +586,8 @@
                         </div>
 
                         <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
-                            <span class="badge bg-dark text-success border border-success border-opacity-25 font-monospace small px-2.5 py-1.5">
-                                <i class="fa-solid fa-circle text-success me-1" style="font-size: 7px;"></i> LIVE DEMO
+                            <span class="badge bg-dark text-success border border-success border-opacity-25 font-monospace small px-2.5 py-1.5" title="Internal Demonstration Build">
+                                <i class="fa-solid fa-laptop-code text-success me-1" style="font-size: 9px;"></i> Demo Project / Internal Build
                             </span>
                             <a href="propertybot" class="btn btn-sm btn-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1.5 text-nowrap" style="font-size: 0.8rem; white-space: nowrap;">
                                 <span>Try Live Demo</span>
@@ -569,8 +627,8 @@
                         </div>
 
                         <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
-                            <span class="badge bg-dark text-info border border-info border-opacity-25 font-monospace small px-2.5 py-1.5">
-                                <i class="fa-solid fa-bolt text-info me-1" style="font-size: 7px;"></i> LIVE DEMO
+                            <span class="badge bg-dark text-info border border-info border-opacity-25 font-monospace small px-2.5 py-1.5" title="Interactive Browser Voice Bot">
+                                <i class="fa-solid fa-bolt text-info me-1" style="font-size: 9px;"></i> Live Interactive Demo
                             </span>
                             <a href="voice-agent" class="btn btn-sm btn-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1.5 text-nowrap" style="font-size: 0.8rem; white-space: nowrap;">
                                 <span>Try Voice Demo</span>
@@ -610,8 +668,8 @@
                         </div>
 
                         <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
-                            <span class="badge bg-dark text-warning border border-warning border-opacity-25 font-monospace small px-2.5 py-1.5">
-                                <i class="fa-solid fa-code me-1" style="font-size: 7px;"></i> BLUEPRINT
+                            <span class="badge bg-dark text-warning border border-warning border-opacity-25 font-monospace small px-2.5 py-1.5" title="Verified Architecture Blueprint">
+                                <i class="fa-solid fa-diagram-project text-warning me-1" style="font-size: 9px;"></i> Production Blueprint / Internal Benchmark
                             </span>
                             <a href="ai-Agent-Automations" class="btn btn-sm btn-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1.5 text-nowrap" style="font-size: 0.8rem; white-space: nowrap;">
                                 <span>Inspect Workflow</span>
@@ -634,587 +692,140 @@
 </section>
 <!-- Notable Projects Section End -->
 
-<!-- Case Study & Demo Section Start -->
-<section id="case-study-section" class="py-5 text-white position-relative overflow-hidden" style="background: linear-gradient(180deg, #070a12 0%, #0c1222 50%, #070a12 100%); border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
-    <!-- Ambient Atmospheric Glows -->
-    <div class="position-absolute rounded-circle pointer-events-none" style="background: radial-gradient(circle, rgba(200, 224, 25, 0.12) 0%, rgba(0,0,0,0) 70%); width: 600px; height: 600px; top: 5%; right: -150px; filter: blur(90px); z-index: 0;"></div>
-    <div class="position-absolute rounded-circle pointer-events-none" style="background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, rgba(0,0,0,0) 70%); width: 500px; height: 500px; bottom: 10%; left: -100px; filter: blur(80px); z-index: 0;"></div>
-
-    <div class="container position-relative" style="z-index: 1;">
-        <!-- Header / Eyebrow -->
-        <div class="text-center mb-5 max-w-800 mx-auto">
-            <div class="d-inline-flex align-items-center gap-2 px-3 py-1.5 rounded-pill mb-3" style="background: rgba(200, 224, 25, 0.08); border: 1px solid rgba(200, 224, 25, 0.25); box-shadow: 0 0 20px rgba(200, 224, 25, 0.1);">
-                <span class="badge rounded-pill px-2 py-0.5" style="background: #C8E019; color: #000; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.05em;">CASE STUDY</span>
-                <span class="text-white small fw-bold" style="font-size: 0.85rem;"><i class="fa-solid fa-bolt me-1 text-accent-neon"></i> n8n Autonomous Lead Recovery &amp; Verification</span>
-            </div>
-            <h2 class="display-5 fw-extrabold text-white mb-3" style="letter-spacing: -0.03em;">
-                How B2B Agencies Recover <span style="background: linear-gradient(135deg, #FFFFFF 30%, #C8E019 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">30%+ Lost Pipeline</span>
-            </h2>
-            <p class="text-white-50 fs-5 mx-auto" style="max-width: 680px; line-height: 1.6;">
-                Most outbound and inbound campaigns bleed revenue due to slow response times and dirty CRM data. Here is the exact production n8n engine we deploy to capture, clean, and verify leads in real time.
-            </p>
-        </div>
-
-        <!-- Problem vs Solution Breakdown (Bento Style) -->
-        <div class="row g-4 mb-5">
-            <!-- Problem Card -->
-            <div class="col-lg-6">
-                <div class="p-4 p-md-4 rounded-4 h-100" style="background: rgba(239, 68, 68, 0.03); border: 1px solid rgba(239, 68, 68, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
-                    <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom border-danger border-opacity-25">
-                        <div class="d-flex align-items-center gap-2">
-                            <span class="badge rounded-pill px-3 py-1.5 fw-bold text-white shadow-sm" style="background: #ef4444; color: #ffffff !important; letter-spacing: 0.5px; border: none; font-size: 11px;">
-                                <i class="fa-solid fa-triangle-exclamation me-1" style="color: #ffffff !important;"></i> THE BOTTLENECK
-                            </span>
-                            <h4 class="h5 fw-bold text-white mb-0">The Leaky Pipeline</h4>
-                        </div>
-                        <span class="small font-monospace fw-bold" style="color: #f87171 !important;"><i class="fa-solid fa-arrow-trend-down me-1"></i>Lost ROI</span>
+<!-- Case Study Executive Teaser Start -->
+<section class="py-5 text-white position-relative overflow-hidden" style="background: linear-gradient(180deg, #070a12 0%, #0d1424 100%); border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
+    <div class="container">
+        <div class="p-4 p-md-5 rounded-4 position-relative overflow-hidden" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(200, 224, 25, 0.25); box-shadow: 0 15px 40px rgba(0,0,0,0.4);">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3" style="background: rgba(200, 224, 25, 0.1); border: 1px solid rgba(200, 224, 25, 0.25);">
+                        <span class="badge rounded-pill px-2 py-0.5" style="background: #C8E019; color: #000; font-size: 0.7rem; font-weight: 800;">CASE STUDY</span>
+                        <span class="text-white small fw-bold"><i class="fa-solid fa-bolt text-accent-neon me-1"></i> Technical Deep-Dive</span>
                     </div>
-                    
-                    <ul class="list-unstyled d-flex flex-column gap-3 mb-4">
-                        <li class="d-flex align-items-start gap-3">
-                            <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 mt-1" style="background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); width: 28px; height: 28px;">
-                                <i class="fa-solid fa-hourglass-half" style="font-size: 13px;"></i>
-                            </div>
-                            <div>
-                                <strong class="text-white d-block">Speed-to-Lead Drop-off (Leads Go Ice-Cold)</strong>
-                                <span class="text-white-50 small">78% of B2B buyers purchase from the vendor who replies first. Leaving inquiries or replies sitting for 15+ minutes causes lead response rates to drop by up to 391%.</span>
-                            </div>
-                        </li>
-                        <li class="d-flex align-items-start gap-3">
-                            <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 mt-1" style="background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); width: 28px; height: 28px;">
-                                <i class="fa-solid fa-envelope-circle-check" style="font-size: 13px;"></i>
-                            </div>
-                            <div>
-                                <strong class="text-white d-block">High Bounce Rates &amp; Burned Mailboxes</strong>
-                                <span class="text-white-50 small">Scraped raw leads contain typos, non-existent corporate domains, and dead inboxes. Blasting unchecked data wrecks domain reputation and triggers spam filters.</span>
-                            </div>
-                        </li>
-                        <li class="d-flex align-items-start gap-3">
-                            <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 mt-1" style="background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); width: 28px; height: 28px;">
-                                <i class="fa-solid fa-table-list" style="font-size: 13px;"></i>
-                            </div>
-                            <div>
-                                <strong class="text-white d-block">Manual CSV Scrubbing Drains SDR Hours</strong>
-                                <span class="text-white-50 small">Sales reps waste 10–14 hours per week manually formatting strings, stripping "LLC/Inc" suffixes, and cross-checking records instead of taking calls and closing.</span>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <div class="p-3 rounded-3" style="background: rgba(239, 68, 68, 0.08); border: 1px dashed rgba(239, 68, 68, 0.3);">
-                        <span class="fw-bold small" style="color: #f87171 !important;"><i class="fa-solid fa-xmark me-1"></i> Net Impact:</span>
-                        <span class="text-white small ms-1">Agencies lose 25–40% of potentially closed-won revenue simply due to delayed response times and bad data hygiene.</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Solution Card -->
-            <div class="col-lg-6">
-                <div class="p-4 p-md-4 rounded-4 h-100" style="background: rgba(200, 224, 25, 0.03); border: 1px solid rgba(200, 224, 25, 0.25); box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
-                    <div class="d-flex align-items-center justify-content-between mb-3 pb-2 border-bottom border-light border-opacity-10">
-                        <div class="d-flex align-items-center gap-2">
-                            <span class="badge rounded-pill px-3 py-1.5 text-dark fw-bold shadow-sm" style="background: #D4FF3D; color: #0a0e1a !important; letter-spacing: 0.5px; border: none; font-size: 11px;">
-                                <i class="fa-solid fa-check-double me-1" style="color: #0a0e1a !important;"></i> OUR AUTOMATION
-                            </span>
-                            <h4 class="h5 fw-bold text-white mb-0">Autonomous n8n Recovery Engine</h4>
-                        </div>
-                        <span class="small font-monospace fw-bold" style="color: #D4FF3D !important;"><i class="fa-solid fa-bolt me-1"></i>Sub-60s Action</span>
-                    </div>
-
-                    <ul class="list-unstyled d-flex flex-column gap-3 mb-4">
-                        <li class="d-flex align-items-start gap-3">
-                            <div class="rounded-circle text-dark d-flex align-items-center justify-content-center flex-shrink-0 mt-1" style="background: #D4FF3D; color: #0a0e1a !important; width: 28px; height: 28px;">
-                                <i class="fa-solid fa-bolt-lightning" style="font-size: 13px;"></i>
-                            </div>
-                            <div>
-                                <strong class="text-white d-block">Instant Trigger &amp; Sub-60s Speed-to-Lead</strong>
-                                <span class="text-white-50 small">Webhooks and scheduled polling monitor incoming form fills and inbox replies 24/7. When a prospect engages, the pipeline catches it within seconds before they go cold.</span>
-                            </div>
-                        </li>
-                        <li class="d-flex align-items-start gap-3">
-                            <div class="rounded-circle text-dark d-flex align-items-center justify-content-center flex-shrink-0 mt-1" style="background: #D4FF3D; color: #0a0e1a !important; width: 28px; height: 28px;">
-                                <i class="fa-solid fa-network-wired" style="font-size: 13px;"></i>
-                            </div>
-                            <div>
-                                <strong class="text-white d-block">Autonomous Cloudflare DNS MX Validation</strong>
-                                <span class="text-white-50 small">The workflow queries live DNS servers to verify mail exchange records on the fly, auto-flagging invalid mailboxes and protecting sender reputation with zero paid API costs.</span>
-                            </div>
-                        </li>
-                        <li class="d-flex align-items-start gap-3">
-                            <div class="rounded-circle text-dark d-flex align-items-center justify-content-center flex-shrink-0 mt-1" style="background: #D4FF3D; color: #0a0e1a !important; width: 28px; height: 28px;">
-                                <i class="fa-solid fa-wand-magic-sparkles" style="font-size: 13px;"></i>
-                            </div>
-                            <div>
-                                <strong class="text-white d-block">JavaScript Data Sanitization &amp; CRM Sync</strong>
-                                <span class="text-white-50 small">Embedded JavaScript cleans names to proper Title Case, strips entity tags (LLC, Inc, Corp), and appends clean data directly into Google Sheets, Airtable, or your CRM.</span>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <div class="p-3 rounded-3" style="background: rgba(200, 224, 25, 0.08); border: 1px dashed rgba(200, 224, 25, 0.35);">
-                        <span class="fw-bold small" style="color: #D4FF3D !important;"><i class="fa-solid fa-circle-check me-1"></i> Measurable Result:</span>
-                        <span class="text-white small ms-1">Zero dropped leads, 99.2% verified deliverability rate, and 12+ hours saved every week per account.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Workflow Visual Demo & Video Player Card -->
-        <div class="card rounded-4 overflow-hidden mb-5" style="background: #0d1322; border: 1px solid rgba(200, 224, 25, 0.2); box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
-            <!-- Window Title Bar / Tab Bar -->
-            <div class="px-4 py-3 border-bottom d-flex flex-wrap align-items-center justify-content-between gap-3" style="background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.07) !important;">
-                <div class="d-flex align-items-center gap-3">
-                    <div class="d-flex align-items-center gap-1.5">
-                        <span class="rounded-circle d-inline-block" style="width: 11px; height: 11px; background: #ff5f56;"></span>
-                        <span class="rounded-circle d-inline-block" style="width: 11px; height: 11px; background: #ffbd2e;"></span>
-                        <span class="rounded-circle d-inline-block" style="width: 11px; height: 11px; background: #27c93f;"></span>
-                    </div>
-                    <span class="text-white-50 small font-monospace ms-2 d-none d-sm-inline">lead-recovery-workflow.n8n · Production v2.4</span>
-                </div>
-
-                <!-- View Switcher Tabs -->
-                <div class="d-flex align-items-center gap-2">
-                    <button type="button" class="btn btn-sm px-3 py-1.5 rounded-pill fw-semibold active case-study-tab-btn" id="tabBtnArchitecture" onclick="switchCaseStudyTab('architecture')" style="font-size: 0.8rem; background: #C8E019; color: #000; border: 1px solid #C8E019;">
-                        <i class="fa-solid fa-diagram-project me-1.5"></i> Workflow Blueprint
-                    </button>
-                    <button type="button" class="btn btn-sm px-3 py-1.5 rounded-pill fw-semibold case-study-tab-btn" id="tabBtnVideo" onclick="switchCaseStudyTab('video')" style="font-size: 0.8rem; background: rgba(255,255,255,0.05); color: #cbd5e1; border: 1px solid rgba(255,255,255,0.1);">
-                        <i class="fa-solid fa-circle-play me-1.5"></i> Video Walkthrough
-                    </button>
-                    <a href="https://screenrec.com/share/7SxeCZsImJ" target="_blank" rel="noopener noreferrer" class="btn btn-sm px-3 py-1.5 rounded-pill fw-semibold d-none d-md-inline-flex align-items-center gap-1 text-white" style="font-size: 0.8rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
-                        <span>ScreenRec HD</span>
-                        <i class="fa-solid fa-arrow-up-right-from-square small"></i>
+                    <h3 class="display-6 fw-bold text-white mb-3">Case Study: n8n Lead Recovery Engine</h3>
+                    <p class="text-white-50 mb-4" style="line-height: 1.7; max-width: 600px;">
+                        How B2B agencies stop pipeline leakage, eliminate manual spreadsheet scrubbing, verify DNS/MX records in real time, and trigger sub-60s warm replies before prospects go cold.
+                    </p>
+                    <a href="case-study" class="btn btn-brand rounded-pill px-4 py-2.5 fw-bold d-inline-flex align-items-center gap-2 shadow">
+                        <span>Read Full Technical Case Study</span>
+                        <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
-            </div>
-
-            <!-- Tab Content 1: Architecture Blueprint (Image) -->
-            <div id="tabContentArchitecture" class="p-3 p-md-4 text-center">
-                <div class="position-relative rounded-3 overflow-hidden" style="border: 1px solid rgba(255,255,255,0.08); background: #07090e; max-height: 540px;">
-                    <img src="assets/media/n8n/n8n-workflow.webp" alt="n8n Lead Cleaner and Recovery Production Workflow" class="img-fluid w-100" style="object-fit: cover; object-position: center; cursor: zoom-in;" onclick="openWorkflowModal()" title="Click to view full blueprint">
-                    
-                    <div class="position-absolute bottom-0 start-0 end-0 p-3 d-flex flex-wrap align-items-center justify-content-between gap-2" style="background: linear-gradient(to top, rgba(7,9,14,0.95) 0%, rgba(7,9,14,0) 100%);">
-                        <div class="d-flex align-items-center gap-2">
-                            <span class="badge bg-dark bg-opacity-75 text-accent-brand border border-secondary border-opacity-50 px-2.5 py-1">
-                                <i class="fa-solid fa-code-branch me-1"></i> 6 Production Nodes
-                            </span>
-                            <span class="text-white small d-none d-sm-inline">Click diagram to expand full view</span>
+                <div class="col-lg-5">
+                    <div class="row g-3 text-center">
+                        <div class="col-12 col-sm-4 col-lg-12 mb-lg-2">
+                            <div class="p-3 rounded-3" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+                                <div class="h3 fw-extrabold text-accent-brand font-monospace mb-0">&lt;60s</div>
+                                <div class="text-white small fw-semibold">Speed-to-Lead</div>
+                            </div>
                         </div>
-                        <button type="button" class="btn btn-sm btn-outline-light rounded-pill px-3 py-1" onclick="openWorkflowModal()">
-                            <i class="fa-solid fa-expand me-1"></i> Fullscreen Blueprint
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 6 Step Pipeline Flow Badges -->
-                <div class="row g-2 mt-3 pt-2 text-start">
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-2.5 rounded-3 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
-                            <div class="text-accent-brand font-monospace small fw-bold mb-1">01 • TRIGGER</div>
-                            <div class="text-white small fw-semibold">Webhook / Poll</div>
-                            <div class="text-white-50" style="font-size: 0.72rem;">Detects new reply or form entry</div>
+                        <div class="col-6 col-sm-4 col-lg-6">
+                            <div class="p-3 rounded-3" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+                                <div class="h4 fw-extrabold text-white font-monospace mb-0">99.2%</div>
+                                <div class="text-white small fw-semibold">Verification Rate</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4 col-lg-6">
+                            <div class="p-3 rounded-3" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
+                                <div class="h4 fw-extrabold font-monospace mb-0" style="color: #38bdf8;">+30%+</div>
+                                <div class="text-white small fw-semibold">Pipeline Recovered</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-2.5 rounded-3 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
-                            <div class="text-accent-brand font-monospace small fw-bold mb-1">02 • INGEST</div>
-                            <div class="text-white small fw-semibold">Read Google Sheet</div>
-                            <div class="text-white-50" style="font-size: 0.72rem;">Streams raw prospect data</div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-2.5 rounded-3 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
-                            <div class="text-accent-brand font-monospace small fw-bold mb-1">03 • CLEANSE</div>
-                            <div class="text-white small fw-semibold">Format &amp; Suffixes</div>
-                            <div class="text-white-50" style="font-size: 0.72rem;">Removes LLC/Inc, fixes casing</div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-2.5 rounded-3 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
-                            <div class="text-accent-brand font-monospace small fw-bold mb-1">04 • DNS LOOKUP</div>
-                            <div class="text-white small fw-semibold">Cloudflare MX Check</div>
-                            <div class="text-white-50" style="font-size: 0.72rem;">Validates real mail servers</div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-2.5 rounded-3 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
-                            <div class="text-accent-brand font-monospace small fw-bold mb-1">05 • EVALUATE</div>
-                            <div class="text-white small fw-semibold">Delivery Logic Gate</div>
-                            <div class="text-white-50" style="font-size: 0.72rem;">Filters valid vs dead records</div>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-2.5 rounded-3 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
-                            <div class="text-accent-brand font-monospace small fw-bold mb-1">06 • SYNC &amp; ROUTE</div>
-                            <div class="text-white small fw-semibold">Append &amp; Alert</div>
-                            <div class="text-white-50" style="font-size: 0.72rem;">Pushes to clean sheet &amp; Slack</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tab Content 2: Live Video Walkthrough -->
-            <div id="tabContentVideo" class="p-3 p-md-4 d-none">
-                <div class="rounded-3 overflow-hidden position-relative" style="background: #000; border: 1px solid rgba(255,255,255,0.1); max-height: 560px;">
-                    <video id="caseStudyVideoPlayer" class="w-100" controls preload="metadata" poster="assets/media/n8n/n8n-workflow.webp" style="max-height: 520px; object-fit: contain; outline: none; display: block; margin: 0 auto;">
-                        <source src="assets/media/n8n/n8n-demo.mp4" type="video/mp4">
-                        Your browser does not support HTML5 video. You can view the demo directly on <a href="https://screenrec.com/share/7SxeCZsImJ" target="_blank" class="text-accent-brand">ScreenRec</a>.
-                    </video>
-                </div>
-                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mt-3 pt-2">
-                    <div class="d-flex align-items-center gap-2">
-                        <span class="badge bg-success bg-opacity-20 text-success border border-success border-opacity-50 px-2.5 py-1">
-                            <i class="fa-solid fa-play me-1"></i> Live Execution Demo
-                        </span>
-                        <span class="text-white-50 small">Watch how the workflow handles live lead ingestion and verification end-to-end.</span>
-                    </div>
-                    <a href="https://screenrec.com/share/7SxeCZsImJ" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light rounded-pill px-3 py-1.5">
-                        <i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Open in ScreenRec
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Verified Impact Metric Counters -->
-        <div class="row g-3 text-center mb-5">
-            <div class="col-6 col-md-3">
-                <div class="p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);">
-                    <div class="display-6 fw-extrabold text-accent-brand font-monospace mb-1">&lt; 60s</div>
-                    <div class="text-white small fw-bold mb-1">Speed-to-Lead</div>
-                    <div class="text-white-50" style="font-size: 0.75rem;">From initial form reply to verified CRM sync</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);">
-                    <div class="display-6 fw-extrabold text-white font-monospace mb-1">99.2%</div>
-                    <div class="text-white small fw-bold mb-1">Deliverability Score</div>
-                    <div class="text-white-50" style="font-size: 0.75rem;">Real-time MX verification stops sender penalties</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);">
-                    <div class="display-6 fw-extrabold font-monospace mb-1" style="color: #38bdf8;">+34%</div>
-                    <div class="text-white small fw-bold mb-1">Pipeline Recovery</div>
-                    <div class="text-white-50" style="font-size: 0.75rem;">Inbound leads recaptured before going cold</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="p-4 rounded-4 h-100" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);">
-                    <div class="display-6 fw-extrabold font-monospace mb-1" style="color: #4ade80;">12+ hrs</div>
-                    <div class="text-white small fw-bold mb-1">Saved Per SDR/Wk</div>
-                    <div class="text-white-50" style="font-size: 0.75rem;">Manual copy-pasting &amp; sheet cleaning removed</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- High-Impact CTA Banner -->
-        <div class="p-4 p-md-5 rounded-4 text-center position-relative overflow-hidden" style="background: radial-gradient(ellipse at center, rgba(200, 224, 25, 0.12) 0%, rgba(15, 23, 42, 0.95) 75%), #0d1424; border: 1px solid rgba(200, 224, 25, 0.35); box-shadow: 0 0 50px rgba(200, 224, 25, 0.1);">
-            <div class="position-relative" style="z-index: 2;">
-                <div class="badge rounded-pill px-3 py-1.5 mb-3" style="background: rgba(200, 224, 25, 0.15); color: #C8E019; border: 1px solid rgba(200, 224, 25, 0.3); font-size: 0.75rem; letter-spacing: 0.5px;">
-                    <i class="fa-solid fa-clock-rotate-left me-1"></i> ZERO PITCH · 100% TECHNICAL VALUE
-                </div>
-                <h3 class="display-6 fw-extrabold text-white mb-3">
-                    Want to plug the leaks in your agency's lead pipeline?
-                </h3>
-                <p class="lead text-white-50 mx-auto mb-4" style="max-width: 640px; font-size: 1.1rem; line-height: 1.6;">
-                    We will inspect your current lead intake, CRM connections, and reply speed — and outline the exact n8n or Make.com blueprint to automate it completely.
-                </p>
-                <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center gap-3">
-                    <a href="#contact-section" class="btn btn-brand btn-lg rounded-pill px-5 py-3 fw-extrabold text-dark shadow d-inline-flex align-items-center gap-2" style="background: #C8E019; border: none; font-size: 1.05rem;">
-                        <i class="fa-solid fa-calendar-check fs-5"></i>
-                        <span>Book a 15-min workflow audit</span>
-                        <i class="fa-solid fa-arrow-right ms-1"></i>
-                    </a>
-                </div>
-                <div class="mt-3 text-white-50 small">
-                    <i class="fa-solid fa-shield-halved text-accent-neon me-1"></i> Free 1-on-1 audit with an automation engineer. No high-pressure sales.
                 </div>
             </div>
         </div>
     </div>
 </section>
-
-<!-- Fullscreen Blueprint Modal -->
-<div class="modal fade" id="workflowModal" tabindex="-1" aria-labelledby="workflowModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-        <div class="modal-content text-white" style="background: #0b0f19; border: 1px solid rgba(200, 224, 25, 0.3); box-shadow: 0 0 50px rgba(0,0,0,0.8);">
-            <div class="modal-header border-bottom border-light border-opacity-10 py-3 px-4">
-                <div class="d-flex align-items-center gap-2">
-                    <span class="badge rounded-pill px-2.5 py-1 text-dark fw-bold" style="background: #C8E019;">n8n Production Canvas</span>
-                    <h5 class="modal-title h6 mb-0 text-white" id="workflowModalLabel">Lead Cleaner &amp; Email Validator Workflow</h5>
-                </div>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body p-2 text-center" style="background: #07090e; overflow-x: auto;">
-                <img src="assets/media/n8n/n8n-workflow.webp" alt="Full Blueprint" class="img-fluid rounded-2" style="min-width: 100%; object-fit: contain;">
-            </div>
-            <div class="modal-footer border-top border-light border-opacity-10 py-2.5 px-4 d-flex justify-content-between">
-                <span class="text-white-50 small">6 active nodes: Manual/Schedule Trigger &rarr; Google Sheet Ingestion &rarr; Regex Cleanse &rarr; Cloudflare DNS MX &rarr; Validation Gate &rarr; Clean Sheet Sync</span>
-                <button type="button" class="btn btn-sm btn-secondary rounded-pill px-3" data-bs-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Case Study Interactive Script -->
-<script>
-function switchCaseStudyTab(tab) {
-    var archTab = document.getElementById('tabContentArchitecture');
-    var vidTab = document.getElementById('tabContentVideo');
-    var archBtn = document.getElementById('tabBtnArchitecture');
-    var vidBtn = document.getElementById('tabBtnVideo');
-    var videoPlayer = document.getElementById('caseStudyVideoPlayer');
-
-    if (tab === 'architecture') {
-        archTab.classList.remove('d-none');
-        vidTab.classList.add('d-none');
-        archBtn.style.background = '#C8E019';
-        archBtn.style.color = '#000';
-        archBtn.style.borderColor = '#C8E019';
-        vidBtn.style.background = 'rgba(255,255,255,0.05)';
-        vidBtn.style.color = '#cbd5e1';
-        vidBtn.style.borderColor = 'rgba(255,255,255,0.1)';
-        if (videoPlayer) videoPlayer.pause();
-    } else {
-        archTab.classList.add('d-none');
-        vidTab.classList.remove('d-none');
-        vidBtn.style.background = '#C8E019';
-        vidBtn.style.color = '#000';
-        vidBtn.style.borderColor = '#C8E019';
-        archBtn.style.background = 'rgba(255,255,255,0.05)';
-        archBtn.style.color = '#cbd5e1';
-        archBtn.style.borderColor = 'rgba(255,255,255,0.1)';
-    }
-}
-
-function openWorkflowModal() {
-    var modalEl = document.getElementById('workflowModal');
-    if (modalEl && typeof bootstrap !== 'undefined' && bootstrap.Modal) {
-        var modal = new bootstrap.Modal(modalEl);
-        modal.show();
-    } else if (modalEl) {
-        modalEl.classList.add('show');
-        modalEl.style.display = 'block';
-        document.body.classList.add('modal-open');
-    }
-}
-</script>
-<!-- Case Study & Demo Section End -->
+<!-- Case Study Executive Teaser End -->
 
 <!-- Technologies We're Using Marquee Section Start -->
-<section id="technologies-section" class="py-5 bg-surface text-white border-top border-light-subtle overflow-hidden">
-    <div class="container mb-4">
-        <div class="d-flex align-items-center justify-content-center gap-3 max-w-700 mx-auto text-center">
-            <div class="flex-grow-1 bg-secondary bg-opacity-25" style="height: 1px;"></div>
-            <div class="d-flex align-items-center gap-2">
-                <span class="rounded-circle bg-accent-brand d-inline-block" style="width: 8px; height: 8px;"></span>
-                <h3 class="fw-extrabold text-white m-0 px-2 fs-4 text-uppercase" style="letter-spacing: 1px;">Technologies We're Using</h3>
-                <span class="rounded-circle bg-accent-brand d-inline-block" style="width: 8px; height: 8px;"></span>
-            </div>
-            <div class="flex-grow-1 bg-secondary bg-opacity-25" style="height: 1px;"></div>
+<section id="technologies-section" class="py-5 bg-surface text-white border-top border-light-subtle">
+    <div class="container">
+        <div class="text-center mb-4">
+            <span class="badge rounded-pill border border-secondary text-light mb-2 px-3 py-1 font-monospace" style="background: rgba(255,255,255,0.05); font-size: 11px;">ARCHITECTURE STACK</span>
+            <h3 class="fw-extrabold text-white m-0 fs-3 text-uppercase" style="letter-spacing: 1px;">Technologies We Engineer With</h3>
+            <p class="text-white-50 small mt-1 mb-0">Production-hardened automation tools, AI models, and enterprise APIs.</p>
         </div>
-    </div>
 
-    <div class="tech-marquee-wrapper">
-        <div class="tech-marquee-track">
-
-            <!-- Block 1 (First Half: 18 items) -->
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">n8n</span>
+        <div class="row g-3 justify-content-center pt-3">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
+                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
+                    <img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" style="width:32px; height:32px; object-fit:contain;" class="mb-2">
+                    <span class="text-white small fw-semibold">n8n</span>
+                </div>
             </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/make/6D3A9C" alt="Make" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">Make</span>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
+                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
+                    <img src="https://cdn.simpleicons.org/make/6D3A9C" alt="Make" style="width:32px; height:32px; object-fit:contain;" class="mb-2">
+                    <span class="text-white small fw-semibold">Make.com</span>
+                </div>
             </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/openai/10A37F" alt="OpenAI" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">OpenAI</span>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
+                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
+                    <div class="mb-2 text-accent-brand"><i class="fa-solid fa-bolt fs-4"></i></div>
+                    <span class="text-white small fw-semibold">GoHighLevel</span>
+                </div>
             </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/anthropic/D97706" alt="Claude" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">Claude</span>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
+                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
+                    <img src="https://cdn.simpleicons.org/openai/10A37F" alt="OpenAI" style="width:32px; height:32px; object-fit:contain;" class="mb-2">
+                    <span class="text-white small fw-semibold">OpenAI</span>
+                </div>
             </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp API" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">WhatsApp API</span>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
+                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
+                    <img src="https://cdn.simpleicons.org/anthropic/D97706" alt="Claude" style="width:32px; height:32px; object-fit:contain;" class="mb-2">
+                    <span class="text-white small fw-semibold">Claude</span>
+                </div>
             </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/elevenlabs/ffffff" alt="ElevenLabs" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">ElevenLabs</span>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
+                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
+                    <img src="https://cdn.simpleicons.org/supabase/3ECF8E" alt="Supabase" style="width:32px; height:32px; object-fit:contain;" class="mb-2">
+                    <span class="text-white small fw-semibold">Supabase</span>
+                </div>
             </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/zapier/FF4A00" alt="Zapier" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">Zapier</span>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
+                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
+                    <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" style="width:32px; height:32px; object-fit:contain;" class="mb-2">
+                    <span class="text-white small fw-semibold">PostgreSQL</span>
+                </div>
             </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">HubSpot</span>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
+                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
+                    <img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot" style="width:32px; height:32px; object-fit:contain;" class="mb-2">
+                    <span class="text-white small fw-semibold">HubSpot</span>
+                </div>
             </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">Python</span>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
+                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
+                    <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp API" style="width:32px; height:32px; object-fit:contain;" class="mb-2">
+                    <span class="text-white small fw-semibold">WhatsApp API</span>
+                </div>
             </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">n8n</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/make/6D3A9C" alt="Make" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">Make</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/openai/10A37F" alt="OpenAI" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">OpenAI</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/anthropic/D97706" alt="Claude" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">Claude</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp API" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">WhatsApp API</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/elevenlabs/ffffff" alt="ElevenLabs" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">ElevenLabs</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/zapier/FF4A00" alt="Zapier" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">Zapier</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">HubSpot</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">Python</span>
-            </div>
-
-            <!-- Block 2 (Second Half: Exact Duplicate for Infinite Seamless 0-to-100% Loop) -->
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">n8n</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/make/6D3A9C" alt="Make" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">Make</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/openai/10A37F" alt="OpenAI" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">OpenAI</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/anthropic/D97706" alt="Claude" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">Claude</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp API" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">WhatsApp API</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/elevenlabs/ffffff" alt="ElevenLabs" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">ElevenLabs</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/zapier/FF4A00" alt="Zapier" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">Zapier</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">HubSpot</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">Python</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">n8n</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/make/6D3A9C" alt="Make" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">Make</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/openai/10A37F" alt="OpenAI" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">OpenAI</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/anthropic/D97706" alt="Claude" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">Claude</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp API" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">WhatsApp API</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/elevenlabs/ffffff" alt="ElevenLabs" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">ElevenLabs</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/zapier/FF4A00" alt="Zapier" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">Zapier</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">HubSpot</span>
-            </div>
-            <div class="tech-item">
-                <div class="tech-item-icon"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" style="width:36px; height:36px; object-fit:contain;"></div>
-                <span class="tech-item-name">Python</span>
-            </div>
-
         </div>
     </div>
 </section>
 <!-- Technologies We're Using Marquee Section End -->
 
 <!-- Our Process Section Start -->
-<section id="process-section" class="section-padding bg-surface text-white border-top border-light-subtle">
+<section id="process-section" class="py-5 bg-surface text-white border-top border-light-subtle">
     <div class="container">
-        <div class="text-center mb-5 max-w-700 mx-auto">
-            <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">HOW WE WORK</span>
-            <h2 class="display-5 fw-extrabold mb-3 text-white typewriter-anim">Our 4-Step Automation Process</h2>
-            <p class="text-white-50 fs-5">A structured, collaborative approach to connecting your business operations.</p>
-        </div>
-        
-        <div class="row g-4 mt-2">
-            <!-- Step 1 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="p-4 bg-surface-1 rounded-4 h-100 shadow-sm border border-secondary border-opacity-25 position-relative">
-                    <span class="position-absolute top-0 end-0 m-3 text-accent-brand fw-extrabold display-6 opacity-25">01</span>
-                    <div class="icon-box mb-3"><i class="fa-solid fa-phone text-accent-brand"></i></div>
-                    <h5 class="fw-bold text-white">Discovery Call</h5>
-                    <p class="text-white-50 small mb-0">We analyze your current tools, identify manual bottlenecks, and map out opportunities to save time.</p>
-                </div>
+        <div class="p-4 p-md-4 rounded-4 text-center" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08);">
+            <div class="d-flex flex-wrap align-items-center justify-content-center gap-2 gap-md-4 mb-3">
+                <span class="badge rounded-pill px-3 py-1 text-dark fw-bold" style="background: #C8E019; font-size: 11px;">HOW WE WORK</span>
+                <span class="text-white fw-bold fs-5 d-flex align-items-center gap-2">
+                    <span>Audit</span> <i class="fa-solid fa-arrow-right text-accent-brand" style="font-size: 12px;"></i>
+                    <span>Architecture</span> <i class="fa-solid fa-arrow-right text-accent-brand" style="font-size: 12px;"></i>
+                    <span>Build</span> <i class="fa-solid fa-arrow-right text-accent-brand" style="font-size: 12px;"></i>
+                    <span>Deploy &amp; Monitor</span>
+                </span>
             </div>
-            <!-- Step 2 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="p-4 bg-surface-1 rounded-4 h-100 shadow-sm border border-secondary border-opacity-25 position-relative">
-                    <span class="position-absolute top-0 end-0 m-3 text-accent-brand fw-extrabold display-6 opacity-25">02</span>
-                    <div class="icon-box mb-3"><i class="fa-solid fa-compass text-accent-brand"></i></div>
-                    <h5 class="fw-bold text-white">Workflow Design</h5>
-                    <p class="text-white-50 small mb-0">We design a visual blueprint mapping out exactly how your CRM, emails, and tools will sync.</p>
-                </div>
-            </div>
-            <!-- Step 3 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="p-4 bg-surface-1 rounded-4 h-100 shadow-sm border border-secondary border-opacity-25 position-relative">
-                    <span class="position-absolute top-0 end-0 m-3 text-accent-brand fw-extrabold display-6 opacity-25">03</span>
-                    <div class="icon-box mb-3"><i class="fa-solid fa-code text-accent-brand"></i></div>
-                    <h5 class="fw-bold text-white">Build & Test</h5>
-                    <p class="text-white-50 small mb-0">We build the active node pipelines (n8n/Make) and run strict test cases to ensure data flows flawlessly.</p>
-                </div>
-            </div>
-            <!-- Step 4 -->
-            <div class="col-lg-3 col-md-6">
-                <div class="p-4 bg-surface-1 rounded-4 h-100 shadow-sm border border-secondary border-opacity-25 position-relative">
-                    <span class="position-absolute top-0 end-0 m-3 text-accent-brand fw-extrabold display-6 opacity-25">04</span>
-                    <div class="icon-box mb-3"><i class="fa-solid fa-circle-check text-accent-brand"></i></div>
-                    <h5 class="fw-bold text-white">Launch & Support</h5>
-                    <p class="text-white-50 small mb-0">We launch the systems live, hand over documentation, and provide ongoing optimization support.</p>
-                </div>
-            </div>
+            <p class="text-white-50 small mb-3">From identifying manual bottlenecks to deploying self-healing production pipelines with 24/7 telemetry.</p>
+            <a href="process" class="btn btn-sm btn-outline-brand rounded-pill px-4 py-2 fw-bold d-inline-flex align-items-center gap-2">
+                <span>See our 4-step process in detail</span>
+                <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i>
+            </a>
         </div>
     </div>
 </section>
@@ -1242,8 +853,9 @@ function openWorkflowModal() {
                             <i class="fa-solid fa-microphone-lines"></i>
                         </div>
                         <div class="badge rounded-pill py-1 px-3 fw-bold mb-2 shadow-sm" style="font-size: 0.75rem; letter-spacing: 1px; background-color: #D4FF3D; color: #0a0e1a !important;">HIGH DEMAND</div>
-                        <h3 class="h4 fw-bold text-white mb-2">AI Voice Agent</h3>
-                        <p class="text-muted small">Autonomous conversational calling</p>
+                        <h3 class="h4 fw-bold text-white mb-1">AI Voice Agent</h3>
+                        <div class="text-accent-brand fw-extrabold fs-5 mb-1">Starting from $1,500 setup</div>
+                        <p class="text-muted small mb-0">Autonomous conversational calling</p>
                     </div>
                     <hr class="border-secondary opacity-25 mb-4">
                     <ul class="list-unstyled text-white-50 mb-5 text-start" style="font-size: 0.95rem;">
@@ -1268,8 +880,9 @@ function openWorkflowModal() {
                         <div class="bg-brand-translucent text-accent-brand rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 60px; height: 60px; font-size: 24px;">
                             <i class="fa-solid fa-robot"></i>
                         </div>
-                        <h3 class="h4 fw-bold text-white mb-2">AI Automations</h3>
-                        <p class="text-muted small">Intelligent agents & custom pipelines</p>
+                        <h3 class="h4 fw-bold text-white mb-1">AI Automations</h3>
+                        <div class="text-accent-brand fw-extrabold fs-5 mb-1">Starting from $2,500 setup</div>
+                        <p class="text-muted small mb-0">Custom pipelines + optional maintenance</p>
                     </div>
                     <hr class="border-secondary opacity-25 mb-4">
                     <ul class="list-unstyled text-white-50 mb-5 text-start" style="font-size: 0.95rem;">
@@ -1307,48 +920,31 @@ function openWorkflowModal() {
     </div>
 </section>
 <!-- CTA Section End -->
-<!-- Testimonials Section Start -->
-<!-- TODO: When collecting future testimonials, prioritize ones with specific measurable results (e.g., "reduced resolution time by 70%") -->
-<section id="testimonials-section" class="section-padding bg-surface text-white border-top border-light-subtle">
-    <div class="container max-w-800">
-        <div class="text-center mb-5">
-            <span class="badge rounded-pill border border-secondary text-light mb-3 px-3 py-2" style="background: rgba(255,255,255,0.05); letter-spacing: 1px;">TESTIMONIALS</span>
-            <h2 class="display-5 fw-extrabold mb-3 text-white typewriter-anim">What Our Clients Say</h2>
-            <p class="text-white-50 fs-5">Trusted by tech companies and service providers worldwide.</p>
-        </div>
-        
-        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active text-center py-4">
-                    <div class="fs-2 text-accent-brand mb-3"><i class="fa-solid fa-quote-left"></i></div>
-                    <p class="fs-5 text-white-50 px-md-5 italic">
-                        "Automatixes transformed our sales onboarding. They built a custom n8n lead scoring agent that synced our calendar, CRM, and emails seamlessly. The team was fast, professional, and precise!"
-                    </p>
-                    <h5 class="fw-bold text-white mt-4 mb-1">M. Ibrahim</h5>
-                    <p class="text-white-50 small">CEO, TechVantage Corp</p>
-                </div>
-                <div class="carousel-item text-center py-4">
-                    <div class="fs-2 text-accent-brand mb-3"><i class="fa-solid fa-quote-left"></i></div>
-                    <p class="fs-5 text-white-50 px-md-5 italic">
-                        "The AI Voice Agent they deployed handles our customer queries and call bookings around the clock without latency. Coupled with their custom automated lead pipelines, our response speed and conversion rate skyrocketed!"
-                    </p>
-                    <h5 class="fw-bold text-white mt-4 mb-1">Sarah K.</h5>
-                    <p class="text-white-50 small">Brand Manager, Luxe Aesthetics</p>
-                </div>
+<!-- Testimonials / Honesty Positioning Section Start -->
+<section id="testimonials-section" class="py-5 bg-surface text-white border-top border-light-subtle">
+    <div class="container max-w-800 text-center">
+        <div class="p-4 p-md-5 rounded-4" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08);">
+            <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3" style="background: rgba(200, 224, 25, 0.1); border: 1px solid rgba(200, 224, 25, 0.25);">
+                <span class="text-accent-brand small fw-bold"><i class="fa-solid fa-handshake text-accent-neon me-1"></i> HONESTY FIRST</span>
             </div>
-            <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true" style="background-size: 50%; opacity: 0.8;"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true" style="background-size: 50%; opacity: 0.8;"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <h3 class="display-6 fw-bold text-white mb-3">Proof Over Promises</h3>
+            <p class="fs-5 text-white-50 mb-4" style="line-height: 1.7;">
+                We're a new agency. Instead of inflated testimonials, we let our working systems speak for themselves. Test our live voice assistant or inspect our technical lead recovery blueprint.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="voice-agent" class="btn btn-brand rounded-pill px-4 py-2.5 fw-bold d-inline-flex align-items-center gap-2 shadow">
+                    <i class="fa-solid fa-microphone-lines"></i>
+                    <span>Try Live Voice Demo</span>
+                </a>
+                <a href="case-study" class="btn btn-outline-light rounded-pill px-4 py-2.5 fw-semibold d-inline-flex align-items-center gap-2">
+                    <i class="fa-solid fa-diagram-project text-accent-brand"></i>
+                    <span>Inspect n8n Case Study</span>
+                </a>
+            </div>
         </div>
     </div>
 </section>
-<!-- Testimonials Section End -->
+<!-- Testimonials / Honesty Positioning Section End -->
 
 <!-- FAQ Section Start -->
 <section id="faq-section" class="section-padding bg-transparent text-white border-top border-light-subtle">

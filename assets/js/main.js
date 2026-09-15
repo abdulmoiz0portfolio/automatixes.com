@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // 3. Matter.js Pill Tossing Setup (Light Theme Cards)
     initMatterJsPhysics();
     
-    // 4. Newsletter Popup Setup (Elastic Active Class Zoom)
-    initNewsletterPopup();
+    // 4. Newsletter Popup Setup (Disabled per revamp instruction)
+    // initNewsletterPopup();
     
     // 5. Firebase Forms Setup
     initFirebaseForms();

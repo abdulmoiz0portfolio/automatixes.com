@@ -110,31 +110,7 @@
     <!-- Footer Section End -->
 
 
-    <!-- Newsletter Discount Popup Modal (Light Theme like SoftNest Technologies) -->
-    <div id="newsletterModal" class="newsletter-modal">
-        <div class="newsletter-modal-content">
-            <button class="close-modal" id="closeModal">&times;</button>
-            <div class="modal-content-side" style="padding: 40px 30px; text-align: center;">
-                <div class="modal-logo">
-                    <img src="assets/img/logo/automatixes-icon.png" alt="Automatixes Logo" style="width: 64px; height: 64px; object-fit: contain; display: block; margin: 0 auto; margin-bottom: 10px;">
-                </div>
-                <h2 style="font-size: 28px; margin-bottom: 10px; ">Exclusive 10% Discount!</h2>
-                <p style="font-size: 15px; color: #666; margin-bottom: 25px;">Subscribe to our newsletter and save <b>10%</b> on your first project with us.</p>
-                <form id="popup-newsletter-form" class="modal-form" novalidate style="max-width: 500px; margin: 0 auto;">
-                    <div class="input-group-custom" style="display: flex; flex-direction: column; align-items: center;">
-                        <input type="email" id="popup-email-input" name="email" placeholder="Your email address" required 
-                            style="width: 100%; padding: 15px 20px; border: 1px solid #ddd; border-radius: 12px; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.05); font-size: 16px; color: #333; background: #fff;">
-                        
-                        <div class="error-msg-container" style="height: 18px; width: 100%; display: flex; align-items: center; justify-content: center;">
-                            <span id="popup-email-error" style="color: #ff3333; font-size: 13px; display: none;">Please enter a valid email address.</span>
-                        </div>
-
-                        <button type="submit" class="btn btn-brand w-100 py-3 d-flex align-items-center justify-content-center gap-2"><span>Claim Now</span> <i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+    <!-- Newsletter modal removed per revamp instruction (redundant popups reduced) -->
 
     <!-- JS Scripts -->
     <!-- jQuery 3.7.1 -->

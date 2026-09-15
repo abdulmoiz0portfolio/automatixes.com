@@ -70,6 +70,7 @@ include 'header.php';
                 </div>
             </div>
         </div>
+        <div class="text-center text-white-50 small mt-2 mb-4" style="font-size: 0.8rem; font-style: italic;">* Based on internal benchmark / demo deployment</div>
 
         <!-- Problem vs Solution Breakdown -->
         <div class="row g-4 mb-5">

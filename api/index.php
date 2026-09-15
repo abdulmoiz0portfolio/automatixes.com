@@ -53,7 +53,16 @@ $allowed_pages = [
     'voice-agent',
     'case-study',
     'whatsapp-api',
-    'propertybot'
+    'propertybot',
+    'whatsapp-automation',
+    'crm-integration',
+    'email-automation',
+    'lead-recovery',
+    'support-agents',
+    'lead-scoring',
+    'inbound-voice',
+    'outbound-voice',
+    'tools'
 ];
 
 if (in_array($path, $allowed_pages) || in_array(strtolower($path), array_map('strtolower', $allowed_pages))) {
