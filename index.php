@@ -768,74 +768,234 @@
 
 
 
-<!-- Technologies We're Using Marquee Section Start -->
-<section id="technologies-section" class="py-5 bg-surface text-white border-top border-light-subtle">
-    <div class="container">
-        <div class="text-center mb-4">
+<!-- Technologies We Engineer With Marquee Section Start -->
+<section id="technologies-section" class="py-5 bg-surface text-white border-top border-light-subtle overflow-hidden">
+    <div class="container mb-4">
+        <div class="text-center">
             <span class="badge rounded-pill border border-secondary text-light mb-2 px-3 py-1 font-monospace" style="background: rgba(255,255,255,0.05); font-size: 11px;">ARCHITECTURE STACK</span>
             <h3 class="fw-extrabold text-white m-0 fs-3 text-uppercase" style="letter-spacing: 1px;">Technologies We Engineer With</h3>
             <p class="text-white-50 small mt-1 mb-0">Production-hardened automation tools, AI models, and enterprise APIs.</p>
         </div>
+    </div>
 
-        <div class="row g-3 justify-content-center pt-3">
-            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
-                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
-                    <img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" style="width:32px; height:32px; object-fit:contain;" class="mb-2">
-                    <span class="text-white small fw-semibold">n8n</span>
-                </div>
+    <!-- Infinite Scrolling Marquee -->
+    <div class="marquee-wrapper">
+        <div class="marquee-track">
+            <!-- Original Set -->
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" width="32" height="32" loading="lazy">
+                <span>n8n</span>
             </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
-                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
-                    <img src="https://cdn.simpleicons.org/make/6D3A9C" alt="Make" style="width:32px; height:32px; object-fit:contain;" class="mb-2">
-                    <span class="text-white small fw-semibold">Make.com</span>
-                </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/make/6D3A9C" alt="Make.com" width="32" height="32" loading="lazy">
+                <span>Make.com</span>
             </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
-                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
-                    <div class="mb-2 text-accent-brand"><i class="fa-solid fa-bolt fs-4"></i></div>
-                    <span class="text-white small fw-semibold">GoHighLevel</span>
-                </div>
+            <div class="tech-card">
+                <div class="tech-icon-box" style="color: #C8E019;"><i class="fa-solid fa-bolt fs-4"></i></div>
+                <span>GoHighLevel</span>
             </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
-                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
-                    <img src="https://cdn.simpleicons.org/openai/10A37F" alt="OpenAI" style="width:32px; height:32px; object-fit:contain;" class="mb-2">
-                    <span class="text-white small fw-semibold">OpenAI</span>
-                </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/openai/10A37F" alt="OpenAI" width="32" height="32" loading="lazy">
+                <span>OpenAI</span>
             </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
-                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
-                    <img src="https://cdn.simpleicons.org/anthropic/D97706" alt="Claude" style="width:32px; height:32px; object-fit:contain;" class="mb-2">
-                    <span class="text-white small fw-semibold">Claude</span>
-                </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/anthropic/D97706" alt="Claude" width="32" height="32" loading="lazy">
+                <span>Claude</span>
             </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
-                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
-                    <img src="https://cdn.simpleicons.org/supabase/3ECF8E" alt="Supabase" style="width:32px; height:32px; object-fit:contain;" class="mb-2">
-                    <span class="text-white small fw-semibold">Supabase</span>
-                </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/supabase/3ECF8E" alt="Supabase" width="32" height="32" loading="lazy">
+                <span>Supabase</span>
             </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
-                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
-                    <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" style="width:32px; height:32px; object-fit:contain;" class="mb-2">
-                    <span class="text-white small fw-semibold">PostgreSQL</span>
-                </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" width="32" height="32" loading="lazy">
+                <span>PostgreSQL</span>
             </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
-                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
-                    <img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot" style="width:32px; height:32px; object-fit:contain;" class="mb-2">
-                    <span class="text-white small fw-semibold">HubSpot</span>
-                </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot" width="32" height="32" loading="lazy">
+                <span>HubSpot</span>
             </div>
-            <div class="col-6 col-sm-4 col-md-3 col-lg-auto">
-                <div class="p-3 rounded-3 text-center d-flex flex-column align-items-center justify-content-center" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); min-width: 120px; height: 100px;">
-                    <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp API" style="width:32px; height:32px; object-fit:contain;" class="mb-2">
-                    <span class="text-white small fw-semibold">WhatsApp API</span>
-                </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp API" width="32" height="32" loading="lazy">
+                <span>WhatsApp API</span>
             </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/twilio/F22F46" alt="Twilio" width="32" height="32" loading="lazy">
+                <span>Twilio</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/airtable/18BFFF" alt="Airtable" width="32" height="32" loading="lazy">
+                <span>Airtable</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/googlesheets/34A853" alt="Google Sheets" width="32" height="32" loading="lazy">
+                <span>Google Sheets</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/slack/ECB22E" alt="Slack" width="32" height="32" loading="lazy">
+                <span>Slack</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firebase" width="32" height="32" loading="lazy">
+                <span>Firebase</span>
+            </div>
+            <div class="tech-card">
+                <div class="tech-icon-box" style="color: #C8E019;"><i class="fa-solid fa-microphone-lines fs-4"></i></div>
+                <span>Retell AI</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/elevenlabs/ffffff" alt="ElevenLabs" width="32" height="32" loading="lazy">
+                <span>ElevenLabs</span>
+            </div>
+
+            <!-- Duplicate Set (for seamless -50% infinite loop) -->
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" width="32" height="32" loading="lazy">
+                <span>n8n</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/make/6D3A9C" alt="Make.com" width="32" height="32" loading="lazy">
+                <span>Make.com</span>
+            </div>
+            <div class="tech-card">
+                <div class="tech-icon-box" style="color: #C8E019;"><i class="fa-solid fa-bolt fs-4"></i></div>
+                <span>GoHighLevel</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/openai/10A37F" alt="OpenAI" width="32" height="32" loading="lazy">
+                <span>OpenAI</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/anthropic/D97706" alt="Claude" width="32" height="32" loading="lazy">
+                <span>Claude</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/supabase/3ECF8E" alt="Supabase" width="32" height="32" loading="lazy">
+                <span>Supabase</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" width="32" height="32" loading="lazy">
+                <span>PostgreSQL</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/hubspot/FF7A59" alt="HubSpot" width="32" height="32" loading="lazy">
+                <span>HubSpot</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="WhatsApp API" width="32" height="32" loading="lazy">
+                <span>WhatsApp API</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/twilio/F22F46" alt="Twilio" width="32" height="32" loading="lazy">
+                <span>Twilio</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/airtable/18BFFF" alt="Airtable" width="32" height="32" loading="lazy">
+                <span>Airtable</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/googlesheets/34A853" alt="Google Sheets" width="32" height="32" loading="lazy">
+                <span>Google Sheets</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/slack/ECB22E" alt="Slack" width="32" height="32" loading="lazy">
+                <span>Slack</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firebase" width="32" height="32" loading="lazy">
+                <span>Firebase</span>
+            </div>
+            <div class="tech-card">
+                <div class="tech-icon-box" style="color: #C8E019;"><i class="fa-solid fa-microphone-lines fs-4"></i></div>
+                <span>Retell AI</span>
+            </div>
+            <div class="tech-card">
+                <img src="https://cdn.simpleicons.org/elevenlabs/ffffff" alt="ElevenLabs" width="32" height="32" loading="lazy">
+                <span>ElevenLabs</span>
+            </div>
+
         </div>
     </div>
 </section>
-<!-- Technologies We're Using Marquee Section End -->
+<!-- Technologies We Engineer With Marquee Section End -->
+
+<style>
+.marquee-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 12px 0;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+    animation: scroll-marquee 42s linear infinite;
+    will-change: transform;
+}
+
+.marquee-wrapper:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+.tech-card {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px 22px;
+    background: #0d1322;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    min-width: 130px;
+    height: 98px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+
+.tech-card:hover {
+    border-color: rgba(200, 224, 25, 0.4) !important;
+    background: #111827;
+    transform: translateY(-2px);
+}
+
+.tech-card img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    display: block;
+}
+
+.tech-card .tech-icon-box {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-card span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    letter-spacing: 0.2px;
+    line-height: 1.2;
+    text-align: center;
+}
+</style>
+
 
 <!-- Our Process Section Start -->
 <section id="process-section" class="py-5 bg-surface text-white border-top border-light-subtle">
