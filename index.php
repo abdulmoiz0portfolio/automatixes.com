@@ -258,7 +258,7 @@
         </div>
         
         <p class="lead mx-auto mb-5" style="max-width: 720px; font-size: 1.15rem; color: #cbd5e1; line-height: 1.7;">
-            We design and deploy custom AI agents, CRM automations, and voice systems for B2B service firms and real estate operators. Built on n8n, Make, and OpenAI.
+            We design and deploy custom AI agents, CRM automations, and voice systems for growing businesses across industries — from real estate to e-commerce to professional services. Built on n8n, Make, and OpenAI.
         </p>
 
         <div class="d-flex justify-content-center gap-3 flex-wrap wow fadeInUp" data-wow-delay=".4s">
@@ -325,7 +325,7 @@
                         </h2>
                     </div>
                     <p class="mt-3 wow fadeInUp text-white-50 fs-5" data-wow-delay=".5s" style="line-height: 1.7;">
-                        We help B2B service firms and real estate operators eliminate repetitive manual work. From lead qualification to invoice processing, we design systems that run without human intervention — built on n8n, Make, and GoHighLevel.
+                        We help growing businesses across industries eliminate repetitive manual work. From lead qualification to invoice processing, we design systems that run without human intervention — built on n8n, Make, and GoHighLevel.
                     </p>
                     
                     <h5 class="fw-bold text-white mt-4 mb-3 wow fadeInUp" data-wow-delay=".3s">Who We Serve:</h5>
@@ -631,48 +631,7 @@
 
         <!-- 3-Card Portfolio Grid -->
         <div class="row g-4 mb-5 justify-content-center">
-            <!-- Project 1: Real Estate Concierge -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25 d-flex flex-column" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
-                    <!-- Project Image with Floating Badge -->
-                    <div class="position-relative overflow-hidden" style="height: 230px; background: #070a12;">
-                        <img src="assets/media/n8n/workflows/workflow-02-real-estate-ai-agent.png" 
-                             alt="Property Advisor - Real Estate Concierge" 
-                             class="w-100 h-100 object-fit-cover" 
-                             loading="lazy" 
-                             style="transition: transform 0.4s ease;">
-                        <span class="badge rounded-pill px-3 py-1.5 position-absolute top-0 start-0 m-3 shadow" style="background: #059669; color: #ffffff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;">
-                            <i class="fa-solid fa-building-columns me-1"></i> Real Estate Concierge
-                        </span>
-                    </div>
-
-                    <!-- Card Body -->
-                    <div class="p-4 d-flex flex-column flex-grow-1">
-                        <div>
-                            <h4 class="h5 fw-bold text-white mb-2 d-flex align-items-center" style="min-height: 52px; line-height: 1.35;">Property Advisor — Real Estate Concierge</h4>
-                            <p class="text-secondary small mb-3" style="line-height: 1.6; min-height: 90px;">
-                                Interactive digital concierge for prime developments. Qualifies buyer criteria, delivers verified pricing benchmarks, clarifies documentation (NOC &amp; Fard), and schedules private viewings 24/7.
-                            </p>
-                            <div class="d-flex align-items-center gap-2 text-white-50 small mb-3 font-monospace" style="min-height: 24px; font-size: 0.78rem;">
-                                <i class="fa-solid fa-location-dot text-danger flex-shrink-0"></i>
-                                <span class="text-truncate">Pakistan Property • 24/7 Concierge</span>
-                            </div>
-                        </div>
-
-                        <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
-                            <span class="badge bg-dark text-success border border-success border-opacity-25 font-monospace small px-2.5 py-1.5" title="Internal Demonstration Build">
-                                <i class="fa-solid fa-laptop-code text-success me-1" style="font-size: 9px;"></i> Demo Project / Internal Build
-                            </span>
-                            <a href="propertybot" class="btn btn-sm btn-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1.5 text-nowrap" style="font-size: 0.8rem; white-space: nowrap;">
-                                <span>Try Live Demo</span>
-                                <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 2: Voice Calling Agent -->
+            <!-- Project 1: Voice Calling Agent -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25 d-flex flex-column" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
                     <!-- Project Image with Floating Badge -->
@@ -713,7 +672,7 @@
                 </div>
             </div>
 
-            <!-- Project 3: Automated Cold Email Outreach Engine -->
+            <!-- Project 2: Automated Cold Email Outreach Engine -->
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25 d-flex flex-column" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
                     <!-- Project Image with Floating Badge -->
@@ -747,6 +706,47 @@
                             </span>
                             <a href="ai-Agent-Automations" class="btn btn-sm btn-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1.5 text-nowrap" style="font-size: 0.8rem; white-space: nowrap;">
                                 <span>Inspect Workflow</span>
+                                <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Real Estate Concierge -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25 d-flex flex-column" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.35);">
+                    <!-- Project Image with Floating Badge -->
+                    <div class="position-relative overflow-hidden" style="height: 230px; background: #070a12;">
+                        <img src="assets/media/n8n/workflows/workflow-02-real-estate-ai-agent.png" 
+                             alt="Property Advisor - Real Estate Concierge" 
+                             class="w-100 h-100 object-fit-cover" 
+                             loading="lazy" 
+                             style="transition: transform 0.4s ease;">
+                        <span class="badge rounded-pill px-3 py-1.5 position-absolute top-0 start-0 m-3 shadow" style="background: #059669; color: #ffffff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;">
+                            <i class="fa-solid fa-building-columns me-1"></i> Real Estate Concierge
+                        </span>
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <div>
+                            <h4 class="h5 fw-bold text-white mb-2 d-flex align-items-center" style="min-height: 52px; line-height: 1.35;">Property Advisor — Real Estate Concierge</h4>
+                            <p class="text-secondary small mb-3" style="line-height: 1.6; min-height: 90px;">
+                                Interactive digital concierge for prime developments. Qualifies buyer criteria, delivers verified pricing benchmarks, clarifies documentation (NOC &amp; Fard), and schedules private viewings 24/7.
+                            </p>
+                            <div class="d-flex align-items-center gap-2 text-white-50 small mb-3 font-monospace" style="min-height: 24px; font-size: 0.78rem;">
+                                <i class="fa-solid fa-location-dot text-danger flex-shrink-0"></i>
+                                <span class="text-truncate">Pakistan Property • 24/7 Concierge</span>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-between pt-3 border-top border-secondary border-opacity-25 mt-auto">
+                            <span class="badge bg-dark text-success border border-success border-opacity-25 font-monospace small px-2.5 py-1.5" title="Internal Demonstration Build">
+                                <i class="fa-solid fa-laptop-code text-success me-1" style="font-size: 9px;"></i> Demo Project / Internal Build
+                            </span>
+                            <a href="propertybot" class="btn btn-sm btn-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1.5 text-nowrap" style="font-size: 0.8rem; white-space: nowrap;">
+                                <span>Try Live Demo</span>
                                 <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i>
                             </a>
                         </div>
@@ -827,8 +827,8 @@
                 <span>Airtable</span>
             </div>
             <div class="tech-card">
-                <img src="https://cdn.simpleicons.org/googlesheets/34A853" alt="Google Sheets" width="32" height="32" loading="lazy">
-                <span>Google Sheets</span>
+                <img src="https://cdn.simpleicons.org/googlesheets/34A853" alt="Google Sheets API" width="32" height="32" loading="lazy">
+                <span>Google Sheets API</span>
             </div>
             <div class="tech-card">
                 <img src="https://cdn.simpleicons.org/slack/ECB22E" alt="Slack" width="32" height="32" loading="lazy">
@@ -842,12 +842,8 @@
                 <div class="tech-icon-box" style="color: #C8E019;"><i class="fa-solid fa-microphone-lines fs-4"></i></div>
                 <span>Retell AI</span>
             </div>
-            <div class="tech-card">
-                <img src="https://cdn.simpleicons.org/elevenlabs/ffffff" alt="ElevenLabs" width="32" height="32" loading="lazy">
-                <span>ElevenLabs</span>
-            </div>
 
-            <!-- Duplicate Set (for seamless -50% infinite loop) -->
+            <!-- Exact Duplicate Set (for seamless -50% infinite loop) -->
             <div class="tech-card">
                 <img src="https://cdn.simpleicons.org/n8n/EA4B71" alt="n8n" width="32" height="32" loading="lazy">
                 <span>n8n</span>
@@ -893,8 +889,8 @@
                 <span>Airtable</span>
             </div>
             <div class="tech-card">
-                <img src="https://cdn.simpleicons.org/googlesheets/34A853" alt="Google Sheets" width="32" height="32" loading="lazy">
-                <span>Google Sheets</span>
+                <img src="https://cdn.simpleicons.org/googlesheets/34A853" alt="Google Sheets API" width="32" height="32" loading="lazy">
+                <span>Google Sheets API</span>
             </div>
             <div class="tech-card">
                 <img src="https://cdn.simpleicons.org/slack/ECB22E" alt="Slack" width="32" height="32" loading="lazy">
@@ -907,10 +903,6 @@
             <div class="tech-card">
                 <div class="tech-icon-box" style="color: #C8E019;"><i class="fa-solid fa-microphone-lines fs-4"></i></div>
                 <span>Retell AI</span>
-            </div>
-            <div class="tech-card">
-                <img src="https://cdn.simpleicons.org/elevenlabs/ffffff" alt="ElevenLabs" width="32" height="32" loading="lazy">
-                <span>ElevenLabs</span>
             </div>
 
         </div>
@@ -930,9 +922,9 @@
 
 .marquee-track {
     display: flex;
-    gap: 16px;
+    gap: 1.5rem;
     width: max-content;
-    animation: scroll-marquee 42s linear infinite;
+    animation: scroll-marquee 50s linear infinite;
     will-change: transform;
 }
 
@@ -951,11 +943,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 18px 22px;
-    background: #0d1322;
+    gap: 0.75rem;
+    padding: 1.25rem 1.5rem;
+    background: #12141c;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 14px;
+    border-radius: 12px;
     min-width: 130px;
     height: 98px;
     position: relative;
@@ -966,7 +958,7 @@
 
 .tech-card:hover {
     border-color: rgba(200, 224, 25, 0.4) !important;
-    background: #111827;
+    background: #161924;
     transform: translateY(-2px);
 }
 
