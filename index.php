@@ -366,6 +366,7 @@
 <!-- Toss-away physics section removed per revamp instruction -->
 
 <!-- Services Section Start -->
+<!-- Services Section Start (3-Column Grid Matching Reference) -->
 <section id="services-section" class="section-padding bg-surface text-white">
     <div class="container">
         <div class="text-center mb-5 max-w-700 mx-auto">
@@ -374,76 +375,183 @@
             <p class="text-white-50 fs-5">We combine autonomous AI voice intelligence, smart agents, and workflow automations to scale your business.</p>
         </div>
         
-        <!-- Row 1: Core Offerings (Dual High-Impact Cards) -->
+        <!-- 6 Core Offerings Grid (3 Columns per Row) -->
         <div class="row g-4 justify-content-center">
-            <!-- Core Offering 1: Autonomous AI Voice Agents -->
-            <div class="col-lg-6 col-md-6">
-                <div class="card-service-item h-100 d-flex flex-column justify-content-between wow fadeInUp" data-wow-delay=".2s" style="border: 1px solid rgba(255, 255, 255, 0.08); background: rgba(18, 24, 38, 0.75); position: relative; overflow: hidden; border-radius: 20px;">
-                    <div>
-                        <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm position-relative">
-                            <img src="assets/img/services/ai_agents.jpg" alt="Autonomous AI Voice Agents" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;">
-                            <span class="badge position-absolute top-0 end-0 m-3 text-dark rounded-pill px-3 py-1.5 shadow fw-bold" style="font-size: 11px; background: #D4FF3D !important; color: #0a0e1a !important; letter-spacing: 0.5px; border: none;">
-                                <i class="fa-solid fa-fire me-1" style="color: #0a0e1a !important;"></i> HIGH DEMAND
-                            </span>
-                        </div>
-                        <div class="content p-2">
-                            <div class="d-flex align-items-center gap-2 mb-2">
-                                <i class="fa-solid fa-microphone-lines" style="font-size: 1.3rem; color: #D4FF3D !important;"></i>
-                                <span class="text-white-50 font-monospace small">Conversational Voice Engine</span>
-                            </div>
-                            <h3 class="mb-3"><a href="voice-agent" class="text-white text-decoration-none">Autonomous AI Voice Agents</a></h3>
-                            <p class="text-white-50 mb-3">Human-like voice bots that handle customer inquiries, inbound call routing, qualify leads, and book appointments 24/7 with zero human lag.</p>
-                            <ul class="list-unstyled text-white-50 small mb-4" style="line-height: 2;">
-                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>Inbound &amp; Outbound Calling (&lt;500ms response)</li>
-                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>Automated Appointment Booking &amp; Calendar Sync</li>
-                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>Live CRM integration &amp; dynamic lead qualification</li>
-                            </ul>
-                        </div>
+            
+            <!-- 1. WhatsApp Business Automation -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25 d-flex flex-column service-grid-card" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="position-relative overflow-hidden" style="height: 190px; background: #070a12;">
+                        <img src="assets/media/n8n/workflows/Customer Support Website agent.png" alt="WhatsApp Business Automation" class="w-100 h-100 object-fit-cover" loading="lazy">
+                        <span class="badge rounded-pill px-3 py-1 position-absolute top-0 end-0 m-3 shadow fw-bold" style="font-size: 10px; background: #25D366; color: #ffffff;">
+                            <i class="fa-brands fa-whatsapp me-1"></i> WhatsApp API
+                        </span>
                     </div>
-                    <div class="p-2 pt-0">
-                        <a href="voice-agent" class="btn btn-sm btn-brand rounded-pill px-4 py-2 fw-bold text-nowrap d-inline-flex align-items-center gap-2 shadow text-dark" style="background: #D4FF3D !important; color: #0a0e1a !important; border: none;">
-                            <span>Try Live Voice Demo</span>
-                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                        </a>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 p-2 mb-3" style="background: rgba(37, 211, 102, 0.12); color: #25D366; width: 42px; height: 42px; font-size: 1.15rem;">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-white mb-2"><a href="whatsapp-automation" class="text-white text-decoration-none hover-neon">WhatsApp Business Automation</a></h4>
+                        <p class="text-white-50 small mb-4 flex-grow-1" style="line-height: 1.6;">
+                            Sub-15s conversational AI response, instant lead qualification, dynamic PDF catalog dispatch, and automated 2-way CRM synchronization.
+                        </p>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 mt-auto">
+                            <a href="whatsapp-automation" class="text-accent-brand fw-bold small text-decoration-none d-inline-flex align-items-center gap-1.5">
+                                <span>Learn More</span>
+                                <i class="fa-solid fa-arrow-right" style="font-size: 11px;"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Core Offering 2: AI Automated Solutions -->
-            <div class="col-lg-6 col-md-6">
-                <div class="card-service-item h-100 d-flex flex-column justify-content-between wow fadeInUp" data-wow-delay=".4s" style="border: 1px solid rgba(255, 255, 255, 0.08); background: rgba(18, 24, 38, 0.75); position: relative; overflow: hidden; border-radius: 20px;">
-                    <div>
-                        <div class="thumb mb-4 rounded-4 overflow-hidden shadow-sm position-relative">
-                            <img src="assets/img/services/ai_automations.jpg" alt="AI Automated Solutions" class="img-fluid w-100" style="aspect-ratio: 16/9; object-fit: cover;">
-                            <span class="badge position-absolute top-0 end-0 m-3 text-dark rounded-pill px-3 py-1.5 shadow fw-bold" style="font-size: 11px; background: #D4FF3D !important; color: #0a0e1a !important; letter-spacing: 0.5px; border: none;">
-                                <i class="fa-solid fa-bolt me-1" style="color: #0a0e1a !important;"></i> CORE AGENTIC
-                            </span>
-                        </div>
-                        <div class="content p-2">
-                            <div class="d-flex align-items-center gap-2 mb-2">
-                                <i class="fa-solid fa-robot" style="font-size: 1.3rem; color: #D4FF3D !important;"></i>
-                                <span class="text-white-50 font-monospace small">AI Agents &amp; Workflow Automations</span>
-                            </div>
-                            <h3 class="mb-3"><a href="ai-Agent-Automations" class="text-white text-decoration-none">AI Agent & Automations</a></h3>
-                            <p class="text-white-50 mb-3">Smart digital agents and custom n8n / Make pipelines that automate support, lead triage, and sync your business software 24/7.</p>
-                            <ul class="list-unstyled text-white-50 small mb-4" style="line-height: 2;">
-                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>Multi-Platform Sync (WhatsApp, CRM, Email, Slack)</li>
-                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>Custom Knowledge-Base Agents &amp; Data Extractors</li>
-                                <li><i class="fa-solid fa-check me-2" style="color: #D4FF3D !important;"></i>n8n, Make, GoHighLevel, Zapier &amp; API Workflows</li>
-                            </ul>
-                        </div>
+            <!-- 2. CRM Lead Sync & Data Integration -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25 d-flex flex-column service-grid-card" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="position-relative overflow-hidden" style="height: 190px; background: #070a12;">
+                        <img src="assets/media/n8n/workflows/image 1.png" alt="CRM Lead Sync & Data Integration" class="w-100 h-100 object-fit-cover" loading="lazy">
+                        <span class="badge rounded-pill px-3 py-1 position-absolute top-0 end-0 m-3 shadow fw-bold" style="font-size: 10px; background: #38bdf8; color: #000;">
+                            <i class="fa-solid fa-diagram-project me-1"></i> Bi-Directional
+                        </span>
                     </div>
-                    <div class="p-2 pt-0">
-                        <a href="ai-Agent-Automations" class="btn btn-sm btn-brand rounded-pill px-4 py-2 fw-bold text-nowrap d-inline-flex align-items-center gap-2 shadow text-dark" style="background: #D4FF3D !important; color: #0a0e1a !important; border: none;">
-                            <span>Explore Automations</span>
-                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-                        </a>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 p-2 mb-3" style="background: rgba(56, 189, 248, 0.12); color: #38bdf8; width: 42px; height: 42px; font-size: 1.15rem;">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-white mb-2"><a href="crm-integration" class="text-white text-decoration-none hover-neon">CRM Lead Sync &amp; Data Integration</a></h4>
+                        <p class="text-white-50 small mb-4 flex-grow-1" style="line-height: 1.6;">
+                            Connect GoHighLevel, HubSpot, and custom backends. Real-time deduplication, automated field mapping, and zero manual copy-paste.
+                        </p>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 mt-auto">
+                            <a href="crm-integration" class="text-accent-brand fw-bold small text-decoration-none d-inline-flex align-items-center gap-1.5">
+                                <span>Learn More</span>
+                                <i class="fa-solid fa-arrow-right" style="font-size: 11px;"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- 3. Email Follow-up & Nurture Automation -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25 d-flex flex-column service-grid-card" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="position-relative overflow-hidden" style="height: 190px; background: #070a12;">
+                        <img src="assets/media/n8n/workflows/Email Marketing.png" alt="Email Follow-up & Nurture Automation" class="w-100 h-100 object-fit-cover" loading="lazy">
+                        <span class="badge rounded-pill px-3 py-1 position-absolute top-0 end-0 m-3 shadow fw-bold" style="font-size: 10px; background: #eab308; color: #000;">
+                            <i class="fa-solid fa-envelope-open-text me-1"></i> Multi-Mailbox
+                        </span>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 p-2 mb-3" style="background: rgba(234, 179, 8, 0.12); color: #eab308; width: 42px; height: 42px; font-size: 1.15rem;">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-white mb-2"><a href="email-automation" class="text-white text-decoration-none hover-neon">Email Follow-up &amp; Nurture Automation</a></h4>
+                        <p class="text-white-50 small mb-4 flex-grow-1" style="line-height: 1.6;">
+                            Pre-verified DNS/MX zero-bounce workflows, AI reply intent sorting, and multi-touch contextual drip sequences that convert.
+                        </p>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 mt-auto">
+                            <a href="email-automation" class="text-accent-brand fw-bold small text-decoration-none d-inline-flex align-items-center gap-1.5">
+                                <span>Learn More</span>
+                                <i class="fa-solid fa-arrow-right" style="font-size: 11px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Cold Outreach & Lead Recovery Automation -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25 d-flex flex-column service-grid-card" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="position-relative overflow-hidden" style="height: 190px; background: #070a12;">
+                        <img src="assets/media/n8n/workflows/n8n-email-marketing-workflow.png" alt="Cold Outreach & Lead Recovery" class="w-100 h-100 object-fit-cover" loading="lazy">
+                        <span class="badge rounded-pill px-3 py-1 position-absolute top-0 end-0 m-3 shadow fw-bold" style="font-size: 10px; background: #C8E019; color: #000;">
+                            <i class="fa-solid fa-life-ring me-1"></i> &lt;60s Recovery
+                        </span>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 p-2 mb-3" style="background: rgba(200, 224, 25, 0.12); color: #C8E019; width: 42px; height: 42px; font-size: 1.15rem;">
+                            <i class="fa-solid fa-life-ring"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-white mb-2"><a href="lead-recovery" class="text-white text-decoration-none hover-neon">Cold Outreach &amp; Lead Recovery</a></h4>
+                        <p class="text-white-50 small mb-4 flex-grow-1" style="line-height: 1.6;">
+                            Sub-60s instant speed-to-lead reply engine, DNS record validation, and automated reactivation of stalled CRM pipelines.
+                        </p>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 mt-auto">
+                            <a href="lead-recovery" class="text-accent-brand fw-bold small text-decoration-none d-inline-flex align-items-center gap-1.5">
+                                <span>Learn More</span>
+                                <i class="fa-solid fa-arrow-right" style="font-size: 11px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Knowledge-Base / Support Chatbot Agents -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25 d-flex flex-column service-grid-card" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="position-relative overflow-hidden" style="height: 190px; background: #070a12;">
+                        <img src="assets/img/services/ai_agents.jpg" alt="Knowledge-Base Support Chatbot Agents" class="w-100 h-100 object-fit-cover" loading="lazy">
+                        <span class="badge rounded-pill px-3 py-1 position-absolute top-0 end-0 m-3 shadow fw-bold" style="font-size: 10px; background: #a855f7; color: #fff;">
+                            <i class="fa-solid fa-robot me-1"></i> RAG Agents
+                        </span>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 p-2 mb-3" style="background: rgba(168, 85, 247, 0.12); color: #a855f7; width: 42px; height: 42px; font-size: 1.15rem;">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-white mb-2"><a href="support-agents" class="text-white text-decoration-none hover-neon">Support Chatbot Agents (Custom RAG)</a></h4>
+                        <p class="text-white-50 small mb-4 flex-grow-1" style="line-height: 1.6;">
+                            Resolve 70%+ of Tier-1 support queries instantly with custom knowledge-base retrieval, zero hallucinations, and human team escalation.
+                        </p>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 mt-auto">
+                            <a href="support-agents" class="text-accent-brand fw-bold small text-decoration-none d-inline-flex align-items-center gap-1.5">
+                                <span>Learn More</span>
+                                <i class="fa-solid fa-arrow-right" style="font-size: 11px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Lead Scoring & Data Extraction Automation -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 rounded-4 overflow-hidden border border-secondary border-opacity-25 d-flex flex-column service-grid-card" style="background: #0d1322; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                    <div class="position-relative overflow-hidden" style="height: 190px; background: #070a12;">
+                        <img src="assets/media/n8n/workflows/workflow-02-real-estate-ai-agent.png" alt="Lead Scoring & Data Extraction" class="w-100 h-100 object-fit-cover" loading="lazy">
+                        <span class="badge rounded-pill px-3 py-1 position-absolute top-0 end-0 m-3 shadow fw-bold" style="font-size: 10px; background: #ef4444; color: #fff;">
+                            <i class="fa-solid fa-bullseye me-1"></i> AI Intent
+                        </span>
+                    </div>
+                    <div class="p-4 d-flex flex-column flex-grow-1">
+                        <div class="d-inline-flex align-items-center justify-content-center rounded-3 p-2 mb-3" style="background: rgba(239, 68, 68, 0.12); color: #f87171; width: 42px; height: 42px; font-size: 1.15rem;">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h4 class="h5 fw-bold text-white mb-2"><a href="lead-scoring" class="text-white text-decoration-none hover-neon">Lead Scoring &amp; Data Extraction</a></h4>
+                        <p class="text-white-50 small mb-4 flex-grow-1" style="line-height: 1.6;">
+                            Algorithmic ICP qualification, real-time company enrichment, and priority round-robin routing to your top account closers.
+                        </p>
+                        <div class="pt-3 border-top border-secondary border-opacity-25 mt-auto">
+                            <a href="lead-scoring" class="text-accent-brand fw-bold small text-decoration-none d-inline-flex align-items-center gap-1.5">
+                                <span>Learn More</span>
+                                <i class="fa-solid fa-arrow-right" style="font-size: 11px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Center CTA Button: View All Services (Matching Image 1) -->
+        <div class="text-center pt-5 mt-2">
+            <a href="service" class="btn btn-brand rounded-pill px-5 py-3 fw-bold d-inline-flex align-items-center gap-2 shadow" style="font-size: 1rem;">
+                <span>View All Services</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
         </div>
     </div>
 </section>
+<!-- Services Section End -->
 
 <!-- AI Comparison Section Start -->
 <section class="py-5 bg-dark text-white border-top border-light-subtle">

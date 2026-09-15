@@ -6,6 +6,12 @@ if (!isset($page_key)) {
 }
 
 $meta_config = [
+        'service' => [
+        'title' => 'AI Automation & Autonomous Voice Services | Automatixes',
+        'desc' => 'Explore our full suite of AI automations: WhatsApp business workflows, CRM data sync, cold email recovery, 24/7 support agents, and voice bots.',
+        'keywords' => 'AI Services, WhatsApp Automation, CRM Integration, Voice Agents, n8n agency, Automatixes services',
+        'url' => 'service'
+    ],
     'index' => [
         'title' => 'AI Automation Agency (n8n, Make, GoHighLevel) | Automatixes',
         'desc' => 'Automatixes is an AI-first agency building custom AI agents and workflow automations to connect your CRM, WhatsApp, and emails. Scale operations 24/7.',
@@ -435,27 +441,7 @@ $og_image = (!empty($active_meta['image']))
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-lg-center">
                         <li class="nav-item"><a class="nav-link active" href="index">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about">About</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Services
-                            </a>
-                            <ul class="dropdown-menu border-0 shadow-lg p-3" aria-labelledby="servicesDropdown" style="background: #0d1322 !important; border: 1px solid rgba(255,255,255,0.1) !important; border-radius: 16px; min-width: 320px;">
-                                <li><h6 class="dropdown-header text-uppercase text-accent-brand fw-bold px-2 py-1" style="font-size: 11px; letter-spacing: 1px;"><i class="fa-solid fa-gears me-1"></i> Workflow Automations</h6></li>
-                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center gap-2" href="whatsapp-automation"><i class="fa-brands fa-whatsapp text-success" style="width: 16px;"></i> WhatsApp Automation</a></li>
-                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center gap-2" href="crm-integration"><i class="fa-solid fa-diagram-project text-info" style="width: 16px;"></i> CRM Integration & Sync</a></li>
-                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center gap-2" href="email-automation"><i class="fa-solid fa-envelope-open-text text-warning" style="width: 16px;"></i> Email & Deliverability</a></li>
-                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center gap-2" href="lead-recovery"><i class="fa-solid fa-life-ring text-accent-brand" style="width: 16px;"></i> Lead Recovery Engine</a></li>
-                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center gap-2" href="support-agents"><i class="fa-solid fa-robot text-primary" style="width: 16px;"></i> 24/7 Support AI Agents</a></li>
-                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center gap-2" href="lead-scoring"><i class="fa-solid fa-bullseye text-danger" style="width: 16px;"></i> AI Lead Scoring</a></li>
-                                <li><hr class="dropdown-divider border-secondary opacity-25 my-2"></li>
-                                <li><h6 class="dropdown-header text-uppercase text-accent-brand fw-bold px-2 py-1" style="font-size: 11px; letter-spacing: 1px;"><i class="fa-solid fa-microphone-lines me-1"></i> Voice AI Solutions</h6></li>
-                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center gap-2" href="inbound-voice"><i class="fa-solid fa-phone-volume text-info" style="width: 16px;"></i> Inbound Voice Receptionist</a></li>
-                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center gap-2" href="outbound-voice"><i class="fa-solid fa-phone-arrow-up-right text-success" style="width: 16px;"></i> Outbound Qualification Bot</a></li>
-                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center justify-content-between" href="voice-agent"><span class="d-flex align-items-center gap-2"><i class="fa-solid fa-bolt text-accent-neon" style="width: 16px;"></i> Live Voice Demo</span> <span class="badge rounded-pill" style="font-size: 9px; background: #D4FF3D !important; color: #0a0e1a !important; font-weight: 800;">HOT</span></a></li>
-                                <li><hr class="dropdown-divider border-secondary opacity-25 my-2"></li>
-                                <li><a class="dropdown-item py-1.5 px-2 rounded-2 text-white small d-flex align-items-center justify-content-between" href="tools"><span class="d-flex align-items-center gap-2"><i class="fa-solid fa-screwdriver-wrench text-secondary" style="width: 16px;"></i> Internal Tools & Labs</span> <i class="fa-solid fa-arrow-right opacity-50" style="font-size: 10px;"></i></a></li>
-                            </ul>
-                        </li>
+                        <li class="nav-item"><a class="nav-link text-nowrap<?php echo ($page_key === 'service' ? ' active' : ''); ?>" href="service">Services</a></li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="process">Process</a></li>
                         <li class="nav-item"><a class="nav-link text-nowrap" href="blogs">Blogs</a></li>
