@@ -277,7 +277,7 @@ include 'header.php';
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = 'https://filter-locale-motors-transport.trycloudflare.com/embed/dograh-widget.js?token=emb_automatixes_live_agent_voice_2026&apiEndpoint=https://filter-locale-motors-transport.trycloudflare.com';
+    js.src = 'https://detector-verified-raises-candle.trycloudflare.com/embed/dograh-widget.js?token=emb_automatixes_live_agent_voice_2026&apiEndpoint=https://detector-verified-raises-candle.trycloudflare.com';
     js.setAttribute('data-dograh-context', JSON.stringify({
       page_url: window.location.href,
       agency: 'Automatixes',
@@ -291,7 +291,7 @@ include 'header.php';
     if (window.DograhWidget && typeof window.DograhWidget.start === 'function') {
       window.DograhWidget.start();
     } else {
-      window.open('https://filter-locale-motors-transport.trycloudflare.com', '_blank');
+      window.open('https://detector-verified-raises-candle.trycloudflare.com', '_blank');
     }
   }
 </script>
