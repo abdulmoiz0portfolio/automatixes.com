@@ -502,40 +502,6 @@
 <!-- =========================================================================
      NOTABLE PROJECTS / PORTFOLIO SECTION (#portfolio-section)
      ========================================================================= -->
-<!-- SaaS Tools Teaser Row Start -->
-<div class="py-4 border-top border-bottom border-light-subtle" style="background: #0a0e1a;">
-    <div class="container">
-        <div class="row align-items-center justify-content-between g-3">
-            <div class="col-lg-4 text-center text-lg-start">
-                <span class="badge bg-secondary bg-opacity-25 text-white-50 font-monospace small mb-1">INTERNAL UTILITIES</span>
-                <h4 class="h5 fw-bold text-white mb-0">Production Tools &amp; Blueprints</h4>
-                <p class="text-white-50 small mb-0">Explore our internal utilities and client tools built by our team.</p>
-            </div>
-            <div class="col-lg-8">
-                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-end gap-3">
-                    <a href="invoice-maker" class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-3 text-decoration-none text-white small" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);">
-                        <i class="fa-solid fa-file-invoice-dollar text-accent-brand"></i>
-                        <span>Invoice Maker</span>
-                    </a>
-                    <a href="https://qrcode.automatixes.com/" target="_blank" class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-3 text-decoration-none text-white small" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);">
-                        <i class="fa-solid fa-qrcode text-info"></i>
-                        <span>Dynamic QR Studio</span>
-                    </a>
-                    <a href="whatsapp-api" class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-3 text-decoration-none text-white small" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);">
-                        <i class="fa-brands fa-whatsapp text-success"></i>
-                        <span>WhatsApp API</span>
-                    </a>
-                    <a href="tools" class="btn btn-sm btn-outline-brand rounded-pill px-3 py-1.5 fw-bold d-inline-flex align-items-center gap-1.5 text-nowrap">
-                        <span>View All Tools</span>
-                        <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- SaaS Tools Teaser Row End -->
-
 <section id="portfolio-section" class="py-5 text-white position-relative overflow-hidden" style="background: #080a11; border-top: 1px solid rgba(255,255,255,0.06);">
     <!-- Ambient Atmospheric Glows -->
     <div class="position-absolute rounded-circle pointer-events-none" style="background: radial-gradient(circle, rgba(200, 224, 25, 0.12) 0%, rgba(0,0,0,0) 70%); width: 600px; height: 600px; top: 0; left: 10%; filter: blur(90px); z-index: 0;"></div>
