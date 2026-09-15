@@ -766,52 +766,7 @@
 </section>
 <!-- Notable Projects Section End -->
 
-<!-- Case Study Executive Teaser Start -->
-<section class="py-5 text-white position-relative overflow-hidden" style="background: linear-gradient(180deg, #070a12 0%, #0d1424 100%); border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
-    <div class="container">
-        <div class="p-4 p-md-5 rounded-4 position-relative overflow-hidden" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(200, 224, 25, 0.25); box-shadow: 0 15px 40px rgba(0,0,0,0.4);">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-7">
-                    <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-3" style="background: rgba(200, 224, 25, 0.1); border: 1px solid rgba(200, 224, 25, 0.25);">
-                        <span class="badge rounded-pill px-2 py-0.5" style="background: #C8E019; color: #000; font-size: 0.7rem; font-weight: 800;">CASE STUDY</span>
-                        <span class="text-white small fw-bold"><i class="fa-solid fa-bolt text-accent-neon me-1"></i> Technical Deep-Dive</span>
-                    </div>
-                    <h3 class="display-6 fw-bold text-white mb-3">Case Study: n8n Lead Recovery Engine</h3>
-                    <p class="text-white-50 mb-4" style="line-height: 1.7; max-width: 600px;">
-                        How B2B agencies stop pipeline leakage, eliminate manual spreadsheet scrubbing, verify DNS/MX records in real time, and trigger sub-60s warm replies before prospects go cold.
-                    </p>
-                    <a href="case-study" class="btn btn-brand rounded-pill px-4 py-2.5 fw-bold d-inline-flex align-items-center gap-2 shadow">
-                        <span>Read Full Technical Case Study</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="col-lg-5">
-                    <div class="row g-3 text-center">
-                        <div class="col-12 col-sm-4 col-lg-12 mb-lg-2">
-                            <div class="p-3 rounded-3" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
-                                <div class="h3 fw-extrabold text-accent-brand font-monospace mb-0">&lt;60s</div>
-                                <div class="text-white small fw-semibold">Speed-to-Lead</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-4 col-lg-6">
-                            <div class="p-3 rounded-3" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
-                                <div class="h4 fw-extrabold text-white font-monospace mb-0">99.2%</div>
-                                <div class="text-white small fw-semibold">Verification Rate</div>
-                            </div>
-                        </div>
-                        <div class="col-6 col-sm-4 col-lg-6">
-                            <div class="p-3 rounded-3" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);">
-                                <div class="h4 fw-extrabold font-monospace mb-0" style="color: #38bdf8;">+30%+</div>
-                                <div class="text-white small fw-semibold">Pipeline Recovered</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Case Study Executive Teaser End -->
+
 
 <!-- Technologies We're Using Marquee Section Start -->
 <section id="technologies-section" class="py-5 bg-surface text-white border-top border-light-subtle">
@@ -907,74 +862,7 @@
 
 
 
-<!-- Packages Section Start -->
-<section id="packages-section" class="packages-area section-padding bg-dark position-relative overflow-hidden">
-    <div class="container position-relative z-1">
-        <div class="text-center mb-5 wow fadeInUp" data-wow-delay=".1s">
-            <span class="badge bg-brand-translucent text-accent-brand mb-3 font-monospace px-3 py-2 border border-brand-50">PACKAGES</span>
-            <h2 class="display-5 fw-bold text-white mb-3">Our Core Packages</h2>
-            <div class="title-underline mx-auto mb-4"></div>
-            <p class="text-white-50 mx-auto max-w-700">Choose the right AI voice agent, autonomous workflow pipeline, or commercial photography package tailored to scale your business.</p>
-        </div>
 
-        <div class="row g-4 justify-content-center align-items-stretch">
-            
-            <!-- Package 1: AI Voice Agent Deployment -->
-            <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay=".2s">
-                <div class="card pricing-card h-100 bg-surface border-0 rounded-4 p-4 p-lg-5 position-relative text-center hover-lift d-flex flex-column" style="box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05) !important;">
-                    <div class="mb-4">
-                        <div class="bg-brand-translucent text-accent-brand rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 60px; height: 60px; font-size: 24px;">
-                            <i class="fa-solid fa-microphone-lines"></i>
-                        </div>
-                        <div class="badge rounded-pill py-1 px-3 fw-bold mb-2 shadow-sm" style="font-size: 0.75rem; letter-spacing: 1px; background-color: #D4FF3D; color: #0a0e1a !important;">HIGH DEMAND</div>
-                        <h3 class="h4 fw-bold text-white mb-1">AI Voice Agent</h3>
-                        <div class="text-accent-brand fw-extrabold fs-5 mb-1">Starting from $1,500 setup</div>
-                        <p class="text-muted small mb-0">Autonomous conversational calling</p>
-                    </div>
-                    <hr class="border-secondary opacity-25 mb-4">
-                    <ul class="list-unstyled text-white-50 mb-5 text-start" style="font-size: 0.95rem;">
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Inbound & Outbound Voice Calling</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Sub-500ms Human Cadence & Latency</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Automated Appointment Booking & Calendar</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>CRM Data Sync & Live Call Transcripts</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>24/7 Autonomous Inbound Lead Triage</span></li>
-                    </ul>
-                    <div class="mt-auto pt-4">
-                        <a href="voice-agent" class="btn btn-outline-brand w-100 rounded-pill py-3 fw-extrabold shadow-sm hover-lift">Try Voice Demo</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Package 2: AI Automation (POPULAR) -->
-            <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                <div class="card pricing-card scale-lg-up h-100 bg-surface rounded-4 p-4 p-lg-5 position-relative text-center d-flex flex-column" style="box-shadow: 0 15px 40px rgba(200, 224, 25, 0.15); border: 2px solid var(--accent-neon) !important;">
-                    
-                    <div class="mb-4 mt-2">
-                        <div class="badge rounded-pill py-1 px-3 fw-bold mb-4 shadow-sm" style="font-size: 0.75rem; letter-spacing: 1px; background-color: #D4FF3D; color: #0a0e1a !important;">MOST POPULAR</div>
-                        <div class="bg-brand-translucent text-accent-brand rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 60px; height: 60px; font-size: 24px;">
-                            <i class="fa-solid fa-robot"></i>
-                        </div>
-                        <h3 class="h4 fw-bold text-white mb-1">AI Automations</h3>
-                        <div class="text-accent-brand fw-extrabold fs-5 mb-1">Starting from $2,500 setup</div>
-                        <p class="text-muted small mb-0">Custom pipelines + optional maintenance</p>
-                    </div>
-                    <hr class="border-secondary opacity-25 mb-4">
-                    <ul class="list-unstyled text-white-50 mb-5 text-start" style="font-size: 0.95rem;">
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Smart Chatbots (WhatsApp, Web, Instagram)</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>End-to-End n8n & Make.com Workflows</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Multi-Tool CRM, Email & API Sync</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Dynamic Lead Scoring & Data Extraction</span></li>
-                        <li class="mb-3 d-flex align-items-start"><i class="fa-solid fa-check text-accent-brand mt-1 me-3 flex-shrink-0"></i> <span>Dedicated Pipeline Monitoring & Support</span></li>
-                    </ul>
-                    <div class="mt-auto pt-4">
-                        <a href="ai-Agent-Automations" class="btn btn-outline-brand w-100 rounded-pill py-3 fw-extrabold shadow-sm hover-lift">Explore Solutions</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Packages Section End -->
 
 <!-- CTA Section Start -->
 <section class="cta-section section-padding bg-surface border-top border-light-subtle text-center">
