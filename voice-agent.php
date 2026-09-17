@@ -273,6 +273,25 @@ include 'header.php';
 
 <!-- Dograh Self-Hosted Voice Agent Widget Integration (Connected via Secure Tunnel) -->
 <script>
+  // Automatically bypass ngrok free browser warning on all fetch & ajax calls
+  (function() {
+    var _origFetch = window.fetch;
+    if (_origFetch) {
+      window.fetch = function(input, init) {
+        init = init || {};
+        init.headers = init.headers || {};
+        if (init.headers instanceof Headers) {
+          init.headers.set('ngrok-skip-browser-warning', 'true');
+        } else if (Array.isArray(init.headers)) {
+          init.headers.push(['ngrok-skip-browser-warning', 'true']);
+        } else {
+          init.headers['ngrok-skip-browser-warning'] = 'true';
+        }
+        return _origFetch.call(this, input, init);
+      };
+    }
+  })();
+
   (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
@@ -314,7 +333,7 @@ include 'header.php';
         clearInterval(timer);
         if (btn) btn.innerHTML = originalHtml;
         window.DograhWidget.start();
-      } else if (checks > 25) {
+      } else if (checks > 30) {
         clearInterval(timer);
         if (btn) btn.innerHTML = originalHtml;
       }
