@@ -288,11 +288,37 @@ include 'header.php';
   }(document, 'script', 'dograh-widget'));
 
   function startVoiceAgentCall() {
+    var cta = document.getElementById('dograh-widget-cta');
+    if (cta) {
+      cta.click();
+      return;
+    }
     if (window.DograhWidget && typeof window.DograhWidget.start === 'function') {
       window.DograhWidget.start();
-    } else {
-      window.open('https://petri-manhood-cranium.ngrok-free.dev', '_blank');
+      return;
     }
+    var btn = document.getElementById('start-dograh-call');
+    var originalHtml = btn ? btn.innerHTML : '';
+    if (btn) {
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" style="font-size: 32px; color: #0b0f19;"></i>';
+    }
+    var checks = 0;
+    var timer = setInterval(function() {
+      checks++;
+      var ctaBtn = document.getElementById('dograh-widget-cta');
+      if (ctaBtn) {
+        clearInterval(timer);
+        if (btn) btn.innerHTML = originalHtml;
+        ctaBtn.click();
+      } else if (window.DograhWidget && typeof window.DograhWidget.start === 'function') {
+        clearInterval(timer);
+        if (btn) btn.innerHTML = originalHtml;
+        window.DograhWidget.start();
+      } else if (checks > 25) {
+        clearInterval(timer);
+        if (btn) btn.innerHTML = originalHtml;
+      }
+    }, 200);
   }
 </script>
 
